@@ -1,0 +1,74 @@
+---
+title: "Jahreszusammenfassungen"
+author: "Kaspar Rufibach"
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
+output:
+  html_document:
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  pdf_document:
+    toc: yes
+  word_document:
+    fig_caption: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+path <- paste(getwd(), "/", sep = "")
+
+## =================================================================
+## input 
+## =================================================================
+sportKR <- as.data.frame(read_excel(paste(path, "data/zsf.xlsx", sep = ""), col_types = NULL))
+sportKR <- (sportKR %>% mutate("Sport" = as.factor(Sport), "Einheit" = as.factor(Einheit)))
+
+# linearly extrapolate last column to full year
+toda <- Sys.Date()
+first <- as.Date(paste(substr(toda, 1, 4), "-01-01", sep = ""))
+frac <- as.numeric((toda - first) / 365.25)
+lastcol <- ncol(sportKR)
+sportKR[, lastcol] <- sportKR[, lastcol] / frac
+
+dat <- sportKR[, 3:lastcol]
+
+# choose scaling
+skal <- c(1, 52)
+skal.nam <- c(" pro Jahr", " pro Woche")
+```
+
+
+# Pro Jahr
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+s <- 1
+par(mar = c(4, 4, 4, 1), las = 1)
+
+for (i in 1:nrow(dat)){
+     dat.i <- as.numeric(dat[i, ] / skal[s])
+     barplot(dat.i, names = colnames(dat), 
+             main = paste(sportKR[i, "Sport"], "\n(", tolower(sportKR[i, "Einheit"]), skal.nam[s], ")", 
+                     sep = ""))     
+     } # end i
+```
+
+# Pro Woche
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+s <- 2
+par(mar = c(4, 4, 4, 1), las = 1)
+
+for (i in 1:nrow(dat)){
+     dat.i <- as.numeric(dat[i, ] / skal[s])
+     barplot(dat.i, names = colnames(dat), 
+             main = paste(sportKR[i, "Sport"], "\n(", tolower(sportKR[i, "Einheit"]), skal.nam[s], ")", 
+                     sep = ""))     
+     } # end i
+```
