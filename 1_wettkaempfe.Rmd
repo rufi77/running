@@ -3,6 +3,7 @@ title: "Wettkaempfe"
 author: "Kaspar Rufibach"
 date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
 output:
+  github_document: 
   html_document:
     toc: yes
     toc_float:
