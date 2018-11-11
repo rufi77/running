@@ -45,21 +45,89 @@ dat <- sportKR[, 3:lastcol]
 # choose scaling
 skal <- c(1, 52)
 skal.nam <- c(" pro Jahr", " pro Woche")
-
-# to add:
-# Add line plots
 ```
 
+Alle Zahlen fuer 2018 sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
 
-Schraffierte rote Balken sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
+# Zusammenfassung ueber Jahre
+
+## Kilometer
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
+km <- subset(sportKR, Einheit == "Km")
+xs <- as.numeric(colnames(km)[3:ncol(km)])
+ys <- km[, 3:ncol(km)]
+plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Kilometer", 
+     main = "Kilometer")
+for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
+legend("bottomleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+```
+
+## Hoehenmeter
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), mar = c(3.5, 5, 3, 1), las = 2)
+km <- subset(sportKR, Einheit == "Hm")
+xs <- as.numeric(colnames(km)[3:ncol(km)])
+ys <- km[, 3:ncol(km)]
+plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "", 
+     main = "Hoehenmeter")
+for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
+legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+
+par(las = 0)
+mtext(text = "Hoehenmeter", side = 2, line = 4, adj = 0.5)
+
+```
+
+## Zeit
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
+km <- subset(sportKR, Einheit == "Zeit")
+xs <- as.numeric(colnames(km)[3:ncol(km)])
+ys <- km[, 3:ncol(km)]
+plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Stunden", 
+     main = "Stunden")
+for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
+legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+```
+
+## Skifahren
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
+par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
+km <- subset(sportKR, Sport %in% c("Skitage", "Skitouren"))
+xs <- as.numeric(colnames(km)[3:ncol(km)])
+ys <- km[, 3:ncol(km)]
+plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Anzahl", 
+     main = "Anzahl")
+for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
+legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+```
+
+## Orte
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
+par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
+km <- subset(sportKR, Einheit == "Anzahl" & (Sport %in% c("Exersuisse", "Skitage", "Skitouren")) == FALSE)
+xs <- as.numeric(colnames(km)[3:ncol(km)])
+ys <- km[, 3:ncol(km)]
+plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Anzahl", 
+     main = "Anzahl")
+for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
+legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+```
 
 # Aktivitaeten pro Jahr
+
+Schraffierte rote Balken sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
 
 ## Bike
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 s <- 1
-par(mar = c(4, 4, 4, 1), las = 1)
 for (i in 1:3){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
@@ -75,6 +143,23 @@ for (i in 4:6){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 for (i in 7:9){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
+## Exersuisse
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
+## Skifahren
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 11:12){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
+## Orte
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 13:nrow(dat)){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
 
 # Aktivitaeten pro Woche
 
@@ -97,3 +182,10 @@ for (i in 4:6){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 for (i in 7:9){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
+
+## Exersuisse
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
