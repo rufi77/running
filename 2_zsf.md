@@ -1,14 +1,42 @@
 Jahreszusammenfassungen
 ================
 Kaspar Rufibach
-10 Nov 2018
+11 Nov 2018
 
-Pro Jahr
-========
+Schraffierte rote Balken sind linear extrapoliert vom Status am 2018-11-11 aufs ganze Jahr.
 
-<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-3.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-4.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-5.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-6.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-7.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-8.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-9.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-10.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-11.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-12.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-13.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-14.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-15.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-16.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-17.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-18.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-19.png" style="display: block; margin: auto;" />
+Aktivitaeten pro Jahr
+=====================
 
-Pro Woche
-=========
+Bike
+----
 
-<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-3.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-4.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-5.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-6.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-7.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-8.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-9.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-10.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-11.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-12.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-13.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-14.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-15.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-16.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-17.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-18.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-19.png" style="display: block; margin: auto;" />
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-1-3.png" style="display: block; margin: auto;" />
+
+Run
+---
+
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-2-3.png" style="display: block; margin: auto;" />
+
+Wandern
+-------
+
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-3-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-3-3.png" style="display: block; margin: auto;" />
+
+Aktivitaeten pro Woche
+======================
+
+Bike
+----
+
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-4-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-4-3.png" style="display: block; margin: auto;" />
+
+Run
+---
+
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-5-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-5-3.png" style="display: block; margin: auto;" />
+
+Wandern
+-------
+
+<img src="2_zsf_files/figure-markdown_github/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-6-2.png" style="display: block; margin: auto;" /><img src="2_zsf_files/figure-markdown_github/unnamed-chunk-6-3.png" style="display: block; margin: auto;" />

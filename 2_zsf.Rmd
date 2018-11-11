@@ -25,6 +25,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 path <- paste(getwd(), "/", sep = "")
 
+source(paste(path, "functions/plotSummary.r", sep = ""))
+
 ## =================================================================
 ## input 
 ## =================================================================
@@ -43,33 +45,55 @@ dat <- sportKR[, 3:lastcol]
 # choose scaling
 skal <- c(1, 52)
 skal.nam <- c(" pro Jahr", " pro Woche")
+
+# to add:
+# Add line plots
 ```
 
 
-# Pro Jahr
+Schraffierte rote Balken sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
+
+# Aktivitaeten pro Jahr
+
+## Bike
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 s <- 1
 par(mar = c(4, 4, 4, 1), las = 1)
-
-for (i in 1:nrow(dat)){
-     dat.i <- as.numeric(dat[i, ] / skal[s])
-     barplot(dat.i, names = colnames(dat), 
-             main = paste(sportKR[i, "Sport"], "\n(", tolower(sportKR[i, "Einheit"]), skal.nam[s], ")", 
-                     sep = ""))     
-     } # end i
+for (i in 1:3){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
-# Pro Woche
+## Run
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 4:6){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
+## Wandern
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 7:9){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
+
+# Aktivitaeten pro Woche
+
+## Bike
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 s <- 2
 par(mar = c(4, 4, 4, 1), las = 1)
+for (i in 1:3){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
 
-for (i in 1:nrow(dat)){
-     dat.i <- as.numeric(dat[i, ] / skal[s])
-     barplot(dat.i, names = colnames(dat), 
-             main = paste(sportKR[i, "Sport"], "\n(", tolower(sportKR[i, "Einheit"]), skal.nam[s], ")", 
-                     sep = ""))     
-     } # end i
+## Run
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 4:6){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
+```
+
+## Wandern
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+for (i in 7:9){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```

@@ -18,7 +18,7 @@ output:
 
 ```{r setup, include=FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "lubridate")
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "lubridate", "readxl")
 for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
@@ -28,7 +28,7 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 ## input uebu data
 ## =================================================================
-wett_in <- read.csv(paste(path, "data/wettkaempfe.csv" , sep = ''), sep = ";", as.is = TRUE)
+wett_in <- as.data.frame(read_excel(paste(path, "data/wettkaempfe.xlsx", sep = ""), col_types = NULL))
 wett <- subset(wett_in, Alexander == 0 & Lorenz == 0)
 
 # order by decreasing frequency of participation
@@ -67,7 +67,7 @@ atleast <- 2
 par(mfrow = c(1, 1), las = 2, mar = c(19, 3, 1, 1))
 a <- table(Anlass)
 a <- a[rev(order(a))]
-barplot(a)
+barplot(a, ylim = c(0, 16))
 abline(h = 1:100, col = grey(0.5), lty = 2)
 ```
 
@@ -82,6 +82,23 @@ abline(h = 1:100, col = grey(0.5), lty = 2)
 
 Bis jetzt habe ich an `r sum(Disziplin == "Run")` Laeufen und `r sum(Disziplin == "Bike")` Bikerennen teilgenommen.
 
+# Teilnahmen pro Anlass ueber die Zeit
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), las = 2, mar = c(4, 17, 1, 1))
+ys <- length(a):1
+
+plot(0, 0, type = "n", xlim = range(Jahr), ylim = c(-1, length(unique(Anlass))), xaxt = "n", xlab = "", ylab = "", yaxt = "n")
+axis(1, at = sort(unique(Jahr)), labels = sort(unique(Jahr)))
+axis(2, at = ys, labels = names(a))
+legend(2002, 0, c("Run", "Bike"), lty = 1, lwd = c(NA, NA), pch = c(19, 17), bty = "n", horiz = TRUE, pt.cex = 1.5)
+
+for (i in 1:length(a)){
+     ind <- (Anlass == names(a)[i])
+     
+     points(Jahr[ind], rep(ys[i], sum(ind)), col = i, pch = ifelse(Disziplin[ind][1] == "Run", 19, 17), cex = 1.5)
+}
+```
 
 # Alle Wettkaempfe
 
@@ -129,46 +146,61 @@ for (i in 1:length(a)){
 
           # Zeit
           par(mfrow = c(1, 1), mar = c(3.5, 6, 3, 1), las = 2)
-          plot(Jahr[ind], as.numeric(Zeit[ind]), type = "b", pch = 1, 
+          y <- as.numeric(Zeit[ind])
+          plot(Jahr[ind], y, type = "b", pch = 1, 
                main = paste(names(a)[i], ": Zeit", sep = ""), yaxt = "n",
-               xlab = "", ylab = "", col = 2, ylim = c(3600, 7200), lwd = 2)
+               xlab = "", ylab = "", col = 2, ylim = c(min(y), max(y)), lwd = 2)
           axis(2, at = ypos, labels = as.character(ylab))
           
           }
-    cat("\n")  
 } # end i
 ```
 
 # Relative Raenge 
-
-Es werden nur Wettkaempfe mit mind. `r atleast` Teilnahmen gezeigt.
 
 ## Innerhalb Maenner ueber alle Wettkaempfe
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
 par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
 plot(0, 0, type = "n", main = "Relativer Rang Maenner", xlim = range(Jahr), 
-     xaxt = "n", ylim = c(0, 0.7), xlab = "", ylab = "Relativer Rang Maenner")
+     xaxt = "n", ylim = c(0, 1), xlab = "", ylab = "Relativer Rang Maenner")
 axis(1, at = Jahr, labels = Jahr)
 abline(h = 0:5 / 10, lty = 2, col = grey(0.5))
 
 leg.nam <- NULL
 leg.col <- NULL
+leg.sym <- NULL
+leg.lty <- NULL
 
 for (i in 1:length(a)){
     ind <- (Anlass == names(a)[i])
+    y0 <- (M_Rang / M_Teiln)[ind]
+    y <- pmin(1, y0, na.rm = TRUE)
 
-    if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+    # nur eine Teilnahme
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) == 1){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i + 1)
+          leg.sym <- c(leg.sym, i)
+          leg.lty <- c(leg.lty, NA)
+          points(Jahr[ind], y, pch = i, col = i + 1, lwd = 2)
+          }
+
+    # >= 2 atleast Teilnahmen
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
            
           # Relativer Rang
           leg.nam <- c(leg.nam, names(a)[i])
           leg.col <- c(leg.col, i)
-          y <- pmin(1, (M_Rang / M_Teiln)[ind], na.rm = TRUE)
+          leg.sym <- c(leg.sym, 1)
+          leg.lty <- c(leg.lty, 1)
           lines(Jahr[ind], y, type = "b", pch = 1, col = i, lty = 1, lwd = 2)
           }
 } # end i
 
-legend("topleft", leg.nam, col = leg.col, lty = 1, lwd = 2, bty = "n")
+legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
 ```
 
 
@@ -177,25 +209,42 @@ legend("topleft", leg.nam, col = leg.col, lty = 1, lwd = 2, bty = "n")
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
 par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
 plot(0, 0, type = "n", main = "Relativer Rang Alterskategorie", xlim = range(Jahr), 
-     xaxt = "n", ylim = c(0, 0.7), xlab = "", ylab = "Relativer Rang Kategorie")
+     xaxt = "n", ylim = c(0, 1), xlab = "", ylab = "Relativer Rang Alterskategorie")
 axis(1, at = Jahr, labels = Jahr)
 abline(h = 0:5 / 10, lty = 2, col = grey(0.5))
 
 leg.nam <- NULL
 leg.col <- NULL
+leg.sym <- NULL
+leg.lty <- NULL
 
 for (i in 1:length(a)){
     ind <- (Anlass == names(a)[i])
+    y0 <- (Kat_Rang / Kat_Teiln)[ind]
+    y <- pmin(1, y0, na.rm = TRUE)
 
-    if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+    # nur eine Teilnahme
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) == 1){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i + 1)
+          leg.sym <- c(leg.sym, i)
+          leg.lty <- c(leg.lty, NA)
+          points(Jahr[ind], y, pch = i, col = i + 1, lwd = 2)
+          }
+
+    # >= 2 atleast Teilnahmen
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
            
           # Relativer Rang
           leg.nam <- c(leg.nam, names(a)[i])
           leg.col <- c(leg.col, i)
-          y <- pmin(1, (Kat_Rang / Kat_Teiln)[ind], na.rm = TRUE)
+          leg.sym <- c(leg.sym, 1)
+          leg.lty <- c(leg.lty, 1)
           lines(Jahr[ind], y, type = "b", pch = 1, col = i, lty = 1, lwd = 2)
           }
 } # end i
 
-legend("topleft", leg.nam, col = leg.col, lty = 1, lwd = 2, bty = "n")
+legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
 ```
