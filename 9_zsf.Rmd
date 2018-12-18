@@ -18,7 +18,7 @@ output:
 
 ```{r setup, include=FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl", "ggplot2")
 for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
@@ -78,7 +78,13 @@ legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n",
 
 par(las = 0)
 mtext(text = "Hoehenmeter", side = 2, line = 4, adj = 0.5)
+```
 
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+df <- rbind(cbind(xs, t(ys)[, 1]), cbind(xs, t(ys)[, 2]), cbind(xs, t(ys)[, 3]))
+df <- data.frame(df, rep(as.character(km[, "Sport"]), each = length(xs)))
+colnames(df) <- c("Jahr", "Hm", "Disziplin")
+ggplot(df, aes(x = Jahr, y = Hm, fill = Disziplin)) + geom_area(position = 'stack')
 ```
 
 ## Zeit
@@ -92,6 +98,13 @@ plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab =
      main = "Stunden")
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
 legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+df <- rbind(cbind(xs, t(ys)[, 1]), cbind(xs, t(ys)[, 2]), cbind(xs, t(ys)[, 3]))
+df <- data.frame(df, rep(as.character(km[, "Sport"]), each = length(xs)))
+colnames(df) <- c("Jahr", "Zeit", "Disziplin")
+ggplot(df, aes(x = Jahr, y = Zeit, fill = Disziplin)) + geom_area(position = 'stack')
 ```
 
 ## Skifahren
