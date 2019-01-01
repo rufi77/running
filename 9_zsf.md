@@ -1,9 +1,9 @@
 Jahreszusammenfassungen
 ================
 Kaspar Rufibach
-18 Dec 2018
+01 Jan 2019
 
-Alle Zahlen fuer 2018 sind linear extrapoliert vom Status am 2018-12-18 aufs ganze Jahr.
+Alle Zahlen fuer 2019 sind linear extrapoliert vom Status am 2019-01-01 aufs ganze Jahr.
 
 Zusammenfassung ueber Jahre
 ===========================
@@ -40,7 +40,7 @@ Orte
 Aktivitaeten pro Jahr
 =====================
 
-Schraffierte rote Balken sind linear extrapoliert vom Status am 2018-12-18 aufs ganze Jahr.
+Schraffierte rote Balken sind linear extrapoliert vom Status am 2019-01-01 aufs ganze Jahr.
 
 Bike
 ----

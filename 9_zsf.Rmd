@@ -32,12 +32,20 @@ source(paste(path, "functions/plotSummary.r", sep = ""))
 ## =================================================================
 sportKR <- as.data.frame(read_excel(paste(path, "data/zsf.xlsx", sep = ""), col_types = NULL))
 sportKR <- (sportKR %>% mutate("Sport" = as.factor(Sport), "Einheit" = as.factor(Einheit)))
+lastcol <- ncol(sportKR)
+
+# collapse certain disclipines
+sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Velo", 3:ncol(sportKR)] 
+
+sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Trail Running", 3:ncol(sportKR)] 
+
+sportKR <- (sportKR %>% filter(!(Sport %in% c("Velo", "Trail Running"))))
 
 # linearly extrapolate last column to full year
 toda <- Sys.Date()
 first <- as.Date(paste(substr(toda, 1, 4), "-01-01", sep = ""))
 frac <- as.numeric((toda - first) / 365.25)
-lastcol <- ncol(sportKR)
+frac <- 1/365
 sportKR[, lastcol] <- sportKR[, lastcol] / frac
 
 dat <- sportKR[, 3:lastcol]
@@ -47,7 +55,7 @@ skal <- c(1, 52)
 skal.nam <- c(" pro Jahr", " pro Woche")
 ```
 
-Alle Zahlen fuer 2018 sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
+Alle Zahlen fuer `r tail(colnames(dat), 1)` sind linear extrapoliert vom Status am `r toda` aufs ganze Jahr.
 
 # Zusammenfassung ueber Jahre
 
