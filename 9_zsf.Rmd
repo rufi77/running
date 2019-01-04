@@ -34,12 +34,18 @@ sportKR <- as.data.frame(read_excel(paste(path, "data/zsf.xlsx", sep = ""), col_
 sportKR <- (sportKR %>% mutate("Sport" = as.factor(Sport), "Einheit" = as.factor(Einheit)))
 lastcol <- ncol(sportKR)
 
+# define which years to include
+include <- sportKR[sportKR[, "Sport"] == "Include", 3:ncol(sportKR)]
+include <- as.numeric(include) * (3:ncol(sportKR))
+include <- include[include > 0] 
+
 # collapse certain disclipines
 sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Velo", 3:ncol(sportKR)] 
 
 sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Trail Running", 3:ncol(sportKR)] 
 
-sportKR <- (sportKR %>% filter(!(Sport %in% c("Velo", "Trail Running"))))
+# remove unused rows
+sportKR <- (sportKR %>% filter(!(Sport %in% c("Include", "Velo", "Trail Running"))))
 
 # linearly extrapolate last column to full year
 toda <- Sys.Date()
@@ -49,6 +55,10 @@ frac <- 1/365
 sportKR[, lastcol] <- sportKR[, lastcol] / frac
 
 dat <- sportKR[, 3:lastcol]
+
+# only use years defined by "include"
+sportKR <- sportKR[, c(1, 2, include)]
+dat <- dat[, include - 2]
 
 # choose scaling
 skal <- c(1, 52)
