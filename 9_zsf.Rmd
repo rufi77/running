@@ -39,7 +39,7 @@ include <- sportKR[sportKR[, "Sport"] == "Include", 3:ncol(sportKR)]
 include <- as.numeric(include) * (3:ncol(sportKR))
 include <- include[include > 0] 
 
-# collapse certain disclipines
+# collapse certain disciplines
 sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Bike", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Velo", 3:ncol(sportKR)] 
 
 sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] <- sportKR[sportKR[, "Sport"] == "Running", 3:ncol(sportKR)] + sportKR[sportKR[, "Sport"] == "Trail Running", 3:ncol(sportKR)] 
@@ -125,11 +125,11 @@ colnames(df) <- c("Jahr", "Zeit", "Disziplin")
 ggplot(df, aes(x = Jahr, y = Zeit, fill = Disziplin)) + geom_area(position = 'stack')
 ```
 
-## Skifahren
+## Orte
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
 par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
-km <- subset(sportKR, Sport %in% c("Skitage", "Skitouren"))
+km <- subset(sportKR, Einheit == "Anzahl" & (Sport %in% c("Exersuisse")) == FALSE)
 xs <- as.numeric(colnames(km)[3:ncol(km)])
 ys <- km[, 3:ncol(km)]
 plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Anzahl", 
@@ -138,17 +138,20 @@ for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
 legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 ```
 
-## Orte
+# Zusammenfassung ueber Wintersaisons
+
+## Skifahren
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
-par(mfrow = c(1, 1), mar = c(3.5, 4.5, 3, 1), las = 2)
-km <- subset(sportKR, Einheit == "Anzahl" & (Sport %in% c("Exersuisse", "Skitage", "Skitouren")) == FALSE)
+par(mfrow = c(1, 1), mar = c(6, 4.5, 3, 1), las = 2)
+km <- subset(sportKR, Einheit == "Anzahl" & (Sport %in% c("Skifahren", "Skitouren")) == TRUE)
 xs <- as.numeric(colnames(km)[3:ncol(km)])
 ys <- km[, 3:ncol(km)]
 plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Anzahl", 
-     main = "Anzahl")
+     main = "Anzahl", xaxt = "n")
+axis(1, at = xs, labels = paste(xs - 1, " / ", xs, sep = ""))
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
-legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+legend(2013.5, 9, legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 ```
 
 # Aktivitaeten pro Jahr
@@ -180,11 +183,6 @@ for (i in 7:9){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
-## Skifahren
-
-```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
-for (i in 11:12){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
-```
 
 ## Orte
 
