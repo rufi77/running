@@ -1,7 +1,7 @@
 Krafttraining
 ================
 Kaspar Rufibach
-27 Jan 2019
+08 May 2019
 
 Analyse
 =======
@@ -28,15 +28,15 @@ Analyse
 <td align="center">Anzahl Programme</td>
 <td align="center">16</td>
 <td align="center">27</td>
-<td align="center">4</td>
-<td align="center">47</td>
+<td align="center">5</td>
+<td align="center">48</td>
 </tr>
 <tr class="even">
 <td align="center">Anzahl Trainings</td>
 <td align="center">305</td>
 <td align="center">506</td>
-<td align="center">55</td>
-<td align="center">866</td>
+<td align="center">74</td>
+<td align="center">885</td>
 </tr>
 <tr class="odd">
 <td align="center">Erstes Training</td>
@@ -49,7 +49,7 @@ Analyse
 <td align="center">Bisher letztes Training</td>
 <td align="center">2011-01-10</td>
 <td align="center">2017-11-15</td>
-<td align="center">2019-01-22</td>
+<td align="center">2019-05-02</td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -60,7 +60,7 @@ Analyse
 Uebungen des letzten absolvierten Programms
 ===========================================
 
-<img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-2.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-3.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-4.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-5.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-6.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-7.png" style="display: block; margin: auto;" />
+<img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-2.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-3.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-4.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-5.png" style="display: block; margin: auto;" /><img src="2_krafttraining_files/figure-markdown_github/unnamed-chunk-3-6.png" style="display: block; margin: auto;" />
 
 Alle Uebungen
 =============

@@ -122,7 +122,7 @@ for (i in first:ncol(uebu)){
           plot(dat$date, dat$v, type = "n", pch = 1, 
                main = paste(colnames(uebu)[i], sep = ""), 
                xlab = "", ylab = "", col = 2)
-     lines(subset(dat, firma == 1 & zeit == "60-90")$date, subset(dat, firma == 1 & zeit == "60-90")$v, pch = 1, col = 2, lty = 3)
+    lines(subset(dat, firma == 1 & zeit == "60-90")$date, subset(dat, firma == 1 & zeit == "60-90")$v, pch = 1, col = 2, lty = 3)
     points(subset(dat, firma == 1 & zeit == "60-90")$date, subset(dat, firma == 1 & zeit == "60-90")$v, pch = 19, col = 2, lty = 3)
 
     lines(subset(dat, firma == 2 & zeit == "60-90")$date, subset(dat, firma == 2 & zeit == "60-90")$v, pch = 1, col = 4, lty = 3)
