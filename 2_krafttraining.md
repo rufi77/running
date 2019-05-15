@@ -1,7 +1,7 @@
 Krafttraining
 ================
 Kaspar Rufibach
-08 May 2019
+15 May 2019
 
 Analyse
 =======

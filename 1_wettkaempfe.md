@@ -1,7 +1,7 @@
 Wettkaempfe
 ================
 Kaspar Rufibach
-08 May 2019
+15 May 2019
 
 Anzahl Teilnahmen pro Anlass
 ============================
@@ -13,7 +13,7 @@ Anzahl Teilnahmen pro Jahr und Disziplin
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
-Bis jetzt habe ich an 46 Laeufen und 5 Bikerennen teilgenommen.
+Bis jetzt habe ich an 47 Laeufen und 5 Bikerennen teilgenommen.
 
 Teilnahmen pro Anlass ueber die Zeit
 ====================================
