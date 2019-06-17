@@ -1,9 +1,9 @@
 Jahreszusammenfassungen
 ================
 Kaspar Rufibach
-15 May 2019, as per 8th April
+17 Jun 2019, as per 8th April
 
-Alle Zahlen fuer 2019 sind linear extrapoliert vom Status am 2019-05-15 aufs ganze Jahr.
+Alle Zahlen fuer 2019 sind linear extrapoliert vom Status am 2019-06-17 aufs ganze Jahr.
 
 Zusammenfassung ueber Jahre
 ===========================
@@ -43,7 +43,7 @@ Skifahren
 Aktivitaeten pro Jahr
 =====================
 
-Schraffierte rote Balken sind linear extrapoliert vom Status am 2019-05-15 aufs ganze Jahr.
+Schraffierte rote Balken sind linear extrapoliert vom Status am 2019-06-17 aufs ganze Jahr.
 
 Bike
 ----

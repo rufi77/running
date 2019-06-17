@@ -1,7 +1,7 @@
 Wettkaempfe
 ================
 Kaspar Rufibach
-15 May 2019
+17 Jun 2019
 
 Anzahl Teilnahmen pro Anlass
 ============================
@@ -13,7 +13,7 @@ Anzahl Teilnahmen pro Jahr und Disziplin
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
-Bis jetzt habe ich an 47 Laeufen und 5 Bikerennen teilgenommen.
+Bis jetzt habe ich an 48 Laeufen und 5 Bikerennen teilgenommen.
 
 Teilnahmen pro Anlass ueber die Zeit
 ====================================
@@ -29,15 +29,15 @@ Es werden nur Wettkaempfe mit mind. 2 Teilnahmen gezeigt.
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-2.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-3.png" style="display: block; margin: auto;" />
 
-    ## Luzern Halbmarathon
+    ## Niesen Treppenlauf
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-4.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-5.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-6.png" style="display: block; margin: auto;" />
 
-    ## Thuner Stadtlauf
+    ## Luzern Halbmarathon
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-7.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-8.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-9.png" style="display: block; margin: auto;" />
 
-    ## Niesen Treppenlauf
+    ## Thuner Stadtlauf
 
 <img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-10.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-11.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-markdown_github/unnamed-chunk-4-12.png" style="display: block; margin: auto;" />
 
