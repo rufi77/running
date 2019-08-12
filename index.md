@@ -1,7 +1,7 @@
-# Sportanalyse KR
+# Activites Kaspar
 
-* [Zusammenfassung Wettkaempfe](1_wettkaempfe.md)
-* [Zusammenfassung Krafttraining](2_krafttraining.md)
-* [Zusammenfassung pro Jahr](9_zsf.md)
+* [Summary competitions](1_wettkaempfe.md)
+* [Summary weight training](2_krafttraining.md)
+* [Summary activities per year](9_zsf.md)
 
 Author: [Kaspar Rufibach](mailto:kaspar.rufibach@gmail.com)
