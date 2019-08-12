@@ -1,7 +1,7 @@
 Yearly summaries
 ================
 Kaspar Rufibach
-12 Aug 2019, as per 17th June
+12 Aug 2019, as per 12th August
 
 Numbers for 2019 are linearly extrapolated from 2019-08-12 to the full
 year.
