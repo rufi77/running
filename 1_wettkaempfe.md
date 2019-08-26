@@ -1,7 +1,7 @@
 Wettkaempfe
 ================
 Kaspar Rufibach
-12 Aug 2019
+26 Aug 2019
 
 # Anzahl Teilnahmen pro Anlass
 

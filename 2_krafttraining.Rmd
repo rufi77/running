@@ -31,7 +31,7 @@ path <- paste(getwd(), "/", sep = "")
 suppressWarnings(uebu <- as.data.frame(read_excel(paste(path, "data/kieser.xls", sep = ""), 
                      col_types = c(rep("numeric", 2),      # 
                                      rep("text", 1),       # 
-                                     rep("numeric", 72)
+                                     rep("numeric", 73)
                      ))))
 date <- as.Date(uebu$Datum, origin = "1899-12-30")
 zeit <- select(uebu, Zeit)
