@@ -3,7 +3,11 @@ title: "Skitouring"
 author: "Kaspar Rufibach"
 date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
 output:
+  github_document: 
+    toc: true
+    toc_depth: 2
   html_document:
+    keep_md: true
     toc: yes
     toc_float:
       collapsed: yes

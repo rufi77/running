@@ -22,7 +22,7 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-path <- "C:/rufibach/01 personal/05_sport/touren/"
+path <- "C:/rufibach/01_personal/05_sport/touren/"
 
 ## =================================================================
 ## input uebu data
@@ -43,7 +43,7 @@ Jahr0 <- year(as.data.frame(dat)[, "date"])
 
 # Skitouren
 
-Liste leider bei weitem nicht vollständig.
+Liste leider bei weitem nicht vollst?ndig.
 
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = FALSE}

@@ -1,7 +1,7 @@
 Hikes, runs, and rides
 ================
 Kaspar Rufibach
-27 Aug 2019
+17 Sep 2019
 
 # Bike
 
@@ -126,7 +126,7 @@ Kaspar Rufibach
 | Skitour | Handeck Kurve nach Mineur |  aerlenluecke   | 2019-03-03 | 04:10:41.3 |
 | Skitour | Handeck Kurve nach Mineur |   Golegghorn    | 2019-03-23 | 03:14:13.4 |
 | Skitour | Handeck Kurve nach Mineur |   Golegghorn    | 2019-03-24 | 03:38:01.7 |
-| Skitour |           Reuti           |   Planplatten   | 2019-12-13 |            |
+| Skitour |           Reuti           |   Planplatten   | 2018-12-13 |            |
 | Skitour |      Schwarzwaldalp       |    Bandspitz    | 2019-02-14 | 01:40:51.8 |
 | Skitour |      Schwarzwaldalp       |   Grindelgrat   | 2019-02-20 | 01:54:15.8 |
 | Skitour |      Schwarzwaldalp       |   Wildgaerst    | 2012-01-12 | 02:35:00.0 |
