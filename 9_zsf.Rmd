@@ -3,12 +3,15 @@ title: "Yearly summaries"
 author: "Kaspar Rufibach"
 date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`, as per 12th August'
 output:
-  github_document: 
   html_document:
+    keep_md: true
     toc: yes
     toc_float:
       collapsed: yes
       smooth_scroll: yes
+  github_document: 
+    toc: true
+    toc_depth: 2
   pdf_document:
     toc: yes
   word_document:
