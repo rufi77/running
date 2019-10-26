@@ -31,7 +31,12 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 ## input uebu data
 ## =================================================================
-wett_in <- as.data.frame(read_excel(paste(path, "data/wettkaempfe.xlsx", sep = ""), col_types = NULL))
+suppressWarnings(wett_in <- as.data.frame(read_excel(paste(path, "data/wettkaempfe.xlsx", sep = ""), 
+                                    col_types = c(rep("text", 2),      # 
+                                                  rep("numeric", 6),       # 
+                                                  rep("text", 1),
+                                                  rep("numeric", 5),
+                                                  rep("text", 1)))))
 wett <- subset(wett_in, Alexander == 0 & Lorenz == 0)
 
 # order by decreasing frequency of participation
@@ -85,7 +90,7 @@ abline(h = 1:100, col = grey(0.5), lty = 2)
 
 Bis jetzt habe ich an `r sum(Disziplin == "Run")` Laeufen und `r sum(Disziplin == "Bike")` Bikerennen teilgenommen.
 
-# Teilnahmen pro Anlass ueber die Zeit
+# Teilnahmen pro Anlass
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 par(mfrow = c(1, 1), las = 2, mar = c(4, 17, 1, 1))
@@ -103,11 +108,14 @@ for (i in 1:length(a)){
 }
 ```
 
-# Alle Wettkaempfe
+# Relative Ränge und Zeiten
+
+## Pro Wettkampf
 
 Es werden nur Wettkaempfe mit mind. `r atleast` Teilnahmen gezeigt.
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
+
 # ypos
 ypos <- seq(0, 14100, by = 300)
 
@@ -152,14 +160,12 @@ for (i in 1:length(a)){
           y <- as.numeric(Zeit[ind])
           plot(Jahr[ind], y, type = "b", pch = 1, 
                main = paste(names(a)[i], ": Zeit", sep = ""), yaxt = "n",
-               xlab = "", ylab = "", col = 2, ylim = c(min(y), max(y)), lwd = 2)
+               xlab = "", ylab = "", col = 2, ylim = c(min(y, na.rm = TRUE), max(y, na.rm = TRUE)), lwd = 2)
           axis(2, at = ypos, labels = as.character(ylab))
-          
+
           }
 } # end i
 ```
-
-# Relative Raenge 
 
 ## Innerhalb Maenner ueber alle Wettkaempfe
 
@@ -250,4 +256,23 @@ for (i in 1:length(a)){
 } # end i
 
 legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
+```
+
+
+# Tabellen mit Zeiten
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+panderOptions('knitr.auto.asis', FALSE)
+for (i in 1:length(a)){
+    ind <- (Anlass == names(a)[i])
+
+    if (all(is.na(Zeit[ind])) == FALSE){
+           
+          cat(paste(names(a)[i], "\n", sep = "")) 
+          d <- as.data.frame(wett[ind, c("Jahr", "Anlass", "Zeit")])
+          rownames(d) <- NULL
+          pander(d)          
+
+          }
+} # end i
 ```

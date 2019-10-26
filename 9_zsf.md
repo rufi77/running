@@ -74,7 +74,7 @@ Shaded red bars are linearly extrapolated from 2019-10-25 to the entire year.
 
 ## Orte
 
-<img src="9_zsf_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-2.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-3.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-4.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-5.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-6.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-7.png" style="display: block; margin: auto;" />
+<img src="9_zsf_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-2.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-3.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-4.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-5.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-6.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-7.png" style="display: block; margin: auto;" /><img src="9_zsf_files/figure-html/unnamed-chunk-12-8.png" style="display: block; margin: auto;" />
 
 # Activity per week
 

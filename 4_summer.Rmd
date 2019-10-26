@@ -34,8 +34,8 @@ path <- paste(getwd(), "/", sep = "")
 suppressWarnings(touren <- as.data.frame(read_excel(paste(path, "data/touren.xls", sep = ""), 
                      sheet = "all",
                      col_types = c(rep("text", 4),      # 
-                                     rep("numeric", 1),       # 
-                                     rep("text", 4)
+                                   rep("numeric", 1),       # 
+                                   rep("text", 4)
                      ))))
 
 all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% 
