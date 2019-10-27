@@ -56,8 +56,11 @@ toda <- Sys.Date()
 first <- as.Date(paste(substr(toda, 1, 4), "-01-01", sep = ""))
 frac <- as.numeric((toda - first) / 365.25)
 #sportKR[, lastcol] <- sportKR[, lastcol] / frac
+include <- c(include, tail(include, 1) + 1)
 
-dat <- sportKR[, 3:lastcol]
+# add extrapolation, for simplicity give it next year as label
+sportKR[, as.character(as.numeric(tail(colnames(sportKR), 1)) + 1)] <- sportKR[, lastcol] / frac
+dat <- sportKR[, 3:ncol(sportKR)]
 
 # only use years defined by "include"
 sportKR <- sportKR[, c(1, 2, include)]
@@ -68,7 +71,7 @@ skal <- c(1, 52)
 skal.nam <- c(" per year", " per week")
 ```
 
-Numbers for `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year.
+Numbers labelled `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year of `r tail(colnames(dat), 2)[1]`.
 
 # Yearly summaries
 

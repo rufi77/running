@@ -1,7 +1,7 @@
 ---
 title: "Wettkaempfe"
 author: "Kaspar Rufibach"
-date: '26 Oct 2019'
+date: '27 Oct 2019'
 output:
   html_document:
     keep_md: true
@@ -30,7 +30,7 @@ output:
 
 <img src="1_wettkaempfe_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
-Bis jetzt habe ich an 48 Laeufen und 5 Bikerennen teilgenommen.
+Bis jetzt habe ich an 49 Laeufen und 5 Bikerennen teilgenommen.
 
 # Teilnahmen pro Anlass
 
@@ -50,13 +50,13 @@ Es werden nur Wettkaempfe mit mind. 2 Teilnahmen gezeigt.
 <img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-2.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-3.png" style="display: block; margin: auto;" />
 
 ```
-## Niesen Treppenlauf
+## Luzern Halbmarathon
 ```
 
 <img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-4.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-5.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-6.png" style="display: block; margin: auto;" />
 
 ```
-## Luzern Halbmarathon
+## Niesen Treppenlauf
 ```
 
 <img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-7.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-8.png" style="display: block; margin: auto;" /><img src="1_wettkaempfe_files/figure-html/unnamed-chunk-4-9.png" style="display: block; margin: auto;" />
@@ -129,6 +129,28 @@ Grand Prix von Bern
  2019   Grand Prix von Bern   1:09:08.3 
 ----------------------------------------
 
+Luzern Halbmarathon
+
+----------------------------------------
+ Jahr         Anlass            Zeit    
+------ --------------------- -----------
+ 2011   Luzern Halbmarathon   1:31:19.3 
+
+ 2012   Luzern Halbmarathon   1:37:13.6 
+
+ 2013   Luzern Halbmarathon   1:32:20.1 
+
+ 2014   Luzern Halbmarathon   1:31:50.3 
+
+ 2015   Luzern Halbmarathon   1:29:19.9 
+
+ 2017   Luzern Halbmarathon   1:29:25.4 
+
+ 2018   Luzern Halbmarathon   1:33:01.2 
+
+ 2019   Luzern Halbmarathon   1:32:47.8 
+----------------------------------------
+
 Niesen Treppenlauf
 
 ---------------------------------------
@@ -148,26 +170,6 @@ Niesen Treppenlauf
 
  2019   Niesen Treppenlauf   1:22:52.0 
 ---------------------------------------
-
-Luzern Halbmarathon
-
-----------------------------------------
- Jahr         Anlass            Zeit    
------- --------------------- -----------
- 2011   Luzern Halbmarathon   1:31:19.3 
-
- 2012   Luzern Halbmarathon   1:37:13.6 
-
- 2013   Luzern Halbmarathon   1:32:20.1 
-
- 2014   Luzern Halbmarathon   1:31:50.3 
-
- 2015   Luzern Halbmarathon   1:29:19.9 
-
- 2017   Luzern Halbmarathon   1:29:25.4 
-
- 2018   Luzern Halbmarathon   1:33:01.2 
-----------------------------------------
 
 Thuner Stadtlauf
 

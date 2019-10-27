@@ -1,7 +1,7 @@
 ---
 title: "Skitouring"
 author: "Kaspar Rufibach"
-date: '25 Oct 2019'
+date: '27 Oct 2019'
 output:
   html_document:
     keep_md: true
