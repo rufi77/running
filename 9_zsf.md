@@ -1,7 +1,7 @@
 ---
 title: "Yearly summaries"
 author: "Kaspar Rufibach"
-date: '27 Oct 2019, as per 12th August'
+date: '04 Dec 2019, as per 12th August'
 output:
   html_document:
     keep_md: true
@@ -21,7 +21,7 @@ output:
 
 
 
-Numbers labelled 2020 are linearly extrapolated from 2019-10-27 to the full year of 2019.
+Numbers labelled 2020 are linearly extrapolated from 2019-12-04 to the full year of 2019.
 
 # Yearly summaries
 
@@ -53,7 +53,7 @@ Numbers labelled 2020 are linearly extrapolated from 2019-10-27 to the full year
 
 # Activity per year
 
-Shaded red bars are linearly extrapolated from 2019-10-27 to the entire year.
+Shaded red bars are linearly extrapolated from 2019-12-04 to the entire year.
 
 ## Bike
 
