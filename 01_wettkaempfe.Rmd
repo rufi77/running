@@ -1,0 +1,278 @@
+---
+title: "Wettkaempfe"
+author: "Kaspar Rufibach"
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
+output:
+  html_document:
+    keep_md: true
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+  github_document: 
+    toc: true
+    toc_depth: 2
+  pdf_document:
+    toc: yes
+  word_document:
+    fig_caption: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "lubridate", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+path <- paste(getwd(), "/", sep = "")
+
+## =================================================================
+## input uebu data
+## =================================================================
+suppressWarnings(wett_in <- as.data.frame(read_excel(paste(path, "data/wettkaempfe.xlsx", sep = ""), 
+                                    col_types = c(rep("text", 2),      # 
+                                                  rep("numeric", 6),       # 
+                                                  rep("text", 1),
+                                                  rep("numeric", 5),
+                                                  rep("text", 1)))))
+wett <- subset(wett_in, Alexander == 0 & Lorenz == 0)
+
+# order by decreasing frequency of participation
+Anlass <- wett[ ,"Anlass"]
+wett <- merge(wett, table(Anlass), by = "Anlass")
+wett <- wett[with(wett, rev(order(Freq, -Jahr))), ]
+
+Anlass    <- wett[ ,"Anlass"]
+Disziplin <- wett[ ,"Disziplin"]
+Distanz   <- wett[ ,"Distanz"]
+Jahr      <- wett[ ,"Jahr"]
+Nr        <- wett[ ,"Nr"]
+Block     <- wett[ ,"Block"]
+Zeit      <- hms(wett[, "Zeit"], quiet = TRUE)
+Kat_Rang  <- wett[ ,"Kat_Rang"]
+Kat_Teiln <- wett[ ,"Kat_Teiln"]
+M_Rang    <- wett[ ,"M_Rang"]
+M_Teiln   <- wett[ ,"M_Teiln"]
+Gewicht   <- wett[ ,"Gewicht"]
+Kommentar <- wett[ ,"Kommentar"]
+
+# min/km
+minkm <- round(as.period(as.period(Zeit, unit = "sec") / Distanz * 1000, unit = "min"), 1)
+
+# time trafo function
+s <- seconds(Zeit)[1]
+
+# fuer Ranganalysen, zeige nur Lauefe mit >= atleast Teilnahmen
+atleast <- 2
+```
+
+
+# Anzahl Teilnahmen pro Anlass
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
+par(mfrow = c(1, 1), las = 2, mar = c(19, 3, 1, 1))
+a <- table(Anlass)
+a <- a[rev(order(a))]
+barplot(a, ylim = c(0, 16))
+abline(h = 1:100, col = grey(0.5), lty = 2)
+```
+
+# Anzahl Teilnahmen pro Jahr und Disziplin
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), las = 2, mar = c(4.5, 3, 1, 1))
+b <- table(Disziplin, Jahr)
+barplot(b, beside = TRUE, legend = TRUE, args.legend = list("bty" = "n", "x" = "topleft"))
+abline(h = 1:100, col = grey(0.5), lty = 2)
+```
+
+Bis jetzt habe ich an `r sum(Disziplin == "Run")` Laeufen und `r sum(Disziplin == "Bike")` Bikerennen teilgenommen.
+
+# Teilnahmen pro Anlass
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), las = 2, mar = c(4, 17, 1, 1))
+ys <- length(a):1
+
+plot(0, 0, type = "n", xlim = range(Jahr), ylim = c(-1, length(unique(Anlass))), xaxt = "n", xlab = "", ylab = "", yaxt = "n")
+axis(1, at = sort(unique(Jahr)), labels = sort(unique(Jahr)))
+axis(2, at = ys, labels = names(a))
+legend(2002, 0, c("Run", "Bike"), lty = 1, lwd = c(NA, NA), pch = c(19, 17), bty = "n", horiz = TRUE, pt.cex = 1.5)
+
+for (i in 1:length(a)){
+     ind <- (Anlass == names(a)[i])
+     
+     points(Jahr[ind], rep(ys[i], sum(ind)), col = i, pch = ifelse(Disziplin[ind][1] == "Run", 19, 17), cex = 1.5)
+}
+```
+
+# Relative Ränge und Zeiten
+
+## Pro Wettkampf
+
+Es werden nur Wettkaempfe mit mind. `r atleast` Teilnahmen gezeigt.
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
+
+# ypos
+ypos <- seq(0, 14100, by = 300)
+
+# ylabs
+h1 <- paste("0H ", seq(0, 55, by = 5), "M 00.0S")
+h2 <- paste("1H ", seq(0, 55, by = 5), "M 00.0S")
+h3 <- paste("2H ", seq(0, 55, by = 5), "M 00.0S")
+h4 <- paste("3H ", seq(0, 55, by = 5), "M 00.0S")
+ylab <- hms(c(h1, h2, h3, h4))
+
+# Konstruktion achsenbeschriftung:  
+# a <- hms("1H 00M 00.0S")
+# seconds(a)
+
+for (i in 1:length(a)){
+     ind <- (Anlass == names(a)[i])
+
+    if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+           
+          cat(paste(names(a)[i], "\n", sep = "")) 
+          
+          # Relativer Rang
+          par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
+          y <- pmin(1, (Kat_Rang / Kat_Teiln)[ind], na.rm = TRUE)
+          plot(Jahr[ind], y, type = "b", pch = 1, 
+               main = paste(names(a)[i], ": relativer Rang Kategorie", sep = ""), 
+               xaxt = "n", ylim = c(0, max(round(10 * y) / 10) + 0.1), lwd = 2,
+               xlab = "", ylab = "Relativer Rang Kategorie", col = 2)
+          axis(1, at = Jahr, labels = Jahr)
+          abline(h = 0:10 / 10, lty = 2, col = grey(0.5))
+          
+          y <- pmin(1, (M_Rang / M_Teiln)[ind], na.rm = TRUE)
+          plot(Jahr[ind], y, type = "b", pch = 1, 
+               main = paste(names(a)[i], ": relativer Rang Maenner", sep = ""), 
+               xaxt = "n", ylim = c(0, max(round(10 * y) / 10) + 0.1), lwd = 2,
+               xlab = "", ylab = "Relativer Rang Maenner", col = 2)
+          axis(1, at = Jahr, labels = Jahr)
+          abline(h = 0:10 / 10, lty = 2, col = grey(0.5))
+
+          # Zeit
+          par(mfrow = c(1, 1), mar = c(3.5, 6, 3, 1), las = 2)
+          y <- as.numeric(Zeit[ind])
+          plot(Jahr[ind], y, type = "b", pch = 1, 
+               main = paste(names(a)[i], ": Zeit", sep = ""), yaxt = "n",
+               xlab = "", ylab = "", col = 2, ylim = c(min(y, na.rm = TRUE), max(y, na.rm = TRUE)), lwd = 2)
+          axis(2, at = ypos, labels = as.character(ylab))
+
+          }
+} # end i
+```
+
+## Innerhalb Maenner ueber alle Wettkaempfe
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
+par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
+plot(0, 0, type = "n", main = "Relativer Rang Maenner", xlim = range(Jahr), 
+     xaxt = "n", ylim = c(0, 1), xlab = "", ylab = "Relativer Rang Maenner")
+axis(1, at = Jahr, labels = Jahr)
+abline(h = 0:5 / 10, lty = 2, col = grey(0.5))
+
+leg.nam <- NULL
+leg.col <- NULL
+leg.sym <- NULL
+leg.lty <- NULL
+
+for (i in 1:length(a)){
+    ind <- (Anlass == names(a)[i])
+    y0 <- (M_Rang / M_Teiln)[ind]
+    y <- pmin(1, y0, na.rm = TRUE)
+
+    # nur eine Teilnahme
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) == 1){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i + 1)
+          leg.sym <- c(leg.sym, i)
+          leg.lty <- c(leg.lty, NA)
+          points(Jahr[ind], y, pch = i, col = i + 1, lwd = 2)
+          }
+
+    # >= 2 atleast Teilnahmen
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i)
+          leg.sym <- c(leg.sym, 1)
+          leg.lty <- c(leg.lty, 1)
+          lines(Jahr[ind], y, type = "b", pch = 1, col = i, lty = 1, lwd = 2)
+          }
+} # end i
+
+legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
+```
+
+
+## Innerhalb Alterskategorie ueber alle Wettkaempfe
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
+par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
+plot(0, 0, type = "n", main = "Relativer Rang Alterskategorie", xlim = range(Jahr), 
+     xaxt = "n", ylim = c(0, 1), xlab = "", ylab = "Relativer Rang Alterskategorie")
+axis(1, at = Jahr, labels = Jahr)
+abline(h = 0:5 / 10, lty = 2, col = grey(0.5))
+
+leg.nam <- NULL
+leg.col <- NULL
+leg.sym <- NULL
+leg.lty <- NULL
+
+for (i in 1:length(a)){
+    ind <- (Anlass == names(a)[i])
+    y0 <- (Kat_Rang / Kat_Teiln)[ind]
+    y <- pmin(1, y0, na.rm = TRUE)
+
+    # nur eine Teilnahme
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) == 1){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i + 1)
+          leg.sym <- c(leg.sym, i)
+          leg.lty <- c(leg.lty, NA)
+          points(Jahr[ind], y, pch = i, col = i + 1, lwd = 2)
+          }
+
+    # >= 2 atleast Teilnahmen
+    if (all(is.na(y0)) == FALSE & all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+           
+          # Relativer Rang
+          leg.nam <- c(leg.nam, names(a)[i])
+          leg.col <- c(leg.col, i)
+          leg.sym <- c(leg.sym, 1)
+          leg.lty <- c(leg.lty, 1)
+          lines(Jahr[ind], y, type = "b", pch = 1, col = i, lty = 1, lwd = 2)
+          }
+} # end i
+
+legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
+```
+
+
+# Tabellen mit Zeiten
+
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+panderOptions('knitr.auto.asis', FALSE)
+for (i in 1:length(a)){
+    ind <- (Anlass == names(a)[i])
+
+    if (all(is.na(Zeit[ind])) == FALSE){
+           
+          cat(paste(names(a)[i], "\n", sep = "")) 
+          d <- as.data.frame(wett[ind, c("Jahr", "Anlass", "Zeit")])
+          rownames(d) <- NULL
+          pander(d)          
+
+          }
+} # end i
+```
