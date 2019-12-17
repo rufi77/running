@@ -1,5 +1,5 @@
 ---
-title: "Some considerations when moving to pharma as a statistician"
+title: "Skitouring"
 author: "Kaspar Rufibach"
 date: '17 Dec 2019'
 output:
@@ -21,4 +21,13 @@ output:
 
 
 
-Hints for people applying: BBS seminars, interact in general, reach out to folks, present at conferences, apply multiple times, ... put on webpage link on twitter
+# Skitouren
+
+List by far not complete.
+
+
+
+
+
+
+<img src="03_winter_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
