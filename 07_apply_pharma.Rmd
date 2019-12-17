@@ -39,13 +39,13 @@ The Department of Biostatistics has about 220 statisticians located in Basel (Sw
 
 ## Methods, Collaboration, and Outreach Group (MCO)
 
-MCO is a group within the Department of Biostatistics, currently consisting of the head and four full-time permanent members (one of which is [Kaspar Rufibach](http://www.kasparrufibach.ch). 
+MCO is a group within the Department of Biostatistics, currently consisting of the head and four full-time permanent members (one of which is [Kaspar Rufibach](http://www.kasparrufibach.ch)). 
 
 The broad remit of the group is to support the clinical biostatisticians in their daily work, through consulting, methods development, collaboration and outreach activities (e.g. in X-pharma working groups, supervision of students, collaboration with academics or regulators, etc). Typically, members of the group have broad experience in applied and clinical biostatistics. 
 
 # Jobs at Roche
 
-[Roche job portal(https://www.roche.com/careers/jobs/jobsearch.htm)
+[Roche job portal](https://www.roche.com/careers/jobs/jobsearch.htm)
 
 Search for "statistics" and "biostatistics".
 
