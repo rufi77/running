@@ -6,6 +6,5 @@
 * [Summary various hikes, runs, and rides](04_summer.md)
 * [Summary activities per year](05_zsf.md)
 * [Summary travelling](06_travel.md)
-* [Thoughts when applying to a pharma statistician job](pharma.md)
 
 Author: [Kaspar Rufibach](mailto:kaspar.rufibach@gmail.com)
