@@ -35,7 +35,7 @@ The Department of Biostatistics has about 220 statisticians located in Basel (Sw
 
 [Biostatistics leadership team on this vision](https://www.youtube.com/watch?v=KeA3e7z7E9Q&authuser=0)
 
-[Poster that was presented at an internal career development day, outlining what we do](20180918_DataScienceCareerDay_Biometrics_BioStats.pptx)
+[Poster that was presented at an internal career development day, outlining what we do](data/20180918_DataScienceCareerDay_Biometrics_BioStats.pptx)
 
 ## Methods, Collaboration, and Outreach Group (MCO)
 
