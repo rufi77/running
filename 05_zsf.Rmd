@@ -1,7 +1,7 @@
 ---
 title: "Yearly summaries"
 author: "Kaspar Rufibach"
-date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`, as per 12th August'
+date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`, as per 31st December 2019'
 output:
   html_document:
     keep_md: true
@@ -56,7 +56,7 @@ toda <- Sys.Date()
 first <- as.Date(paste(substr(toda, 1, 4), "-01-01", sep = ""))
 frac <- as.numeric((toda - first) / 365.25)
 #sportKR[, lastcol] <- sportKR[, lastcol] / frac
-include <- c(include, tail(include, 1) + 1)
+#include <- c(include, tail(include, 1) + 1)
 
 # add extrapolation, for simplicity give it next year as label
 sportKR[, as.character(as.numeric(tail(colnames(sportKR), 1)) + 1)] <- sportKR[, lastcol] / frac
@@ -71,9 +71,9 @@ skal <- c(1, 52)
 skal.nam <- c(" per year", " per week")
 ```
 
-Numbers labelled `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year of `r tail(colnames(dat), 2)[1]`.
+<!-- Numbers labelled `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year of `r tail(colnames(dat), 2)[1]`. -->
 
-# Yearly summaries
+# Yearly summaries {.tabset .tabset-fade .tabset-pills}
 
 ## Kilometer
 
@@ -90,11 +90,18 @@ legend("bottomleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "
 
 ## Elevation gain
 
-```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
-par(mfrow = c(1, 1), mar = c(3.5, 5, 3, 1), las = 2)
+```{r, echo = FALSE, results = 'asis', message = FALSE}
 km <- subset(sportKR, Einheit == "Hm")
 xs <- as.numeric(colnames(km)[3:ncol(km)])
 ys <- km[, 3:ncol(km)]
+ystot <- apply(ys, 2, sum)
+ystot <- rbind(ystot, ystot / 52, ystot / 365)
+rownames(ystot) <- c("Total", "per week", "per day")
+pander(ystot) 
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), mar = c(3.5, 5, 3, 1), las = 2)
 plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "", 
      main = "Elevation gain")
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
@@ -121,7 +128,7 @@ ys <- km[, 3:ncol(km)]
 plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "Stunden", 
      main = "Stunden")
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
-legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+legend("bottomleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 ```
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
@@ -157,10 +164,10 @@ plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab =
      main = "Number", xaxt = "n")
 axis(1, at = xs, labels = paste(xs - 1, " / ", xs, sep = ""))
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
-legend(2013.5, 20, legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
+legend(2013.5, 14, legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 ```
 
-# Activity per year
+# Activity per year {.tabset .tabset-fade .tabset-pills}
 
 Shaded red bars are linearly extrapolated from `r toda` to the entire year.
 
@@ -196,7 +203,7 @@ for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 for (i in 13:nrow(dat)){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
-# Activity per week
+# Activity per week {.tabset .tabset-fade .tabset-pills}
 
 ## Bike
 

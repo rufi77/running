@@ -1,5 +1,5 @@
 ---
-title: "Skitouring"
+title: "Countries visited"
 author: "Kaspar Rufibach"
 date: '01 Jan 2020'
 output:
@@ -21,13 +21,10 @@ output:
 
 
 
-# Skitouren
+# Per year and country
 
-List by far not complete.
+<img src="06_travel_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
 
+# Per year
 
-
-
-
-
-<img src="03_winter_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="06_travel_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />

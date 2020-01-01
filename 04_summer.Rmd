@@ -43,28 +43,29 @@ all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung
 all[is.na(all)] <- ""
 ```
 
+# Activities {.tabset .tabset-fade .tabset-pills}
 
-# Bike
+## Bike
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 pander(all %>% filter(sport == "Bike")) 
 ```
 
 
-# Run
+## Run
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 pander(all %>% filter(sport == "Run")) 
 ```
 
 
-# Hike
+## Hike
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 pander(all %>% filter(sport == "Hike")) 
 ```
 
-# Skitour
+## Skitour
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 pander(all %>% filter(sport == "Skitour")) 

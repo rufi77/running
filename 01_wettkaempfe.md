@@ -1,7 +1,7 @@
 ---
 title: "Wettkaempfe"
 author: "Kaspar Rufibach"
-date: '17 Dec 2019'
+date: '01 Jan 2020'
 output:
   html_document:
     keep_md: true
@@ -36,7 +36,7 @@ Bis jetzt habe ich an 49 Laeufen und 5 Bikerennen teilgenommen.
 
 <img src="01_wettkaempfe_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-# Relative Ränge und Zeiten
+# Relative Ränge und Zeiten {.tabset .tabset-fade .tabset-pills}
 
 ## Pro Wettkampf
 

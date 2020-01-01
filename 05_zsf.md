@@ -1,7 +1,7 @@
 ---
 title: "Yearly summaries"
 author: "Kaspar Rufibach"
-date: '17 Dec 2019, as per 12th August'
+date: '01 Jan 2020, as per 31st December 2019'
 output:
   html_document:
     keep_md: true
@@ -21,9 +21,9 @@ output:
 
 
 
-Numbers labelled 2020 are linearly extrapolated from 2019-12-17 to the full year of 2019.
+<!-- Numbers labelled 2019 are linearly extrapolated from 2020-01-01 to the full year of 2018. -->
 
-# Yearly summaries
+# Yearly summaries {.tabset .tabset-fade .tabset-pills}
 
 ## Kilometer
 
@@ -31,66 +31,77 @@ Numbers labelled 2020 are linearly extrapolated from 2019-12-17 to the full year
 
 ## Elevation gain
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+
+----------------------------------------------------------------------
+    &nbsp;      2013    2014    2015    2016    2017    2018    2019  
+-------------- ------- ------- ------- ------- ------- ------- -------
+  **Total**     73817   48432   48372   51288   70050   87186   98671 
+
+ **per week**   1420    931.4   930.2   986.3   1347    1677    1898  
+
+ **per day**    202.2   132.7   132.5   140.5   191.9   238.9   270.3 
+----------------------------------------------------------------------
 
 <img src="05_zsf_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-## Time
-
 <img src="05_zsf_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+
+## Time
 
 <img src="05_zsf_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
+<img src="05_zsf_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+
 ## Places
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 # Summary over winter seasons (not years)
 
 ## Skiing
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
-# Activity per year
+# Activity per year {.tabset .tabset-fade .tabset-pills}
 
-Shaded red bars are linearly extrapolated from 2019-12-17 to the entire year.
+Shaded red bars are linearly extrapolated from 2020-01-01 to the entire year.
 
 ## Bike
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-8-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-8-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-9-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-9-3.png" style="display: block; margin: auto;" />
 
 ## Run
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-9-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-9-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-10-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-10-3.png" style="display: block; margin: auto;" />
 
 ## Hiking
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-10-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-10-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-11-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-11-3.png" style="display: block; margin: auto;" />
 
 ## Exersuisse
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
 
 ## Orte
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-3.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-4.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-5.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-6.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-7.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-12-8.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-3.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-4.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-5.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-6.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-7.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-8.png" style="display: block; margin: auto;" />
 
-# Activity per week
+# Activity per week {.tabset .tabset-fade .tabset-pills}
 
 ## Bike
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-13-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-14-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-14-3.png" style="display: block; margin: auto;" />
 
 ## Run
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-14-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-14-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-15-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-15-3.png" style="display: block; margin: auto;" />
 
 ## Hiking
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-15-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-15-3.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-16-2.png" style="display: block; margin: auto;" /><img src="05_zsf_files/figure-html/unnamed-chunk-16-3.png" style="display: block; margin: auto;" />
 
 ## Exersuisse
 
-<img src="05_zsf_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
+<img src="05_zsf_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
 

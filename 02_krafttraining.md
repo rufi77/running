@@ -1,7 +1,7 @@
 ---
 title: "Krafttraining"
 author: "Kaspar Rufibach"
-date: '17 Dec 2019'
+date: '01 Jan 2020'
 output:
   html_document:
     keep_md: true
@@ -43,11 +43,6 @@ output:
 # Uebungen des letzten absolvierten Programms
 
 <img src="02_krafttraining_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /><img src="02_krafttraining_files/figure-html/unnamed-chunk-3-2.png" style="display: block; margin: auto;" /><img src="02_krafttraining_files/figure-html/unnamed-chunk-3-3.png" style="display: block; margin: auto;" /><img src="02_krafttraining_files/figure-html/unnamed-chunk-3-4.png" style="display: block; margin: auto;" /><img src="02_krafttraining_files/figure-html/unnamed-chunk-3-5.png" style="display: block; margin: auto;" /><img src="02_krafttraining_files/figure-html/unnamed-chunk-3-6.png" style="display: block; margin: auto;" />
-
-
-
-
-
 
 # Alle Uebungen
 

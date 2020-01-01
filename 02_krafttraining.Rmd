@@ -106,11 +106,6 @@ for (i in 1:ncol(last3)){
 } # end i
 ```
 
-
-
-
-
-
 # Alle Uebungen
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
