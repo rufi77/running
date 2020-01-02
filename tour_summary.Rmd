@@ -1,0 +1,15 @@
+## `r tour[i]` {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t <- (all %>% filter(end == tour[i]) %>% arrange(desc(date)))
+pander(t)
+```
+
+### By time
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t <- (all %>% filter(end == tour[i] & time != "") %>% arrange(time, desc(date)))
+pander(t)
+```

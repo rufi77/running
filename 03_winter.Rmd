@@ -30,57 +30,165 @@ path <- "C:/rufibach/01 personal/05_sport/touren/"
 path <- paste(getwd(), "/", sep = "")
 
 ## =================================================================
-## input uebu data
+## input data
 ## =================================================================
-dat <- read_excel(paste(path, "data/touren.xls", sep = ""))
+touren <- read_excel(paste(path, "data/touren.xls", sep = ""))
 
-sport   <- dat[ ,"sport"]
-region  <- dat[ ,"region"]
-start   <- dat[ ,"start"]
-end     <- dat[ ,"end"]
-date    <- dat[ ,"date"]
-time    <- hms(as.vector(apply(dat[ ,"time"], 1:2, as.character)), quiet = TRUE)
-begleitung1 <- dat[ ,"begleitung1"]
-begleitung2 <- dat[ ,"begleitung2"]
-
-Jahr0 <- year(as.data.frame(dat)[, "date"])
+all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% 
+  arrange(sport, start, end, time) %>% filter(sport == "Skitour")
+all[is.na(all)] <- ""
 ```
 
-# Skitouren
+# Summary over years
 
-List by far not complete.
-
+List by far not complete. Multiple tours within same month are pooled and frequency is given.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = FALSE}
-with(subset(dat, sport == "Skitour"), pander(addmargins(table(as.character(end), year(date))), digits = 1))
+with(subset(touren, sport == "Skitour"), pander(addmargins(table(as.character(end), year(date))), digits = 1))
 ```
-
-
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 par(mfrow = c(1, 1), las = 2, mar = c(4, 8, 1, 1))
-Anlass <- subset(end, sport == "Skitour")[[1]]
-Jahr <- subset(Jahr0, sport == "Skitour")
-a <- table(Anlass)
-a <- a[rev(order(a))]
-ys <- length(a):1
-uJ <- sort(unique(Jahr))
 
-plot(0, 0, type = "n", xlim = range(Jahr), ylim = c(-1, length(unique(Anlass))), xaxt = "n", xlab = "", ylab = "", yaxt = "n")
-axis(1, at = uJ, labels = uJ)
-axis(2, at = ys, labels = names(a))
-abline(h = 1:100, lty = 3, col = grey(0.5))
+ski <- (touren %>% filter(sport == "Skitour") %>% select(start, end, date, time))
+tour <- unique(ski$end)
 
-for (i in 1:length(uJ)){
-  Anlass_i <- Anlass[Jahr == uJ[i]]
-    for (j in 1:length(unique(Anlass_i))){
-     ind <- (Anlass_i[j] == names(a))
-     xs <- uJ[i]
-     ys_j <- ys[ind]
-     text(xs, ys_j, col = i, labels = sum(unique(Anlass_i)[j] == Anlass_i), cex = 1.5)
-    }
+# x-axis
+xs <- ymd_hms(paste(min(year(ski$date)):max(year(ski$date) + 1), "0101 00:00:00", sep = ""))
+plot(xs, rep(0, length(xs)), type = "n", ylim = c(0, length(tour)), xaxt = "n", yaxt = "n", xlab = "", ylab = "")
+axis(1, at = xs, labels = year(xs))
+axis(2, at = 1:length(tour), labels = tour)
+abline(h = 1:length(tour), lty = 2, col = grey(0.5))
+offset <- 0.2
+
+for (i in 1:length(tour)){
+  dat.i <- (ski %>% filter(end == tour[i]) %>% arrange(date) %>% group_by("w" = paste(year(date), month(date), sep = "")) %>% add_tally() %>% slice(1))
+  text(dat.i$date, rep(i, nrow(dat.i)), dat.i$n)
 }
-
-
-for (i in 1:length(uJ)){text(uJ[i], -1, sum(Jahr == uJ[i]))}
 ```
+
+# Listing, chronologically and by time
+
+For listings by time, tours with missing time are omitted.
+
+```{r, include=FALSE}
+i <- 1
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 2
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 3
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 4
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 5
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 6
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 7
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 8
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 9
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 10
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 11
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 12
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 13
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 14
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 15
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 16
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+```{r, include=FALSE}
+i <- 17
+```
+
+```{r test-main, child = 'tour_summary.Rmd'}
+```
+
+
+

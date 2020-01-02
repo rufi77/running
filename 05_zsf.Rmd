@@ -69,6 +69,9 @@ dat <- dat[, include - 2]
 # choose scaling
 skal <- c(1, 52)
 skal.nam <- c(" per year", " per week")
+
+# monthly ascent
+ascent <- as.data.frame(read_excel(paste(path, "data/ascentmonthly.xlsx", sep = ""), col_types = NULL))
 ```
 
 <!-- Numbers labelled `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year of `r tail(colnames(dat), 2)[1]`. -->
@@ -88,7 +91,7 @@ for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
 legend("bottomleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 ```
 
-## Elevation gain
+## Ascent
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 km <- subset(sportKR, Einheit == "Hm")
@@ -103,12 +106,12 @@ pander(ystot)
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 par(mfrow = c(1, 1), mar = c(3.5, 5, 3, 1), las = 2)
 plot(0, 0, type = "n", xlim = range(xs), ylim = c(0, max(ys)), xlab = "", ylab = "", 
-     main = "Elevation gain")
+     main = "Ascent")
 for (i in 1:nrow(km)){lines(xs, ys[i, ], type = "b", col = i + 1, lwd = 2)}
 legend("topleft", legend = km$Sport, lty = 1, col = 2:(nrow(km) + 1), bty = "n", lwd = 2)
 
 par(las = 0)
-mtext(text = "Elevation gain", side = 2, line = 4, adj = 0.5)
+mtext(text = "Ascent", side = 2, line = 4, adj = 0.5)
 ```
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
@@ -116,6 +119,16 @@ df <- rbind(cbind(xs, t(ys)[, 1]), cbind(xs, t(ys)[, 2]), cbind(xs, t(ys)[, 3]),
 df <- data.frame(df, rep(as.character(km[, "Sport"]), each = length(xs)))
 colnames(df) <- c("Jahr", "Hm", "Disziplin")
 ggplot(df, aes(x = Jahr, y = Hm, fill = Disziplin)) + geom_area(position = 'stack')
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(mfrow = c(1, 1), mar = c(6, 5, 3, 1), las = 2)
+plot(0, 0, type = "n", xlim = c(1, 12), ylim = c(0, 12000), xlab = "", ylab = "", main = "Ascent", xaxt = "n")
+for (i in 2:ncol(ascent)){lines(1:12, ascent[, i], type = "b", col = i, lwd = 2)}
+axis(1, at = 1:12, labels = ascent[, "month"])
+par(las = 0)
+mtext(text = "Ascent (Hm)", side = 2, line = 4, adj = 0.5)
+legend("bottomleft", legend = paste(colnames(ascent)[-1], ": ", apply(ascent[, -1], 2, sum), sep = ""), lty = 1, col = 2:ncol(ascent), bty = "n", lwd = 2)
 ```
 
 ## Time
