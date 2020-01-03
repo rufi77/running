@@ -283,6 +283,8 @@ For listings by time, tours with missing time are omitted.
 ------------ -------------- ------------ ------------
  Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0 
 
+ Boudry Bhf   Creux du Van   2016-07-25              
+
  Boudry Bhf   Creux du Van   2011-08-20   01:27:00.0 
 -----------------------------------------------------
 
@@ -364,39 +366,6 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------
 
 
-## Schwarzwaldalp Beiz {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
------------------------------------------------------------------
-      start                end              date         time    
------------------ --------------------- ------------ ------------
- Frutal Willigen   Schwarzwaldalp Beiz   2018-06-05   00:56:14.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2018-05-26   00:59:16.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2009-10-19   01:00:00.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2007-10-02   00:56:00.0 
------------------------------------------------------------------
-
-### By time
-
-
------------------------------------------------------------------
-      start                end              date         time    
------------------ --------------------- ------------ ------------
- Frutal Willigen   Schwarzwaldalp Beiz   2007-10-02   00:56:00.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2018-06-05   00:56:14.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2018-05-26   00:59:16.0 
-
- Frutal Willigen   Schwarzwaldalp Beiz   2009-10-19   01:00:00.0 
------------------------------------------------------------------
-
-
 ## Zwirgi {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -409,10 +378,6 @@ For listings by time, tours with missing time are omitted.
 
  Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
 
- Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
-
- Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
-
  Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
 ----------------------------------------------------
 
@@ -423,10 +388,6 @@ For listings by time, tours with missing time are omitted.
       start         end        date         time    
 ----------------- -------- ------------ ------------
  Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
-
- Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
-
- Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
 
  Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
 
