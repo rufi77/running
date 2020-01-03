@@ -1,7 +1,7 @@
 ---
 title: "Krafttraining"
 author: "Kaspar Rufibach"
-date: '01 Jan 2020'
+date: '03 Jan 2020'
 output:
   html_document:
     keep_md: true
