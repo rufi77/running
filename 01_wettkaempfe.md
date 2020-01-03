@@ -1,7 +1,7 @@
 ---
 title: "Wettkaempfe"
 author: "Kaspar Rufibach"
-date: '01 Jan 2020'
+date: '03 Jan 2020'
 output:
   html_document:
     keep_md: true
@@ -36,62 +36,27 @@ Bis jetzt habe ich an 49 Laeufen und 5 Bikerennen teilgenommen.
 
 <img src="01_wettkaempfe_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-# Relative Ränge und Zeiten {.tabset .tabset-fade .tabset-pills}
+# Relative Ränge und Zeiten 
 
-## Pro Wettkampf
-
-Es werden nur Wettkaempfe mit mind. 2 Teilnahmen gezeigt.
+Grafiken werden nur für Wettkämpfe mit mind. 2 Teilnahmen gezeigt. Für alle anderen Wettkämpfe wird nur eine Tabelle mit den Zeiten gezeigt.
 
 
-```
-## Grand Prix von Bern
-```
+## Grand Prix von Bern {.tabset .tabset-fade .tabset-pills}
 
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-2.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-3.png" style="display: block; margin: auto;" />
+### Relativer Rang Kategorie
 
-```
-## Luzern Halbmarathon
-```
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-4.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-5.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-6.png" style="display: block; margin: auto;" />
+### Relativer Range Männer
 
-```
-## Niesen Treppenlauf
-```
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-7.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-8.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-9.png" style="display: block; margin: auto;" />
+### Zeit
 
-```
-## Thuner Stadtlauf
-```
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-10.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-11.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-12.png" style="display: block; margin: auto;" />
+### Tabelle Zeiten
 
-```
-## Stockhorn Halbmarathon
-```
-
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-13.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-14.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-15.png" style="display: block; margin: auto;" />
-
-```
-## Brienzerseelauf
-```
-
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-16.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-17.png" style="display: block; margin: auto;" /><img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-18.png" style="display: block; margin: auto;" />
-
-## Innerhalb Maenner ueber alle Wettkaempfe
-
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
-
-
-## Innerhalb Alterskategorie ueber alle Wettkaempfe
-
-<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
-
-
-# Tabellen mit Zeiten
-
-Grand Prix von Bern
 
 ----------------------------------------
  Jahr         Anlass            Zeit    
@@ -129,7 +94,26 @@ Grand Prix von Bern
  2019   Grand Prix von Bern   1:09:08.3 
 ----------------------------------------
 
-Luzern Halbmarathon
+
+
+
+
+## Luzern Halbmarathon {.tabset .tabset-fade .tabset-pills}
+
+### Relativer Rang Kategorie
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+
+### Relativer Range Männer
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+
+### Zeit
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+
+### Tabelle Zeiten
+
 
 ----------------------------------------
  Jahr         Anlass            Zeit    
@@ -151,7 +135,26 @@ Luzern Halbmarathon
  2019   Luzern Halbmarathon   1:32:47.8 
 ----------------------------------------
 
-Niesen Treppenlauf
+
+
+
+
+## Niesen Treppenlauf {.tabset .tabset-fade .tabset-pills}
+
+### Relativer Rang Kategorie
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" />
+
+### Relativer Range Männer
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
+
+### Zeit
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+
+### Tabelle Zeiten
+
 
 ---------------------------------------
  Jahr         Anlass           Zeit    
@@ -171,7 +174,26 @@ Niesen Treppenlauf
  2019   Niesen Treppenlauf   1:22:52.0 
 ---------------------------------------
 
-Thuner Stadtlauf
+
+
+
+
+## Thuner Stadtlauf {.tabset .tabset-fade .tabset-pills}
+
+### Relativer Rang Kategorie
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+
+### Relativer Range Männer
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
+
+### Zeit
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" />
+
+### Tabelle Zeiten
+
 
 -------------------------------------
  Jahr        Anlass          Zeit    
@@ -189,7 +211,26 @@ Thuner Stadtlauf
  2013   Thuner Stadtlauf   0:41:01.5 
 -------------------------------------
 
-Stockhorn Halbmarathon
+
+
+
+
+## Stockhorn Halbmarathon {.tabset .tabset-fade .tabset-pills}
+
+### Relativer Rang Kategorie
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
+
+### Relativer Range Männer
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
+
+### Zeit
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
+
+### Tabelle Zeiten
+
 
 -------------------------------------------
  Jahr           Anlass             Zeit    
@@ -201,7 +242,43 @@ Stockhorn Halbmarathon
  2015   Stockhorn Halbmarathon   2:26:03.0 
 -------------------------------------------
 
-Brienzerseelauf
+
+
+
+
+## Biennathlon {.tabset .tabset-fade .tabset-pills}
+
+
+---------------------------
+ Jahr     Anlass      Zeit 
+------ ------------- ------
+ 2009   Biennathlon    NA  
+
+ 2011   Biennathlon    NA  
+
+ 2012   Biennathlon    NA  
+---------------------------
+
+
+
+
+
+## Brienzerseelauf {.tabset .tabset-fade .tabset-pills}
+
+### Relativer Rang Kategorie
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" />
+
+### Relativer Range Männer
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" />
+
+### Zeit
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-36-1.png" style="display: block; margin: auto;" />
+
+### Tabelle Zeiten
+
 
 ------------------------------------
  Jahr       Anlass          Zeit    
@@ -211,7 +288,12 @@ Brienzerseelauf
  2008   Brienzerseelauf   1:29:13.0 
 ------------------------------------
 
-Nationalpark Bike Marathon: Livigno - Scuol
+
+
+
+
+## Nationalpark Bike Marathon: Livigno - Scuol {.tabset .tabset-fade .tabset-pills}
+
 
 ------------------------------------------------
  Jahr             Anlass                Zeit    
@@ -220,7 +302,12 @@ Nationalpark Bike Marathon: Livigno - Scuol
               Livigno - Scuol                   
 ------------------------------------------------
 
-Mountain Man
+
+
+
+
+## Mountain Man {.tabset .tabset-fade .tabset-pills}
+
 
 ---------------------------------
  Jahr      Anlass        Zeit    
@@ -228,7 +315,12 @@ Mountain Man
  2018   Mountain Man   2:31:06.0 
 ---------------------------------
 
-Luzerner Stadtlauf (Musegg Classic)
+
+
+
+
+## Luzerner Stadtlauf (Musegg Classic) {.tabset .tabset-fade .tabset-pills}
+
 
 -----------------------------------------------
  Jahr             Anlass               Zeit    
@@ -237,7 +329,12 @@ Luzerner Stadtlauf (Musegg Classic)
                  Classic)                      
 -----------------------------------------------
 
-Kerzerslauf
+
+
+
+
+## Kerzerslauf {.tabset .tabset-fade .tabset-pills}
+
 
 --------------------------------
  Jahr     Anlass        Zeit    
@@ -245,7 +342,25 @@ Kerzerslauf
  2013   Kerzerslauf   1:06:17.1 
 --------------------------------
 
-Halbmarathon Lausanne
+
+
+
+
+## Inferno Team Trophy {.tabset .tabset-fade .tabset-pills}
+
+
+-----------------------------------
+ Jahr         Anlass          Zeit 
+------ --------------------- ------
+ 2001   Inferno Team Trophy    NA  
+-----------------------------------
+
+
+
+
+
+## Halbmarathon Lausanne {.tabset .tabset-fade .tabset-pills}
+
 
 ------------------------------------------
  Jahr          Anlass             Zeit    
@@ -253,7 +368,12 @@ Halbmarathon Lausanne
  2004   Halbmarathon Lausanne   1:34:34.0 
 ------------------------------------------
 
-Berner Bärgloufcup: Gurten (Tag 1)
+
+
+
+
+## Berner Bärgloufcup: Gurten (Tag 1) {.tabset .tabset-fade .tabset-pills}
+
 
 -----------------------------------------------
  Jahr             Anlass               Zeit    
@@ -262,7 +382,12 @@ Berner Bärgloufcup: Gurten (Tag 1)
                  (Tag 1)                       
 -----------------------------------------------
 
-Berner Bärgloufcup: Bantiger (Tag 4)
+
+
+
+
+## Berner Bärgloufcup: Bantiger (Tag 4) {.tabset .tabset-fade .tabset-pills}
+
 
 -------------------------------------------------
  Jahr              Anlass                Zeit    
@@ -271,10 +396,24 @@ Berner Bärgloufcup: Bantiger (Tag 4)
                   (Tag 4)                        
 -------------------------------------------------
 
-Bay to Breakers
+
+
+
+
+## Bay to Breakers {.tabset .tabset-fade .tabset-pills}
+
 
 ------------------------------------
  Jahr       Anlass          Zeit    
 ------ ----------------- -----------
  2007   Bay to Breakers   1:13:26.0 
 ------------------------------------
+
+# Innerhalb Maenner ueber alle Wettkaempfe
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+
+
+# Innerhalb Alterskategorie ueber alle Wettkaempfe
+
+<img src="01_wettkaempfe_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />

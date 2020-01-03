@@ -108,13 +108,13 @@ for (i in 1:length(a)){
 }
 ```
 
-# Relative Ränge und Zeiten {.tabset .tabset-fade .tabset-pills}
+# Relative Ränge und Zeiten 
 
-## Pro Wettkampf
+Grafiken werden nur für Wettkämpfe mit mind. `r atleast` Teilnahmen gezeigt. Für alle anderen Wettkämpfe wird nur eine Tabelle mit den Zeiten gezeigt.
 
-Es werden nur Wettkaempfe mit mind. `r atleast` Teilnahmen gezeigt.
+```{r hike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
-```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
 
 # ypos
 ypos <- seq(0, 14100, by = 300)
@@ -130,44 +130,20 @@ ylab <- hms(c(h1, h2, h3, h4))
 # a <- hms("1H 00M 00.0S")
 # seconds(a)
 
+out <- NULL
 for (i in 1:length(a)){
-     ind <- (Anlass == names(a)[i])
+  ind <- (Anlass == names(a)[i])
+  if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
+    out <- c(out, knit_expand('wett_summary.Rmd'))
+  } else {
+      out <- c(out, knit_expand('wett_summary1.Rmd'))
+  }
+}
 
-    if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
-           
-          cat(paste(names(a)[i], "\n", sep = "")) 
-          
-          # Relativer Rang
-          par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
-          y <- pmin(1, (Kat_Rang / Kat_Teiln)[ind], na.rm = TRUE)
-          plot(Jahr[ind], y, type = "b", pch = 1, 
-               main = paste(names(a)[i], ": relativer Rang Kategorie", sep = ""), 
-               xaxt = "n", ylim = c(0, max(round(10 * y) / 10) + 0.1), lwd = 2,
-               xlab = "", ylab = "Relativer Rang Kategorie", col = 2)
-          axis(1, at = Jahr, labels = Jahr)
-          abline(h = 0:10 / 10, lty = 2, col = grey(0.5))
-          
-          y <- pmin(1, (M_Rang / M_Teiln)[ind], na.rm = TRUE)
-          plot(Jahr[ind], y, type = "b", pch = 1, 
-               main = paste(names(a)[i], ": relativer Rang Maenner", sep = ""), 
-               xaxt = "n", ylim = c(0, max(round(10 * y) / 10) + 0.1), lwd = 2,
-               xlab = "", ylab = "Relativer Rang Maenner", col = 2)
-          axis(1, at = Jahr, labels = Jahr)
-          abline(h = 0:10 / 10, lty = 2, col = grey(0.5))
-
-          # Zeit
-          par(mfrow = c(1, 1), mar = c(3.5, 6, 3, 1), las = 2)
-          y <- as.numeric(Zeit[ind])
-          plot(Jahr[ind], y, type = "b", pch = 1, 
-               main = paste(names(a)[i], ": Zeit", sep = ""), yaxt = "n",
-               xlab = "", ylab = "", col = 2, ylim = c(min(y, na.rm = TRUE), max(y, na.rm = TRUE)), lwd = 2)
-          axis(2, at = ypos, labels = as.character(ylab))
-
-          }
-} # end i
+cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
 ```
 
-## Innerhalb Maenner ueber alle Wettkaempfe
+# Innerhalb Maenner ueber alle Wettkaempfe
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
 par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
@@ -213,7 +189,7 @@ legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2,
 ```
 
 
-## Innerhalb Alterskategorie ueber alle Wettkaempfe
+# Innerhalb Alterskategorie ueber alle Wettkaempfe
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 7}
 par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
@@ -256,23 +232,4 @@ for (i in 1:length(a)){
 } # end i
 
 legend("topleft", leg.nam, col = leg.col, pch = leg.sym, lty = leg.lty, lwd = 2, bty = "n")
-```
-
-
-# Tabellen mit Zeiten
-
-```{r, echo = FALSE, results = 'asis', message = FALSE}
-panderOptions('knitr.auto.asis', FALSE)
-for (i in 1:length(a)){
-    ind <- (Anlass == names(a)[i])
-
-    if (all(is.na(Zeit[ind])) == FALSE){
-           
-          cat(paste(names(a)[i], "\n", sep = "")) 
-          d <- as.data.frame(wett[ind, c("Jahr", "Anlass", "Zeit")])
-          rownames(d) <- NULL
-          pander(d)          
-
-          }
-} # end i
 ```

@@ -47,258 +47,50 @@ all0[is.na(all0)] <- ""
 
 For listings by time, tours with missing time are omitted.
 
-```{r, include=FALSE}
+```{r bike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
 all <- (all0 %>% filter(sport == "Bike"))
 tour <- unique(all$end)
+out1 <- NULL
+for (i in 1:length(tour)){
+  out1 <- c(out1, knit_expand('tour_summary.Rmd'))
+}
+
+cat(knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE))
 ```
 
-```{r, include=FALSE}
-i <- 1
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 2
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 3
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 4
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 5
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 6
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 7
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 8
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 9
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 10
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 11
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 12
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 13
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 14
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 15
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 16
-```
 
 # Run
 
-```{r, include=FALSE}
+```{r run, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
 all <- (all0 %>% filter(sport == "Run"))
 tour <- unique(all$end)
+out2 <- NULL
+for (i in 1:length(tour)){
+  out2 <- c(out2, knit_expand('tour_summary.Rmd'))
+}
+
+cat(knit(text = unlist(paste(out2, collapse = '\n')), quiet = TRUE))
 ```
 
-```{r, include=FALSE}
-i <- 1
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 2
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 3
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 4
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 5
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 6
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 7
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 8
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 9
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 10
-```
 
 # Hike
 
-```{r, include=FALSE}
+```{r hike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
 all <- (all0 %>% filter(sport == "Hike"))
 tour <- unique(all$end)
-```
+out3 <- NULL
+for (i in 1:length(tour)){
+  out3 <- c(out3, knit_expand('tour_summary.Rmd'))
+}
 
-```{r, include=FALSE}
-i <- 1
+cat(knit(text = unlist(paste(out3, collapse = '\n')), quiet = TRUE))
 ```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 2
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 3
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 4
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 5
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 6
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 7
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 8
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 9
-```
-

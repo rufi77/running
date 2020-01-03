@@ -67,128 +67,22 @@ for (i in 1:length(tour)){
 }
 ```
 
-# Listing, chronologically and by time
+# Listings
 
-For listings by time, tours with missing time are omitted.
+This section provides listings, chronologically and by time. For listings by time, tours with missing time are omitted.
 
-```{r, include=FALSE}
-i <- 1
+```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+out <- NULL
+for (i in 1:length(tour)){
+  out <- c(out, knit_expand('tour_summary.Rmd'))
+}
+
+cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
 ```
 
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 2
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 3
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 4
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 5
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 6
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 7
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 8
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 9
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 10
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 11
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 12
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 13
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 14
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 15
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 16
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
-
-```{r, include=FALSE}
-i <- 17
-```
-
-```{r test-main, child = 'tour_summary.Rmd'}
-```
 
 
 
