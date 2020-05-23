@@ -56,13 +56,14 @@ tour <- unique(ski$end)
 xs <- ymd_hms(paste(min(year(ski$date)):max(year(ski$date) + 1), "0101 00:00:00", sep = ""))
 plot(xs, rep(0, length(xs)), type = "n", ylim = c(0, length(tour)), xaxt = "n", yaxt = "n", xlab = "", ylab = "")
 axis(1, at = xs, labels = year(xs))
-axis(2, at = 1:length(tour), labels = tour)
+axis(2, at = length(tour):1, labels = tour)
 abline(h = 1:length(tour), lty = 2, col = grey(0.5))
 offset <- 0.2
 
 for (i in 1:length(tour)){
-  dat.i <- (ski %>% filter(end == tour[i]) %>% arrange(date) %>% group_by("w" = paste(year(date), month(date), sep = "")) %>% add_tally() %>% slice(1))
-  text(dat.i$date, rep(i, nrow(dat.i)), dat.i$n)
+  dat.i <- (ski %>% filter(end == tour[length(tour) - i + 1]) %>% arrange(date) %>% group_by("w" = paste(year(date), month(date), sep = "")) %>% add_tally() %>% slice(1))
+  xs.i <- ymd_hms(paste(as.character(dat.i$date), " 00:00:00", sep = ""))
+  text(xs.i, rep(i, nrow(dat.i)), dat.i$n)
 }
 ```
 
