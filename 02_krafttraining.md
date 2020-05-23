@@ -1,7 +1,7 @@
 ---
 title: "Krafttraining"
 author: "Kaspar Rufibach"
-date: '03 Jan 2020'
+date: '23 May 2020'
 output:
   html_document:
     keep_md: true
@@ -28,13 +28,13 @@ output:
 ------------------------------------------------------------------------
          &nbsp;              Kieser     Exersuisse    Kieser 2    Total 
 ------------------------- ------------ ------------ ------------ -------
-    Anzahl Programme           16           27           7         50   
+    Anzahl Programme           16           27           8         51   
 
-    Anzahl Trainings          305          506          109        920  
+    Anzahl Trainings          305          506          127        938  
 
      Erstes Training       2005-05-07   2011-01-12   2017-11-23         
 
- Bisher letztes Training   2011-01-10   2017-11-15   2019-11-20         
+ Bisher letztes Training   2011-01-10   2017-11-15   2020-02-12         
 ------------------------------------------------------------------------
 
 

@@ -39,7 +39,7 @@ suppressWarnings(touren <- as.data.frame(read_excel(paste(path, "data/touren.xls
                      ))))
 
 all0 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% 
-  arrange(sport, start, end, time)
+  arrange(sport, end, time)
 all0[is.na(all0)] <- ""
 ```
 
@@ -78,14 +78,13 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out2, collapse = '\n')), quiet = TRUE))
 ```
 
-
-# Hike
+# Bike and run
 
 ```{r hike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
 # how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
 
-all <- (all0 %>% filter(sport == "Hike"))
+all <- (all0 %>% filter(sport == "Bike and run"))
 tour <- unique(all$end)
 out3 <- NULL
 for (i in 1:length(tour)){
@@ -93,4 +92,20 @@ for (i in 1:length(tour)){
 }
 
 cat(knit(text = unlist(paste(out3, collapse = '\n')), quiet = TRUE))
+```
+
+# Hike
+
+```{r bikeandrun, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+all <- (all0 %>% filter(sport == "Hike"))
+tour <- unique(all$end)
+out4 <- NULL
+for (i in 1:length(tour)){
+  out4 <- c(out4, knit_expand('tour_summary.Rmd'))
+}
+
+cat(knit(text = unlist(paste(out4, collapse = '\n')), quiet = TRUE))
 ```

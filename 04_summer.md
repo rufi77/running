@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '03 Jan 2020'
+date: '23 May 2020'
 output:
   html_document:
     keep_md: true
@@ -26,70 +26,46 @@ output:
 For listings by time, tours with missing time are omitted.
 
 
-## Reuti (Postautoparkplatz) {.tabset .tabset-fade .tabset-pills}
+## Abzweigung Wanderweg {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
----------------------------------------------------------------
-  start               end                 date         time    
---------- --------------------------- ------------ ------------
- Alpbach   Reuti (Postautoparkplatz)   2019-08-27   00:26:02.1 
-
- Alpbach   Reuti (Postautoparkplatz)   2018-06-25   00:24:30.3 
-
- Alpbach   Reuti (Postautoparkplatz)   2018-05-27   00:27:40.0 
-
- Alpbach   Reuti (Postautoparkplatz)   2007-10-13   00:26:00.0 
-
- Alpbach   Reuti (Postautoparkplatz)   2007-09-24   00:22:00.0 
----------------------------------------------------------------
+--------------------------------------------------------------------
+       start                 end               date         time    
+------------------- ---------------------- ------------ ------------
+ Kreisel S'burgstr   Abzweigung Wanderweg   2017-07-29   00:51:40.0 
+--------------------------------------------------------------------
 
 ### By time
 
 
----------------------------------------------------------------
-  start               end                 date         time    
---------- --------------------------- ------------ ------------
- Alpbach   Reuti (Postautoparkplatz)   2007-09-24   00:22:00.0 
-
- Alpbach   Reuti (Postautoparkplatz)   2018-06-25   00:24:30.3 
-
- Alpbach   Reuti (Postautoparkplatz)   2007-10-13   00:26:00.0 
-
- Alpbach   Reuti (Postautoparkplatz)   2019-08-27   00:26:02.1 
-
- Alpbach   Reuti (Postautoparkplatz)   2018-05-27   00:27:40.0 
----------------------------------------------------------------
+--------------------------------------------------------------------
+       start                 end               date         time    
+------------------- ---------------------- ------------ ------------
+ Kreisel S'burgstr   Abzweigung Wanderweg   2017-07-29   00:51:40.0 
+--------------------------------------------------------------------
 
 
-## Winterluecke {.tabset .tabset-fade .tabset-pills}
+## Bidmi (via Reuti) {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
---------------------------------------------------
-  start        end           date         time    
---------- -------------- ------------ ------------
- Alpbach   Winterluecke   2018-05-27   00:55:00.0 
-
- Alpbach   Winterluecke   2007-10-13   00:46:00.0 
-
- Alpbach   Winterluecke   2007-09-24   00:43:00.0 
---------------------------------------------------
+-------------------------------------------------------
+  start           end             date         time    
+--------- ------------------- ------------ ------------
+ Alpbach   Bidmi (via Reuti)   2020-05-17   00:56:52.2 
+-------------------------------------------------------
 
 ### By time
 
 
---------------------------------------------------
-  start        end           date         time    
---------- -------------- ------------ ------------
- Alpbach   Winterluecke   2007-09-24   00:43:00.0 
-
- Alpbach   Winterluecke   2007-10-13   00:46:00.0 
-
- Alpbach   Winterluecke   2018-05-27   00:55:00.0 
---------------------------------------------------
+-------------------------------------------------------
+  start           end             date         time    
+--------- ------------------- ------------ ------------
+ Alpbach   Bidmi (via Reuti)   2020-05-17   00:56:52.2 
+-------------------------------------------------------
 
 
 ## Bidmi (via Twing) {.tabset .tabset-fade .tabset-pills}
@@ -100,6 +76,10 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------
   start            end             date         time    
 ---------- ------------------- ------------ ------------
+ Amtshaus   Bidmi (via Twing)   2020-05-09   00:52:44.2 
+
+ Amtshaus   Bidmi (via Twing)   2020-03-21   00:59:03.1 
+
  Amtshaus   Bidmi (via Twing)   2019-09-15   00:55:46.8 
 
  Amtshaus   Bidmi (via Twing)   2007-10-01   00:53:00.0 
@@ -111,10 +91,132 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------
   start            end             date         time    
 ---------- ------------------- ------------ ------------
+ Amtshaus   Bidmi (via Twing)   2020-05-09   00:52:44.2 
+
  Amtshaus   Bidmi (via Twing)   2007-10-01   00:53:00.0 
 
  Amtshaus   Bidmi (via Twing)   2019-09-15   00:55:46.8 
+
+ Amtshaus   Bidmi (via Twing)   2020-03-21   00:59:03.1 
 --------------------------------------------------------
+
+
+## Blueme Turm {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------------
+       start             end          date         time    
+------------------- ------------- ------------ ------------
+ Kreisel S'burgstr   Blueme Turm   2008-06-01   00:55:10.0 
+
+ Kreisel S'burgstr   Blueme Turm   2006-06-06   01:00:00.0 
+
+ Kreisel S'burgstr   Blueme Turm   2002-06-30   00:52:00.0 
+-----------------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------------
+       start             end          date         time    
+------------------- ------------- ------------ ------------
+ Kreisel S'burgstr   Blueme Turm   2002-06-30   00:52:00.0 
+
+ Kreisel S'burgstr   Blueme Turm   2008-06-01   00:55:10.0 
+
+ Kreisel S'burgstr   Blueme Turm   2006-06-06   01:00:00.0 
+-----------------------------------------------------------
+
+
+## Creux du Van {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------
+   start          end           date         time    
+------------ -------------- ------------ ------------
+ Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0 
+
+ Boudry Bhf   Creux du Van   2016-07-25              
+
+ Boudry Bhf   Creux du Van   2011-08-20   01:27:00.0 
+-----------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------
+   start          end           date         time    
+------------ -------------- ------------ ------------
+ Boudry Bhf   Creux du Van   2011-08-20   01:27:00.0 
+
+ Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0 
+-----------------------------------------------------
+
+
+## Grosse Scheidegg {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------------------
+      start              end             date         time    
+----------------- ------------------ ------------ ------------
+ Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
+
+ Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
+--------------------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------------------
+      start              end             date         time    
+----------------- ------------------ ------------ ------------
+ Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
+
+ Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
+--------------------------------------------------------------
+
+
+## Gurnigel Restaurant {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------------------
+       start                 end              date         time    
+------------------- --------------------- ------------ ------------
+ Bhf Schwarzenburg   Gurnigel Restaurant   2011-06-12   01:17:50.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2010-10-03   01:24:30.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2010-06-20   01:23:35.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2009-11-01   01:20:15.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2009-09-15   01:25:00.0 
+-------------------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------------------
+       start                 end              date         time    
+------------------- --------------------- ------------ ------------
+ Bhf Schwarzenburg   Gurnigel Restaurant   2011-06-12   01:17:50.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2009-11-01   01:20:15.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2010-06-20   01:23:35.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2010-10-03   01:24:30.0 
+
+ Bhf Schwarzenburg   Gurnigel Restaurant   2009-09-15   01:25:00.0 
+-------------------------------------------------------------------
 
 
 ## Hohfluh Staatstrasse {.tabset .tabset-fade .tabset-pills}
@@ -125,6 +227,10 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------
   start             end               date         time    
 ---------- ---------------------- ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse   2020-05-09   00:27:36.8 
+
+ Amtshaus   Hohfluh Staatstrasse   2020-03-21   00:31:10.7 
+
  Amtshaus   Hohfluh Staatstrasse   2019-08-16   00:28:03.3 
 
  Amtshaus   Hohfluh Staatstrasse   2018-09-15   00:29:04.4 
@@ -150,6 +256,8 @@ For listings by time, tours with missing time are omitted.
 ---------- ---------------------- ------------ ------------
  Amtshaus   Hohfluh Staatstrasse   2018-05-29   00:26:55.0 
 
+ Amtshaus   Hohfluh Staatstrasse   2020-05-09   00:27:36.8 
+
  Amtshaus   Hohfluh Staatstrasse   2007-10-01   00:28:00.0 
 
  Amtshaus   Hohfluh Staatstrasse   2019-08-16   00:28:03.3 
@@ -163,7 +271,30 @@ For listings by time, tours with missing time are omitted.
  Amtshaus   Hohfluh Staatstrasse   2009-09-18   00:29:30.0 
 
  Amtshaus   Hohfluh Staatstrasse   2007-10-03   00:30:00.0 
+
+ Amtshaus   Hohfluh Staatstrasse   2020-03-21   00:31:10.7 
 -----------------------------------------------------------
+
+
+## Honegg {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+------------------------------------------------
+    start       end        date         time    
+------------- -------- ------------ ------------
+ Langnau Bhf   Honegg   2011-05-28   02:49:00.0 
+------------------------------------------------
+
+### By time
+
+
+------------------------------------------------
+    start       end        date         time    
+------------- -------- ------------ ------------
+ Langnau Bhf   Honegg   2011-05-28   02:49:00.0 
+------------------------------------------------
 
 
 ## Kaeserstatt Velostaender {.tabset .tabset-fade .tabset-pills}
@@ -236,236 +367,6 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------
 
 
-## Gurnigel Restaurant {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
--------------------------------------------------------------------
-       start                 end              date         time    
-------------------- --------------------- ------------ ------------
- Bhf Schwarzenburg   Gurnigel Restaurant   2011-06-12   01:17:50.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2010-10-03   01:24:30.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2010-06-20   01:23:35.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2009-11-01   01:20:15.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2009-09-15   01:25:00.0 
--------------------------------------------------------------------
-
-### By time
-
-
--------------------------------------------------------------------
-       start                 end              date         time    
-------------------- --------------------- ------------ ------------
- Bhf Schwarzenburg   Gurnigel Restaurant   2011-06-12   01:17:50.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2009-11-01   01:20:15.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2010-06-20   01:23:35.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2010-10-03   01:24:30.0 
-
- Bhf Schwarzenburg   Gurnigel Restaurant   2009-09-15   01:25:00.0 
--------------------------------------------------------------------
-
-
-## Creux du Van {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
------------------------------------------------------
-   start          end           date         time    
------------- -------------- ------------ ------------
- Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0 
-
- Boudry Bhf   Creux du Van   2016-07-25              
-
- Boudry Bhf   Creux du Van   2011-08-20   01:27:00.0 
------------------------------------------------------
-
-### By time
-
-
------------------------------------------------------
-   start          end           date         time    
------------- -------------- ------------ ------------
- Boudry Bhf   Creux du Van   2011-08-20   01:27:00.0 
-
- Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0 
------------------------------------------------------
-
-
-## Grosse Scheidegg {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
---------------------------------------------------------------
-      start              end             date         time    
------------------ ------------------ ------------ ------------
- Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
-
- Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
---------------------------------------------------------------
-
-### By time
-
-
---------------------------------------------------------------
-      start              end             date         time    
------------------ ------------------ ------------ ------------
- Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
-
- Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
---------------------------------------------------------------
-
-
-## Schwarzwaldalp {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
-------------------------------------------------------------
-      start             end            date         time    
------------------ ---------------- ------------ ------------
- Frutal Willigen   Schwarzwaldalp   2019-08-24   00:56:24.7 
-
- Frutal Willigen   Schwarzwaldalp   2018-07-13   00:53:09.5 
-
- Frutal Willigen   Schwarzwaldalp   2018-06-05   00:56:14.0 
-
- Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
-
- Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0 
-
- Frutal Willigen   Schwarzwaldalp   2007-10-02   00:56:00.0 
-------------------------------------------------------------
-
-### By time
-
-
-------------------------------------------------------------
-      start             end            date         time    
------------------ ---------------- ------------ ------------
- Frutal Willigen   Schwarzwaldalp   2018-07-13   00:53:09.5 
-
- Frutal Willigen   Schwarzwaldalp   2007-10-02   00:56:00.0 
-
- Frutal Willigen   Schwarzwaldalp   2018-06-05   00:56:14.0 
-
- Frutal Willigen   Schwarzwaldalp   2019-08-24   00:56:24.7 
-
- Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
-
- Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0 
-------------------------------------------------------------
-
-
-## Zwirgi {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
-----------------------------------------------------
-      start         end        date         time    
------------------ -------- ------------ ------------
- Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
-
- Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
-
- Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
-----------------------------------------------------
-
-### By time
-
-
-----------------------------------------------------
-      start         end        date         time    
------------------ -------- ------------ ------------
- Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
-
- Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
-
- Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
-----------------------------------------------------
-
-
-## Abzweigung Wanderweg {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
---------------------------------------------------------------------
-       start                 end               date         time    
-------------------- ---------------------- ------------ ------------
- Kreisel S'burgstr   Abzweigung Wanderweg   2017-07-29   00:51:40.0 
---------------------------------------------------------------------
-
-### By time
-
-
---------------------------------------------------------------------
-       start                 end               date         time    
-------------------- ---------------------- ------------ ------------
- Kreisel S'burgstr   Abzweigung Wanderweg   2017-07-29   00:51:40.0 
---------------------------------------------------------------------
-
-
-## Blueme Turm {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
------------------------------------------------------------
-       start             end          date         time    
-------------------- ------------- ------------ ------------
- Kreisel S'burgstr   Blueme Turm   2008-06-01   00:55:10.0 
-
- Kreisel S'burgstr   Blueme Turm   2006-06-06   01:00:00.0 
-
- Kreisel S'burgstr   Blueme Turm   2002-06-30   00:52:00.0 
------------------------------------------------------------
-
-### By time
-
-
------------------------------------------------------------
-       start             end          date         time    
-------------------- ------------- ------------ ------------
- Kreisel S'burgstr   Blueme Turm   2002-06-30   00:52:00.0 
-
- Kreisel S'burgstr   Blueme Turm   2008-06-01   00:55:10.0 
-
- Kreisel S'burgstr   Blueme Turm   2006-06-06   01:00:00.0 
------------------------------------------------------------
-
-
-## Honegg {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
-------------------------------------------------
-    start       end        date         time    
-------------- -------- ------------ ------------
- Langnau Bhf   Honegg   2011-05-28   02:49:00.0 
-------------------------------------------------
-
-### By time
-
-
-------------------------------------------------
-    start       end        date         time    
-------------- -------- ------------ ------------
- Langnau Bhf   Honegg   2011-05-28   02:49:00.0 
-------------------------------------------------
-
-
 ## Meiringen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -487,28 +388,90 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------
 
 
-# Run
-
-
-## Reuti {.tabset .tabset-fade .tabset-pills}
+## Obri Mettlen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
--------------------------------------------
-  start     end       date         time    
---------- ------- ------------ ------------
- Alpbach   Reuti   2018-06-22   00:26:29.2 
--------------------------------------------
+----------------------------------------------------------
+      start            end           date         time    
+----------------- -------------- ------------ ------------
+ Frutal Willigen   Obri Mettlen   2020-05-16   01:33:52.1 
+----------------------------------------------------------
 
 ### By time
 
 
--------------------------------------------
-  start     end       date         time    
---------- ------- ------------ ------------
- Alpbach   Reuti   2018-06-22   00:26:29.2 
--------------------------------------------
+----------------------------------------------------------
+      start            end           date         time    
+----------------- -------------- ------------ ------------
+ Frutal Willigen   Obri Mettlen   2020-05-16   01:33:52.1 
+----------------------------------------------------------
+
+
+## Reuti (Postautoparkplatz) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------
+  start               end                 date         time    
+--------- --------------------------- ------------ ------------
+ Alpbach   Reuti (Postautoparkplatz)   2020-05-17   00:27:52.1 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-04-27   00:26:34.9 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-04-05   00:27:13.6 
+
+ Alpbach   Reuti (Postautoparkplatz)   2019-08-27   00:26:02.1 
+
+ Alpbach   Reuti (Postautoparkplatz)   2019-06-07   00:28:06.3 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-10-22   00:28:05.8 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-10-07   00:26:31.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-06-25   00:24:30.3 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-05-27   00:27:40.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2015-05-27   00:27:00.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2007-10-13   00:26:00.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2007-09-24   00:22:00.0 
+---------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------
+  start               end                 date         time    
+--------- --------------------------- ------------ ------------
+ Alpbach   Reuti (Postautoparkplatz)   2007-09-24   00:22:00.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-06-25   00:24:30.3 
+
+ Alpbach   Reuti (Postautoparkplatz)   2007-10-13   00:26:00.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2019-08-27   00:26:02.1 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-10-07   00:26:31.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-04-27   00:26:34.9 
+
+ Alpbach   Reuti (Postautoparkplatz)   2015-05-27   00:27:00.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-04-05   00:27:13.6 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-05-27   00:27:40.0 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-05-17   00:27:52.1 
+
+ Alpbach   Reuti (Postautoparkplatz)   2018-10-22   00:28:05.8 
+
+ Alpbach   Reuti (Postautoparkplatz)   2019-06-07   00:28:06.3 
+---------------------------------------------------------------
 
 
 ## Schwarzwaldalp {.tabset .tabset-fade .tabset-pills}
@@ -516,24 +479,145 @@ For listings by time, tours with missing time are omitted.
 ### Chronologically
 
 
--------------------------------------------------------
-   start           end            date         time    
------------- ---------------- ------------ ------------
- Alpbaechli   Schwarzwaldalp   2019-10-12   01:14:59.2 
+------------------------------------------------------------
+      start             end            date         time    
+----------------- ---------------- ------------ ------------
+ Frutal Willigen   Schwarzwaldalp   2020-04-17   01:01:02.4 
 
- Alpbaechli   Schwarzwaldalp   2019-08-18   01:21:14.5 
--------------------------------------------------------
+ Frutal Willigen   Schwarzwaldalp   2020-04-10   00:59:56.0 
+
+ Frutal Willigen   Schwarzwaldalp   2020-03-28   01:00:13.3 
+
+ Frutal Willigen   Schwarzwaldalp   2019-08-24   00:56:24.7 
+
+ Frutal Willigen   Schwarzwaldalp   2018-07-13   00:53:09.5 
+
+ Frutal Willigen   Schwarzwaldalp   2018-06-05   00:56:14.0 
+
+ Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
+
+ Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0 
+
+ Frutal Willigen   Schwarzwaldalp   2007-10-02   00:56:00.0 
+------------------------------------------------------------
 
 ### By time
 
 
--------------------------------------------------------
-   start           end            date         time    
------------- ---------------- ------------ ------------
- Alpbaechli   Schwarzwaldalp   2019-10-12   01:14:59.2 
+------------------------------------------------------------
+      start             end            date         time    
+----------------- ---------------- ------------ ------------
+ Frutal Willigen   Schwarzwaldalp   2018-07-13   00:53:09.5 
 
- Alpbaechli   Schwarzwaldalp   2019-08-18   01:21:14.5 
--------------------------------------------------------
+ Frutal Willigen   Schwarzwaldalp   2007-10-02   00:56:00.0 
+
+ Frutal Willigen   Schwarzwaldalp   2018-06-05   00:56:14.0 
+
+ Frutal Willigen   Schwarzwaldalp   2019-08-24   00:56:24.7 
+
+ Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
+
+ Frutal Willigen   Schwarzwaldalp   2020-04-10   00:59:56.0 
+
+ Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0 
+
+ Frutal Willigen   Schwarzwaldalp   2020-03-28   01:00:13.3 
+
+ Frutal Willigen   Schwarzwaldalp   2020-04-17   01:01:02.4 
+------------------------------------------------------------
+
+
+## Winterluecke {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------
+  start        end           date         time    
+--------- -------------- ------------ ------------
+ Alpbach   Winterluecke   2020-04-05   00:49:21.5 
+
+ Alpbach   Winterluecke   2019-06-07   00:53:13.5 
+
+ Alpbach   Winterluecke   2018-10-22   00:51:47.1 
+
+ Alpbach   Winterluecke   2018-10-07   00:48:55.6 
+
+ Alpbach   Winterluecke   2018-05-27   00:55:00.0 
+
+ Alpbach   Winterluecke   2015-05-27   00:50:04.1 
+
+ Alpbach   Winterluecke   2007-10-13   00:46:00.0 
+
+ Alpbach   Winterluecke   2007-09-24   00:43:00.0 
+--------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------
+  start        end           date         time    
+--------- -------------- ------------ ------------
+ Alpbach   Winterluecke   2007-09-24   00:43:00.0 
+
+ Alpbach   Winterluecke   2007-10-13   00:46:00.0 
+
+ Alpbach   Winterluecke   2018-10-07   00:48:55.6 
+
+ Alpbach   Winterluecke   2020-04-05   00:49:21.5 
+
+ Alpbach   Winterluecke   2015-05-27   00:50:04.1 
+
+ Alpbach   Winterluecke   2018-10-22   00:51:47.1 
+
+ Alpbach   Winterluecke   2019-06-07   00:53:13.5 
+
+ Alpbach   Winterluecke   2018-05-27   00:55:00.0 
+--------------------------------------------------
+
+
+## Zwirgi {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+----------------------------------------------------
+      start         end        date         time    
+----------------- -------- ------------ ------------
+ Frutal Willigen   Zwirgi   2020-04-17   00:23:56.8 
+
+ Frutal Willigen   Zwirgi   2020-04-10   00:23:27.3 
+
+ Frutal Willigen   Zwirgi   2020-03-28   00:22:53.3 
+
+ Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
+
+ Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
+
+ Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
+----------------------------------------------------
+
+### By time
+
+
+----------------------------------------------------
+      start         end        date         time    
+----------------- -------- ------------ ------------
+ Frutal Willigen   Zwirgi   2018-06-05   00:18:03.0 
+
+ Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
+
+ Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
+
+ Frutal Willigen   Zwirgi   2020-03-28   00:22:53.3 
+
+ Frutal Willigen   Zwirgi   2020-04-10   00:23:27.3 
+
+ Frutal Willigen   Zwirgi   2020-04-17   00:23:56.8 
+----------------------------------------------------
+
+
+# Run
 
 
 ## 17.3km Runde {.tabset .tabset-fade .tabset-pills}
@@ -578,27 +662,6 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------
 
 
-## Hohgant West {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
------------------------------------------------------
-   start          end           date         time    
------------- -------------- ------------ ------------
- Eriz Saege   Hohgant West   2004-09-21   01:25:00.0 
------------------------------------------------------
-
-### By time
-
-
------------------------------------------------------
-   start          end           date         time    
------------- -------------- ------------ ------------
- Eriz Saege   Hohgant West   2004-09-21   01:25:00.0 
------------------------------------------------------
-
-
 ## Gempen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -620,25 +683,46 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------
 
 
-## Schilthorn Terrasse {.tabset .tabset-fade .tabset-pills}
+## Hohgant West {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
--------------------------------------------------------------------
-       start                 end              date         time    
-------------------- --------------------- ------------ ------------
- Lauterbrunnen Bhf   Schilthorn Terrasse   2012-08-22   02:55:40.0 
--------------------------------------------------------------------
+-----------------------------------------------------
+   start          end           date         time    
+------------ -------------- ------------ ------------
+ Eriz Saege   Hohgant West   2004-09-21   01:25:00.0 
+-----------------------------------------------------
 
 ### By time
 
 
--------------------------------------------------------------------
-       start                 end              date         time    
-------------------- --------------------- ------------ ------------
- Lauterbrunnen Bhf   Schilthorn Terrasse   2012-08-22   02:55:40.0 
--------------------------------------------------------------------
+-----------------------------------------------------
+   start          end           date         time    
+------------ -------------- ------------ ------------
+ Eriz Saege   Hohgant West   2004-09-21   01:25:00.0 
+-----------------------------------------------------
+
+
+## Muensingen Bhf {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------------------
+       start              end            date         time    
+------------------- ---------------- ------------ ------------
+ Winkelriedstrasse   Muensingen Bhf   2004-06-30   01:37:00.0 
+--------------------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------------------
+       start              end            date         time    
+------------------- ---------------- ------------ ------------
+ Winkelriedstrasse   Muensingen Bhf   2004-06-30   01:37:00.0 
+--------------------------------------------------------------
 
 
 ## Niesen Plattform {.tabset .tabset-fade .tabset-pills}
@@ -738,70 +822,171 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------------
 
 
-## Muensingen Bhf {.tabset .tabset-fade .tabset-pills}
+## Reuti {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
---------------------------------------------------------------
-       start              end            date         time    
-------------------- ---------------- ------------ ------------
- Winkelriedstrasse   Muensingen Bhf   2004-06-30   01:37:00.0 
---------------------------------------------------------------
+-------------------------------------------
+  start     end       date         time    
+--------- ------- ------------ ------------
+ Alpbach   Reuti   2018-06-22   00:26:29.2 
+-------------------------------------------
 
 ### By time
 
 
---------------------------------------------------------------
-       start              end            date         time    
-------------------- ---------------- ------------ ------------
- Winkelriedstrasse   Muensingen Bhf   2004-06-30   01:37:00.0 
---------------------------------------------------------------
+-------------------------------------------
+  start     end       date         time    
+--------- ------- ------------ ------------
+ Alpbach   Reuti   2018-06-22   00:26:29.2 
+-------------------------------------------
 
+
+## Schilthorn Terrasse {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------------------
+       start                 end              date         time    
+------------------- --------------------- ------------ ------------
+ Lauterbrunnen Bhf   Schilthorn Terrasse   2012-08-22   02:55:40.0 
+-------------------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------------------
+       start                 end              date         time    
+------------------- --------------------- ------------ ------------
+ Lauterbrunnen Bhf   Schilthorn Terrasse   2012-08-22   02:55:40.0 
+-------------------------------------------------------------------
+
+
+## Schwarzwaldalp {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------
+   start           end            date         time    
+------------ ---------------- ------------ ------------
+ Alpbaechli   Schwarzwaldalp   2020-03-01   01:21:52.4 
+
+ Alpbaechli   Schwarzwaldalp   2019-10-12   01:14:59.2 
+
+ Alpbaechli   Schwarzwaldalp   2019-08-18   01:21:14.5 
+-------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------
+   start           end            date         time    
+------------ ---------------- ------------ ------------
+ Alpbaechli   Schwarzwaldalp   2019-10-12   01:14:59.2 
+
+ Alpbaechli   Schwarzwaldalp   2019-08-18   01:21:14.5 
+
+ Alpbaechli   Schwarzwaldalp   2020-03-01   01:21:52.4 
+-------------------------------------------------------
+
+# Bike and run
+
+
+## Gaulihuette {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+----------------------------------------------------
+   start          end          date         time    
+------------ ------------- ------------ ------------
+ Alpbaechli   Gaulihuette   2019-10-07   03:39:26.0 
+----------------------------------------------------
+
+### By time
+
+
+----------------------------------------------------
+   start          end          date         time    
+------------ ------------- ------------ ------------
+ Alpbaechli   Gaulihuette   2019-10-07   03:39:26.0 
+----------------------------------------------------
+
+
+## Signal {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------
+   start       end        date         time    
+------------ -------- ------------ ------------
+ Alpbaechli   Signal   2020-04-23   01:58:43.9 
+-----------------------------------------------
+
+### By time
+
+
+-----------------------------------------------
+   start       end        date         time    
+------------ -------- ------------ ------------
+ Alpbaechli   Signal   2020-04-23   01:58:43.9 
+-----------------------------------------------
+
+
+## Wilerhorn {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+------------------------------------------------
+  start        end         date         time    
+---------- ----------- ------------ ------------
+ Amtshaus   Wilerhorn   2020-04-14   02:07:09.3 
+
+ Amtshaus   Wilerhorn   2019-09-28   02:16:49.1 
+
+ Amtshaus   Wilerhorn   2019-08-03   02:10:13.6 
+------------------------------------------------
+
+### By time
+
+
+------------------------------------------------
+  start        end         date         time    
+---------- ----------- ------------ ------------
+ Amtshaus   Wilerhorn   2020-04-14   02:07:09.3 
+
+ Amtshaus   Wilerhorn   2019-08-03   02:10:13.6 
+
+ Amtshaus   Wilerhorn   2019-09-28   02:16:49.1 
+------------------------------------------------
 
 # Hike
 
 
-## Sparrhorn {.tabset .tabset-fade .tabset-pills}
+## alte Triftbruecke {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
 
 
-----------------------------------------------------------
-       start             end         date         time    
--------------------- ----------- ------------ ------------
- Belalp Bergstation   Sparrhorn   2008-11-09   01:22:00.0 
-----------------------------------------------------------
+---------------------------------------------------------
+   start            end             date         time    
+----------- ------------------- ------------ ------------
+ Nessental   alte Triftbruecke   2006-07-16   02:00:00.0 
+---------------------------------------------------------
 
 ### By time
 
 
-----------------------------------------------------------
-       start             end         date         time    
--------------------- ----------- ------------ ------------
- Belalp Bergstation   Sparrhorn   2008-11-09   01:22:00.0 
-----------------------------------------------------------
-
-
-## Gehrihorn {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
------------------------------------------------------------
-        start             end         date         time    
---------------------- ----------- ------------ ------------
- Frutigen Bhfbruecke   Gehrihorn   2007-10-09   02:00:00.0 
------------------------------------------------------------
-
-### By time
-
-
------------------------------------------------------------
-        start             end         date         time    
---------------------- ----------- ------------ ------------
- Frutigen Bhfbruecke   Gehrihorn   2007-10-09   02:00:00.0 
------------------------------------------------------------
+---------------------------------------------------------
+   start            end             date         time    
+----------- ------------------- ------------ ------------
+ Nessental   alte Triftbruecke   2006-07-16   02:00:00.0 
+---------------------------------------------------------
 
 
 ## Augstmatthorn {.tabset .tabset-fade .tabset-pills}
@@ -825,6 +1010,48 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------
 
 
+## Baeren Guttannen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+------------------------------------------------------------
+     start             end             date         time    
+--------------- ------------------ ------------ ------------
+ Windegghuette   Baeren Guttannen   2006-07-16   03:00:00.0 
+------------------------------------------------------------
+
+### By time
+
+
+------------------------------------------------------------
+     start             end             date         time    
+--------------- ------------------ ------------ ------------
+ Windegghuette   Baeren Guttannen   2006-07-16   03:00:00.0 
+------------------------------------------------------------
+
+
+## Gehrihorn {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------------
+        start             end         date         time    
+--------------------- ----------- ------------ ------------
+ Frutigen Bhfbruecke   Gehrihorn   2007-10-09   02:00:00.0 
+-----------------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------------
+        start             end         date         time    
+--------------------- ----------- ------------ ------------
+ Frutigen Bhfbruecke   Gehrihorn   2007-10-09   02:00:00.0 
+-----------------------------------------------------------
+
+
 ## Joderhorn {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -844,27 +1071,6 @@ For listings by time, tours with missing time are omitted.
 --------------------- ----------- ------------ ------------
  Mattmark Restaurant   Joderhorn   2009-08-30   02:00:00.0 
 -----------------------------------------------------------
-
-
-## alte Triftbruecke {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
----------------------------------------------------------
-   start            end             date         time    
------------ ------------------- ------------ ------------
- Nessental   alte Triftbruecke   2006-07-16   02:00:00.0 
----------------------------------------------------------
-
-### By time
-
-
----------------------------------------------------------
-   start            end             date         time    
------------ ------------------- ------------ ------------
- Nessental   alte Triftbruecke   2006-07-16   02:00:00.0 
----------------------------------------------------------
 
 
 ## Juchlistock {.tabset .tabset-fade .tabset-pills}
@@ -917,6 +1123,27 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------------------
 
 
+## Sparrhorn {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+----------------------------------------------------------
+       start             end         date         time    
+-------------------- ----------- ------------ ------------
+ Belalp Bergstation   Sparrhorn   2008-11-09   01:22:00.0 
+----------------------------------------------------------
+
+### By time
+
+
+----------------------------------------------------------
+       start             end         date         time    
+-------------------- ----------- ------------ ------------
+ Belalp Bergstation   Sparrhorn   2008-11-09   01:22:00.0 
+----------------------------------------------------------
+
+
 ## Wildstrubel {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -936,24 +1163,3 @@ For listings by time, tours with missing time are omitted.
 -------------- ------------- ------------ ------------
  Simmenfaelle   Wildstrubel   2008-08-31   03:40:00.0 
 ------------------------------------------------------
-
-
-## Baeren Guttannen {.tabset .tabset-fade .tabset-pills}
-
-### Chronologically
-
-
-------------------------------------------------------------
-     start             end             date         time    
---------------- ------------------ ------------ ------------
- Windegghuette   Baeren Guttannen   2006-07-16   03:00:00.0 
-------------------------------------------------------------
-
-### By time
-
-
-------------------------------------------------------------
-     start             end             date         time    
---------------- ------------------ ------------ ------------
- Windegghuette   Baeren Guttannen   2006-07-16   03:00:00.0 
-------------------------------------------------------------

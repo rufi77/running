@@ -26,7 +26,7 @@ for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
-path <- "C:/rufibach/01 personal/05_sport/touren/"
+path <- "C:/rufibach/01_personal/05_Sport/40_reporting/"
 path <- paste(getwd(), "/", sep = "")
 
 ## =================================================================
@@ -34,8 +34,7 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 touren <- read_excel(paste(path, "data/touren.xls", sep = ""))
 
-all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% 
-  arrange(sport, start, end, time) %>% filter(sport == "Skitour")
+all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) 
 all[is.na(all)] <- ""
 ```
 
@@ -50,7 +49,7 @@ with(subset(touren, sport == "Skitour"), pander(addmargins(table(as.character(en
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 par(mfrow = c(1, 1), las = 2, mar = c(4, 8, 1, 1))
 
-ski <- (touren %>% filter(sport == "Skitour") %>% select(start, end, date, time))
+ski <- (all %>% select(start, end, date, time))
 tour <- unique(ski$end)
 
 # x-axis
