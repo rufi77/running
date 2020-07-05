@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '23 May 2020'
+date: '05 Jul 2020'
 output:
   html_document:
     keep_md: true
@@ -45,6 +45,27 @@ For listings by time, tours with missing time are omitted.
 ------------------- ---------------------- ------------ ------------
  Kreisel S'burgstr   Abzweigung Wanderweg   2017-07-29   00:51:40.0 
 --------------------------------------------------------------------
+
+
+## Bidmi (via Goldern) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------
+  start            end              date         time    
+--------- --------------------- ------------ ------------
+ Alpbach   Bidmi (via Goldern)   2020-06-25   00:56:55.5 
+---------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------
+  start            end              date         time    
+--------- --------------------- ------------ ------------
+ Alpbach   Bidmi (via Goldern)   2020-06-25   00:56:55.5 
+---------------------------------------------------------
 
 
 ## Bidmi (via Reuti) {.tabset .tabset-fade .tabset-pills}
@@ -157,6 +178,27 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------
 
 
+## Grindelfeld Brunnen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Frutal Willigen   Grindelfeld Brunnen   2020-06-13   01:58:17.1 
+-----------------------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Frutal Willigen   Grindelfeld Brunnen   2020-06-13   01:58:17.1 
+-----------------------------------------------------------------
+
+
 ## Grosse Scheidegg {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -165,6 +207,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------
       start              end             date         time    
 ----------------- ------------------ ------------ ------------
+ Frutal Willigen   Grosse Scheidegg   2020-06-23   01:34:54.7 
+
  Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
 
  Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
@@ -177,6 +221,8 @@ For listings by time, tours with missing time are omitted.
       start              end             date         time    
 ----------------- ------------------ ------------ ------------
  Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
+
+ Frutal Willigen   Grosse Scheidegg   2020-06-23   01:34:54.7 
 
  Frutal Willigen   Grosse Scheidegg   2018-05-26   01:37:46.0 
 --------------------------------------------------------------
@@ -227,6 +273,10 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------
   start             end               date         time    
 ---------- ---------------------- ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse   2020-06-20   00:26:37.9 
+
+ Amtshaus   Hohfluh Staatstrasse   2020-05-29   00:29:22.9 
+
  Amtshaus   Hohfluh Staatstrasse   2020-05-09   00:27:36.8 
 
  Amtshaus   Hohfluh Staatstrasse   2020-03-21   00:31:10.7 
@@ -254,6 +304,8 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------
   start             end               date         time    
 ---------- ---------------------- ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse   2020-06-20   00:26:37.9 
+
  Amtshaus   Hohfluh Staatstrasse   2018-05-29   00:26:55.0 
 
  Amtshaus   Hohfluh Staatstrasse   2020-05-09   00:27:36.8 
@@ -267,6 +319,8 @@ For listings by time, tours with missing time are omitted.
  Amtshaus   Hohfluh Staatstrasse   2006-08-23   00:29:00.0 
 
  Amtshaus   Hohfluh Staatstrasse   2018-09-15   00:29:04.4 
+
+ Amtshaus   Hohfluh Staatstrasse   2020-05-29   00:29:22.9 
 
  Amtshaus   Hohfluh Staatstrasse   2009-09-18   00:29:30.0 
 
@@ -305,6 +359,8 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------
   start               end                 date         time    
 ---------- -------------------------- ------------ ------------
+ Alpbach    Kaeserstatt Velostaender   2020-06-16   01:19:18.3 
+
  Amtshaus   Kaeserstatt Velostaender   2019-08-16   01:20:49.6 
 
  Amtshaus   Kaeserstatt Velostaender   2018-08-11   01:18:19.0 
@@ -329,6 +385,8 @@ For listings by time, tours with missing time are omitted.
   start               end                 date         time    
 ---------- -------------------------- ------------ ------------
  Amtshaus   Kaeserstatt Velostaender   2018-08-11   01:18:19.0 
+
+ Alpbach    Kaeserstatt Velostaender   2020-06-16   01:19:18.3 
 
  Amtshaus   Kaeserstatt Velostaender   2019-08-16   01:20:49.6 
 
@@ -367,6 +425,27 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------
 
 
+## Maegis (via Goldern) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+----------------------------------------------------------
+  start            end               date         time    
+--------- ---------------------- ------------ ------------
+ Alpbach   Maegis (via Goldern)   2020-06-25   01:18:13.2 
+----------------------------------------------------------
+
+### By time
+
+
+----------------------------------------------------------
+  start            end               date         time    
+--------- ---------------------- ------------ ------------
+ Alpbach   Maegis (via Goldern)   2020-06-25   01:18:13.2 
+----------------------------------------------------------
+
+
 ## Meiringen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -396,6 +475,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------------
       start            end           date         time    
 ----------------- -------------- ------------ ------------
+ Frutal Willigen   Obri Mettlen   2020-06-13   01:33:31.3 
+
  Frutal Willigen   Obri Mettlen   2020-05-16   01:33:52.1 
 ----------------------------------------------------------
 
@@ -405,8 +486,73 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------------
       start            end           date         time    
 ----------------- -------------- ------------ ------------
+ Frutal Willigen   Obri Mettlen   2020-06-13   01:33:31.3 
+
  Frutal Willigen   Obri Mettlen   2020-05-16   01:33:52.1 
 ----------------------------------------------------------
+
+
+## Oltscheren (Bielen) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Balm Abzweigung   Oltscheren (Bielen)   2020-05-27   01:10:17.3 
+-----------------------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Balm Abzweigung   Oltscheren (Bielen)   2020-05-27   01:10:17.3 
+-----------------------------------------------------------------
+
+
+## Oltscheren (Oberfeld) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------------------
+      start                 end               date         time    
+----------------- ----------------------- ------------ ------------
+ Balm Abzweigung   Oltscheren (Oberfeld)   2020-05-27   01:29:13.9 
+-------------------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------------------
+      start                 end               date         time    
+----------------- ----------------------- ------------ ------------
+ Balm Abzweigung   Oltscheren (Oberfeld)   2020-05-27   01:29:13.9 
+-------------------------------------------------------------------
+
+
+## Planplatten (via Goldern) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------
+  start               end                 date         time    
+--------- --------------------------- ------------ ------------
+ Alpbach   Planplatten (via Goldern)   2020-06-25   02:01:36.3 
+---------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------
+  start               end                 date         time    
+--------- --------------------------- ------------ ------------
+ Alpbach   Planplatten (via Goldern)   2020-06-25   02:01:36.3 
+---------------------------------------------------------------
 
 
 ## Reuti (Postautoparkplatz) {.tabset .tabset-fade .tabset-pills}
@@ -417,6 +563,10 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------
   start               end                 date         time    
 --------- --------------------------- ------------ ------------
+ Alpbach   Reuti (Postautoparkplatz)   2020-06-21   00:28:49.7 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-05-25   00:26:35.5 
+
  Alpbach   Reuti (Postautoparkplatz)   2020-05-17   00:27:52.1 
 
  Alpbach   Reuti (Postautoparkplatz)   2020-04-27   00:26:34.9 
@@ -460,6 +610,8 @@ For listings by time, tours with missing time are omitted.
 
  Alpbach   Reuti (Postautoparkplatz)   2020-04-27   00:26:34.9 
 
+ Alpbach   Reuti (Postautoparkplatz)   2020-05-25   00:26:35.5 
+
  Alpbach   Reuti (Postautoparkplatz)   2015-05-27   00:27:00.0 
 
  Alpbach   Reuti (Postautoparkplatz)   2020-04-05   00:27:13.6 
@@ -471,7 +623,30 @@ For listings by time, tours with missing time are omitted.
  Alpbach   Reuti (Postautoparkplatz)   2018-10-22   00:28:05.8 
 
  Alpbach   Reuti (Postautoparkplatz)   2019-06-07   00:28:06.3 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-06-21   00:28:49.7 
 ---------------------------------------------------------------
+
+
+## Schlafbielen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------
+  start        end           date         time    
+--------- -------------- ------------ ------------
+ Alpbach   Schlafbielen   2020-06-21   01:36:13.6 
+--------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------
+  start        end           date         time    
+--------- -------------- ------------ ------------
+ Alpbach   Schlafbielen   2020-06-21   01:36:13.6 
+--------------------------------------------------
 
 
 ## Schwarzwaldalp {.tabset .tabset-fade .tabset-pills}
@@ -482,6 +657,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------
       start             end            date         time    
 ----------------- ---------------- ------------ ------------
+ Frutal Willigen   Schwarzwaldalp   2020-06-23   00:59:41.3 
+
  Frutal Willigen   Schwarzwaldalp   2020-04-17   01:01:02.4 
 
  Frutal Willigen   Schwarzwaldalp   2020-04-10   00:59:56.0 
@@ -517,6 +694,8 @@ For listings by time, tours with missing time are omitted.
 
  Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
 
+ Frutal Willigen   Schwarzwaldalp   2020-06-23   00:59:41.3 
+
  Frutal Willigen   Schwarzwaldalp   2020-04-10   00:59:56.0 
 
  Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0 
@@ -527,6 +706,131 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------
 
 
+## Tschorren {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+------------------------------------------------
+  start        end         date         time    
+---------- ----------- ------------ ------------
+ Amtshaus   Tschorren   2020-06-20   00:40:48.9 
+
+ Amtshaus   Tschorren   2020-05-29   00:45:34.4 
+------------------------------------------------
+
+### By time
+
+
+------------------------------------------------
+  start        end         date         time    
+---------- ----------- ------------ ------------
+ Amtshaus   Tschorren   2020-06-20   00:40:48.9 
+
+ Amtshaus   Tschorren   2020-05-29   00:45:34.4 
+------------------------------------------------
+
+
+## Wandel (Hochmoor) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------
+      start               end             date         time    
+----------------- ------------------- ------------ ------------
+ Balm Abzweigung   Wandel (Hochmoor)   2020-07-05   01:33:16.9 
+---------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------
+      start               end             date         time    
+----------------- ------------------- ------------ ------------
+ Balm Abzweigung   Wandel (Hochmoor)   2020-07-05   01:33:16.9 
+---------------------------------------------------------------
+
+
+## Wandel (Mettlen) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------------------
+      start              end             date         time    
+----------------- ------------------ ------------ ------------
+ Balm Abzweigung   Wandel (Mettlen)   2020-07-05   00:51:14.2 
+
+ Balm Abzweigung   Wandel (Mettlen)   2020-06-06   00:49:40.1 
+
+ Balm Abzweigung   Wandel (Mettlen)   2020-05-07   00:52:13.8 
+--------------------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------------------
+      start              end             date         time    
+----------------- ------------------ ------------ ------------
+ Balm Abzweigung   Wandel (Mettlen)   2020-06-06   00:49:40.1 
+
+ Balm Abzweigung   Wandel (Mettlen)   2020-07-05   00:51:14.2 
+
+ Balm Abzweigung   Wandel (Mettlen)   2020-05-07   00:52:13.8 
+--------------------------------------------------------------
+
+
+## Wandel (mittlesten) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Balm Abzweigung   Wandel (mittlesten)   2020-07-05   01:12:47.8 
+
+ Balm Abzweigung   Wandel (mittlesten)   2020-05-07   01:17:24.8 
+-----------------------------------------------------------------
+
+### By time
+
+
+-----------------------------------------------------------------
+      start                end              date         time    
+----------------- --------------------- ------------ ------------
+ Balm Abzweigung   Wandel (mittlesten)   2020-07-05   01:12:47.8 
+
+ Balm Abzweigung   Wandel (mittlesten)   2020-05-07   01:17:24.8 
+-----------------------------------------------------------------
+
+
+## Wandel (obristen) {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------
+      start               end             date         time    
+----------------- ------------------- ------------ ------------
+ Balm Abzweigung   Wandel (obristen)   2020-07-05   01:27:25.2 
+
+ Balm Abzweigung   Wandel (obristen)   2018-07-30   01:34:02.9 
+---------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------
+      start               end             date         time    
+----------------- ------------------- ------------ ------------
+ Balm Abzweigung   Wandel (obristen)   2020-07-05   01:27:25.2 
+
+ Balm Abzweigung   Wandel (obristen)   2018-07-30   01:34:02.9 
+---------------------------------------------------------------
+
+
 ## Winterluecke {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -535,6 +839,10 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------
   start        end           date         time    
 --------- -------------- ------------ ------------
+ Alpbach   Winterluecke   2020-06-21   00:53:37.2 
+
+ Alpbach   Winterluecke   2020-05-25   00:48:13.6 
+
  Alpbach   Winterluecke   2020-04-05   00:49:21.5 
 
  Alpbach   Winterluecke   2019-06-07   00:53:13.5 
@@ -562,6 +870,8 @@ For listings by time, tours with missing time are omitted.
 
  Alpbach   Winterluecke   2007-10-13   00:46:00.0 
 
+ Alpbach   Winterluecke   2020-05-25   00:48:13.6 
+
  Alpbach   Winterluecke   2018-10-07   00:48:55.6 
 
  Alpbach   Winterluecke   2020-04-05   00:49:21.5 
@@ -571,6 +881,8 @@ For listings by time, tours with missing time are omitted.
  Alpbach   Winterluecke   2018-10-22   00:51:47.1 
 
  Alpbach   Winterluecke   2019-06-07   00:53:13.5 
+
+ Alpbach   Winterluecke   2020-06-21   00:53:37.2 
 
  Alpbach   Winterluecke   2018-05-27   00:55:00.0 
 --------------------------------------------------
@@ -584,6 +896,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
       start         end        date         time    
 ----------------- -------- ------------ ------------
+ Frutal Willigen   Zwirgi   2020-06-23   00:23:16.2 
+
  Frutal Willigen   Zwirgi   2020-04-17   00:23:56.8 
 
  Frutal Willigen   Zwirgi   2020-04-10   00:23:27.3 
@@ -610,6 +924,8 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
 
  Frutal Willigen   Zwirgi   2020-03-28   00:22:53.3 
+
+ Frutal Willigen   Zwirgi   2020-06-23   00:23:16.2 
 
  Frutal Willigen   Zwirgi   2020-04-10   00:23:27.3 
 
@@ -733,6 +1049,8 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------------
        start                end             date         time    
 -------------------- ------------------ ------------ ------------
+ Niesen Treppenlauf   Niesen Plattform   2019-06-15   01:22:52.0 
+
  Niesen Treppenlauf   Niesen Plattform   2018-06-02   01:21:02.0 
 
  Muelenen Parkplatz   Niesen Plattform   2017-08-16   01:43:32.0 
@@ -783,6 +1101,8 @@ For listings by time, tours with missing time are omitted.
  Niesen Treppenlauf   Niesen Plattform   2018-06-02   01:21:02.0 
 
  Niesen Treppenlauf   Niesen Plattform   2012-06-02   01:22:30.0 
+
+ Niesen Treppenlauf   Niesen Plattform   2019-06-15   01:22:52.0 
 
  Niesen Treppenlauf   Niesen Plattform   2011-06-04   01:24:00.0 
 
@@ -916,6 +1236,27 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
 
 
+## Grindelgrat {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+----------------------------------------------------
+   start          end          date         time    
+------------ ------------- ------------ ------------
+ Alpbaechli   Grindelgrat   2020-06-13   02:26:04.2 
+----------------------------------------------------
+
+### By time
+
+
+----------------------------------------------------
+   start          end          date         time    
+------------ ------------- ------------ ------------
+ Alpbaechli   Grindelgrat   2020-06-13   02:26:04.2 
+----------------------------------------------------
+
+
 ## Signal {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -945,6 +1286,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------
   start        end         date         time    
 ---------- ----------- ------------ ------------
+ Amtshaus   Wilerhorn   2020-07-04   01:59:59.8 
+
  Amtshaus   Wilerhorn   2020-04-14   02:07:09.3 
 
  Amtshaus   Wilerhorn   2019-09-28   02:16:49.1 
@@ -958,6 +1301,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------
   start        end         date         time    
 ---------- ----------- ------------ ------------
+ Amtshaus   Wilerhorn   2020-07-04   01:59:59.8 
+
  Amtshaus   Wilerhorn   2020-04-14   02:07:09.3 
 
  Amtshaus   Wilerhorn   2019-08-03   02:10:13.6 
