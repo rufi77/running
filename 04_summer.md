@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '05 Jul 2020'
+date: '23 Jul 2020'
 output:
   html_document:
     keep_md: true
@@ -178,6 +178,39 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------
 
 
+## Gibel {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------
+  start      end       date         time    
+---------- ------- ------------ ------------
+ Alpbach    Gibel   2020-07-07   01:43:38.0 
+
+ Amtshaus   Gibel   2019-09-01   01:49:20.4 
+
+ Amtshaus   Gibel   2018-10-13   01:46:03.8 
+
+ Amtshaus   Gibel   2018-07-26   01:49:34.9 
+--------------------------------------------
+
+### By time
+
+
+--------------------------------------------
+  start      end       date         time    
+---------- ------- ------------ ------------
+ Alpbach    Gibel   2020-07-07   01:43:38.0 
+
+ Amtshaus   Gibel   2018-10-13   01:46:03.8 
+
+ Amtshaus   Gibel   2019-09-01   01:49:20.4 
+
+ Amtshaus   Gibel   2018-07-26   01:49:34.9 
+--------------------------------------------
+
+
 ## Grindelfeld Brunnen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -207,6 +240,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------
       start              end             date         time    
 ----------------- ------------------ ------------ ------------
+ Frutal Willigen   Grosse Scheidegg   2020-07-21   01:30:29.7 
+
  Frutal Willigen   Grosse Scheidegg   2020-06-23   01:34:54.7 
 
  Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
@@ -220,6 +255,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------
       start              end             date         time    
 ----------------- ------------------ ------------ ------------
+ Frutal Willigen   Grosse Scheidegg   2020-07-21   01:30:29.7 
+
  Frutal Willigen   Grosse Scheidegg   2019-08-24   01:34:45.7 
 
  Frutal Willigen   Grosse Scheidegg   2020-06-23   01:34:54.7 
@@ -273,6 +310,8 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------
   start             end               date         time    
 ---------- ---------------------- ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse   2020-07-23   00:28:35.4 
+
  Amtshaus   Hohfluh Staatstrasse   2020-06-20   00:26:37.9 
 
  Amtshaus   Hohfluh Staatstrasse   2020-05-29   00:29:22.9 
@@ -313,6 +352,8 @@ For listings by time, tours with missing time are omitted.
  Amtshaus   Hohfluh Staatstrasse   2007-10-01   00:28:00.0 
 
  Amtshaus   Hohfluh Staatstrasse   2019-08-16   00:28:03.3 
+
+ Amtshaus   Hohfluh Staatstrasse   2020-07-23   00:28:35.4 
 
  Amtshaus   Hohfluh Staatstrasse   2007-10-08   00:29:00.0 
 
@@ -563,6 +604,8 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------
   start               end                 date         time    
 --------- --------------------------- ------------ ------------
+ Alpbach   Reuti (Postautoparkplatz)   2020-07-12   00:26:09.8 
+
  Alpbach   Reuti (Postautoparkplatz)   2020-06-21   00:28:49.7 
 
  Alpbach   Reuti (Postautoparkplatz)   2020-05-25   00:26:35.5 
@@ -605,6 +648,8 @@ For listings by time, tours with missing time are omitted.
  Alpbach   Reuti (Postautoparkplatz)   2007-10-13   00:26:00.0 
 
  Alpbach   Reuti (Postautoparkplatz)   2019-08-27   00:26:02.1 
+
+ Alpbach   Reuti (Postautoparkplatz)   2020-07-12   00:26:09.8 
 
  Alpbach   Reuti (Postautoparkplatz)   2018-10-07   00:26:31.0 
 
@@ -657,6 +702,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------
       start             end            date         time    
 ----------------- ---------------- ------------ ------------
+ Frutal Willigen   Schwarzwaldalp   2020-07-21   00:57:27.1 
+
  Frutal Willigen   Schwarzwaldalp   2020-06-23   00:59:41.3 
 
  Frutal Willigen   Schwarzwaldalp   2020-04-17   01:01:02.4 
@@ -691,6 +738,8 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen   Schwarzwaldalp   2018-06-05   00:56:14.0 
 
  Frutal Willigen   Schwarzwaldalp   2019-08-24   00:56:24.7 
+
+ Frutal Willigen   Schwarzwaldalp   2020-07-21   00:57:27.1 
 
  Frutal Willigen   Schwarzwaldalp   2018-05-26   00:59:16.0 
 
@@ -839,6 +888,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------
   start        end           date         time    
 --------- -------------- ------------ ------------
+ Alpbach   Winterluecke   2020-07-12   00:48:05.4 
+
  Alpbach   Winterluecke   2020-06-21   00:53:37.2 
 
  Alpbach   Winterluecke   2020-05-25   00:48:13.6 
@@ -870,6 +921,8 @@ For listings by time, tours with missing time are omitted.
 
  Alpbach   Winterluecke   2007-10-13   00:46:00.0 
 
+ Alpbach   Winterluecke   2020-07-12   00:48:05.4 
+
  Alpbach   Winterluecke   2020-05-25   00:48:13.6 
 
  Alpbach   Winterluecke   2018-10-07   00:48:55.6 
@@ -896,6 +949,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
       start         end        date         time    
 ----------------- -------- ------------ ------------
+ Frutal Willigen   Zwirgi   2020-07-21   00:22:42.9 
+
  Frutal Willigen   Zwirgi   2020-06-23   00:23:16.2 
 
  Frutal Willigen   Zwirgi   2020-04-17   00:23:56.8 
@@ -922,6 +977,8 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen   Zwirgi   2007-10-02   00:21:00.0 
 
  Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
+
+ Frutal Willigen   Zwirgi   2020-07-21   00:22:42.9 
 
  Frutal Willigen   Zwirgi   2020-03-28   00:22:53.3 
 

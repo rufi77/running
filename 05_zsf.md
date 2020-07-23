@@ -1,7 +1,7 @@
 ---
 title: "Yearly summaries"
 author: "Kaspar Rufibach"
-date: '05 Jul 2020, as per 23rd May 2020'
+date: '23 Jul 2020, as per 23rd May 2020'
 output:
   html_document:
     keep_md: true
@@ -21,7 +21,7 @@ output:
 
 
 
-<!-- Numbers labelled 2021 are linearly extrapolated from 2020-07-05 to the full year of 2020. -->
+<!-- Numbers labelled 2021 are linearly extrapolated from 2020-07-23 to the full year of 2020. -->
 
 # Yearly summaries {.tabset .tabset-fade .tabset-pills}
 
@@ -37,11 +37,11 @@ The year 2021 always refers to the current status of 2020 linearly extrapolated 
 ---------------------------------------------------------------------------------------
     &nbsp;      2013    2014    2015    2016    2017    2018    2019    2020     2021  
 -------------- ------- ------- ------- ------- ------- ------- ------- ------- --------
-  **Total**     73817   48432   48372   51288   70050   87186   98833   63927   125534 
+  **Total**     73817   48432   48372   51288   70050   87186   98833   78899   141264 
 
- **per week**   1420    931.4   930.2   986.3   1347    1677    1901    1229     2414  
+ **per week**   1420    931.4   930.2   986.3   1347    1677    1901    1517     2717  
 
- **per day**    202.2   132.7   132.5   140.5   191.9   238.9   270.8   175.1   343.9  
+ **per day**    202.2   132.7   132.5   140.5   191.9   238.9   270.8   216.2    387   
 ---------------------------------------------------------------------------------------
 
 <img src="05_zsf_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
