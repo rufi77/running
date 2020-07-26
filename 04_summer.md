@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '23 Jul 2020'
+date: '26 Jul 2020'
 output:
   html_document:
     keep_md: true
@@ -673,6 +673,31 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------
 
 
+## Rohrmatten {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------
+   start         end          date         time    
+------------ ------------ ------------ ------------
+ Alpbaechli   Rohrmatten   2020-07-25   00:51.52.3 
+
+ Alpbaechli   Rohrmatten   2019-10-07   01:01:34.8 
+---------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------
+   start         end          date         time    
+------------ ------------ ------------ ------------
+ Alpbaechli   Rohrmatten   2020-07-25   00:51.52.3 
+
+ Alpbaechli   Rohrmatten   2019-10-07   01:01:34.8 
+---------------------------------------------------
+
+
 ## Schlafbielen {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -1313,6 +1338,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
    start          end          date         time    
 ------------ ------------- ------------ ------------
+ Alpbaechli   Gaulihuette   2020-07-25   02:45.52.3 
+
  Alpbaechli   Gaulihuette   2019-10-07   03:39:26.0 
 ----------------------------------------------------
 
@@ -1322,6 +1349,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
    start          end          date         time    
 ------------ ------------- ------------ ------------
+ Alpbaechli   Gaulihuette   2020-07-25   02:45.52.3 
+
  Alpbaechli   Gaulihuette   2019-10-07   03:39:26.0 
 ----------------------------------------------------
 
