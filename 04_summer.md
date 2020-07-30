@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '26 Jul 2020'
+date: '30 Jul 2020'
 output:
   html_document:
     keep_md: true
@@ -974,6 +974,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------
       start         end        date         time    
 ----------------- -------- ------------ ------------
+ Frutal Willigen   Zwirgi   2020-07-30   00:22:44.4 
+
  Frutal Willigen   Zwirgi   2020-07-21   00:22:42.9 
 
  Frutal Willigen   Zwirgi   2020-06-23   00:23:16.2 
@@ -1004,6 +1006,8 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen   Zwirgi   2019-08-24   00:21:04.5 
 
  Frutal Willigen   Zwirgi   2020-07-21   00:22:42.9 
+
+ Frutal Willigen   Zwirgi   2020-07-30   00:22:44.4 
 
  Frutal Willigen   Zwirgi   2020-03-28   00:22:53.3 
 
