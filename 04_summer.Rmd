@@ -33,7 +33,7 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 suppressWarnings(touren <- as.data.frame(read_excel(paste(path, "data/touren.xls", sep = ""), 
                      sheet = "all",
-                     col_types = c(rep("text", 4),      # 
+                     col_types = c(rep("text", 6),      # 
                                    rep("numeric", 1),       # 
                                    rep("text", 4)
                      ))))
