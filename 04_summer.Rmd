@@ -61,7 +61,6 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE))
 ```
 
-
 # Run
 
 ```{r run, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}

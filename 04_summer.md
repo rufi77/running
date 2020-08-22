@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '16 Aug 2020'
+date: '22 Aug 2020'
 output:
   html_document:
     keep_md: true
@@ -55,11 +55,11 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------------
   start      via1     via2      end          date         time    
 ---------- --------- ------ ------------ ------------ ------------
- Amtshaus   Hohfluh          Alpbruecke   2020-08-24   01:05:22.8 
-
  Alpbach    Goldern          Alpbruecke   2020-08-15   01.02:44.0 
 
  Amtshaus   Hohfluh          Alpbruecke   2020-08-08   01:05:01.4 
+
+ Amtshaus   Hohfluh          Alpbruecke   2018-08-24   01:05:22.8 
 ------------------------------------------------------------------
 
 ### By time
@@ -72,7 +72,7 @@ For listings by time, tours with missing time are omitted.
 
  Amtshaus   Hohfluh          Alpbruecke   2020-08-08   01:05:01.4 
 
- Amtshaus   Hohfluh          Alpbruecke   2020-08-24   01:05:22.8 
+ Amtshaus   Hohfluh          Alpbruecke   2018-08-24   01:05:22.8 
 ------------------------------------------------------------------
 
 
@@ -1037,7 +1037,6 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen                 Zwirgi   2020-04-17   00:23:56.8 
 ------------------------------------------------------------------
 
-
 # Run
 
 
@@ -1277,28 +1276,32 @@ For listings by time, tours with missing time are omitted.
 ### Chronologically
 
 
----------------------------------------------------------------------
-   start      via1   via2        end            date         time    
------------- ------ ------ ---------------- ------------ ------------
- Alpbaechli                 Schwarzwaldalp   2020-03-01   01:21:52.4 
+--------------------------------------------------------------------------------
+   start           via1         via2        end            date         time    
+------------ ----------------- ------ ---------------- ------------ ------------
+ Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-08-22   01:13:46.0 
 
- Alpbaechli                 Schwarzwaldalp   2019-10-12   01:14:59.2 
+ Alpbaechli                            Schwarzwaldalp   2020-03-01   01:21:52.4 
 
- Alpbaechli                 Schwarzwaldalp   2019-08-18   01:21:14.5 
----------------------------------------------------------------------
+ Alpbaechli                            Schwarzwaldalp   2019-10-12   01:14:59.2 
+
+ Alpbaechli                            Schwarzwaldalp   2019-08-18   01:21:14.5 
+--------------------------------------------------------------------------------
 
 ### By time
 
 
----------------------------------------------------------------------
-   start      via1   via2        end            date         time    
------------- ------ ------ ---------------- ------------ ------------
- Alpbaechli                 Schwarzwaldalp   2019-10-12   01:14:59.2 
+--------------------------------------------------------------------------------
+   start           via1         via2        end            date         time    
+------------ ----------------- ------ ---------------- ------------ ------------
+ Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-08-22   01:13:46.0 
 
- Alpbaechli                 Schwarzwaldalp   2019-08-18   01:21:14.5 
+ Alpbaechli                            Schwarzwaldalp   2019-10-12   01:14:59.2 
 
- Alpbaechli                 Schwarzwaldalp   2020-03-01   01:21:52.4 
----------------------------------------------------------------------
+ Alpbaechli                            Schwarzwaldalp   2019-08-18   01:21:14.5 
+
+ Alpbaechli                            Schwarzwaldalp   2020-03-01   01:21:52.4 
+--------------------------------------------------------------------------------
 
 
 ## Wilerhorn {.tabset .tabset-fade .tabset-pills}
