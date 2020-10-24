@@ -136,7 +136,7 @@ legend("bottomleft", legend = paste(colnames(ascent)[-1], ": ", apply(ascent[, -
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
 par(mfrow = c(1, 1), mar = c(6, 5, 5, 1), las = 2)
-plot(0, 0, type = "n", xlim = c(1, 12), ylim = c(0, 100000), xlab = "", ylab = "", main = "Cumulative ascent", xaxt = "n", yaxt = "n")
+plot(0, 0, type = "n", xlim = c(1, 12), ylim = c(0, 150000), xlab = "", ylab = "", main = "Cumulative ascent", xaxt = "n", yaxt = "n")
 for (i in 2:ncol(ascent)){
   tmp1 <- ascent[, i]
   tmp2 <- cumsum(na.omit(tmp1))

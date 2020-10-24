@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '22 Aug 2020'
+date: '24 Oct 2020'
 output:
   html_document:
     keep_md: true
@@ -84,6 +84,10 @@ For listings by time, tours with missing time are omitted.
 -------------------------------------------------------------
   start      via1     via2    end       date         time    
 ---------- --------- ------ ------- ------------ ------------
+ Alpbach    Goldern          Bidmi   2020-09-22   00:55:16.8 
+
+ Alpbach    Goldern          Bidmi   2020-09-08   00:54:19.8 
+
  Alpbach    Goldern          Bidmi   2020-08-06   00:54:00.5 
 
  Alpbach    Goldern          Bidmi   2020-06-25   00:56:55.5 
@@ -108,6 +112,10 @@ For listings by time, tours with missing time are omitted.
  Amtshaus   Hohfluh          Bidmi   2007-10-01   00:53:00.0 
 
  Alpbach    Goldern          Bidmi   2020-08-06   00:54:00.5 
+
+ Alpbach    Goldern          Bidmi   2020-09-08   00:54:19.8 
+
+ Alpbach    Goldern          Bidmi   2020-09-22   00:55:16.8 
 
  Amtshaus   Hohfluh          Bidmi   2019-09-15   00:55:46.8 
 
@@ -322,6 +330,35 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------------------------
 
 
+## Halgenfluh {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------------------------------
+  start             via1           via2      end          date         time    
+---------- ---------------------- ------ ------------ ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-10-24   00:47:45.7 
+
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-09-24   00:47:20.2 
+
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-07-23   00:46:59.6 
+-------------------------------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------------------------------
+  start             via1           via2      end          date         time    
+---------- ---------------------- ------ ------------ ------------ ------------
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-07-23   00:46:59.6 
+
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-09-24   00:47:20.2 
+
+ Amtshaus   Hohfluh Staatstrasse          Halgenfluh   2020-10-24   00:47:45.7 
+-------------------------------------------------------------------------------
+
+
 ## Hohfluh Staatstrasse {.tabset .tabset-fade .tabset-pills}
 
 ### Chronologically
@@ -330,6 +367,10 @@ For listings by time, tours with missing time are omitted.
 -------------------------------------------------------------------------
   start     via1   via2           end               date         time    
 ---------- ------ ------ ---------------------- ------------ ------------
+ Amtshaus                 Hohfluh Staatstrasse   2020-10-24   00:30:30.4 
+
+ Amtshaus                 Hohfluh Staatstrasse   2020-09-24   00:29:57.6 
+
  Amtshaus                 Hohfluh Staatstrasse   2020-08-08   00:31:42.5 
 
  Amtshaus                 Hohfluh Staatstrasse   2020-07-23   00:28:35.4 
@@ -387,7 +428,11 @@ For listings by time, tours with missing time are omitted.
 
  Amtshaus                 Hohfluh Staatstrasse   2009-09-18   00:29:30.0 
 
+ Amtshaus                 Hohfluh Staatstrasse   2020-09-24   00:29:57.6 
+
  Amtshaus                 Hohfluh Staatstrasse   2007-10-03   00:30:00.0 
+
+ Amtshaus                 Hohfluh Staatstrasse   2020-10-24   00:30:30.4 
 
  Amtshaus                 Hohfluh Staatstrasse   2020-03-21   00:31:10.7 
 
@@ -481,6 +526,8 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------------
   start      via1     via2     end        date         time    
 ---------- --------- ------- -------- ------------ ------------
+ Alpbach    Goldern   Bidmi   Maegis   2020-09-08   01:16:06.5 
+
  Alpbach    Goldern   Bidmi   Maegis   2020-08-06   01:14:22.9 
 
  Alpbach    Goldern   Bidmi   Maegis   2020-06-25   01:18:13.2 
@@ -495,6 +542,8 @@ For listings by time, tours with missing time are omitted.
   start      via1     via2     end        date         time    
 ---------- --------- ------- -------- ------------ ------------
  Alpbach    Goldern   Bidmi   Maegis   2020-08-06   01:14:22.9 
+
+ Alpbach    Goldern   Bidmi   Maegis   2020-09-08   01:16:06.5 
 
  Alpbach    Goldern   Bidmi   Maegis   2020-06-25   01:18:13.2 
 
@@ -531,6 +580,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------------------
       start        via1   via2       end           date         time    
 ----------------- ------ ------ -------------- ------------ ------------
+ Frutal Willigen                 Obri Mettlen   2020-09-02   01:22:54.2 
+
  Frutal Willigen                 Obri Mettlen   2020-06-13   01:33:31.3 
 
  Frutal Willigen                 Obri Mettlen   2020-05-16   01:33:52.1 
@@ -542,6 +593,8 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------------------
       start        via1   via2       end           date         time    
 ----------------- ------ ------ -------------- ------------ ------------
+ Frutal Willigen                 Obri Mettlen   2020-09-02   01:22:54.2 
+
  Frutal Willigen                 Obri Mettlen   2020-06-13   01:33:31.3 
 
  Frutal Willigen                 Obri Mettlen   2020-05-16   01:33:52.1 
@@ -598,6 +651,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------------
   start     via1      via2        end          date         time    
 --------- --------- -------- ------------- ------------ ------------
+ Alpbach   Goldern   Maegis   Planplatten   2020-09-08   01:57:43.8 
+
  Alpbach   Goldern   Maegis   Planplatten   2020-06-25   02:01:36.3 
 --------------------------------------------------------------------
 
@@ -607,6 +662,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------------
   start     via1      via2        end          date         time    
 --------- --------- -------- ------------- ------------ ------------
+ Alpbach   Goldern   Maegis   Planplatten   2020-09-08   01:57:43.8 
+
  Alpbach   Goldern   Maegis   Planplatten   2020-06-25   02:01:36.3 
 --------------------------------------------------------------------
 
@@ -619,6 +676,8 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------
   start    via1   via2    end       date         time    
 --------- ------ ------ ------- ------------ ------------
+ Alpbach                 Reuti   2020-10-20   00:27:29.8 
+
  Alpbach                 Reuti   2020-08-01   00:28:09.7 
 
  Alpbach                 Reuti   2020-07-12   00:26:09.8 
@@ -677,6 +736,8 @@ For listings by time, tours with missing time are omitted.
  Alpbach                 Reuti   2015-05-27   00:27:00.0 
 
  Alpbach                 Reuti   2020-04-05   00:27:13.6 
+
+ Alpbach                 Reuti   2020-10-20   00:27:29.8 
 
  Alpbach                 Reuti   2018-05-27   00:27:40.0 
 
@@ -746,6 +807,8 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------------------
       start        via1   via2        end            date         time    
 ----------------- ------ ------ ---------------- ------------ ------------
+ Frutal Willigen                 Schwarzwaldalp   2020-10-22   00:57:33.8 
+
  Frutal Willigen                 Schwarzwaldalp   2020-07-21   00:57:27.1 
 
  Frutal Willigen                 Schwarzwaldalp   2020-06-23   00:59:41.3 
@@ -784,6 +847,8 @@ For listings by time, tours with missing time are omitted.
  Frutal Willigen                 Schwarzwaldalp   2019-08-24   00:56:24.7 
 
  Frutal Willigen                 Schwarzwaldalp   2020-07-21   00:57:27.1 
+
+ Frutal Willigen                 Schwarzwaldalp   2020-10-22   00:57:33.8 
 
  Frutal Willigen                 Schwarzwaldalp   2018-05-26   00:59:16.0 
 
@@ -932,6 +997,8 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------------------
   start    via1    via2       end          date         time    
 --------- ------- ------ ------------- ------------ ------------
+ Alpbach   Reuti          Winterlicke   2020-10-20   00:49:49.2 
+
  Alpbach   Reuti          Winterlicke   2020-07-12   00:48:05.4 
 
  Alpbach   Reuti          Winterlicke   2020-06-21   00:53:37.2 
@@ -973,6 +1040,8 @@ For listings by time, tours with missing time are omitted.
 
  Alpbach   Reuti          Winterlicke   2020-04-05   00:49:21.5 
 
+ Alpbach   Reuti          Winterlicke   2020-10-20   00:49:49.2 
+
  Alpbach   Reuti          Winterlicke   2015-05-27   00:50:04.1 
 
  Alpbach   Reuti          Winterlicke   2018-10-22   00:51:47.1 
@@ -993,6 +1062,10 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------------
       start        via1   via2    end        date         time    
 ----------------- ------ ------ -------- ------------ ------------
+ Frutal Willigen                 Zwirgi   2020-10-22   00:22:36.3 
+
+ Frutal Willigen                 Zwirgi   2020-09-02   00:21:55.2 
+
  Frutal Willigen                 Zwirgi   2020-07-30   00:22:44.4 
 
  Frutal Willigen                 Zwirgi   2020-07-21   00:22:42.9 
@@ -1024,6 +1097,10 @@ For listings by time, tours with missing time are omitted.
 
  Frutal Willigen                 Zwirgi   2019-08-24   00:21:04.5 
 
+ Frutal Willigen                 Zwirgi   2020-09-02   00:21:55.2 
+
+ Frutal Willigen                 Zwirgi   2020-10-22   00:22:36.3 
+
  Frutal Willigen                 Zwirgi   2020-07-21   00:22:42.9 
 
  Frutal Willigen                 Zwirgi   2020-07-30   00:22:44.4 
@@ -1038,6 +1115,31 @@ For listings by time, tours with missing time are omitted.
 ------------------------------------------------------------------
 
 # Run
+
+
+## Bidmi {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+-------------------------------------------------------------
+   start      via1    via2    end       date         time    
+------------ ------- ------ ------- ------------ ------------
+  Alpbach     Reuti          Bidmi   2020-10-06   00:56:08.7 
+
+ Alpbaechli   Reuti          Bidmi   2020-10-06   00:59:01.7 
+-------------------------------------------------------------
+
+### By time
+
+
+-------------------------------------------------------------
+   start      via1    via2    end       date         time    
+------------ ------- ------ ------- ------------ ------------
+  Alpbach     Reuti          Bidmi   2020-10-06   00:56:08.7 
+
+ Alpbaechli   Reuti          Bidmi   2020-10-06   00:59:01.7 
+-------------------------------------------------------------
 
 
 ## Brienzer Rothorn {.tabset .tabset-fade .tabset-pills}
@@ -1059,6 +1161,27 @@ For listings by time, tours with missing time are omitted.
 ------------ ------ ------ ------------------ ------------ ------------
  Brienz Bhf                 Brienzer Rothorn   2019-07-06   02:16:07.3 
 -----------------------------------------------------------------------
+
+
+## Gadmen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------------
+   start         via1       via2     end        date         time    
+------------ ------------- ------- -------- ------------ ------------
+ Alpbaechli   Hundschipfi   Boden   Gadmen   2020-10-03   01:59:43.7 
+---------------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------------
+   start         via1       via2     end        date         time    
+------------ ------------- ------- -------- ------------ ------------
+ Alpbaechli   Hundschipfi   Boden   Gadmen   2020-10-03   01:59:43.7 
+---------------------------------------------------------------------
 
 
 ## Gaulihuette {.tabset .tabset-fade .tabset-pills}
@@ -1279,13 +1402,15 @@ For listings by time, tours with missing time are omitted.
 --------------------------------------------------------------------------------
    start           via1         via2        end            date         time    
 ------------ ----------------- ------ ---------------- ------------ ------------
+ Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-09-15   01:17:40.0 
+
  Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-08-22   01:13:46.0 
 
- Alpbaechli                            Schwarzwaldalp   2020-03-01   01:21:52.4 
+ Alpbaechli      Schwendi              Schwarzwaldalp   2020-03-01   01:21:52.4 
 
- Alpbaechli                            Schwarzwaldalp   2019-10-12   01:14:59.2 
+ Alpbaechli      Schwendi              Schwarzwaldalp   2019-10-12   01:14:59.2 
 
- Alpbaechli                            Schwarzwaldalp   2019-08-18   01:21:14.5 
+ Alpbaechli      Schwendi              Schwarzwaldalp   2019-08-18   01:21:14.5 
 --------------------------------------------------------------------------------
 
 ### By time
@@ -1296,12 +1421,53 @@ For listings by time, tours with missing time are omitted.
 ------------ ----------------- ------ ---------------- ------------ ------------
  Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-08-22   01:13:46.0 
 
- Alpbaechli                            Schwarzwaldalp   2019-10-12   01:14:59.2 
+ Alpbaechli      Schwendi              Schwarzwaldalp   2019-10-12   01:14:59.2 
 
- Alpbaechli                            Schwarzwaldalp   2019-08-18   01:21:14.5 
+ Alpbaechli   Reichenbachfall          Schwarzwaldalp   2020-09-15   01:17:40.0 
 
- Alpbaechli                            Schwarzwaldalp   2020-03-01   01:21:52.4 
+ Alpbaechli      Schwendi              Schwarzwaldalp   2019-08-18   01:21:14.5 
+
+ Alpbaechli      Schwendi              Schwarzwaldalp   2020-03-01   01:21:52.4 
 --------------------------------------------------------------------------------
+
+
+## Triftbruecke {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------------------
+        start                via1         via2       end           date    
+--------------------- ------------------ ------ -------------- ------------
+ Nessental Triftbahn   alter Windeggweg          Triftbruecke   2020-10-05 
+---------------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+------------
+    time    
+------------
+ 01:26:03.0 
+------------
+
+### By time
+
+
+---------------------------------------------------------------------------
+        start                via1         via2       end           date    
+--------------------- ------------------ ------ -------------- ------------
+ Nessental Triftbahn   alter Windeggweg          Triftbruecke   2020-10-05 
+---------------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+------------
+    time    
+------------
+ 01:26:03.0 
+------------
 
 
 ## Wilerhorn {.tabset .tabset-fade .tabset-pills}

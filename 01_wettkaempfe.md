@@ -1,7 +1,7 @@
 ---
 title: "Wettkaempfe"
 author: "Kaspar Rufibach"
-date: '23 Jul 2020'
+date: '24 Oct 2020'
 output:
   html_document:
     keep_md: true
