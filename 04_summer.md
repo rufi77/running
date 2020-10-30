@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '24 Oct 2020'
+date: '30 Oct 2020'
 output:
   html_document:
     keep_md: true
