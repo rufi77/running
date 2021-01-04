@@ -41,7 +41,7 @@ wett <- subset(wett_in, Alexander == 0 & Lorenz == 0)
 
 # order by decreasing frequency of participation
 Anlass <- wett[ ,"Anlass"]
-wett <- merge(wett, table(Anlass), by = "Anlass")
+wett <- merge(wett, table(Anlass, useNA = "always"), by = "Anlass")
 wett <- wett[with(wett, rev(order(Freq, -Jahr))), ]
 
 Anlass    <- wett[ ,"Anlass"]
@@ -88,7 +88,7 @@ barplot(b, beside = TRUE, legend = TRUE, args.legend = list("bty" = "n", "x" = "
 abline(h = 1:100, col = grey(0.5), lty = 2)
 ```
 
-Bis jetzt habe ich an `r sum(Disziplin == "Run")` Laeufen und `r sum(Disziplin == "Bike")` Bikerennen teilgenommen.
+Bis jetzt habe ich an `r sum(Disziplin == "Run", na.rm = TRUE)` Laeufen und `r sum(Disziplin == "Bike", na.rm = TRUE)` Bikerennen teilgenommen.
 
 # Teilnahmen pro Anlass
 
@@ -103,8 +103,9 @@ legend(2002, 0, c("Run", "Bike"), lty = 1, lwd = c(NA, NA), pch = c(19, 17), bty
 
 for (i in 1:length(a)){
      ind <- (Anlass == names(a)[i])
-     
-     points(Jahr[ind], rep(ys[i], sum(ind)), col = i, pch = ifelse(Disziplin[ind][1] == "Run", 19, 17), cex = 1.5)
+     J2 <- Jahr[ind]
+     J2 <- J2[is.na(J2) == FALSE]
+     points(J2, rep(ys[i], sum(ind, na.rm = TRUE)), col = i, pch = ifelse(Disziplin[ind][1] == "Run", 19, 17), cex = 1.5)
 }
 ```
 
@@ -133,6 +134,7 @@ ylab <- hms(c(h1, h2, h3, h4))
 out <- NULL
 for (i in 1:length(a)){
   ind <- (Anlass == names(a)[i])
+  ind[is.na(ind)] <- FALSE
   if (all(is.na(Zeit[ind])) == FALSE & sum(ind) >= atleast){
     out <- c(out, knit_expand('wett_summary.Rmd'))
   } else {
@@ -159,6 +161,7 @@ leg.lty <- NULL
 
 for (i in 1:length(a)){
     ind <- (Anlass == names(a)[i])
+    ind[is.na(ind)] <- FALSE
     y0 <- (M_Rang / M_Teiln)[ind]
     y <- pmin(1, y0, na.rm = TRUE)
 
@@ -205,6 +208,7 @@ leg.lty <- NULL
 
 for (i in 1:length(a)){
     ind <- (Anlass == names(a)[i])
+    ind[is.na(ind)] <- FALSE
     y0 <- (Kat_Rang / Kat_Teiln)[ind]
     y <- pmin(1, y0, na.rm = TRUE)
 

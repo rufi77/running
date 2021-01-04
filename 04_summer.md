@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '30 Oct 2020'
+date: '04 Jan 2021'
 output:
   html_document:
     keep_md: true
@@ -214,6 +214,8 @@ For listings by time, tours with missing time are omitted.
 -----------------------------------------------------------------
   start      via1       via2      end       date         time    
 ---------- --------- ---------- ------- ------------ ------------
+ Alpbach    Goldern    Halti     Gibel   2020-11-07   01:45:38.0 
+
  Alpbach    Goldern    Halti     Gibel   2020-07-07   01:43:38.0 
 
  Amtshaus   Hohfluh   Balisalp   Gibel   2019-09-01   01:49:20.4 
@@ -230,6 +232,8 @@ For listings by time, tours with missing time are omitted.
   start      via1       via2      end       date         time    
 ---------- --------- ---------- ------- ------------ ------------
  Alpbach    Goldern    Halti     Gibel   2020-07-07   01:43:38.0 
+
+ Alpbach    Goldern    Halti     Gibel   2020-11-07   01:45:38.0 
 
  Amtshaus   Hohfluh   Balisalp   Gibel   2018-10-13   01:46:03.8 
 
@@ -367,6 +371,8 @@ For listings by time, tours with missing time are omitted.
 -------------------------------------------------------------------------
   start     via1   via2           end               date         time    
 ---------- ------ ------ ---------------------- ------------ ------------
+ Amtshaus                 Hohfluh Staatstrasse   2020-11-23   00:29:36.2 
+
  Amtshaus                 Hohfluh Staatstrasse   2020-10-24   00:30:30.4 
 
  Amtshaus                 Hohfluh Staatstrasse   2020-09-24   00:29:57.6 
@@ -427,6 +433,8 @@ For listings by time, tours with missing time are omitted.
  Amtshaus                 Hohfluh Staatstrasse   2020-05-29   00:29:22.9 
 
  Amtshaus                 Hohfluh Staatstrasse   2009-09-18   00:29:30.0 
+
+ Amtshaus                 Hohfluh Staatstrasse   2020-11-23   00:29:36.2 
 
  Amtshaus                 Hohfluh Staatstrasse   2020-09-24   00:29:57.6 
 
@@ -676,6 +684,10 @@ For listings by time, tours with missing time are omitted.
 ---------------------------------------------------------
   start    via1   via2    end       date         time    
 --------- ------ ------ ------- ------------ ------------
+ Alpbach                 Reuti   2020-11-22   00:28:10.6 
+
+ Alpbach                 Reuti   2020-11-12   00:28:24.6 
+
  Alpbach                 Reuti   2020-10-20   00:27:29.8 
 
  Alpbach                 Reuti   2020-08-01   00:28:09.7 
@@ -748,6 +760,10 @@ For listings by time, tours with missing time are omitted.
  Alpbach                 Reuti   2019-06-07   00:28:06.3 
 
  Alpbach                 Reuti   2020-08-01   00:28:09.7 
+
+ Alpbach                 Reuti   2020-11-22   00:28:10.6 
+
+ Alpbach                 Reuti   2020-11-12   00:28:24.6 
 
  Alpbach                 Reuti   2020-06-21   00:28:49.7 
 ---------------------------------------------------------
@@ -997,6 +1013,10 @@ For listings by time, tours with missing time are omitted.
 ----------------------------------------------------------------
   start    via1    via2       end          date         time    
 --------- ------- ------ ------------- ------------ ------------
+ Alpbach   Reuti          Winterlicke   2020-11-22   00:50:22.4 
+
+ Alpbach   Reuti          Winterlicke   2020-11-12   00:51:43.6 
+
  Alpbach   Reuti          Winterlicke   2020-10-20   00:49:49.2 
 
  Alpbach   Reuti          Winterlicke   2020-07-12   00:48:05.4 
@@ -1043,6 +1063,10 @@ For listings by time, tours with missing time are omitted.
  Alpbach   Reuti          Winterlicke   2020-10-20   00:49:49.2 
 
  Alpbach   Reuti          Winterlicke   2015-05-27   00:50:04.1 
+
+ Alpbach   Reuti          Winterlicke   2020-11-22   00:50:22.4 
+
+ Alpbach   Reuti          Winterlicke   2020-11-12   00:51:43.6 
 
  Alpbach   Reuti          Winterlicke   2018-10-22   00:51:47.1 
 
@@ -1161,6 +1185,27 @@ For listings by time, tours with missing time are omitted.
 ------------ ------ ------ ------------------ ------------ ------------
  Brienz Bhf                 Brienzer Rothorn   2019-07-06   02:16:07.3 
 -----------------------------------------------------------------------
+
+
+## Funtenen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+---------------------------------------------------------------
+   start      via1   via2     end         date         time    
+------------ ------ ------ ---------- ------------ ------------
+ Alpbaechli   5km           Funtenen   2021-01-03   00:21:13.1 
+---------------------------------------------------------------
+
+### By time
+
+
+---------------------------------------------------------------
+   start      via1   via2     end         date         time    
+------------ ------ ------ ---------- ------------ ------------
+ Alpbaechli   5km           Funtenen   2021-01-03   00:21:13.1 
+---------------------------------------------------------------
 
 
 ## Gadmen {.tabset .tabset-fade .tabset-pills}
@@ -1559,6 +1604,8 @@ Table: Table continues below
 -------------------------------------------------------------
    start      via1   via2    end        date         time    
 ------------ ------ ------ -------- ------------ ------------
+ Alpbaechli                 Signal   2020-11-29   01:48:37.2 
+
  Alpbaechli                 Signal   2020-04-23   01:58:43.9 
 -------------------------------------------------------------
 
@@ -1568,6 +1615,8 @@ Table: Table continues below
 -------------------------------------------------------------
    start      via1   via2    end        date         time    
 ------------ ------ ------ -------- ------------ ------------
+ Alpbaechli                 Signal   2020-11-29   01:48:37.2 
+
  Alpbaechli                 Signal   2020-04-23   01:58:43.9 
 -------------------------------------------------------------
 

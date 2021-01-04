@@ -1,7 +1,7 @@
 ---
 title: "Countries visited"
 author: "Kaspar Rufibach"
-date: '30 Oct 2020'
+date: '04 Jan 2021'
 output:
   html_document:
     keep_md: true

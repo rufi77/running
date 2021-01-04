@@ -1,7 +1,7 @@
 ---
 title: "Skitouring"
 author: "Kaspar Rufibach"
-date: '30 Oct 2020'
+date: '04 Jan 2021'
 output:
   html_document:
     keep_md: true
@@ -28,6 +28,8 @@ List by far not complete. Multiple tours within same month are pooled and freque
 
 
 <img src="03_winter_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+
+<img src="03_winter_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 # Listings
 
@@ -246,6 +248,8 @@ This section provides listings, chronologically and by time. For listings by tim
 -----------------------------------------------------------------------
       start        via1   via2       end          date         time    
 ----------------- ------ ------ ------------- ------------ ------------
+ Gschwandtenmaad                 Grindelgrat   2020-12-10   02:23:22.0 
+
  Schwarzwaldalp                  Grindelgrat   2019-02-20   01:54:15.8 
 
  Gschwandtenmaad                 Grindelgrat   2013-02-10   03:05:41.2 
@@ -263,8 +267,31 @@ This section provides listings, chronologically and by time. For listings by tim
 ----------------- ------ ------ ------------- ------------ ------------
  Schwarzwaldalp                  Grindelgrat   2019-02-20   01:54:15.8 
 
+ Gschwandtenmaad                 Grindelgrat   2020-12-10   02:23:22.0 
+
  Gschwandtenmaad                 Grindelgrat   2013-02-10   03:05:41.2 
 -----------------------------------------------------------------------
+
+
+## Gummen {.tabset .tabset-fade .tabset-pills}
+
+### Chronologically
+
+
+--------------------------------------------------------
+ start   via1   via2    end        date         time    
+------- ------ ------ -------- ------------ ------------
+ Reuti                 Gummen   2020-12-07   02:17:20.0 
+--------------------------------------------------------
+
+### By time
+
+
+--------------------------------------------------------
+ start   via1   via2    end        date         time    
+------- ------ ------ -------- ------------ ------------
+ Reuti                 Gummen   2020-12-07   02:17:20.0 
+--------------------------------------------------------
 
 
 ## Obertaljoch {.tabset .tabset-fade .tabset-pills}
@@ -295,6 +322,12 @@ This section provides listings, chronologically and by time. For listings by tim
 -------------------------------------------------------------
  start   via1   via2       end          date         time    
 ------- ------ ------ ------------- ------------ ------------
+ Reuti                 Planplatten   2020-12-21   01:59:54.0 
+
+ Reuti                 Planplatten   2020-12-19   01:42:21.5 
+
+ Reuti                 Planplatten   2020-12-08   02:18:22.0 
+
  Reuti                 Planplatten   2018-12-13   02:12:01.6 
 -------------------------------------------------------------
 
@@ -304,7 +337,13 @@ This section provides listings, chronologically and by time. For listings by tim
 -------------------------------------------------------------
  start   via1   via2       end          date         time    
 ------- ------ ------ ------------- ------------ ------------
+ Reuti                 Planplatten   2020-12-19   01:42:21.5 
+
+ Reuti                 Planplatten   2020-12-21   01:59:54.0 
+
  Reuti                 Planplatten   2018-12-13   02:12:01.6 
+
+ Reuti                 Planplatten   2020-12-08   02:18:22.0 
 -------------------------------------------------------------
 
 
@@ -426,6 +465,8 @@ This section provides listings, chronologically and by time. For listings by tim
 ---------------------------------------------------------------------
      start        via1   via2      end          date         time    
 ---------------- ------ ------ ------------ ------------ ------------
+ Schwarzwaldalp                 Wildgaerst   2020-12-14   02:59:58.0 
+
  Schwarzwaldalp                 Wildgaerst   2019-12-30   02:57:19.5 
 
  Schwarzwaldalp                 Wildgaerst   2019-12-29   02:15:47.4 
@@ -460,6 +501,8 @@ This section provides listings, chronologically and by time. For listings by tim
  Schwarzwaldalp                 Wildgaerst   2019-12-30   02:57:19.5 
 
  Schwarzwaldalp                 Wildgaerst   2019-02-19   02:59:45.5 
+
+ Schwarzwaldalp                 Wildgaerst   2020-12-14   02:59:58.0 
 ---------------------------------------------------------------------
 
 

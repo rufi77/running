@@ -35,6 +35,8 @@ suppressWarnings(touren <- as.data.frame(read_excel(paste(path, "data/touren.xls
                      sheet = "all",
                      col_types = c(rep("text", 6),      # 
                                    rep("numeric", 1),       # 
+                                   rep("text", 1),
+                                   rep("numeric", 2),
                                    rep("text", 4)
                      ))))
 

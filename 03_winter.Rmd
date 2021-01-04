@@ -34,8 +34,18 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 touren <- read_excel(paste(path, "data/touren.xls", sep = ""))
 
-all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) 
+# add season
+cuts <- parse_date_time(x = "2000-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
+touren$season <- cut.POSIXt(x = parse_date_time(x = touren$date, orders = "ymd"), breaks = cuts, 
+                         labels = c(paste("Winter 0", 0:8, "/0", 1:9, sep = ""), 
+                                    "Winter 09/10", paste("Winter ", 10:49, "/", 11:50, sep = "")))
+
+# skitouren
+all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) 
 all[is.na(all)] <- ""
+
+# skitage
+skitage1 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = as.numeric(skihalbtag), skihalbtag_fam = as.numeric(skihalbtag_fam)) %>% filter(sport == "Skifahren") %>% arrange(end, time) 
 ```
 
 # Summary over years
@@ -65,6 +75,33 @@ for (i in 1:length(tour)){
   xs.i <- ymd_hms(paste(as.character(dat.i$date), " 00:00:00", sep = ""))
   text(xs.i, rep(i, nrow(dat.i)), dat.i$n)
 }
+```
+
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+par(las = 2, mar = c(8, 4.5, 1, 1))
+
+# now pick first season with entry and last season
+dat <- table(all$season)
+i1 <- which(names(dat) == unique(sort(droplevels(all$season)))[1])
+i2 <- which(names(dat) == tail(unique(sort(droplevels(all$season))), 1))
+dat <- dat[i1:i2]
+
+plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage")
+abline(h = 1:100, lty = 2, col = grey(0.5))
+
+# Skihalbtage 
+ski1 <- (skitage1 %>% group_by(season) %>% summarize(sum = sum(skihalbtag, na.rm = TRUE), .groups = 'drop'))
+dat1 <- dat
+dat1[1:length(dat1)] <- NA
+dat1[names(dat1) %in% ski1$season] <- ski1$sum
+lines(1:length(dat1), dat1, col = 3, type = "b", pch = 19)
+
+# Familien-Skihalbtage 
+ski2 <- (skitage1 %>% group_by(season) %>% summarize(sum = sum(skihalbtag_fam, na.rm = TRUE), .groups = 'drop'))
+dat2 <- dat
+dat2[1:length(dat2)] <- NA
+dat2[names(dat2) %in% ski1$season] <- ski2$sum
+lines(1:length(dat2), dat2, col = 4, type = "b", pch = 19)
 ```
 
 # Listings

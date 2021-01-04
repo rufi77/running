@@ -3,6 +3,7 @@
 
 i <- as.numeric('{{i}}')
 ind <- (Anlass == names(a)[i])
+ind[is.na(ind)] <- FALSE
 ```
 
 ## `r names(a)[i]` {.tabset .tabset-fade .tabset-pills}
