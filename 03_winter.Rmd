@@ -34,6 +34,16 @@ path <- paste(getwd(), "/", sep = "")
 ## =================================================================
 touren <- read_excel(paste(path, "data/touren.xls", sep = ""))
 
+# Hoehenmeter
+hm <- read_excel(paste(path, "data/hm.xlsx", sep = ""))
+hm$mum <- with(hm, pmax(mum_prov, mum_def, na.rm = TRUE))
+
+# merge the two and add time in hours
+touren <- (inner_join(touren, hm[, c("ort", "mum")], by = c("start" = "ort")) %>% rename(start_hm = mum) %>% inner_join(hm[, c("ort", "mum")], by = c("end" = "ort")) %>% rename(end_hm = mum) %>% mutate(time_h = as.numeric(hms(time, quiet = TRUE)) / 3600))
+
+# add Hm / h
+touren <- (touren %>% mutate(hm_diff = end_hm - start_hm, hm_h = hm_diff / time_h))
+
 # add season
 cuts <- parse_date_time(x = "2000-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
 touren$season <- cut.POSIXt(x = parse_date_time(x = touren$date, orders = "ymd"), breaks = cuts, 
@@ -41,11 +51,13 @@ touren$season <- cut.POSIXt(x = parse_date_time(x = touren$date, orders = "ymd")
                                     "Winter 09/10", paste("Winter ", 10:49, "/", 11:50, sep = "")))
 
 # skitouren
-all <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) 
+all <- (touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) )
+all <- as.data.frame(all)
 all[is.na(all)] <- ""
 
 # skitage
 skitage1 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = as.numeric(skihalbtag), skihalbtag_fam = as.numeric(skihalbtag_fam)) %>% filter(sport == "Skifahren") %>% arrange(end, time) 
+
 ```
 
 # Summary over years
@@ -104,6 +116,28 @@ dat2[names(dat2) %in% ski1$season] <- ski2$sum
 lines(1:length(dat2), dat2, col = 4, type = "b", pch = 19)
 ```
 
+# Days on ski in total
+
+```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+s <- 21
+f1 <- lapply(with(touren, split(skihalbtag, season)), sum, na.rm = TRUE)[[s]]
+f2 <- lapply(with(touren, split(skihalbtag_fam, season)), sum, na.rm = TRUE)[[s]]
+f3 <- lapply(with(touren, split(sport == "Skitour", season)), sum, na.rm = TRUE)[[s]]
+
+f_tab <- data.frame(cbind(c("Ski half-day", "Ski half-day family", "Skitour"), c(f1, f2, f3)))
+colnames(f_tab) <- c("Type", "frequency")
+pander(f_tab)
+
+# days on ski (double counting not possible)
+f4 <- with(touren, data.frame(date, skihalbtag, skihalbtag_fam, tour = as.numeric(sport == "Skitour"), season))
+f5 <- f4[f4$season == levels(with(touren, season))[s], ]
+f5$any <- with(f5, pmax(skihalbtag, skihalbtag_fam, tour, na.rm = TRUE))
+f5_dat <- f5[f5$any == 1, "date"]
+skidays <- length(unique(f5_dat))
+```
+
+Total days on skis: `r skidays`.
+
 # Listings
 
 This section provides listings, chronologically and by time. For listings by time, tours with missing time are omitted.
@@ -120,6 +154,13 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
 ```
 
+# Elevation gain per hour
 
+This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% select(start, end, date, hm_diff, time, hm_h) %>% arrange(desc(hm_h)) %>% mutate(start = substr(start, 1, 23)))
+pander(t)
+```
 
 
