@@ -21,31 +21,27 @@ output:
 
 ```{r setup, include=FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl", "lubridate")
 for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
 
 path <- paste(getwd(), "/", sep = "")
 
-## =================================================================
-## input touren data
-## =================================================================
-suppressWarnings(touren <- as.data.frame(read_excel(paste(path, "data/touren.xls", sep = ""), 
-                     sheet = "all",
-                     col_types = c(rep("text", 6),      # 
-                                   rep("numeric", 1),       # 
-                                   rep("text", 1),
-                                   rep("numeric", 2),
-                                   rep("text", 4)
-                     ))))
+source(paste(path, "/functions/input_touren.r", sep = ""))
+source(paste(path, "/functions/hm_print.r", sep = ""))
 
-all0 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% 
-  arrange(sport, end, time)
-all0[is.na(all0)] <- ""
+## =================================================================
+## input data
+## =================================================================
+touren <- input_touren(path)
+
+all0 <- (touren %>% mutate(begleitung1 = NULL, begleitung2 = NULL, region = NULL, kommentar = NULL) %>% arrange(sport, end, time))
 ```
 
 # Bike
+
+## Listings
 
 For listings by time, tours with missing time are omitted.
 
@@ -63,7 +59,17 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE))
 ```
 
+## Elevation gain per hour
+
+This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+
+```{r bike2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike"))
+```
+
 # Run
+
+## Listings
 
 ```{r run, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -79,7 +85,17 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out2, collapse = '\n')), quiet = TRUE))
 ```
 
+## Elevation gain per hour
+
+This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+
+```{r run2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Run"))
+```
+
 # Bike and run
+
+## Listings
 
 ```{r hike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -95,7 +111,17 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out3, collapse = '\n')), quiet = TRUE))
 ```
 
+## Elevation gain per hour
+
+This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+
+```{r hike2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike and run"))
+```
+
 # Hike
+
+## Listings
 
 ```{r bikeandrun, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -109,4 +135,12 @@ for (i in 1:length(tour)){
 }
 
 cat(knit(text = unlist(paste(out4, collapse = '\n')), quiet = TRUE))
+```
+
+## Elevation gain per hour
+
+This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+
+```{r bikeandrun2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Hike"))
 ```
