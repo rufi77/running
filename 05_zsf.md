@@ -1,7 +1,7 @@
 ---
 title: "Yearly summaries"
 author: "Kaspar Rufibach"
-date: '04 Jan 2021, as per 23rd May 2020'
+date: '29 Mar 2021, as per 23rd May 2020'
 output:
   html_document:
     keep_md: true
@@ -21,7 +21,7 @@ output:
 
 
 
-<!-- Numbers labelled 2022 are linearly extrapolated from 2021-01-04 to the full year of 2021. -->
+<!-- Numbers labelled 2022 are linearly extrapolated from 2021-03-29 to the full year of 2021. -->
 
 # Yearly summaries {.tabset .tabset-fade .tabset-pills}
 

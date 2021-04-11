@@ -1,5 +1,5 @@
 ---
-title: "Skitouring"
+title: "Skitouren"
 author: "Kaspar Rufibach"
 date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
 output:
@@ -44,11 +44,11 @@ all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 
 skitage1 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skihalbtag = as.numeric(skihalbtag), skihalbtag_fam = as.numeric(skihalbtag_fam)) %>% filter(sport == "Skifahren") %>% arrange(end, time) 
 ```
 
-# Summary over years
+# Zusammenfassung ueber die Jahre
 
-List by far not complete. Multiple tours within same month are pooled and frequency is given.
+Liste nicht komplett. Mehrere Touren mit demselben Ziel innerhalb eines Monats sind zusammengefasst.
 
-```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = FALSE}
 t <- with(subset(touren, sport == "Skitour"), addmargins(table(as.character(end), season)))
 
 # pick seasons
@@ -93,7 +93,7 @@ i1 <- which(names(dat) == unique(sort(droplevels(all$season)))[1])
 i2 <- which(names(dat) == tail(unique(sort(droplevels(all$season))), 1))
 dat <- dat[i1:i2]
 
-plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 25))
+plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 30))
 abline(h = 1:100, lty = 2, col = grey(0.5))
 
 # Skihalbtage 
@@ -110,22 +110,30 @@ dat2[1:length(dat2)] <- NA
 dat2[names(dat2) %in% ski1$season] <- ski2$sum
 lines(1:length(dat2), dat2, col = 4, type = "b", pch = 19)
 
-# count skiing days
-s <- 21
-f1 <- lapply(with(touren, split(skihalbtag, season)), sum, na.rm = TRUE)[[s]]
-f2 <- lapply(with(touren, split(skihalbtag_fam, season)), sum, na.rm = TRUE)[[s]]
-f3 <- lapply(with(touren, split(sport == "Skitour", season)), sum, na.rm = TRUE)[[s]]
-
-f_tab <- data.frame(cbind(c("Ski half-day", "Ski half-day family", "Skitour"), c(f1, f2, f3)))
-colnames(f_tab) <- c("Type", "frequency")
-
-legend("topleft", f_tab[, "Type"], pch = c(1, 19, 19), col = c(2, 3, 4), bg = "white")
+legend("topleft", legend = c("Wochentag", "Skihalbtag", "Skihalbtag Familie", "Skitour"), pch = c(1, 19, 19), col = c(2, 3, 4), bg = "white", bty = "")
 ```
 
-# Days on ski in total
+# Tage auf Ski total
 
-```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
-pander(f_tab)
+```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis", eval = TRUE}
+# count skiing days
+s <- 21
+
+# f1 <- table(with(touren, cbind(skihalbtag, weekdays(date))[as.numeric(season) == s & is.na(skihalbtag) == FALSE, 2]))
+# f2 <- table(with(touren, cbind(skihalbtag_fam, weekdays(date))[as.numeric(season) == s & is.na(skihalbtag_fam) == FALSE, 2]))
+# f3 <- table(with(touren, cbind(sport == "Skitour", weekdays(date))[as.numeric(season) == s & (sport == "Skitour"), 2]))
+# 
+# m1 <- data.frame(matrix(NA, nrow = 7, ncol = 4))
+# colnames(m1) <- c("Skihalbtag", "Skihalbtag Familie", "Skitour", "Wochentag")
+# m1$Wochentag <- c("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")
+# m1[match(names(f1), m1$Wochentag), 1] <- f1
+# m1[match(names(f2), m1$Wochentag), 2] <- f2
+# m1[match(names(f3), m1$Wochentag), 3] <- f3
+# rownames(m1) <- m1$Wochentag
+# m1 <- m1[, -4]
+# m1[is.na(m1)] <- ""
+# m1 <- t(m1)
+# pander(m1)
 
 # days on ski (double counting not possible)
 f4 <- with(touren, data.frame(date, skihalbtag, skihalbtag_fam, tour = as.numeric(sport == "Skitour"), season))
@@ -158,8 +166,43 @@ cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
 This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% select(start, end, date, hm_diff, time, hm_h) %>% arrange(desc(hm_h)) %>% mutate(start = substr(start, 1, 20)))
-pander(t)
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
 ```
 
+# Aktuelle Saison {.tabset .tabset-fade .tabset-pills}
 
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour" & season == "Winter 20/21") %>% hm_print())
+```
+
+- Anzahl Touren: `r nrow(t)`. 
+- Total Hoehenmeter: `r disp(sum(t$hm_diff), 0)`.
+
+## Nach Datum
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t1 <- (t %>% select(-begleitung1) %>% arrange(date))
+pander(t1)
+```
+## Nach Hoehenmeter
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t1 <- (t %>% select(-begleitung1) %>% arrange(desc(hm_diff)))
+pander(t1)
+```
+
+## Nach Hoehenmeter pro Stunde
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t1 <- (t %>% select(-begleitung1) %>% arrange(desc(hm_h)))
+pander(t1)
+```
+
+## Mit Papa, nach Hoehenmeter pro Stunde
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t1 <- (t %>% filter(begleitung1 == "Papa") %>% select(-begleitung1) %>% arrange(desc(hm_h)))
+pander(t1)
+```

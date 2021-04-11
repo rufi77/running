@@ -1,7 +1,7 @@
 ---
-title: "Skitouring"
+title: "Skitouren"
 author: "Kaspar Rufibach"
-date: '22 Feb 2021'
+date: '08 Apr 2021'
 output:
   html_document:
     keep_md: true
@@ -21,320 +21,21 @@ output:
 
 
 
-# Summary over years
+# Zusammenfassung ueber die Jahre
 
-List by far not complete. Multiple tours within same month are pooled and frequency is given.
+Liste nicht komplett. Mehrere Touren mit demselben Ziel innerhalb eines Monats sind zusammengefasst.
 
 
-------------------------------------------------------------------
-       &nbsp;          Winter 02/03   Winter 03/04   Winter 04/05 
---------------------- -------------- -------------- --------------
-    **Aerlen-S**                                                  
-
-  **Aerlenluecke**                                                
-
- **Baechlisplatti**                                               
-
-    **Bandspitz**                                                 
-
- **Gaerstenluecke**                                               
-
- **Gletscherchaele**                                      1       
-
-   **Golegghorn**                                                 
-
-   **Grindelgrat**                         1                      
-
-   **Gstelliwang**                                                
-
-     **Gummen**                                                   
-
-   **Obertaljoch**                         1                      
-
-   **Planplatten**                                                
-
-  **Schaftelouwi**                                                
-
-   **Schwarzhorn**                                        1       
-
-   **Sustenhorn**                          1                      
-
-  **Talegglistock**                                               
-
-    **Tschingel**                                                 
-
-  **Under Steckli**                                               
-
-  **Untertalstock**                                               
-
-   **Wildgaerst**                          1                      
-
-       **Sum**                             4              2       
-------------------------------------------------------------------
-
-Table: Table continues below
-
- 
-------------------------------------------------------------------
-       &nbsp;          Winter 05/06   Winter 06/07   Winter 07/08 
---------------------- -------------- -------------- --------------
-    **Aerlen-S**                                                  
-
-  **Aerlenluecke**                                                
-
- **Baechlisplatti**                                               
-
-    **Bandspitz**                                                 
-
- **Gaerstenluecke**                                       1       
-
- **Gletscherchaele**                                      1       
-
-   **Golegghorn**                                         1       
-
-   **Grindelgrat**                                                
-
-   **Gstelliwang**                                                
-
-     **Gummen**                                                   
-
-   **Obertaljoch**                                                
-
-   **Planplatten**                                                
-
-  **Schaftelouwi**                                        1       
-
-   **Schwarzhorn**                                                
-
-   **Sustenhorn**                                         1       
-
-  **Talegglistock**                                               
-
-    **Tschingel**                                                 
-
-  **Under Steckli**                                               
-
-  **Untertalstock**                                               
-
-   **Wildgaerst**                                         2       
-
-       **Sum**                                            7       
-------------------------------------------------------------------
-
-Table: Table continues below
-
- 
-------------------------------------------------------------------
-       &nbsp;          Winter 08/09   Winter 09/10   Winter 10/11 
---------------------- -------------- -------------- --------------
-    **Aerlen-S**                                                  
-
-  **Aerlenluecke**                                        1       
-
- **Baechlisplatti**                                               
-
-    **Bandspitz**                                                 
-
- **Gaerstenluecke**                                               
-
- **Gletscherchaele**                                              
-
-   **Golegghorn**           1                             1       
-
-   **Grindelgrat**                                        1       
-
-   **Gstelliwang**                                        1       
-
-     **Gummen**                                                   
-
-   **Obertaljoch**                                                
-
-   **Planplatten**                                                
-
-  **Schaftelouwi**                                                
-
-   **Schwarzhorn**                                                
-
-   **Sustenhorn**                                                 
-
-  **Talegglistock**                                               
-
-    **Tschingel**                                                 
-
-  **Under Steckli**                                               
-
-  **Untertalstock**                                               
-
-   **Wildgaerst**                                                 
-
-       **Sum**              1                             4       
-------------------------------------------------------------------
-
-Table: Table continues below
-
- 
-------------------------------------------------------------------
-       &nbsp;          Winter 11/12   Winter 12/13   Winter 13/14 
---------------------- -------------- -------------- --------------
-    **Aerlen-S**                                                  
-
-  **Aerlenluecke**                                                
-
- **Baechlisplatti**                                               
-
-    **Bandspitz**                                                 
-
- **Gaerstenluecke**                                               
-
- **Gletscherchaele**                                              
-
-   **Golegghorn**                                                 
-
-   **Grindelgrat**                         1                      
-
-   **Gstelliwang**          1                                     
-
-     **Gummen**                                                   
-
-   **Obertaljoch**                                                
-
-   **Planplatten**                                                
-
-  **Schaftelouwi**                                                
-
-   **Schwarzhorn**                                                
-
-   **Sustenhorn**                                                 
-
-  **Talegglistock**                                               
-
-    **Tschingel**                          1                      
-
-  **Under Steckli**                        1                      
-
-  **Untertalstock**                                               
-
-   **Wildgaerst**           1                                     
-
-       **Sum**              2              3                      
-------------------------------------------------------------------
-
-Table: Table continues below
-
- 
-------------------------------------------------------------------
-       &nbsp;          Winter 14/15   Winter 15/16   Winter 16/17 
---------------------- -------------- -------------- --------------
-    **Aerlen-S**                                                  
-
-  **Aerlenluecke**                                                
-
- **Baechlisplatti**                                               
-
-    **Bandspitz**                                                 
-
- **Gaerstenluecke**                                               
-
- **Gletscherchaele**                                              
-
-   **Golegghorn**                                                 
-
-   **Grindelgrat**                                                
-
-   **Gstelliwang**                                                
-
-     **Gummen**                                                   
-
-   **Obertaljoch**                                                
-
-   **Planplatten**                                                
-
-  **Schaftelouwi**                                                
-
-   **Schwarzhorn**                                                
-
-   **Sustenhorn**                                                 
-
-  **Talegglistock**                                               
-
-    **Tschingel**                                                 
-
-  **Under Steckli**                                               
-
-  **Untertalstock**                        1                      
-
-   **Wildgaerst**                                         1       
-
-       **Sum**                             1              1       
-------------------------------------------------------------------
-
-Table: Table continues below
-
- 
----------------------------------------------------------------------------------
-       &nbsp;          Winter 17/18   Winter 18/19   Winter 19/20   Winter 20/21 
---------------------- -------------- -------------- -------------- --------------
-    **Aerlen-S**                           1                                     
-
-  **Aerlenluecke**                         1              1              1       
-
- **Baechlisplatti**         1              2                                     
-
-    **Bandspitz**                          1              1              2       
-
- **Gaerstenluecke**                                                              
-
- **Gletscherchaele**                       1                                     
-
-   **Golegghorn**                          2                             1       
-
-   **Grindelgrat**                         1                             2       
-
-   **Gstelliwang**                                                       1       
-
-     **Gummen**                                                          1       
-
-   **Obertaljoch**                                                               
-
-   **Planplatten**                         1                             3       
-
-  **Schaftelouwi**                                                               
-
-   **Schwarzhorn**                                                               
-
-   **Sustenhorn**                          1                                     
-
-  **Talegglistock**                                                      2       
-
-    **Tschingel**                                                        1       
-
-  **Under Steckli**                                                              
-
-  **Untertalstock**                                                              
-
-   **Wildgaerst**                          2              2              2       
-
-       **Sum**              1              13             4              16      
----------------------------------------------------------------------------------
 
 <img src="03_winter_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 <img src="03_winter_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
-# Days on ski in total
+# Tage auf Ski total
 
 
----------------------------------
-        Type           frequency 
---------------------- -----------
-    Ski half-day          11     
 
- Ski half-day family      20     
-
-       Skitour            16     
----------------------------------
-
-Total days on skis: 44.
+Total days on skis: 68.
 
 # Listings
 
@@ -462,6 +163,8 @@ Table: Table continues below
 ---------------------------------------------------------------------------
      start        via1   via2      end         date         time      hm_h 
 ---------------- ------ ------ ----------- ------------ ------------ ------
+ Schwarzwaldalp                 Bandspitz   2021-02-23   02:44:24.0   345  
+
  Schwarzwaldalp                 Bandspitz   2021-01-23   01:45:00.0   541  
 
  Schwarzwaldalp                 Bandspitz   2021-01-20   01:50:37.0   513  
@@ -484,6 +187,8 @@ Table: Table continues below
  Schwarzwaldalp                 Bandspitz   2021-01-23   01:45:00.0   541  
 
  Schwarzwaldalp                 Bandspitz   2021-01-20   01:50:37.0   513  
+
+ Schwarzwaldalp                 Bandspitz   2021-02-23   02:44:24.0   345  
 ---------------------------------------------------------------------------
 
 
@@ -540,6 +245,10 @@ Table: Table continues below
 --------------------------------------------------------------------------------
            start             via1   via2      end          date         time    
 --------------------------- ------ ------ ------------ ------------ ------------
+ Handeck Kurve nach Mineur                 Golegghorn   2021-03-30   03:42:50.0 
+
+ Handeck Kurve nach Mineur                 Golegghorn   2021-02-24   03:58:43.0 
+
  Handeck Kurve nach Mineur                 Golegghorn   2021-02-19   03:19:30.0 
 
  Handeck Kurve nach Mineur                 Golegghorn   2019-03-24   03:38:01.7 
@@ -559,6 +268,10 @@ Table: Table continues below
 ------
  hm_h 
 ------
+ 471  
+
+ 439  
+
  526  
 
  481  
@@ -587,6 +300,10 @@ Table: Table continues below
        Handeck Hotel                       Golegghorn   2011-01-30   03:25:00.0 
 
  Handeck Kurve nach Mineur                 Golegghorn   2019-03-24   03:38:01.7 
+
+ Handeck Kurve nach Mineur                 Golegghorn   2021-03-30   03:42:50.0 
+
+ Handeck Kurve nach Mineur                 Golegghorn   2021-02-24   03:58:43.0 
 --------------------------------------------------------------------------------
 
 Table: Table continues below
@@ -604,6 +321,10 @@ Table: Table continues below
  490  
 
  481  
+
+ 471  
+
+ 439  
 ------
 
 
@@ -615,6 +336,10 @@ Table: Table continues below
 ------------------------------------------------------------------------------
       start        via1   via2       end          date         time      hm_h 
 ----------------- ------ ------ ------------- ------------ ------------ ------
+ Schwarzwaldalp                  Grindelgrat   2021-03-22   02:22.54.0   393  
+
+ Schwarzwaldalp                  Grindelgrat   2021-03-09   01:19:50.0   703  
+
  Schwarzwaldalp                  Grindelgrat   2021-02-08   02:07:28.0   441  
 
  Gschwandtenmaad                 Grindelgrat   2020-12-10   02:23:22.0   456  
@@ -634,9 +359,13 @@ Table: Table continues below
 ------------------------------------------------------------------------------
       start        via1   via2       end          date         time      hm_h 
 ----------------- ------ ------ ------------- ------------ ------------ ------
+ Schwarzwaldalp                  Grindelgrat   2021-03-09   01:19:50.0   703  
+
  Schwarzwaldalp                  Grindelgrat   2019-02-20   01:54:15.8   491  
 
  Schwarzwaldalp                  Grindelgrat   2021-02-08   02:07:28.0   441  
+
+ Schwarzwaldalp                  Grindelgrat   2021-03-22   02:22.54.0   393  
 
  Gschwandtenmaad                 Grindelgrat   2020-12-10   02:23:22.0   456  
 
@@ -652,6 +381,8 @@ Table: Table continues below
 --------------------------------------------------------------------
  start   via1   via2       end          date         time      hm_h 
 ------- ------ ------ ------------- ------------ ------------ ------
+ Broch                 Gstelliwang   2021-03-23   01:31:20.2   755  
+
  Broch                 Gstelliwang   2021-02-15   01:52:19.0   614  
 
  Broch                 Gstelliwang   2012-01-17                 NA  
@@ -665,29 +396,54 @@ Table: Table continues below
 --------------------------------------------------------------------
  start   via1   via2       end          date         time      hm_h 
 ------- ------ ------ ------------- ------------ ------------ ------
+ Broch                 Gstelliwang   2021-03-23   01:31:20.2   755  
+
  Broch                 Gstelliwang   2021-02-15   01:52:19.0   614  
 --------------------------------------------------------------------
 
 
-### Gummen {.tabset .tabset-fade .tabset-pills}
+### Gummen Pt 2005 {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
 
 
----------------------------------------------------------------
- start   via1   via2    end        date         time      hm_h 
-------- ------ ------ -------- ------------ ------------ ------
- Reuti                 Gummen   2020-12-07   02:17:20.0    NA  
----------------------------------------------------------------
+-------------------------------------------------------------------------------
+     start       via1   via2        end            date         time      hm_h 
+--------------- ------ ------ ---------------- ------------ ------------ ------
+ Reuti Station                 Gummen Pt 2005   2020-12-07   02:17:20.0   411  
+-------------------------------------------------------------------------------
 
 #### By time
 
 
----------------------------------------------------------------
- start   via1   via2    end        date         time      hm_h 
-------- ------ ------ -------- ------------ ------------ ------
- Reuti                 Gummen   2020-12-07   02:17:20.0    NA  
----------------------------------------------------------------
+-------------------------------------------------------------------------------
+     start       via1   via2        end            date         time      hm_h 
+--------------- ------ ------ ---------------- ------------ ------------ ------
+ Reuti Station                 Gummen Pt 2005   2020-12-07   02:17:20.0   411  
+-------------------------------------------------------------------------------
+
+
+### Hinder Steckli {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+----------------------------------------------------------------------------------
+      start         via1   via2        end            date         time      hm_h 
+------------------ ------ ------ ---------------- ------------ ------------ ------
+ Guttannen Tunnel                 Hinder Steckli   2021-03-13   03:03:22.0   465  
+
+                                  Hinder Steckli   2013-02-18                 NA  
+----------------------------------------------------------------------------------
+
+#### By time
+
+
+----------------------------------------------------------------------------------
+      start         via1   via2        end            date         time      hm_h 
+------------------ ------ ------ ---------------- ------------ ------------ ------
+ Guttannen Tunnel                 Hinder Steckli   2021-03-13   03:03:22.0   465  
+----------------------------------------------------------------------------------
 
 
 ### Obertaljoch {.tabset .tabset-fade .tabset-pills}
@@ -715,32 +471,36 @@ Table: Table continues below
 #### Chronologically
 
 
---------------------------------------------------------------------
- start   via1   via2       end          date         time      hm_h 
-------- ------ ------ ------------- ------------ ------------ ------
- Reuti                 Planplatten   2020-12-21   01:59:54.0   585  
+------------------------------------------------------------------------------
+      start        via1   via2       end          date         time      hm_h 
+----------------- ------ ------ ------------- ------------ ------------ ------
+ Spycher Pt 1439                 Planplatten   2021-03-18   00:59:49.3   808  
 
- Reuti                 Planplatten   2020-12-19   01:42:21.5   685  
+  Reuti Station                  Planplatten   2020-12-21   01:59:54.0   590  
 
- Reuti                 Planplatten   2020-12-08   02:18:22.0   507  
+  Reuti Station                  Planplatten   2020-12-19   01:42:21.5   692  
 
- Reuti                 Planplatten   2018-12-13   02:12:01.6   531  
---------------------------------------------------------------------
+  Reuti Station                  Planplatten   2020-12-08   02:18:22.0   512  
+
+  Reuti Station                  Planplatten   2018-12-13   02:12:01.6   536  
+------------------------------------------------------------------------------
 
 #### By time
 
 
---------------------------------------------------------------------
- start   via1   via2       end          date         time      hm_h 
-------- ------ ------ ------------- ------------ ------------ ------
- Reuti                 Planplatten   2020-12-19   01:42:21.5   685  
+------------------------------------------------------------------------------
+      start        via1   via2       end          date         time      hm_h 
+----------------- ------ ------ ------------- ------------ ------------ ------
+ Spycher Pt 1439                 Planplatten   2021-03-18   00:59:49.3   808  
 
- Reuti                 Planplatten   2020-12-21   01:59:54.0   585  
+  Reuti Station                  Planplatten   2020-12-19   01:42:21.5   692  
 
- Reuti                 Planplatten   2018-12-13   02:12:01.6   531  
+  Reuti Station                  Planplatten   2020-12-21   01:59:54.0   590  
 
- Reuti                 Planplatten   2020-12-08   02:18:22.0   507  
---------------------------------------------------------------------
+  Reuti Station                  Planplatten   2018-12-13   02:12:01.6   536  
+
+  Reuti Station                  Planplatten   2020-12-08   02:18:22.0   512  
+------------------------------------------------------------------------------
 
 
 ### Schaftelouwi {.tabset .tabset-fade .tabset-pills}
@@ -781,6 +541,45 @@ Table: Table continues below
  **start**   **via1**   **via2**   **end**   **date**   **time**   **hm_h** 
 
 ----------- ---------- ---------- --------- ---------- ---------- ----------
+
+
+### Spreitloui Pt 1677 {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+-------------------------------------------------------------------------------
+      start         via1   via2          end              date         time    
+------------------ ------ ------ -------------------- ------------ ------------
+ Guttannen Tunnel                 Spreitloui Pt 1677   2021-03-10   01:11:28.0 
+-------------------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+------
+ hm_h 
+------
+ 552  
+------
+
+#### By time
+
+
+-------------------------------------------------------------------------------
+      start         via1   via2          end              date         time    
+------------------ ------ ------ -------------------- ------------ ------------
+ Guttannen Tunnel                 Spreitloui Pt 1677   2021-03-10   01:11:28.0 
+-------------------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+------
+ hm_h 
+------
+ 552  
+------
 
 
 ### Sustenhorn {.tabset .tabset-fade .tabset-pills}
@@ -843,9 +642,11 @@ Table: Table continues below
 ----------------------------------------------------------------------------
       start        via1   via2      end         date         time      hm_h 
 ----------------- ------ ------ ----------- ------------ ------------ ------
- Gschwandtenmaad                 Tschingel   2021-01-19   01:50:12.0   512  
+ Gschwandtenmaad                 Tschingel   2021-04-08   01:33:13.0   659  
 
- Gschwandtenmaad                 Tschingel   2013-02-09   02:29:33.8   377  
+ Gschwandtenmaad                 Tschingel   2021-01-19   01:50:12.0   558  
+
+ Gschwandtenmaad                 Tschingel   2013-02-09   02:29:33.8   411  
 ----------------------------------------------------------------------------
 
 #### By time
@@ -854,30 +655,12 @@ Table: Table continues below
 ----------------------------------------------------------------------------
       start        via1   via2      end         date         time      hm_h 
 ----------------- ------ ------ ----------- ------------ ------------ ------
- Gschwandtenmaad                 Tschingel   2021-01-19   01:50:12.0   512  
+ Gschwandtenmaad                 Tschingel   2021-04-08   01:33:13.0   659  
 
- Gschwandtenmaad                 Tschingel   2013-02-09   02:29:33.8   377  
+ Gschwandtenmaad                 Tschingel   2021-01-19   01:50:12.0   558  
+
+ Gschwandtenmaad                 Tschingel   2013-02-09   02:29:33.8   411  
 ----------------------------------------------------------------------------
-
-
-### Under Steckli {.tabset .tabset-fade .tabset-pills}
-
-#### Chronologically
-
-
-----------------------------------------------------------------
- start   via1   via2        end           date      time   hm_h 
-------- ------ ------ --------------- ------------ ------ ------
-                       Under Steckli   2013-02-18           NA  
-----------------------------------------------------------------
-
-#### By time
-
-
------------ ---------- ---------- --------- ---------- ---------- ----------
- **start**   **via1**   **via2**   **end**   **date**   **time**   **hm_h** 
-
------------ ---------- ---------- --------- ---------- ---------- ----------
 
 
 ### Untertalstock {.tabset .tabset-fade .tabset-pills}
@@ -901,6 +684,78 @@ Table: Table continues below
 -------------------------------------------------------------------------
 
 
+### Wandelhorn {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+--------------------------------------------------------------------------
+    start       via1   via2      end          date         time      hm_h 
+-------------- ------ ------ ------------ ------------ ------------ ------
+ Boozisteinen                 Wandelhorn   2021-04-01   03:12:15.0   363  
+
+ Boozisteinen                 Wandelhorn   2021-03-29   01:41:44.0   685  
+
+ Boozisteinen                 Wandelhorn   2021-03-04   01:50:02.0   634  
+
+ Boozisteinen                 Wandelhorn   2021-03-01   02:19:17.0   501  
+--------------------------------------------------------------------------
+
+#### By time
+
+
+--------------------------------------------------------------------------
+    start       via1   via2      end          date         time      hm_h 
+-------------- ------ ------ ------------ ------------ ------------ ------
+ Boozisteinen                 Wandelhorn   2021-03-29   01:41:44.0   685  
+
+ Boozisteinen                 Wandelhorn   2021-03-04   01:50:02.0   634  
+
+ Boozisteinen                 Wandelhorn   2021-03-01   02:19:17.0   501  
+
+ Boozisteinen                 Wandelhorn   2021-04-01   03:12:15.0   363  
+--------------------------------------------------------------------------
+
+
+### Wetterhorn {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+---------------------------------------------------------------------
+            start              via1   via2      end          date    
+----------------------------- ------ ------ ------------ ------------
+ Parkplatz Rosenlauischlucht                 Wetterhorn   2021-03-25 
+---------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+-------------------
+    time      hm_h 
+------------ ------
+ 05:51:34.0   398  
+-------------------
+
+#### By time
+
+
+---------------------------------------------------------------------
+            start              via1   via2      end          date    
+----------------------------- ------ ------ ------------ ------------
+ Parkplatz Rosenlauischlucht                 Wetterhorn   2021-03-25 
+---------------------------------------------------------------------
+
+Table: Table continues below
+
+ 
+-------------------
+    time      hm_h 
+------------ ------
+ 05:51:34.0   398  
+-------------------
+
+
 ### Wildgaerst {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
@@ -909,6 +764,14 @@ Table: Table continues below
 ----------------------------------------------------------------------------
      start        via1   via2      end          date         time      hm_h 
 ---------------- ------ ------ ------------ ------------ ------------ ------
+ Schwarzwaldalp                 Wildgaerst   2021-04-05   02:07:41.0   675  
+
+ Schwarzwaldalp                 Wildgaerst   2021-04-04   03:34:07.0   402  
+
+ Schwarzwaldalp                 Wildgaerst   2021-03-20   02:29:03.0   578  
+
+ Schwarzwaldalp                 Wildgaerst   2021-03-06   02:47:40.0   514  
+
  Schwarzwaldalp                 Wildgaerst   2021-02-06   02:12:57.0   648  
 
  Schwarzwaldalp                 Wildgaerst   2020-12-14   02:59:58.0   479  
@@ -938,15 +801,21 @@ Table: Table continues below
 ----------------------------------------------------------------------------
      start        via1   via2      end          date         time      hm_h 
 ---------------- ------ ------ ------------ ------------ ------------ ------
+ Schwarzwaldalp                 Wildgaerst   2021-04-05   02:07:41.0   675  
+
  Schwarzwaldalp                 Wildgaerst   2021-02-06   02:12:57.0   648  
 
  Schwarzwaldalp                 Wildgaerst   2019-12-29   02:15:47.4   635  
+
+ Schwarzwaldalp                 Wildgaerst   2021-03-20   02:29:03.0   578  
 
  Schwarzwaldalp                 Wildgaerst   2012-01-12   02:35:00.0   556  
 
  Schwarzwaldalp                 Wildgaerst   2007-12-25   02:40:00.0   538  
 
  Schwarzwaldalp                 Wildgaerst   2019-02-13   02:46:49.0   516  
+
+ Schwarzwaldalp                 Wildgaerst   2021-03-06   02:47:40.0   514  
 
  Schwarzwaldalp                 Wildgaerst   2019-12-30   02:57:19.5   486  
 
@@ -955,6 +824,8 @@ Table: Table continues below
  Schwarzwaldalp                 Wildgaerst   2020-12-14   02:59:58.0   479  
 
  Schwarzwaldalp                 Wildgaerst   2017-02-22   03:01:45.1   474  
+
+ Schwarzwaldalp                 Wildgaerst   2021-04-04   03:34:07.0   402  
 ----------------------------------------------------------------------------
 
 # Elevation gain per hour
@@ -962,94 +833,406 @@ Table: Table continues below
 This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
 
 
------------------------------------------------------------------------------------
-        start                 end            date      hm_diff      time      hm_h 
----------------------- ----------------- ------------ --------- ------------ ------
-        Reuti             Planplatten     2020-12-19    1169     01:42:21.5   685  
+------------------------------------------------------------------------------------
+       start                 end              date      hm_diff      time      hm_h 
+-------------------- -------------------- ------------ --------- ------------ ------
+  Spycher Pt 1439        Planplatten       2021-03-18     806     00:59:49.3   808  
 
-    Schwarzwaldalp        Wildgaerst      2021-02-06    1436     02:12:57.0   648  
+       Broch             Gstelliwang       2021-03-23    1150     01:31:20.2   755  
 
-    Schwarzwaldalp        Wildgaerst      2019-12-29    1436     02:15:47.4   635  
+   Schwarzwaldalp        Grindelgrat       2021-03-09     936     01:19:50.0   703  
 
-        Broch             Gstelliwang     2021-02-15    1150     01:52:19.0   614  
+   Reuti Station         Planplatten       2020-12-19    1180     01:42:21.5   692  
 
-        Reuti             Planplatten     2020-12-21    1169     01:59:54.0   585  
+    Boozisteinen          Wandelhorn       2021-03-29    1162     01:41:44.0   685  
 
-    Schwarzwaldalp         Bandspitz      2019-02-14     946     01:40:51.8   563  
+   Schwarzwaldalp         Wildgaerst       2021-04-05    1436     02:07:41.0   675  
 
-    Schwarzwaldalp        Wildgaerst      2012-01-12    1436     02:35:00.0   556  
+  Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
 
-    Steingletscher        Sustenhorn      2008-05-12    1639     03:00:00.0   546  
+   Schwarzwaldalp         Wildgaerst       2021-02-06    1436     02:12:57.0   648  
 
-    Schwarzwaldalp         Bandspitz      2020-01-02     946     01:43:57.0   546  
+   Schwarzwaldalp         Wildgaerst       2019-12-29    1436     02:15:47.4   635  
 
-    Schwarzwaldalp         Bandspitz      2021-01-23     946     01:45:00.0   541  
+    Boozisteinen          Wandelhorn       2021-03-04    1162     01:50:02.0   634  
 
- Handeck Kurve nach M     Golegghorn      2019-03-23    1748     03:14:13.4   540  
+       Broch             Gstelliwang       2021-02-15    1150     01:52:19.0   614  
 
-    Schwarzwaldalp        Wildgaerst      2007-12-25    1436     02:40:00.0   538  
+   Reuti Station         Planplatten       2020-12-21    1180     01:59:54.0   590  
 
-        Reuti             Planplatten     2018-12-13    1169     02:12:01.6   531  
+   Schwarzwaldalp         Wildgaerst       2021-03-20    1436     02:29:03.0   578  
 
- Handeck Kurve nach M     Golegghorn      2021-02-19    1748     03:19:30.0   526  
+   Schwarzwaldalp         Bandspitz        2019-02-14     946     01:40:51.8   563  
 
-    Schwarzwaldalp        Wildgaerst      2019-02-13    1436     02:46:49.0   516  
+  Gschwandtenmaad         Tschingel        2021-01-19    1024     01:50:12.0   558  
 
-    Schwarzwaldalp         Bandspitz      2021-01-20     946     01:50:37.0   513  
+   Schwarzwaldalp         Wildgaerst       2012-01-12    1436     02:35:00.0   556  
 
-   Gschwandtenmaad         Tschingel      2021-01-19     941     01:50:12.0   512  
+  Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
 
-    Steingletscher        Sustenhorn      2019-06-01    1639     03:12:22.8   511  
+   Steingletscher         Sustenhorn       2008-05-12    1639     03:00:00.0   546  
 
-    Handeck Hotel        Aerlenluecke     2011-02-06    1654     03:15:00.0   509  
+   Schwarzwaldalp         Bandspitz        2020-01-02     946     01:43:57.0   546  
 
-      Gerstenegg        Baechlisplatti    2019-05-24     988     01:56:25.9   509  
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
 
-        Reuti             Planplatten     2020-12-08    1169     02:18:22.0   507  
+ Handeck Kurve nach       Golegghorn       2019-03-23    1748     03:14:13.4   540  
 
-    Handeck Hotel         Golegghorn      2008-02-16    1675     03:20:00.0   502  
+   Schwarzwaldalp         Wildgaerst       2007-12-25    1436     02:40:00.0   538  
 
-    Schwarzwaldalp        Grindelgrat     2019-02-20     936     01:54:15.8   491  
+   Reuti Station         Planplatten       2018-12-13    1180     02:12:01.6   536  
 
-    Handeck Hotel         Golegghorn      2011-01-30    1675     03:25:00.0   490  
+ Handeck Kurve nach       Golegghorn       2021-02-19    1748     03:19:30.0   526  
 
-    Schwarzwaldalp        Wildgaerst      2019-12-30    1436     02:57:19.5   486  
+   Schwarzwaldalp         Wildgaerst       2019-02-13    1436     02:46:49.0   516  
 
- Handeck Kurve nach M     Golegghorn      2019-03-24    1748     03:38:01.7   481  
+   Schwarzwaldalp         Wildgaerst       2021-03-06    1436     02:47:40.0   514  
 
-    Handeck Mineur       Aerlenluecke     2020-02-08    1749     03:38:24.8   480  
+   Schwarzwaldalp         Bandspitz        2021-01-20     946     01:50:37.0   513  
 
-    Schwarzwaldalp        Wildgaerst      2019-02-19    1436     02:59:45.5   479  
+   Reuti Station         Planplatten       2020-12-08    1180     02:18:22.0   512  
 
-    Schwarzwaldalp        Wildgaerst      2020-12-14    1436     02:59:58.0   479  
+   Steingletscher         Sustenhorn       2019-06-01    1639     03:12:22.8   511  
 
-    Kunzentennlen       Baechlisplatti    2018-04-25    1093     02:18:01.0   475  
+   Handeck Hotel         Aerlenluecke      2011-02-06    1654     03:15:00.0   509  
 
-    Schwarzwaldalp        Wildgaerst      2017-02-22    1436     03:01:45.1   474  
+     Gerstenegg         Baechlisplatti     2019-05-24     988     01:56:25.9   509  
 
-   Gschwandtenmaad        Grindelgrat     2020-12-10    1089     02:23:22.0   456  
+   Handeck Hotel          Golegghorn       2008-02-16    1675     03:20:00.0   502  
 
- Handeck Kurve nach M    Aerlenluecke     2021-02-20    1727     03:50:08.0   450  
+    Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
 
-    Schwarzwaldalp        Grindelgrat     2021-02-08     936     02:07:28.0   441  
+   Schwarzwaldalp        Grindelgrat       2019-02-20     936     01:54:15.8   491  
 
-      Gerstenegg        Baechlisplatti    2019-05-31     988     02:15:19.9   438  
+   Handeck Hotel          Golegghorn       2011-01-30    1675     03:25:00.0   490  
 
-       Obermad           Talegglistock    2021-02-13    1647     03:48:29.0   433  
+   Schwarzwaldalp         Wildgaerst       2019-12-30    1436     02:57:19.5   486  
 
-       Obermad           Talegglistock    2021-02-14    1647     03:49:11.0   431  
+ Handeck Kurve nach       Golegghorn       2019-03-24    1748     03:38:01.7   481  
 
- Handeck Kurve nach M      Aerlen-S       2019-03-20    1157     02:41:25.0   430  
+   Handeck Mineur        Aerlenluecke      2020-02-08    1749     03:38:24.8   480  
 
- Handeck Kurve nach M    Aerlenluecke     2019-03-03    1727     04:10:41.3   413  
+   Schwarzwaldalp         Wildgaerst       2019-02-19    1436     02:59:45.5   479  
 
-       Feldmoos          Untertalstock    2016-03-31    1158     02:51:59.8   404  
+   Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
 
-   Gschwandtenmaad         Tschingel      2013-02-09     941     02:29:33.8   377  
+   Kunzentennlen        Baechlisplatti     2018-04-25    1093     02:18:01.0   475  
 
-   Guttannen Tunnel     Gletscherchaele   2019-02-16    1839     04:58:18.9   370  
+   Schwarzwaldalp         Wildgaerst       2017-02-22    1436     03:01:45.1   474  
 
-   Gschwandtenmaad        Grindelgrat     2013-02-10    1089     03:05:41.2   352  
------------------------------------------------------------------------------------
+ Handeck Kurve nach       Golegghorn       2021-03-30    1748     03:42:50.0   471  
+
+  Guttannen Tunnel      Hinder Steckli     2021-03-13    1420     03:03:22.0   465  
+
+  Gschwandtenmaad        Grindelgrat       2020-12-10    1089     02:23:22.0   456  
+
+ Handeck Kurve nach      Aerlenluecke      2021-02-20    1727     03:50:08.0   450  
+
+   Schwarzwaldalp        Grindelgrat       2021-02-08     936     02:07:28.0   441  
+
+ Handeck Kurve nach       Golegghorn       2021-02-24    1748     03:58:43.0   439  
+
+     Gerstenegg         Baechlisplatti     2019-05-31     988     02:15:19.9   438  
+
+      Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
+
+      Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+
+ Handeck Kurve nach        Aerlen-S        2019-03-20    1157     02:41:25.0   430  
+
+ Handeck Kurve nach      Aerlenluecke      2019-03-03    1727     04:10:41.3   413  
+
+  Gschwandtenmaad         Tschingel        2013-02-09    1024     02:29:33.8   411  
+
+   Reuti Station        Gummen Pt 2005     2020-12-07     940     02:17:20.0   411  
+
+      Feldmoos          Untertalstock      2016-03-31    1158     02:51:59.8   404  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-04    1436     03:34:07.0   402  
+
+ Parkplatz Rosenlau       Wetterhorn       2021-03-25    2332     05:51:34.0   398  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-22     936     02:22.54.0   393  
+
+  Guttannen Tunnel     Gletscherchaele     2019-02-16    1839     04:58:18.9   370  
+
+    Boozisteinen          Wandelhorn       2021-04-01    1162     03:12:15.0   363  
+
+  Gschwandtenmaad        Grindelgrat       2013-02-10    1089     03:05:41.2   352  
+
+   Schwarzwaldalp         Bandspitz        2021-02-23     946     02:44:24.0   345  
+------------------------------------------------------------------------------------
+
+# Aktuelle Saison {.tabset .tabset-fade .tabset-pills}
 
 
+
+- Anzahl Touren: 35. 
+- Total Hoehenmeter: 44307.
+
+## Nach Datum
+
+
+------------------------------------------------------------------------------------
+       start                 end              date      hm_diff      time      hm_h 
+-------------------- -------------------- ------------ --------- ------------ ------
+   Reuti Station        Gummen Pt 2005     2020-12-07     940     02:17:20.0   411  
+
+   Reuti Station         Planplatten       2020-12-08    1180     02:18:22.0   512  
+
+  Gschwandtenmaad        Grindelgrat       2020-12-10    1089     02:23:22.0   456  
+
+   Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
+
+   Reuti Station         Planplatten       2020-12-19    1180     01:42:21.5   692  
+
+   Reuti Station         Planplatten       2020-12-21    1180     01:59:54.0   590  
+
+  Gschwandtenmaad         Tschingel        2021-01-19    1024     01:50:12.0   558  
+
+   Schwarzwaldalp         Bandspitz        2021-01-20     946     01:50:37.0   513  
+
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
+
+   Schwarzwaldalp         Wildgaerst       2021-02-06    1436     02:12:57.0   648  
+
+   Schwarzwaldalp        Grindelgrat       2021-02-08     936     02:07:28.0   441  
+
+      Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
+
+      Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+
+       Broch             Gstelliwang       2021-02-15    1150     01:52:19.0   614  
+
+ Handeck Kurve nach       Golegghorn       2021-02-19    1748     03:19:30.0   526  
+
+ Handeck Kurve nach      Aerlenluecke      2021-02-20    1727     03:50:08.0   450  
+
+   Schwarzwaldalp         Bandspitz        2021-02-23     946     02:44:24.0   345  
+
+ Handeck Kurve nach       Golegghorn       2021-02-24    1748     03:58:43.0   439  
+
+    Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
+
+    Boozisteinen          Wandelhorn       2021-03-04    1162     01:50:02.0   634  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-06    1436     02:47:40.0   514  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-09     936     01:19:50.0   703  
+
+  Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
+
+  Guttannen Tunnel      Hinder Steckli     2021-03-13    1420     03:03:22.0   465  
+
+  Spycher Pt 1439        Planplatten       2021-03-18     806     00:59:49.3   808  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-20    1436     02:29:03.0   578  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-22     936     02:22.54.0   393  
+
+       Broch             Gstelliwang       2021-03-23    1150     01:31:20.2   755  
+
+ Parkplatz Rosenlau       Wetterhorn       2021-03-25    2332     05:51:34.0   398  
+
+    Boozisteinen          Wandelhorn       2021-03-29    1162     01:41:44.0   685  
+
+ Handeck Kurve nach       Golegghorn       2021-03-30    1748     03:42:50.0   471  
+
+    Boozisteinen          Wandelhorn       2021-04-01    1162     03:12:15.0   363  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-04    1436     03:34:07.0   402  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-05    1436     02:07:41.0   675  
+
+  Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
+------------------------------------------------------------------------------------
+## Nach Hoehenmeter
+
+
+------------------------------------------------------------------------------------
+       start                 end              date      hm_diff      time      hm_h 
+-------------------- -------------------- ------------ --------- ------------ ------
+ Parkplatz Rosenlau       Wetterhorn       2021-03-25    2332     05:51:34.0   398  
+
+ Handeck Kurve nach       Golegghorn       2021-02-19    1748     03:19:30.0   526  
+
+ Handeck Kurve nach       Golegghorn       2021-03-30    1748     03:42:50.0   471  
+
+ Handeck Kurve nach       Golegghorn       2021-02-24    1748     03:58:43.0   439  
+
+ Handeck Kurve nach      Aerlenluecke      2021-02-20    1727     03:50:08.0   450  
+
+      Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
+
+      Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-05    1436     02:07:41.0   675  
+
+   Schwarzwaldalp         Wildgaerst       2021-02-06    1436     02:12:57.0   648  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-20    1436     02:29:03.0   578  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-06    1436     02:47:40.0   514  
+
+   Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-04    1436     03:34:07.0   402  
+
+  Guttannen Tunnel      Hinder Steckli     2021-03-13    1420     03:03:22.0   465  
+
+   Reuti Station         Planplatten       2020-12-19    1180     01:42:21.5   692  
+
+   Reuti Station         Planplatten       2020-12-21    1180     01:59:54.0   590  
+
+   Reuti Station         Planplatten       2020-12-08    1180     02:18:22.0   512  
+
+    Boozisteinen          Wandelhorn       2021-03-29    1162     01:41:44.0   685  
+
+    Boozisteinen          Wandelhorn       2021-03-04    1162     01:50:02.0   634  
+
+    Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
+
+    Boozisteinen          Wandelhorn       2021-04-01    1162     03:12:15.0   363  
+
+       Broch             Gstelliwang       2021-03-23    1150     01:31:20.2   755  
+
+       Broch             Gstelliwang       2021-02-15    1150     01:52:19.0   614  
+
+  Gschwandtenmaad        Grindelgrat       2020-12-10    1089     02:23:22.0   456  
+
+  Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
+
+  Gschwandtenmaad         Tschingel        2021-01-19    1024     01:50:12.0   558  
+
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
+
+   Schwarzwaldalp         Bandspitz        2021-01-20     946     01:50:37.0   513  
+
+   Schwarzwaldalp         Bandspitz        2021-02-23     946     02:44:24.0   345  
+
+   Reuti Station        Gummen Pt 2005     2020-12-07     940     02:17:20.0   411  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-09     936     01:19:50.0   703  
+
+   Schwarzwaldalp        Grindelgrat       2021-02-08     936     02:07:28.0   441  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-22     936     02:22.54.0   393  
+
+  Spycher Pt 1439        Planplatten       2021-03-18     806     00:59:49.3   808  
+
+  Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
+------------------------------------------------------------------------------------
+
+## Nach Hoehenmeter pro Stunde
+
+
+------------------------------------------------------------------------------------
+       start                 end              date      hm_diff      time      hm_h 
+-------------------- -------------------- ------------ --------- ------------ ------
+  Spycher Pt 1439        Planplatten       2021-03-18     806     00:59:49.3   808  
+
+       Broch             Gstelliwang       2021-03-23    1150     01:31:20.2   755  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-09     936     01:19:50.0   703  
+
+   Reuti Station         Planplatten       2020-12-19    1180     01:42:21.5   692  
+
+    Boozisteinen          Wandelhorn       2021-03-29    1162     01:41:44.0   685  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-05    1436     02:07:41.0   675  
+
+  Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
+
+   Schwarzwaldalp         Wildgaerst       2021-02-06    1436     02:12:57.0   648  
+
+    Boozisteinen          Wandelhorn       2021-03-04    1162     01:50:02.0   634  
+
+       Broch             Gstelliwang       2021-02-15    1150     01:52:19.0   614  
+
+   Reuti Station         Planplatten       2020-12-21    1180     01:59:54.0   590  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-20    1436     02:29:03.0   578  
+
+  Gschwandtenmaad         Tschingel        2021-01-19    1024     01:50:12.0   558  
+
+  Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
+
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
+
+ Handeck Kurve nach       Golegghorn       2021-02-19    1748     03:19:30.0   526  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-06    1436     02:47:40.0   514  
+
+   Schwarzwaldalp         Bandspitz        2021-01-20     946     01:50:37.0   513  
+
+   Reuti Station         Planplatten       2020-12-08    1180     02:18:22.0   512  
+
+    Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
+
+   Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
+
+ Handeck Kurve nach       Golegghorn       2021-03-30    1748     03:42:50.0   471  
+
+  Guttannen Tunnel      Hinder Steckli     2021-03-13    1420     03:03:22.0   465  
+
+  Gschwandtenmaad        Grindelgrat       2020-12-10    1089     02:23:22.0   456  
+
+ Handeck Kurve nach      Aerlenluecke      2021-02-20    1727     03:50:08.0   450  
+
+   Schwarzwaldalp        Grindelgrat       2021-02-08     936     02:07:28.0   441  
+
+ Handeck Kurve nach       Golegghorn       2021-02-24    1748     03:58:43.0   439  
+
+      Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
+
+      Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+
+   Reuti Station        Gummen Pt 2005     2020-12-07     940     02:17:20.0   411  
+
+   Schwarzwaldalp         Wildgaerst       2021-04-04    1436     03:34:07.0   402  
+
+ Parkplatz Rosenlau       Wetterhorn       2021-03-25    2332     05:51:34.0   398  
+
+   Schwarzwaldalp        Grindelgrat       2021-03-22     936     02:22.54.0   393  
+
+    Boozisteinen          Wandelhorn       2021-04-01    1162     03:12:15.0   363  
+
+   Schwarzwaldalp         Bandspitz        2021-02-23     946     02:44:24.0   345  
+------------------------------------------------------------------------------------
+
+## Mit Papa, nach Hoehenmeter pro Stunde
+
+
+------------------------------------------------------------------------------------
+       start                 end              date      hm_diff      time      hm_h 
+-------------------- -------------------- ------------ --------- ------------ ------
+   Reuti Station         Planplatten       2020-12-21    1180     01:59:54.0   590  
+
+  Gschwandtenmaad         Tschingel        2021-01-19    1024     01:50:12.0   558  
+
+  Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
+
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
+
+   Schwarzwaldalp         Wildgaerst       2021-03-06    1436     02:47:40.0   514  
+
+   Schwarzwaldalp         Bandspitz        2021-01-20     946     01:50:37.0   513  
+
+    Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
+
+   Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
+
+ Handeck Kurve nach       Golegghorn       2021-03-30    1748     03:42:50.0   471  
+
+  Guttannen Tunnel      Hinder Steckli     2021-03-13    1420     03:03:22.0   465  
+
+  Gschwandtenmaad        Grindelgrat       2020-12-10    1089     02:23:22.0   456  
+
+ Handeck Kurve nach      Aerlenluecke      2021-02-20    1727     03:50:08.0   450  
+
+   Schwarzwaldalp        Grindelgrat       2021-02-08     936     02:07:28.0   441  
+
+ Handeck Kurve nach       Golegghorn       2021-02-24    1748     03:58:43.0   439  
+
+      Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+------------------------------------------------------------------------------------

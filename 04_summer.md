@@ -1,7 +1,7 @@
 ---
 title: "Hikes, runs, and rides"
 author: "Kaspar Rufibach"
-date: '22 Feb 2021'
+date: '03 Mar 2021'
 output:
   html_document:
     keep_md: true
@@ -22,6 +22,8 @@ output:
 
 
 # Bike
+
+<font color='red'>test blue color font</font>
 
 ## Listings
 
@@ -846,97 +848,89 @@ Table: Table continues below
 ---------------------------------------------------------------------------
 
 
-### Reuti {.tabset .tabset-fade .tabset-pills}
+### Reuti Post {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
 
 
-----------------------------------------------------------------
-  start    via1   via2    end       date         time      hm_h 
---------- ------ ------ ------- ------------ ------------ ------
- Alpbach                 Reuti   2020-11-22   00:28:10.6   948  
+---------------------------------------------------------------------
+  start    via1   via2      end          date         time      hm_h 
+--------- ------ ------ ------------ ------------ ------------ ------
+ Alpbach                 Reuti Post   2020-11-22   00:28:10.6   931  
 
- Alpbach                 Reuti   2020-11-12   00:28:24.6   940  
+ Alpbach                 Reuti Post   2020-11-12   00:28:24.6   923  
 
- Alpbach                 Reuti   2020-10-20   00:27:29.8   971  
+ Alpbach                 Reuti Post   2020-10-20   00:27:29.8   954  
 
- Alpbach                 Reuti   2020-08-01   00:28:09.7   948  
+ Alpbach                 Reuti Post   2020-08-01   00:28:09.7   931  
 
- Alpbach                 Reuti   2020-07-12   00:26:09.8   1021 
+ Alpbach                 Reuti Post   2020-07-12   00:26:09.8   1002 
 
- Alpbach                 Reuti   2020-06-21   00:28:49.7   926  
+ Alpbach                 Reuti Post   2020-06-21   00:28:49.7   910  
 
- Alpbach                 Reuti   2020-05-25   00:26:35.5   1004 
+ Alpbach                 Reuti Post   2020-05-25   00:26:35.5   986  
 
- Alpbach                 Reuti   2020-05-17   00:27:52.1   958  
+ Alpbach                 Reuti Post   2020-05-17   00:27:52.1   941  
 
- Alpbach                 Reuti   2020-04-27   00:26:34.9   1004 
+ Alpbach                 Reuti Post   2020-04-27   00:26:34.9   986  
 
- Alpbach                 Reuti   2020-04-05   00:27:13.6   981  
+ Alpbach                 Reuti Post   2020-04-05   00:27:13.6   963  
 
- Alpbach                 Reuti   2019-08-27   00:26:02.1   1026 
+ Alpbach                 Reuti Post   2019-08-27   00:26:02.1   1007 
 
- Alpbach                 Reuti   2019-06-07   00:28:06.3   950  
+ Alpbach                 Reuti Post   2019-06-07   00:28:06.3   933  
 
- Alpbach                 Reuti   2018-10-22   00:28:05.8   950  
+ Alpbach                 Reuti Post   2018-10-22   00:28:05.8   933  
 
- Alpbach                 Reuti   2018-10-07   00:26:31.0   1007 
+ Alpbach                 Reuti Post   2018-10-07   00:26:31.0   989  
 
- Alpbach                 Reuti   2018-06-25   00:24:30.3   1090 
+ Alpbach                 Reuti Post   2018-06-25   00:24:30.3   1070 
 
- Alpbach                 Reuti   2018-05-27   00:27:40.0   965  
+ Alpbach                 Reuti Post   2018-05-27   00:27:40.0   948  
 
- Alpbach                 Reuti   2015-05-27   00:27:00.0   989  
-
- Alpbach                 Reuti   2007-10-13   00:26:00.0   1027 
-
- Alpbach                 Reuti   2007-09-24   00:22:00.0   1214 
-----------------------------------------------------------------
+ Alpbach                 Reuti Post   2015-05-27   00:27:00.0   971  
+---------------------------------------------------------------------
 
 #### By time
 
 
-----------------------------------------------------------------
-  start    via1   via2    end       date         time      hm_h 
---------- ------ ------ ------- ------------ ------------ ------
- Alpbach                 Reuti   2007-09-24   00:22:00.0   1214 
+---------------------------------------------------------------------
+  start    via1   via2      end          date         time      hm_h 
+--------- ------ ------ ------------ ------------ ------------ ------
+ Alpbach                 Reuti Post   2018-06-25   00:24:30.3   1070 
 
- Alpbach                 Reuti   2018-06-25   00:24:30.3   1090 
+ Alpbach                 Reuti Post   2019-08-27   00:26:02.1   1007 
 
- Alpbach                 Reuti   2007-10-13   00:26:00.0   1027 
+ Alpbach                 Reuti Post   2020-07-12   00:26:09.8   1002 
 
- Alpbach                 Reuti   2019-08-27   00:26:02.1   1026 
+ Alpbach                 Reuti Post   2018-10-07   00:26:31.0   989  
 
- Alpbach                 Reuti   2020-07-12   00:26:09.8   1021 
+ Alpbach                 Reuti Post   2020-04-27   00:26:34.9   986  
 
- Alpbach                 Reuti   2018-10-07   00:26:31.0   1007 
+ Alpbach                 Reuti Post   2020-05-25   00:26:35.5   986  
 
- Alpbach                 Reuti   2020-04-27   00:26:34.9   1004 
+ Alpbach                 Reuti Post   2015-05-27   00:27:00.0   971  
 
- Alpbach                 Reuti   2020-05-25   00:26:35.5   1004 
+ Alpbach                 Reuti Post   2020-04-05   00:27:13.6   963  
 
- Alpbach                 Reuti   2015-05-27   00:27:00.0   989  
+ Alpbach                 Reuti Post   2020-10-20   00:27:29.8   954  
 
- Alpbach                 Reuti   2020-04-05   00:27:13.6   981  
+ Alpbach                 Reuti Post   2018-05-27   00:27:40.0   948  
 
- Alpbach                 Reuti   2020-10-20   00:27:29.8   971  
+ Alpbach                 Reuti Post   2020-05-17   00:27:52.1   941  
 
- Alpbach                 Reuti   2018-05-27   00:27:40.0   965  
+ Alpbach                 Reuti Post   2018-10-22   00:28:05.8   933  
 
- Alpbach                 Reuti   2020-05-17   00:27:52.1   958  
+ Alpbach                 Reuti Post   2019-06-07   00:28:06.3   933  
 
- Alpbach                 Reuti   2018-10-22   00:28:05.8   950  
+ Alpbach                 Reuti Post   2020-08-01   00:28:09.7   931  
 
- Alpbach                 Reuti   2019-06-07   00:28:06.3   950  
+ Alpbach                 Reuti Post   2020-11-22   00:28:10.6   931  
 
- Alpbach                 Reuti   2020-08-01   00:28:09.7   948  
+ Alpbach                 Reuti Post   2020-11-12   00:28:24.6   923  
 
- Alpbach                 Reuti   2020-11-22   00:28:10.6   948  
-
- Alpbach                 Reuti   2020-11-12   00:28:24.6   940  
-
- Alpbach                 Reuti   2020-06-21   00:28:49.7   926  
-----------------------------------------------------------------
+ Alpbach                 Reuti Post   2020-06-21   00:28:49.7   910  
+---------------------------------------------------------------------
 
 
 ### Rohrmatten {.tabset .tabset-fade .tabset-pills}
@@ -1206,10 +1200,6 @@ Table: Table continues below
  Alpbach   Reuti          Winterlicke   2018-05-27   00:55:00.0   845  
 
  Alpbach   Reuti          Winterlicke   2015-05-27   00:50:04.1   929  
-
- Alpbach   Reuti          Winterlicke   2007-10-13   00:46:00.0   1011 
-
- Alpbach   Reuti          Winterlicke   2007-09-24   00:43:00.0   1081 
 -----------------------------------------------------------------------
 
 #### By time
@@ -1218,10 +1208,6 @@ Table: Table continues below
 -----------------------------------------------------------------------
   start    via1    via2       end          date         time      hm_h 
 --------- ------- ------ ------------- ------------ ------------ ------
- Alpbach   Reuti          Winterlicke   2007-09-24   00:43:00.0   1081 
-
- Alpbach   Reuti          Winterlicke   2007-10-13   00:46:00.0   1011 
-
  Alpbach   Reuti          Winterlicke   2020-07-12   00:48:05.4   967  
 
  Alpbach   Reuti          Winterlicke   2020-05-25   00:48:13.6   964  
@@ -1316,21 +1302,11 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 ----------------------------------------------------------------------------------
        start                end             date      hm_diff      time      hm_h 
 ------------------- ------------------- ------------ --------- ------------ ------
-      Alpbach              Reuti         2007-09-24     445     00:22:00.0   1214 
-
   Frutal Willigen         Zwirgi         2018-06-05     356     00:18:03.0   1183 
 
-      Alpbach              Reuti         2018-06-25     445     00:24:30.3   1090 
-
-      Alpbach           Winterlicke      2007-09-24     775     00:43:00.0   1081 
+      Alpbach           Reuti Post       2018-06-25     437     00:24:30.3   1070 
 
      Amtshaus            Tschorren       2020-06-20     728     00:40:48.9   1070 
-
-      Alpbach              Reuti         2007-10-13     445     00:26:00.0   1027 
-
-      Alpbach              Reuti         2019-08-27     445     00:26:02.1   1026 
-
-      Alpbach              Reuti         2020-07-12     445     00:26:09.8   1021 
 
      Amtshaus        Hohfluh Staatstra   2020-06-20     452     00:26:37.9   1018 
 
@@ -1338,25 +1314,23 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 
   Frutal Willigen         Zwirgi         2019-08-24     356     00:21:04.5   1014 
 
-      Alpbach           Winterlicke      2007-10-13     775     00:46:00.0   1011 
-
      Amtshaus        Hohfluh Staatstra   2018-05-29     452     00:26:55.0   1008 
 
-      Alpbach              Reuti         2018-10-07     445     00:26:31.0   1007 
+      Alpbach           Reuti Post       2019-08-27     437     00:26:02.1   1007 
 
-      Alpbach              Reuti         2020-04-27     445     00:26:34.9   1004 
+      Alpbach           Reuti Post       2020-07-12     437     00:26:09.8   1002 
 
-      Alpbach              Reuti         2020-05-25     445     00:26:35.5   1004 
+      Alpbach           Reuti Post       2018-10-07     437     00:26:31.0   989  
 
-      Alpbach              Reuti         2015-05-27     445     00:27:00.0   989  
+      Alpbach           Reuti Post       2020-04-27     437     00:26:34.9   986  
+
+      Alpbach           Reuti Post       2020-05-25     437     00:26:35.5   986  
 
      Amtshaus        Hohfluh Staatstra   2020-05-09     452     00:27:36.8   982  
 
-      Alpbach              Reuti         2020-04-05     445     00:27:13.6   981  
-
   Frutal Willigen         Zwirgi         2020-09-02     356     00:21:55.2   974  
 
-      Alpbach              Reuti         2020-10-20     445     00:27:29.8   971  
+      Alpbach           Reuti Post       2015-05-27     437     00:27:00.0   971  
 
  Kreisel S'burgstr      Blueme Turm      2002-06-30     841     00:52:00.0   970  
 
@@ -1366,25 +1340,19 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 
       Alpbach           Winterlicke      2020-07-12     775     00:48:05.4   967  
 
-      Alpbach              Reuti         2018-05-27     445     00:27:40.0   965  
-
       Alpbach           Winterlicke      2020-05-25     775     00:48:13.6   964  
 
-      Alpbach              Reuti         2020-05-17     445     00:27:52.1   958  
+      Alpbach           Reuti Post       2020-04-05     437     00:27:13.6   963  
 
      Amtshaus            Tschorren       2020-05-29     728     00:45:34.4   958  
 
+      Alpbach           Reuti Post       2020-10-20     437     00:27:29.8   954  
+
       Alpbach           Winterlicke      2018-10-07     775     00:48:55.6   950  
-
-      Alpbach              Reuti         2018-10-22     445     00:28:05.8   950  
-
-      Alpbach              Reuti         2019-06-07     445     00:28:06.3   950  
 
      Amtshaus        Hohfluh Staatstra   2020-07-23     452     00:28:35.4   949  
 
-      Alpbach              Reuti         2020-08-01     445     00:28:09.7   948  
-
-      Alpbach              Reuti         2020-11-22     445     00:28:10.6   948  
+      Alpbach           Reuti Post       2018-05-27     437     00:27:40.0   948  
 
   Frutal Willigen         Zwirgi         2020-10-22     356     00:22:36.3   945  
 
@@ -1392,11 +1360,11 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 
       Alpbach           Winterlicke      2020-04-05     775     00:49:21.5   942  
 
+      Alpbach           Reuti Post       2020-05-17     437     00:27:52.1   941  
+
      Amtshaus        Kaeserstatt Velos   2018-08-11    1227     01:18:19.0   940  
 
   Frutal Willigen         Zwirgi         2020-07-21     356     00:22:42.9   940  
-
-      Alpbach              Reuti         2020-11-12     445     00:28:24.6   940  
 
   Frutal Willigen         Zwirgi         2020-07-30     356     00:22:44.4   939  
 
@@ -1406,19 +1374,27 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 
      Amtshaus        Hohfluh Staatstra   2018-09-15     452     00:29:04.4   933  
 
+      Alpbach           Reuti Post       2018-10-22     437     00:28:05.8   933  
+
+      Alpbach           Reuti Post       2019-06-07     437     00:28:06.3   933  
+
   Frutal Willigen         Zwirgi         2020-03-28     356     00:22:53.3   933  
 
      Amtshaus              Bidmi         2020-05-09     820     00:52:44.2   933  
 
       Alpbach           Winterlicke      2020-10-20     775     00:49:49.2   933  
 
+      Alpbach           Reuti Post       2020-08-01     437     00:28:09.7   931  
+
+      Alpbach           Reuti Post       2020-11-22     437     00:28:10.6   931  
+
       Alpbach           Winterlicke      2015-05-27     775     00:50:04.1   929  
 
      Amtshaus              Bidmi         2007-10-01     820     00:53:00.0   928  
 
-      Alpbach              Reuti         2020-06-21     445     00:28:49.7   926  
-
      Amtshaus        Hohfluh Staatstra   2020-05-29     452     00:29:22.9   923  
+
+      Alpbach           Reuti Post       2020-11-12     437     00:28:24.6   923  
 
       Alpbach           Winterlicke      2020-11-22     775     00:50:22.4   923  
 
@@ -1437,6 +1413,8 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
      Amtshaus        Kaeserstatt Velos   2019-08-16    1227     01:20:49.6   911  
 
   Frutal Willigen         Zwirgi         2020-04-10     356     00:23:27.3   911  
+
+      Alpbach           Reuti Post       2020-06-21     437     00:28:49.7   910  
 
      Amtshaus        Hohfluh Staatstra   2020-09-24     452     00:29:57.6   905  
 
@@ -1966,25 +1944,25 @@ Table: Table continues below
 ------
 
 
-### Reuti {.tabset .tabset-fade .tabset-pills}
+### Reuti Post {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
 
 
-----------------------------------------------------------------
-  start    via1   via2    end       date         time      hm_h 
---------- ------ ------ ------- ------------ ------------ ------
- Alpbach                 Reuti   2018-06-22   00:26:29.2   1008 
-----------------------------------------------------------------
+---------------------------------------------------------------------
+  start    via1   via2      end          date         time      hm_h 
+--------- ------ ------ ------------ ------------ ------------ ------
+ Alpbach                 Reuti Post   2018-06-22   00:26:29.2   990  
+---------------------------------------------------------------------
 
 #### By time
 
 
-----------------------------------------------------------------
-  start    via1   via2    end       date         time      hm_h 
---------- ------ ------ ------- ------------ ------------ ------
- Alpbach                 Reuti   2018-06-22   00:26:29.2   1008 
-----------------------------------------------------------------
+---------------------------------------------------------------------
+  start    via1   via2      end          date         time      hm_h 
+--------- ------ ------ ------------ ------------ ------------ ------
+ Alpbach                 Reuti Post   2018-06-22   00:26:29.2   990  
+---------------------------------------------------------------------
 
 
 ### Schilthorn Terrasse {.tabset .tabset-fade .tabset-pills}
@@ -2192,13 +2170,13 @@ This section provides a list of tours be elevation gain per hour, sorted in decr
 
  Muelenen Parkplat   Niesen Plattform    2011-08-06    1671     01:38:09.0   1021 
 
-      Alpbach              Reuti         2018-06-22     445     00:26:29.2   1008 
-
  Muelenen Parkplat   Niesen Plattform    2013-06-22    1671     01:39:44.0   1005 
 
  Muelenen Parkplat   Niesen Plattform    2012-05-28    1671     01:40:42.0   996  
 
  Muelenen Parkplat   Niesen Plattform    2008-08-09    1671     01:41:00.0   993  
+
+      Alpbach           Reuti Post       2018-06-22     437     00:26:29.2   990  
 
  Muelenen Parkplat   Niesen Plattform    2009-05-31    1671     01:41:40.0   986  
 
