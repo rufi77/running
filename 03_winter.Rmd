@@ -46,7 +46,7 @@ skitage1 <- touren %>% mutate(date = as.Date(date, origin = "1899-12-30"), skiha
 
 # Zusammenfassung ueber die Jahre
 
-Liste nicht komplett. Mehrere Touren mit demselben Ziel innerhalb eines Monats sind zusammengefasst.
+<!-- Liste nicht komplett. Mehrere Touren mit demselben Ziel innerhalb eines Monats sind zusammengefasst. -->
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = FALSE}
 t <- with(subset(touren, sport == "Skitour"), addmargins(table(as.character(end), season)))
@@ -63,7 +63,7 @@ t[t == 0] <- ""
 pander(t, digits = 1)
 ```
 
-```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5, fig.show='hide'}
 par(mfrow = c(1, 1), las = 2, mar = c(4, 8, 1, 1))
 
 ski <- (all %>% select(start, end, date, time))
@@ -93,7 +93,7 @@ i1 <- which(names(dat) == unique(sort(droplevels(all$season)))[1])
 i2 <- which(names(dat) == tail(unique(sort(droplevels(all$season))), 1))
 dat <- dat[i1:i2]
 
-plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 30))
+plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 40))
 abline(h = 1:100, lty = 2, col = grey(0.5))
 
 # Skihalbtage 
@@ -113,7 +113,35 @@ lines(1:length(dat2), dat2, col = 4, type = "b", pch = 19)
 legend("topleft", legend = c("Wochentag", "Skihalbtag", "Skihalbtag Familie", "Skitour"), pch = c(1, 19, 19), col = c(2, 3, 4), bg = "white", bty = "")
 ```
 
-# Tage auf Ski total
+# Listen der Tourenziele
+
+Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.
+
+```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+
+# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
+
+out <- NULL
+for (i in 1:length(tour)){
+  out <- c(out, knit_expand('tour_summary.Rmd'))
+}
+
+cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
+```
+
+# Hoehenmeter pro Stunde
+
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
+```
+
+# Aktuelle Saison
+
+## Tage auf Ski total
 
 ```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis", eval = TRUE}
 # count skiing days
@@ -143,35 +171,7 @@ f5_dat <- f5[f5$any == 1, "date"]
 skidays <- length(unique(f5_dat))
 ```
 
-Total days on skis: `r skidays`.
-
-# Listings
-
-This section provides listings, chronologically and by time. For listings by time, tours with missing time are omitted.
-
-```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
-
-# how to do this with child documents: https://gist.github.com/rmoff/a043676a2f084b81a434
-
-out <- NULL
-for (i in 1:length(tour)){
-  out <- c(out, knit_expand('tour_summary.Rmd'))
-}
-
-cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
-```
-
-# Elevation gain per hour
-
-This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
-
-```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% hm_print())
-t1 <- (t %>% select(-begleitung1))
-pander(t1)
-```
-
-# Aktuelle Saison {.tabset .tabset-fade .tabset-pills}
+Total Skitage: `r skidays`.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour" & season == "Winter 20/21") %>% hm_print())
@@ -180,27 +180,29 @@ t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour" & season == "W
 - Anzahl Touren: `r nrow(t)`. 
 - Total Hoehenmeter: `r disp(sum(t$hm_diff), 0)`.
 
-## Nach Datum
+## Skitouren {.tabset .tabset-fade .tabset-pills}
+
+### Nach Datum
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% select(-begleitung1) %>% arrange(date))
 pander(t1)
 ```
-## Nach Hoehenmeter
+### Nach Hoehenmeter
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% select(-begleitung1) %>% arrange(desc(hm_diff)))
 pander(t1)
 ```
 
-## Nach Hoehenmeter pro Stunde
+### Nach Hoehenmeter pro Stunde
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% select(-begleitung1) %>% arrange(desc(hm_h)))
 pander(t1)
 ```
 
-## Mit Papa, nach Hoehenmeter pro Stunde
+### Mit Papa, nach Hoehenmeter pro Stunde
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% filter(begleitung1 == "Papa") %>% select(-begleitung1) %>% arrange(desc(hm_h)))
