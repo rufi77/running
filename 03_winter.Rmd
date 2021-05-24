@@ -93,7 +93,7 @@ i1 <- which(names(dat) == unique(sort(droplevels(all$season)))[1])
 i2 <- which(names(dat) == tail(unique(sort(droplevels(all$season))), 1))
 dat <- dat[i1:i2]
 
-plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 40))
+plot(dat, type = "b", col = 2, xlab = "", ylab = "Anzahl Skitouren / Skihalbtage", ylim = c(0, 50))
 abline(h = 1:100, lty = 2, col = grey(0.5))
 
 # Skihalbtage 
@@ -131,10 +131,12 @@ cat(knit(text = unlist(paste(out, collapse = '\n')), quiet = TRUE))
 
 # Hoehenmeter pro Stunde
 
-Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour") %>% hm_print())
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour"))
+t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t <- (t %>% hm_print())
 t1 <- (t %>% select(-begleitung1))
 pander(t1)
 ```
@@ -197,8 +199,13 @@ pander(t1)
 
 ### Nach Hoehenmeter pro Stunde
 
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
+
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-begleitung1) %>% arrange(desc(hm_h)))
+t1 <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour"))
+t1 <- (t1 %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t1 <- (t1 %>% hm_print())
+t1 <- (t1 %>% select(-begleitung1))
 pander(t1)
 ```
 

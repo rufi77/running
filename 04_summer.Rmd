@@ -1,5 +1,5 @@
 ---
-title: "Hikes, runs, and rides"
+title: "Biken, Wandern, Secklen"
 author: "Kaspar Rufibach"
 date: '`r Sys.setlocale("LC_TIME", "C"); format(Sys.Date(), "%d %b %Y")`'
 output:
@@ -41,9 +41,9 @@ all0 <- (touren %>% mutate(begleitung1 = NULL, begleitung2 = NULL, region = NULL
 
 # Bike
 
-## Listings
+## Listen der Tourenziele
 
-For listings by time, tours with missing time are omitted.
+Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.
 
 ```{r bike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -59,17 +59,23 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out1, collapse = '\n')), quiet = TRUE))
 ```
 
-## Elevation gain per hour
+## Hoehenmeter pro Stunde
 
-This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r bike2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike"))
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike"))
+t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t <- (t %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
 ```
 
-# Run
+# Secklen
 
-## Listings
+## Listen der Tourenziele
+
+Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.
 
 ```{r run, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -85,17 +91,23 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out2, collapse = '\n')), quiet = TRUE))
 ```
 
-## Elevation gain per hour
+## Hoehenmeter pro Stunde
 
-This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r run2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Run"))
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Run"))
+t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t <- (t %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
 ```
 
-# Bike and run
+# Bike & Seckle
 
-## Listings
+## Listen der Tourenziele
+
+Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.
 
 ```{r hike, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -111,17 +123,23 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out3, collapse = '\n')), quiet = TRUE))
 ```
 
-## Elevation gain per hour
+## Hoehenmeter pro Stunde
 
-This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r hike2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike and run"))
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike and run"))
+t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t <- (t %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
 ```
 
-# Hike
+# Wandern
 
-## Listings
+## Listen der Tourenziele
+
+Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.
 
 ```{r bikeandrun, echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 
@@ -137,10 +155,14 @@ for (i in 1:length(tour)){
 cat(knit(text = unlist(paste(out4, collapse = '\n')), quiet = TRUE))
 ```
 
-## Elevation gain per hour
+## Hoehenmeter pro Stunde
 
-This section provides a list of tours be elevation gain per hour, sorted in decreasing order.
+Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r bikeandrun2, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-hm_print(touren %>% filter(is.na(hm_h) == FALSE & sport == "Hike"))
+t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Hike"))
+t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t <- (t %>% hm_print())
+t1 <- (t %>% select(-begleitung1))
+pander(t1)
 ```
