@@ -190,6 +190,7 @@ t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour" & season == "W
 t1 <- (t %>% select(-begleitung1) %>% arrange(date))
 pander(t1)
 ```
+
 ### Nach Hoehenmeter
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
@@ -202,8 +203,7 @@ pander(t1)
 Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Skitour"))
-t1 <- (t1 %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
+t1 <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
 t1 <- (t1 %>% hm_print())
 t1 <- (t1 %>% select(-begleitung1))
 pander(t1)

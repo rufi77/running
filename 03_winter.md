@@ -1,7 +1,7 @@
 ---
 title: "Skitouren"
 author: "Kaspar Rufibach"
-date: '24 May 2021'
+date: '31 May 2021'
 output:
   html_document:
     keep_md: true
@@ -194,6 +194,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
      start              end             date         time      hm_h 
 ---------------- ------------------ ------------ ------------ ------
  Steingletscher   Fuenffingersteck   2021-05-24   01:59:28.5   567  
+
+                  Fuenffingersteck   2004-05-27                 NA  
 --------------------------------------------------------------------
 
 #### By time
@@ -400,6 +402,33 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -----------------------------------------------------------------
 
 
+### Gwaechtenhorn {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+-----------------------------------------------------------------
+     start             end           date         time      hm_h 
+---------------- --------------- ------------ ------------ ------
+ Steingletscher   Gwaechtenhorn   2021-05-31   03:13:37.0   482  
+
+ Steingletscher   Gwaechtenhorn   2021-05-29   02:30:00.0   623  
+
+ Steingletscher   Gwaechtenhorn   2004-05-28                 NA  
+-----------------------------------------------------------------
+
+#### By time
+
+
+-----------------------------------------------------------------
+     start             end           date         time      hm_h 
+---------------- --------------- ------------ ------------ ------
+ Steingletscher   Gwaechtenhorn   2021-05-29   02:30:00.0   623  
+
+ Steingletscher   Gwaechtenhorn   2021-05-31   03:13:37.0   482  
+-----------------------------------------------------------------
+
+
 ### Hinder Steckli {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
@@ -421,26 +450,6 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ------------------ ---------------- ------------ ------------ ------
  Guttannen Tunnel   Hinder Steckli   2021-03-13   03:03:22.0   465  
 --------------------------------------------------------------------
-
-
-### Obertaljoch {.tabset .tabset-fade .tabset-pills}
-
-#### Chronologically
-
-
-------------------------------------------------
- start       end          date      time   hm_h 
-------- ------------- ------------ ------ ------
-         Obertaljoch   2004-05-27           NA  
-------------------------------------------------
-
-#### By time
-
-
------------ --------- ---------- ---------- ----------
- **start**   **end**   **date**   **time**   **hm_h** 
-
------------ --------- ---------- ---------- ----------
 
 
 ### Planplatten {.tabset .tabset-fade .tabset-pills}
@@ -570,11 +579,13 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 --------------------------------------------------------------
      start           end          date         time      hm_h 
 ---------------- ------------ ------------ ------------ ------
+ Steingletscher   Sustenhorn   2021-05-28   03:18:04.0   496  
+
  Steingletscher   Sustenhorn   2019-06-01   03:12:22.8   511  
 
  Steingletscher   Sustenhorn   2008-05-12   03:00:00.0   546  
 
-                  Sustenhorn   2004-05-28                 NA  
+ Steingletscher   Sustenhorn   2004-05-28                 NA  
 --------------------------------------------------------------
 
 #### By time
@@ -586,6 +597,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Steingletscher   Sustenhorn   2008-05-12   03:00:00.0   546  
 
  Steingletscher   Sustenhorn   2019-06-01   03:12:22.8   511  
+
+ Steingletscher   Sustenhorn   2021-05-28   03:18:04.0   496  
 --------------------------------------------------------------
 
 
@@ -816,6 +829,8 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
   Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
 
+   Steingletscher       Gwaechtenhorn      2021-05-29    1557     02:30:00.0   623  
+
    Kunzentennlen      Baechlisblatti Pt    2021-05-14    1043     01:47:51.0   580  
 
    Kunzentennlen        Baechlisblatti     2021-05-04    1093     01:55:05.0   570  
@@ -867,12 +882,12 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
 
 
-Total Skitage: 76.
+Total Skitage: 79.
 
 
 
-- Anzahl Touren: 43. 
-- Total Hoehenmeter: 55539.
+- Anzahl Touren: 46. 
+- Total Hoehenmeter: 60292.
 
 ## Skitouren {.tabset .tabset-fade .tabset-pills}
 
@@ -967,7 +982,14 @@ Total Skitage: 76.
    Kunzentennlen      Baechlisblatti Pt    2021-05-14    1043     01:47:51.0   580  
 
    Steingletscher      Fuenffingersteck    2021-05-24    1130     01:59:28.5   567  
+
+   Steingletscher         Sustenhorn       2021-05-28    1639     03:18:04.0   496  
+
+   Steingletscher       Gwaechtenhorn      2021-05-29    1557     02:30:00.0   623  
+
+   Steingletscher       Gwaechtenhorn      2021-05-31    1557     03:13:37.0   482  
 ------------------------------------------------------------------------------------
+
 ### Nach Hoehenmeter
 
 
@@ -991,6 +1013,12 @@ Total Skitage: 76.
       Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
 
       Obermad           Talegglistock      2021-02-14    1647     03:49:11.0   431  
+
+   Steingletscher         Sustenhorn       2021-05-28    1639     03:18:04.0   496  
+
+   Steingletscher       Gwaechtenhorn      2021-05-29    1557     02:30:00.0   623  
+
+   Steingletscher       Gwaechtenhorn      2021-05-31    1557     03:13:37.0   482  
 
    Kunzentennlen        Gaerstenluecke     2021-04-25    1490     02:56:55.0   505  
 
@@ -1083,29 +1111,23 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
   Gschwandtenmaad         Tschingel        2021-04-08    1024     01:33:13.0   659  
 
+   Steingletscher       Gwaechtenhorn      2021-05-29    1557     02:30:00.0   623  
+
    Kunzentennlen      Baechlisblatti Pt    2021-05-14    1043     01:47:51.0   580  
 
    Kunzentennlen        Baechlisblatti     2021-05-04    1093     01:55:05.0   570  
 
    Steingletscher      Fuenffingersteck    2021-05-24    1130     01:59:28.5   567  
 
-   Schwarzwaldalp         Bandspitz        2019-02-14     946     01:40:51.8   563  
-
   Guttannen Tunnel    Spreitloui Pt 1677   2021-03-10     657     01:11:28.0   552  
 
-   Steingletscher         Sustenhorn       2008-05-12    1639     03:00:00.0   546  
+   Schwarzwaldalp         Bandspitz        2021-01-23     946     01:45:00.0   541  
 
- Handeck Kurve nach       Golegghorn       2019-03-23    1748     03:14:13.4   540  
-
-     Gerstenegg         Baechlisblatti     2019-05-24     988     01:56:25.9   509  
-
-   Handeck Hotel         Aerlenluecke      2011-02-06    1654     03:15:00.0   509  
+ Handeck Kurve nach       Golegghorn       2021-02-19    1748     03:19:30.0   526  
 
    Kunzentennlen        Gaerstenluecke     2021-04-25    1490     02:56:55.0   505  
 
-   Handeck Hotel          Golegghorn       2008-02-16    1675     03:20:00.0   502  
-
-   Handeck Mineur        Aerlenluecke      2020-02-08    1749     03:38:24.8   480  
+   Steingletscher         Sustenhorn       2021-05-28    1639     03:18:04.0   496  
 
  Parkplatz Rosenlau      Raenfenhorn       2021-04-23    1901     04:02:00.0   471  
 
@@ -1117,15 +1139,9 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
       Obermad           Talegglistock      2021-02-13    1647     03:48:29.0   433  
 
- Handeck Kurve nach        Aerlen-S        2019-03-20    1157     02:41:25.0   430  
-
    Reuti Station        Gummen Pt 2005     2020-12-07     940     02:17:20.0   411  
 
-      Feldmoos          Untertalstock      2016-03-31    1158     02:51:59.8   404  
-
  Parkplatz Rosenlau       Wetterhorn       2021-04-17    2332     05:50:32.0   399  
-
-  Guttannen Tunnel     Gletscherchaele     2019-02-16    1839     04:58:18.9   370  
 ------------------------------------------------------------------------------------
 
 ### Mit Papa, nach Hoehenmeter pro Stunde
@@ -1155,6 +1171,8 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
    Kunzentennlen        Gaerstenluecke     2021-04-25    1490     02:56:55.0   505  
 
     Boozisteinen          Wandelhorn       2021-03-01    1162     02:19:17.0   501  
+
+   Steingletscher         Sustenhorn       2021-05-28    1639     03:18:04.0   496  
 
    Schwarzwaldalp         Wildgaerst       2020-12-14    1436     02:59:58.0   479  
 

@@ -1,7 +1,7 @@
 ---
 title: "Biken, Wandern, Secklen"
 author: "Kaspar Rufibach"
-date: '24 May 2021'
+date: '25 May 2021'
 output:
   html_document:
     keep_md: true
@@ -377,6 +377,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ------------------------------------------------------------------
   start             end               date         time      hm_h 
 ---------- ---------------------- ------------ ------------ ------
+ Amtshaus   Hohfluh Staatstrasse   2021-05-25   00:28:47.9   942  
+
  Amtshaus   Hohfluh Staatstrasse   2021-05-18   00:33:31.1   809  
 
  Amtshaus   Hohfluh Staatstrasse   2021-05-17   00:34:33.1   785  
@@ -441,6 +443,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Amtshaus   Hohfluh Staatstrasse   2020-07-23   00:28:35.4   949  
 
  Amtshaus   Hohfluh Staatstrasse   2021-04-22   00:28:38.9   947  
+
+ Amtshaus   Hohfluh Staatstrasse   2021-05-25   00:28:47.9   942  
 
  Amtshaus   Hohfluh Staatstrasse   2007-10-08   00:29:00.0   935  
 
@@ -1098,21 +1102,24 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 #### Chronologically
 
 
----------------------------------------------------
-  start         end          date      time   hm_h 
----------- ------------- ------------ ------ ------
- Amtshaus   Wasserwendi   2021-05-20           NA  
+---------------------------------------------------------
+  start         end          date         time      hm_h 
+---------- ------------- ------------ ------------ ------
+ Amtshaus   Wasserwendi   2021-05-25   00:41:14.5   898  
 
- Amtshaus   Wasserwendi   2021-05-17           NA  
----------------------------------------------------
+ Amtshaus   Wasserwendi   2021-05-20                 NA  
+
+ Amtshaus   Wasserwendi   2021-05-17                 NA  
+---------------------------------------------------------
 
 #### By time
 
 
------------ --------- ---------- ---------- ----------
- **start**   **end**   **date**   **time**   **hm_h** 
-
------------ --------- ---------- ---------- ----------
+---------------------------------------------------------
+  start         end          date         time      hm_h 
+---------- ------------- ------------ ------------ ------
+ Amtshaus   Wasserwendi   2021-05-25   00:41:14.5   898  
+---------------------------------------------------------
 
 
 ### Winterlicke {.tabset .tabset-fade .tabset-pills}
@@ -1275,6 +1282,8 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
  Kreisel S'burgstr      Blueme Turm       2008-06-01     841     00:55:10.0   915  
 
   Balm Abzweigung      Wandel Mettlen     2020-06-06     756     00:49:40.1   913  
+
+     Amtshaus           Wasserwendi       2021-05-25     617     00:41:14.5   898  
 
      Amtshaus            Halgenfluh       2020-07-23     702     00:46:59.6   896  
 
