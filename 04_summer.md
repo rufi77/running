@@ -1,7 +1,7 @@
 ---
 title: "Biken, Wandern, Secklen"
 author: "Kaspar Rufibach"
-date: '25 May 2021'
+date: '24 Jun 2021'
 output:
   html_document:
     keep_md: true
@@ -49,33 +49,45 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ---------------------------------------------------------------------------
 
 
-### Alpbruecke {.tabset .tabset-fade .tabset-pills}
+### Alpbruecke Wegweiser {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
 
 
---------------------------------------------------------
-  start        end          date         time      hm_h 
----------- ------------ ------------ ------------ ------
- Alpbach    Alpbruecke   2020-08-15   01.02:44.0   876  
+------------------------------------------------------------------
+  start             end               date         time      hm_h 
+---------- ---------------------- ------------ ------------ ------
+ Alpbach    Alpbruecke Wegweiser   2021-06-20   01:02:01.7   886  
 
- Amtshaus   Alpbruecke   2020-08-08   01:05:01.4   859  
+ Amtshaus   Alpbruecke Wegweiser   2021-06-10   01:01:26.9   909  
 
- Amtshaus   Alpbruecke   2018-08-24   01:05:22.8   854  
---------------------------------------------------------
+ Alpbach    Alpbruecke Wegweiser   2020-08-15   01:02:44.0   876  
+
+ Amtshaus   Alpbruecke Wegweiser   2020-08-08   01:05:01.4   859  
+
+ Amtshaus   Alpbruecke Wegweiser   2018-08-24   01:04:22.8   868  
+
+ Amtshaus   Alpbruecke Wegweiser   2018-08-11   00:58:41.5   952  
+------------------------------------------------------------------
 
 #### By time
 
 
---------------------------------------------------------
-  start        end          date         time      hm_h 
----------- ------------ ------------ ------------ ------
- Alpbach    Alpbruecke   2020-08-15   01.02:44.0   876  
+------------------------------------------------------------------
+  start             end               date         time      hm_h 
+---------- ---------------------- ------------ ------------ ------
+ Amtshaus   Alpbruecke Wegweiser   2018-08-11   00:58:41.5   952  
 
- Amtshaus   Alpbruecke   2020-08-08   01:05:01.4   859  
+ Amtshaus   Alpbruecke Wegweiser   2021-06-10   01:01:26.9   909  
 
- Amtshaus   Alpbruecke   2018-08-24   01:05:22.8   854  
---------------------------------------------------------
+ Alpbach    Alpbruecke Wegweiser   2021-06-20   01:02:01.7   886  
+
+ Alpbach    Alpbruecke Wegweiser   2020-08-15   01:02:44.0   876  
+
+ Amtshaus   Alpbruecke Wegweiser   2018-08-24   01:04:22.8   868  
+
+ Amtshaus   Alpbruecke Wegweiser   2020-08-08   01:05:01.4   859  
+------------------------------------------------------------------
 
 
 ### Bidmi {.tabset .tabset-fade .tabset-pills}
@@ -139,6 +151,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -----------------------------------------------------------
   start         end            date         time      hm_h 
 --------- ---------------- ------------ ------------ ------
+ Alpbach   Bidmi Abesyten   2021-06-23   00:55:50.2   900  
+
  Alpbach   Bidmi Abesyten   2020-08-01   00:56:54.7   883  
 
  Alpbach   Bidmi Abesyten   2020-05-17   00:56:52.2   884  
@@ -150,6 +164,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -----------------------------------------------------------
   start         end            date         time      hm_h 
 --------- ---------------- ------------ ------------ ------
+ Alpbach   Bidmi Abesyten   2021-06-23   00:55:50.2   900  
+
  Alpbach   Bidmi Abesyten   2020-05-17   00:56:52.2   884  
 
  Alpbach   Bidmi Abesyten   2020-08-01   00:56:54.7   883  
@@ -177,6 +193,27 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ------------------------------------------------------------------
 
 
+### Chlyn Rychenbach {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+---------------------------------------------------------------------
+      start              end             date         time      hm_h 
+----------------- ------------------ ------------ ------------ ------
+ Frutal Willigen   Chlyn Rychenbach   2021-06-17   01:16:25.7    NA  
+---------------------------------------------------------------------
+
+#### By time
+
+
+---------------------------------------------------------------------
+      start              end             date         time      hm_h 
+----------------- ------------------ ------------ ------------ ------
+ Frutal Willigen   Chlyn Rychenbach   2021-06-17   01:16:25.7    NA  
+---------------------------------------------------------------------
+
+
 ### Creux du Van {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
@@ -202,6 +239,27 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Boudry Bhf   Creux du Van   2017-10-27   01:31:23.0   614  
 ------------------------------------------------------------
+
+
+### Engstlen {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+-----------------------------------------------------
+  start      end         date         time      hm_h 
+--------- ---------- ------------ ------------ ------
+ Alpbach   Engstlen   2021-06-06   01:50:20.9    NA  
+-----------------------------------------------------
+
+#### By time
+
+
+-----------------------------------------------------
+  start      end         date         time      hm_h 
+--------- ---------- ------------ ------------ ------
+ Alpbach   Engstlen   2021-06-06   01:50:20.9    NA  
+-----------------------------------------------------
 
 
 ### Gibel {.tabset .tabset-fade .tabset-pills}
@@ -239,6 +297,27 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Amtshaus   Gibel   2018-07-26   01:49:34.9   786  
 ---------------------------------------------------
+
+
+### Goldern {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+----------------------------------------------------
+  start      end        date         time      hm_h 
+--------- --------- ------------ ------------ ------
+ Alpbach   Goldern   2021-06-20   00:30:47.5    NA  
+----------------------------------------------------
+
+#### By time
+
+
+----------------------------------------------------
+  start      end        date         time      hm_h 
+--------- --------- ------------ ------------ ------
+ Alpbach   Goldern   2021-06-20   00:30:47.5    NA  
+----------------------------------------------------
 
 
 ### Grindelfeld Brunnen {.tabset .tabset-fade .tabset-pills}
@@ -377,6 +456,10 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ------------------------------------------------------------------
   start             end               date         time      hm_h 
 ---------- ---------------------- ------------ ------------ ------
+ Amtshaus   Hohfluh Staatstrasse   2021-06-10   00:30:02.9   903  
+
+ Amtshaus   Hohfluh Staatstrasse   2021-06-01   00:28:30.7   951  
+
  Amtshaus   Hohfluh Staatstrasse   2021-05-25   00:28:47.9   942  
 
  Amtshaus   Hohfluh Staatstrasse   2021-05-18   00:33:31.1   809  
@@ -411,6 +494,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Amtshaus   Hohfluh Staatstrasse   2018-09-15   00:29:04.4   933  
 
+ Amtshaus   Hohfluh Staatstrasse   2018-08-11   00:28:01.9   967  
+
  Amtshaus   Hohfluh Staatstrasse   2018-05-29   00:26:55.0   1008 
 
  Amtshaus   Hohfluh Staatstrasse   2009-09-18   00:29:30.0   919  
@@ -438,7 +523,11 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Amtshaus   Hohfluh Staatstrasse   2007-10-01   00:28:00.0   969  
 
+ Amtshaus   Hohfluh Staatstrasse   2018-08-11   00:28:01.9   967  
+
  Amtshaus   Hohfluh Staatstrasse   2019-08-16   00:28:03.3   967  
+
+ Amtshaus   Hohfluh Staatstrasse   2021-06-01   00:28:30.7   951  
 
  Amtshaus   Hohfluh Staatstrasse   2020-07-23   00:28:35.4   949  
 
@@ -463,6 +552,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Amtshaus   Hohfluh Staatstrasse   2020-09-24   00:29:57.6   905  
 
  Amtshaus   Hohfluh Staatstrasse   2007-10-03   00:30:00.0   904  
+
+ Amtshaus   Hohfluh Staatstrasse   2021-06-10   00:30:02.9   903  
 
  Amtshaus   Hohfluh Staatstrasse   2020-10-24   00:30:30.4   889  
 
@@ -531,6 +622,10 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ----------------------------------------------------------------------
   start               end                 date         time      hm_h 
 ---------- -------------------------- ------------ ------------ ------
+ Alpbach    Kaeserstatt Velostaender   2021-06-20   01:22:08.5   885  
+
+ Amtshaus   Kaeserstatt Velostaender   2021-06-10   01:20:41.5   912  
+
  Alpbach    Kaeserstatt Velostaender   2020-08-15   01:21:00.0   898  
 
  Alpbach    Kaeserstatt Velostaender   2020-06-16   01:19:18.3   917  
@@ -562,6 +657,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Alpbach    Kaeserstatt Velostaender   2020-06-16   01:19:18.3   917  
 
+ Amtshaus   Kaeserstatt Velostaender   2021-06-10   01:20:41.5   912  
+
  Amtshaus   Kaeserstatt Velostaender   2019-08-16   01:20:49.6   911  
 
  Alpbach    Kaeserstatt Velostaender   2020-08-15   01:21:00.0   898  
@@ -569,6 +666,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Amtshaus   Kaeserstatt Velostaender   2018-06-28   01:21:39.6   902  
 
  Amtshaus   Kaeserstatt Velostaender   2007-10-03   01:22:00.0   898  
+
+ Alpbach    Kaeserstatt Velostaender   2021-06-20   01:22:08.5   885  
 
  Amtshaus   Kaeserstatt Velostaender   2009-09-18   01:23:00.0   887  
 
@@ -770,6 +869,26 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 --------------------------------------------------------
 
 
+### Raeterichsbodensee {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+------------------------------------------------------------
+   start             end              date      time   hm_h 
+------------ -------------------- ------------ ------ ------
+ Alpbaechli   Raeterichsbodensee   2021-06-08           NA  
+------------------------------------------------------------
+
+#### By time
+
+
+----------- --------- ---------- ---------- ----------
+ **start**   **end**   **date**   **time**   **hm_h** 
+
+----------- --------- ---------- ---------- ----------
+
+
 ### Reuti Post {.tabset .tabset-fade .tabset-pills}
 
 #### Chronologically
@@ -778,6 +897,12 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -------------------------------------------------------
   start       end          date         time      hm_h 
 --------- ------------ ------------ ------------ ------
+ Alpbach   Reuti Post   2021-06-23   00:28:55.0   907  
+
+ Alpbach   Reuti Post   2021-06-13                 NA  
+
+ Alpbach   Reuti Post   2021-06-06   00:28:22.4   924  
+
  Alpbach   Reuti Post   2021-05-13                 NA  
 
  Alpbach   Reuti Post   2020-11-22   00:28:10.6   931  
@@ -851,9 +976,13 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Alpbach   Reuti Post   2020-11-22   00:28:10.6   931  
 
+ Alpbach   Reuti Post   2021-06-06   00:28:22.4   924  
+
  Alpbach   Reuti Post   2020-11-12   00:28:24.6   923  
 
  Alpbach   Reuti Post   2020-06-21   00:28:49.7   910  
+
+ Alpbach   Reuti Post   2021-06-23   00:28:55.0   907  
 -------------------------------------------------------
 
 
@@ -911,6 +1040,12 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -------------------------------------------------------------------
       start             end            date         time      hm_h 
 ----------------- ---------------- ------------ ------------ ------
+ Frutal Willigen   Schwarzwaldalp   2021-06-21   00:59:56.4   836  
+
+ Frutal Willigen   Schwarzwaldalp   2021-06-09   01:01:33.1   814  
+
+ Frutal Willigen   Schwarzwaldalp   2021-06-03   01:01:47.0   811  
+
  Frutal Willigen   Schwarzwaldalp   2021-05-22   00:58:46.9   852  
 
  Frutal Willigen   Schwarzwaldalp   2020-10-22   00:57:33.8   870  
@@ -964,12 +1099,39 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Frutal Willigen   Schwarzwaldalp   2020-04-10   00:59:56.0   836  
 
+ Frutal Willigen   Schwarzwaldalp   2021-06-21   00:59:56.4   836  
+
  Frutal Willigen   Schwarzwaldalp   2009-10-19   01:00:00.0   835  
 
  Frutal Willigen   Schwarzwaldalp   2020-03-28   01:00:13.3   832  
 
  Frutal Willigen   Schwarzwaldalp   2020-04-17   01:01:02.4   821  
+
+ Frutal Willigen   Schwarzwaldalp   2021-06-09   01:01:33.1   814  
+
+ Frutal Willigen   Schwarzwaldalp   2021-06-03   01:01:47.0   811  
 -------------------------------------------------------------------
+
+
+### Taelli {.tabset .tabset-fade .tabset-pills}
+
+#### Chronologically
+
+
+------------------------------------------------------
+   start       end        date         time      hm_h 
+------------ -------- ------------ ------------ ------
+ Alpbaechli   Taelli   2021-06-14   01:57:59.0    NA  
+------------------------------------------------------
+
+#### By time
+
+
+------------------------------------------------------
+   start       end        date         time      hm_h 
+------------ -------- ------------ ------------ ------
+ Alpbaechli   Taelli   2021-06-14   01:57:59.0    NA  
+------------------------------------------------------
 
 
 ### Tschorren {.tabset .tabset-fade .tabset-pills}
@@ -1026,6 +1188,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -------------------------------------------------------------------
       start             end            date         time      hm_h 
 ----------------- ---------------- ------------ ------------ ------
+ Balm Abzweigung   Wandel Mettlen   2021-06-15   00:55:10.0   822  
+
  Balm Abzweigung   Wandel Mettlen   2020-07-05   00:51:14.2   885  
 
  Balm Abzweigung   Wandel Mettlen   2020-06-06   00:49:40.1   913  
@@ -1044,6 +1208,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Balm Abzweigung   Wandel Mettlen   2020-07-05   00:51:14.2   885  
 
  Balm Abzweigung   Wandel Mettlen   2020-05-07   00:52:13.8   868  
+
+ Balm Abzweigung   Wandel Mettlen   2021-06-15   00:55:10.0   822  
 -------------------------------------------------------------------
 
 
@@ -1105,6 +1271,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 ---------------------------------------------------------
   start         end          date         time      hm_h 
 ---------- ------------- ------------ ------------ ------
+ Amtshaus   Wasserwendi   2021-06-01   00:42:23.9   873  
+
  Amtshaus   Wasserwendi   2021-05-25   00:41:14.5   898  
 
  Amtshaus   Wasserwendi   2021-05-20                 NA  
@@ -1119,6 +1287,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
   start         end          date         time      hm_h 
 ---------- ------------- ------------ ------------ ------
  Amtshaus   Wasserwendi   2021-05-25   00:41:14.5   898  
+
+ Amtshaus   Wasserwendi   2021-06-01   00:42:23.9   873  
 ---------------------------------------------------------
 
 
@@ -1130,6 +1300,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 --------------------------------------------------------
   start        end          date         time      hm_h 
 --------- ------------- ------------ ------------ ------
+ Alpbach   Winterlicke   2021-06-06   00:51:52.6   896  
+
  Alpbach   Winterlicke   2021-04-24                 NA  
 
  Alpbach   Winterlicke   2021-04-10                 NA  
@@ -1185,6 +1357,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 
  Alpbach   Winterlicke   2018-10-22   00:51:47.1   898  
 
+ Alpbach   Winterlicke   2021-06-06   00:51:52.6   896  
+
  Alpbach   Winterlicke   2019-06-07   00:53:13.5   874  
 
  Alpbach   Winterlicke   2020-06-21   00:53:37.2   867  
@@ -1201,6 +1375,10 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
 -----------------------------------------------------------
       start         end        date         time      hm_h 
 ----------------- -------- ------------ ------------ ------
+ Frutal Willigen   Zwirgi   2021-06-21                 NA  
+
+ Frutal Willigen   Zwirgi   2021-06-09   00:24:19.4   878  
+
  Frutal Willigen   Zwirgi   2020-10-22   00:22:36.3   945  
 
  Frutal Willigen   Zwirgi   2020-09-02   00:21:55.2   974  
@@ -1251,6 +1429,8 @@ Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer d
  Frutal Willigen   Zwirgi   2020-04-10   00:23:27.3   911  
 
  Frutal Willigen   Zwirgi   2020-04-17   00:23:56.8   892  
+
+ Frutal Willigen   Zwirgi   2021-06-09   00:24:19.4   878  
 -----------------------------------------------------------
 
 ## Hoehenmeter pro Stunde
@@ -1271,6 +1451,8 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
       Alpbach           Winterlicke       2020-07-12     775     00:48:05.4   967  
 
+     Amtshaus        Alpbruecke Wegweis   2018-08-11     931     00:58:41.5   952  
+
   Frutal Willigen      Schwarzwaldalp     2018-07-13     835     00:53:09.5   942  
 
      Amtshaus        Kaeserstatt Velost   2018-08-11    1227     01:18:19.0   940  
@@ -1283,6 +1465,8 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
   Balm Abzweigung      Wandel Mettlen     2020-06-06     756     00:49:40.1   913  
 
+      Alpbach          Bidmi Abesyten     2021-06-23     838     00:55:50.2   900  
+
      Amtshaus           Wasserwendi       2021-05-25     617     00:41:14.5   898  
 
      Amtshaus            Halgenfluh       2020-07-23     702     00:46:59.6   896  
@@ -1293,17 +1477,13 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 
   Frutal Willigen       Obri Mettlen      2020-09-02    1229     01:22:54.2   889  
 
-  Balm Abzweigung    Oltscheren Bielen    2020-05-27    1038     01:10:17.3   886  
+      Alpbach        Alpbruecke Wegweis   2021-06-20     916     01:02:01.7   886  
 
-      Alpbach          Bidmi Abesyten     2020-05-17     838     00:56:52.2   884  
+  Balm Abzweigung    Oltscheren Bielen    2020-05-27    1038     01:10:17.3   886  
 
       Alpbach              Maegis         2020-08-06    1092     01:14:22.9   881  
 
-      Alpbach            Alpbruecke       2020-08-15     916     01.02:44.0   876  
-
   Balm Abzweigung    Wandel mittlesten    2020-07-05    1059     01:12:47.8   873  
-
-     Amtshaus            Alpbruecke       2020-08-08     931     01:05:01.4   859  
 
   Balm Abzweigung    Oltscheren Oberfel   2020-05-27    1273     01:29:13.9   856  
 

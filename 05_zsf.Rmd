@@ -145,12 +145,14 @@ for (i in 2:ncol(ascent)){
   lines(1:12, tmp2, type = "b", col = i, lwd = 2)
   }
 axis(1, at = 1:12, labels = ascent[, "month"])
-axis(2, at = seq(0, 10 ^ 5, by = 10 ^ 4), labels = format(seq(0, 10 ^ 5, by = 10 ^ 4), scientific = FALSE))
+axis(2, at = seq(0, 10 ^ 6, by = 2.5 * 10 ^ 4), labels = format(seq(0, 10 ^ 6, by = 2.5 * 10 ^ 4), scientific = FALSE))
 par(las = 0)
 mtext(text = "Cumulative ascent (Hm)", side = 2, line = 4, adj = 0.5)
 legend("topleft", legend = paste(colnames(ascent)[-1], ": ", apply(ascent[, -1], 2, sum, na.rm = TRUE), sep = ""), lty = 1, col = 2:ncol(ascent), bty = "n", lwd = 2)
 gap <- (cumsum(ascent[, ncol(ascent)]) - cumsum(ascent[, ncol(ascent) - 1]))[tail(which(is.na(ascent[, ncol(ascent)]) == FALSE), 1)]
 mtext(paste("Delta to last year, last month = ", gap, " Hm", sep = ""), side = 3, line = 0.5)
+
+abline(h = 10 ^ 5, col = grey(0.5), lty = 3)
 ```
 
 
