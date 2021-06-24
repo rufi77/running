@@ -84,7 +84,7 @@ for (i in 1:length(tour)){
 }
 ```
 
-```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5}
+```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 5, fig.show='hide'}
 par(las = 2, mar = c(8, 4.5, 1, 1))
 
 # now pick first season with entry and last season

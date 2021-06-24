@@ -29,7 +29,7 @@ output:
 
 
 
-<img src="03_winter_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+
 
 # Listen der Tourenziele
 
