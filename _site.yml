@@ -1,0 +1,31 @@
+name: "Sport Kaspar"
+output_dir: docs
+navbar:
+  title: "Sport  Kaspar"
+  type: inverse
+  left:
+    - text: "Wettkaempfe"
+      href: wettkaempfe.html
+    - text: "Ausdauer"
+      menu:
+        - text: "Bike"
+          href: bike.html
+        - text: "Wandern"
+          href: hike.html
+        - text: "Bike & Run"
+          href: bikerun.html
+        - text: "Skitouren"
+          href: skitouren.html
+    - text: "Kieser"
+      href: kieser.html
+    - text: "Zusammenfassungen"
+      href: zusammenfassungen.html
+    - text: "Tage im Ausland"
+      href: travel.html
+  output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    include:
+      after_body: footer.html
+    css: styles.css
