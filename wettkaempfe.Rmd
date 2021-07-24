@@ -98,6 +98,7 @@ legend(2002, 0, c("Run", "Bike"), lty = 1, lwd = c(NA, NA), pch = c(19, 17), bty
 
 for (i in 1:length(a)){
      ind <- (Anlass == names(a)[i])
+     ind[is.na(ind)] <- FALSE
      J2 <- Jahr[ind]
      J2 <- J2[is.na(J2) == FALSE]
      points(J2, rep(ys[i], sum(ind, na.rm = TRUE)), col = i, pch = ifelse(Disziplin[ind][1] == "Run", 19, 17), cex = 1.5)

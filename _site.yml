@@ -20,8 +20,6 @@ navbar:
       href: kieser.html
     - text: "Zusammenfassungen"
       href: zusammenfassungen.html
-    - text: "Tage im Ausland"
-      href: travel.html
   output:
   html_document:
     theme: cosmo
