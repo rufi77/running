@@ -10,6 +10,8 @@ navbar:
       menu:
         - text: "Bike"
           href: bike.html
+        - text: "Run"
+          href: run.html
         - text: "Wandern"
           href: hike.html
         - text: "Bike & Run"
