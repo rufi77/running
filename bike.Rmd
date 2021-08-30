@@ -33,7 +33,7 @@ source(paste(path, "/functions/hm_print.r", sep = ""))
 touren <- input_touren(path)
                   
 # Bike
-all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Bike") %>% arrange(end, time) )
+all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Bike"))
 
 ski <- (all %>% select(start, end, date, time))
 tour <- unique(ski$end)
@@ -42,7 +42,7 @@ tour <- unique(ski$end)
 # Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Bike" & year(touren$date) == "2021") %>% group_by(date) %>% arrange(desc(time), .by_group = TRUE) %>% slice(1) %>% hm_print())
+t <- (touren %>% filter(sport == "Bike" & year(touren$date) == "2021" & begleitung1 != "Alexander") %>% group_by(date) %>% slice_tail() %>% hm_print())
 ```
 
 Anzahl Touren: `r nrow(t)`. 
