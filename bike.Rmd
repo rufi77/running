@@ -36,7 +36,7 @@ touren <- input_touren(path)
 all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Bike"))
 
 ski <- (all %>% select(start, end, date, time))
-tour <- unique(ski$end)
+tour <- sort(unique(ski$end))
 ```
 
 # Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}

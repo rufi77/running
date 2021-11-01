@@ -12,7 +12,7 @@ ind[is.na(ind)] <- FALSE
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
   # Relativer Rang
-  par(mfrow = c(1, 1), mar = c(3.5, 3, 3, 1), las = 2)
+  par(mfrow = c(1, 1), mar = c(3.5, 6, 3, 1), las = 2)
   y <- pmin(1, (Kat_Rang / Kat_Teiln)[ind], na.rm = TRUE)
   plot(Jahr[ind], y, type = "b", pch = 1, 
          main = paste(names(a)[i], ": relativer Rang Kategorie", sep = ""), 
@@ -25,6 +25,7 @@ ind[is.na(ind)] <- FALSE
 ### Relativer Range Männer
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 3.5}
+  par(mfrow = c(1, 1), mar = c(3.5, 6, 3, 1), las = 2)
   y <- pmin(1, (M_Rang / M_Teiln)[ind], na.rm = TRUE)
   plot(Jahr[ind], y, type = "b", pch = 1, 
          main = paste(names(a)[i], ": relativer Rang Maenner", sep = ""), 
@@ -45,7 +46,7 @@ ind[is.na(ind)] <- FALSE
          axis(2, at = ypos, labels = as.character(ylab))
 ```
 
-### Tabelle Zeiten
+### Zeiten, nach Jahr
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 panderOptions('knitr.auto.asis', FALSE)
@@ -54,5 +55,11 @@ rownames(d) <- NULL
 pander(d)          
 ```
 
+### Zeiten, sortiert
 
+```{r, echo = FALSE, results = 'asis', message = FALSE}
+library(pander)
+d2 <- (d[order(d[, "Zeit"]), ] %>% rowid_to_column("Nr"))
+pander(d2)          
+```
 
