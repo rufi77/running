@@ -45,7 +45,7 @@ tour <- unique(ski$end)
 
 ```{r echo = FALSE, message = FALSE, warning = FALSE, results = "asis", eval = TRUE}
 # count skiing days
-s <- 21
+s <- 22
 
 # f1 <- table(with(touren, cbind(skihalbtag, weekdays(date))[as.numeric(season) == s & is.na(skihalbtag) == FALSE, 2]))
 # f2 <- table(with(touren, cbind(skihalbtag_fam, weekdays(date))[as.numeric(season) == s & is.na(skihalbtag_fam) == FALSE, 2]))
@@ -74,10 +74,10 @@ skidays <- length(unique(f5_dat))
 Total Skitage: `r skidays`.
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Skitour" & season == "Winter 20/21") %>% hm_print())
+t <- (touren %>% filter(sport == "Skitour" & season == "Winter 21/22") %>% hm_print())
 ```
 
-- Anzahl Touren: `r nrow(t)`. 
+- Anzahl Tourentage: `r length(unique(t$date))`. 
 - Total Hoehenmeter: `r disp(sum(t$hm_diff), 0)`.
 
 ## Nach Datum
