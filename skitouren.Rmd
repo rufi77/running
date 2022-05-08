@@ -16,7 +16,7 @@ output:
 
 ```{r setup, include=FALSE}
 ## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "lubridate", "readxl", "tibble")
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "lubridate", "readxl", "tibble", "summarytools")
 for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
 
 knitr::opts_chunk$set(echo = TRUE)
@@ -33,7 +33,8 @@ source(paste(path, "/functions/hm_print.r", sep = ""))
 touren <- input_touren(path)
                   
 # skitouren
-all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) )
+all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, 
+                          region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) )
 
 ski <- (all %>% select(start, end, date, time))
 tour <- unique(ski$end)
@@ -110,6 +111,25 @@ pander(t1)
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% filter(begleitung1 == "Papa") %>% select(-begleitung1) %>% arrange(desc(hm_h))) %>% rowid_to_column("Nr")
 pander(t1)
+```
+
+# Skimodell
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+all_m0 <- all[all$date >= "2003-12-31" & all$date <= "2022-08-31", ]
+all_m <- (all_m0 %>% arrange(date) %>% group_by(date) %>% slice(1) %>% select(-season))
+cuts <- parse_date_time(x = "2003-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 19, by = 1))
+labs <- c(paste("Winter 0", 3:8, "/0", 4:9, sep = ""), "Winter 09/10", paste("Winter ", 10:21, "/", 11:22, sep = ""))
+
+all_m$season <- cut.POSIXt(x = parse_date_time(x = all_m$date, orders = "ymd"), breaks = cuts, labels = labs)
+
+with(all_m, ctable(x = season, y = modell, useNA = "no", 
+       prop = "t", totals = TRUE, headings = FALSE, method = "render"))
+```
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+sum_mod <- (all_m %>% arrange(modell) %>% group_by(modell) %>% summarise(Hm = sum(hm_diff, na.rm = TRUE)))
+kable(sum_mod)
 ```
 
 # Touren nach Ziel
