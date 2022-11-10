@@ -76,7 +76,14 @@ pander(t1)
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t <- (touren %>% filter(sport == "Bike" & year(touren$date) == "2022") %>% arrange(date))
-t1 <- (t %>% filter(begleitung1 == "Alexander") %>% rowid_to_column("Nr") %>% hm_print())
+t1 <- (t %>% filter(begleitung1 == "Alexander" | begleitung2 == "Alexander" | begleitung3 == "Alexander" | begleitung4 == "Alexander") %>% rowid_to_column("Nr") %>% hm_print())
+pander(t1)
+```
+
+## Mit Lorenz
+
+```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
+t1 <- (t %>% filter(begleitung1 == "Lorenz" | begleitung2 == "Lorenz" | begleitung3 == "Lorenz" | begleitung4 == "Lorenz") %>% rowid_to_column("Nr") %>% hm_print())
 pander(t1)
 ```
 
