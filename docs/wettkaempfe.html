@@ -13,7 +13,7 @@
 
 <title>Wettkaempfe</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -296,7 +297,7 @@ div.tocify {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -309,7 +310,7 @@ div.tocify {
   <a href="wettkaempfe.html">Wettkaempfe</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ausdauer
      
     <span class="caret"></span>
@@ -353,16 +354,24 @@ div.tocify {
 <h1 class="title toc-ignore">Wettkaempfe</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
+Meiringen<br><h4 class="date">Last change: 07 April, 2023</h4>
 
 </div>
 
 
-<div id="anzahl-teilnahmen-pro-anlass" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Anzahl Teilnahmen pro Anlass</h1>
+<div id="anzahl-teilnahmen-pro-anlass" class="section level1"
+number="1">
+<h1><span class="header-section-number">1</span> Anzahl Teilnahmen pro
+Anlass</h1>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Bis jetzt habe ich an 51 Laeufen und 5 Bikerennen teilgenommen.</p>
 <table>
+<colgroup>
+<col width="62%" />
+<col width="12%" />
+<col width="12%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"></th>
@@ -477,33 +486,45 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="anzahl-teilnahmen-pro-jahr-und-disziplin" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Anzahl Teilnahmen pro Jahr und Disziplin</h1>
+<div id="anzahl-teilnahmen-pro-jahr-und-disziplin"
+class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Anzahl Teilnahmen pro
+Jahr und Disziplin</h1>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="teilnahmen-pro-anlass" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Teilnahmen pro Anlass</h1>
+<h1><span class="header-section-number">3</span> Teilnahmen pro
+Anlass</h1>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="relative-ränge-und-zeiten" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Relative Ränge und Zeiten</h1>
-<p>Grafiken werden nur für Wettkämpfe mit mind. 2 Teilnahmen gezeigt. Für alle anderen Wettkämpfe wird nur eine Tabelle mit den Zeiten gezeigt.</p>
-<div id="grand-prix-von-bern" class="section level2 tabset tabset-fade tabset-pills" number="4.1">
-<h2 class="tabset tabset-fade tabset-pills" number="4.1"><span class="header-section-number">4.1</span> Grand Prix von Bern</h2>
-<div id="relativer-rang-kategorie" class="section level3" number="4.1.1">
-<h3 number="4.1.1"><span class="header-section-number">4.1.1</span> Relativer Rang Kategorie</h3>
+<h1><span class="header-section-number">4</span> Relative Ränge und
+Zeiten</h1>
+<p>Grafiken werden nur für Wettkämpfe mit mind. 2 Teilnahmen gezeigt.
+Für alle anderen Wettkämpfe wird nur eine Tabelle mit den Zeiten
+gezeigt.</p>
+<div id="grand-prix-von-bern"
+class="section level2 tabset tabset-fade tabset-pills" number="4.1">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.1</span> Grand Prix von Bern</h2>
+<div id="relativer-rang-kategorie" class="section level3"
+number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="relativer-range-männer" class="section level3" number="4.1.2">
-<h3 number="4.1.2"><span class="header-section-number">4.1.2</span> Relativer Range Männer</h3>
+<h3><span class="header-section-number">4.1.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit" class="section level3" number="4.1.3">
-<h3 number="4.1.3"><span class="header-section-number">4.1.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.1.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr" class="section level3" number="4.1.4">
-<h3 number="4.1.4"><span class="header-section-number">4.1.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.1.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:57%;">
 <colgroup>
 <col width="9%" />
@@ -607,7 +628,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert" class="section level3" number="4.1.5">
-<h3 number="4.1.5"><span class="header-section-number">4.1.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.1.5</span> Zeiten,
+sortiert</h3>
 <table style="width:64%;">
 <colgroup>
 <col width="6%" />
@@ -730,22 +752,29 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="luzern-halbmarathon" class="section level2 tabset tabset-fade tabset-pills" number="4.2">
-<h2 class="tabset tabset-fade tabset-pills" number="4.2"><span class="header-section-number">4.2</span> Luzern Halbmarathon</h2>
-<div id="relativer-rang-kategorie-1" class="section level3" number="4.2.1">
-<h3 number="4.2.1"><span class="header-section-number">4.2.1</span> Relativer Rang Kategorie</h3>
+<div id="luzern-halbmarathon"
+class="section level2 tabset tabset-fade tabset-pills" number="4.2">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.2</span> Luzern Halbmarathon</h2>
+<div id="relativer-rang-kategorie-1" class="section level3"
+number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="relativer-range-männer-1" class="section level3" number="4.2.2">
-<h3 number="4.2.2"><span class="header-section-number">4.2.2</span> Relativer Range Männer</h3>
+<div id="relativer-range-männer-1" class="section level3"
+number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit-1" class="section level3" number="4.2.3">
-<h3 number="4.2.3"><span class="header-section-number">4.2.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.2.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr-1" class="section level3" number="4.2.4">
-<h3 number="4.2.4"><span class="header-section-number">4.2.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.2.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:58%;">
 <colgroup>
 <col width="9%" />
@@ -809,7 +838,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert-1" class="section level3" number="4.2.5">
-<h3 number="4.2.5"><span class="header-section-number">4.2.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.2.5</span> Zeiten,
+sortiert</h3>
 <table style="width:65%;">
 <colgroup>
 <col width="6%" />
@@ -884,22 +914,29 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="niesen-treppenlauf" class="section level2 tabset tabset-fade tabset-pills" number="4.3">
-<h2 class="tabset tabset-fade tabset-pills" number="4.3"><span class="header-section-number">4.3</span> Niesen Treppenlauf</h2>
-<div id="relativer-rang-kategorie-2" class="section level3" number="4.3.1">
-<h3 number="4.3.1"><span class="header-section-number">4.3.1</span> Relativer Rang Kategorie</h3>
+<div id="niesen-treppenlauf"
+class="section level2 tabset tabset-fade tabset-pills" number="4.3">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.3</span> Niesen Treppenlauf</h2>
+<div id="relativer-rang-kategorie-2" class="section level3"
+number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="relativer-range-männer-2" class="section level3" number="4.3.2">
-<h3 number="4.3.2"><span class="header-section-number">4.3.2</span> Relativer Range Männer</h3>
+<div id="relativer-range-männer-2" class="section level3"
+number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-21-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit-2" class="section level3" number="4.3.3">
-<h3 number="4.3.3"><span class="header-section-number">4.3.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.3.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr-2" class="section level3" number="4.3.4">
-<h3 number="4.3.4"><span class="header-section-number">4.3.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.3.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:56%;">
 <colgroup>
 <col width="9%" />
@@ -953,7 +990,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert-2" class="section level3" number="4.3.5">
-<h3 number="4.3.5"><span class="header-section-number">4.3.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.3.5</span> Zeiten,
+sortiert</h3>
 <table style="width:62%;">
 <colgroup>
 <col width="6%" />
@@ -1016,22 +1054,29 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="thuner-stadtlauf" class="section level2 tabset tabset-fade tabset-pills" number="4.4">
-<h2 class="tabset tabset-fade tabset-pills" number="4.4"><span class="header-section-number">4.4</span> Thuner Stadtlauf</h2>
-<div id="relativer-rang-kategorie-3" class="section level3" number="4.4.1">
-<h3 number="4.4.1"><span class="header-section-number">4.4.1</span> Relativer Rang Kategorie</h3>
+<div id="thuner-stadtlauf"
+class="section level2 tabset tabset-fade tabset-pills" number="4.4">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.4</span> Thuner Stadtlauf</h2>
+<div id="relativer-rang-kategorie-3" class="section level3"
+number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="relativer-range-männer-3" class="section level3" number="4.4.2">
-<h3 number="4.4.2"><span class="header-section-number">4.4.2</span> Relativer Range Männer</h3>
+<div id="relativer-range-männer-3" class="section level3"
+number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit-3" class="section level3" number="4.4.3">
-<h3 number="4.4.3"><span class="header-section-number">4.4.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.4.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-28-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr-3" class="section level3" number="4.4.4">
-<h3 number="4.4.4"><span class="header-section-number">4.4.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.4.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:53%;">
 <colgroup>
 <col width="9%" />
@@ -1080,7 +1125,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert-3" class="section level3" number="4.4.5">
-<h3 number="4.4.5"><span class="header-section-number">4.4.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.4.5</span> Zeiten,
+sortiert</h3>
 <table style="width:60%;">
 <colgroup>
 <col width="6%" />
@@ -1137,22 +1183,29 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="stockhorn-halbmarathon" class="section level2 tabset tabset-fade tabset-pills" number="4.5">
-<h2 class="tabset tabset-fade tabset-pills" number="4.5"><span class="header-section-number">4.5</span> Stockhorn Halbmarathon</h2>
-<div id="relativer-rang-kategorie-4" class="section level3" number="4.5.1">
-<h3 number="4.5.1"><span class="header-section-number">4.5.1</span> Relativer Rang Kategorie</h3>
+<div id="stockhorn-halbmarathon"
+class="section level2 tabset tabset-fade tabset-pills" number="4.5">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.5</span> Stockhorn Halbmarathon</h2>
+<div id="relativer-rang-kategorie-4" class="section level3"
+number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="relativer-range-männer-4" class="section level3" number="4.5.2">
-<h3 number="4.5.2"><span class="header-section-number">4.5.2</span> Relativer Range Männer</h3>
+<div id="relativer-range-männer-4" class="section level3"
+number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit-4" class="section level3" number="4.5.3">
-<h3 number="4.5.3"><span class="header-section-number">4.5.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.5.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-34-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr-4" class="section level3" number="4.5.4">
-<h3 number="4.5.4"><span class="header-section-number">4.5.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.5.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:61%;">
 <colgroup>
 <col width="9%" />
@@ -1186,7 +1239,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert-4" class="section level3" number="4.5.5">
-<h3 number="4.5.5"><span class="header-section-number">4.5.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.5.5</span> Zeiten,
+sortiert</h3>
 <table style="width:68%;">
 <colgroup>
 <col width="6%" />
@@ -1225,8 +1279,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="biennathlon" class="section level2 tabset tabset-fade tabset-pills" number="4.6">
-<h2 class="tabset tabset-fade tabset-pills" number="4.6"><span class="header-section-number">4.6</span> Biennathlon</h2>
+<div id="biennathlon"
+class="section level2 tabset tabset-fade tabset-pills" number="4.6">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.6</span> Biennathlon</h2>
 <table style="width:39%;">
 <colgroup>
 <col width="9%" />
@@ -1259,22 +1315,29 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="brienzerseelauf" class="section level2 tabset tabset-fade tabset-pills" number="4.7">
-<h2 class="tabset tabset-fade tabset-pills" number="4.7"><span class="header-section-number">4.7</span> Brienzerseelauf</h2>
-<div id="relativer-rang-kategorie-5" class="section level3" number="4.7.1">
-<h3 number="4.7.1"><span class="header-section-number">4.7.1</span> Relativer Rang Kategorie</h3>
+<div id="brienzerseelauf"
+class="section level2 tabset tabset-fade tabset-pills" number="4.7">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.7</span> Brienzerseelauf</h2>
+<div id="relativer-rang-kategorie-5" class="section level3"
+number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> Relativer Rang
+Kategorie</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-40-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="relativer-range-männer-5" class="section level3" number="4.7.2">
-<h3 number="4.7.2"><span class="header-section-number">4.7.2</span> Relativer Range Männer</h3>
+<div id="relativer-range-männer-5" class="section level3"
+number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> Relativer Range
+Männer</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-41-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit-5" class="section level3" number="4.7.3">
-<h3 number="4.7.3"><span class="header-section-number">4.7.3</span> Zeit</h3>
+<h3><span class="header-section-number">4.7.3</span> Zeit</h3>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-42-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeiten-nach-jahr-5" class="section level3" number="4.7.4">
-<h3 number="4.7.4"><span class="header-section-number">4.7.4</span> Zeiten, nach Jahr</h3>
+<h3><span class="header-section-number">4.7.4</span> Zeiten, nach
+Jahr</h3>
 <table style="width:51%;">
 <colgroup>
 <col width="9%" />
@@ -1303,7 +1366,8 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 <div id="zeiten-sortiert-5" class="section level3" number="4.7.5">
-<h3 number="4.7.5"><span class="header-section-number">4.7.5</span> Zeiten, sortiert</h3>
+<h3><span class="header-section-number">4.7.5</span> Zeiten,
+sortiert</h3>
 <table style="width:58%;">
 <colgroup>
 <col width="6%" />
@@ -1336,8 +1400,11 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="nationalpark-bike-marathon-livigno---scuol" class="section level2 tabset tabset-fade tabset-pills" number="4.8">
-<h2 class="tabset tabset-fade tabset-pills" number="4.8"><span class="header-section-number">4.8</span> Nationalpark Bike Marathon: Livigno - Scuol</h2>
+<div id="nationalpark-bike-marathon-livigno---scuol"
+class="section level2 tabset tabset-fade tabset-pills" number="4.8">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.8</span> Nationalpark Bike Marathon:
+Livigno - Scuol</h2>
 <table style="width:68%;">
 <colgroup>
 <col width="9%" />
@@ -1360,8 +1427,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="mountain-man" class="section level2 tabset tabset-fade tabset-pills" number="4.9">
-<h2 class="tabset tabset-fade tabset-pills" number="4.9"><span class="header-section-number">4.9</span> Mountain Man</h2>
+<div id="mountain-man"
+class="section level2 tabset tabset-fade tabset-pills" number="4.9">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.9</span> Mountain Man</h2>
 <table style="width:47%;">
 <colgroup>
 <col width="9%" />
@@ -1384,8 +1453,11 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="luzerner-stadtlauf-musegg-classic" class="section level2 tabset tabset-fade tabset-pills" number="4.10">
-<h2 class="tabset tabset-fade tabset-pills" number="4.10"><span class="header-section-number">4.10</span> Luzerner Stadtlauf (Musegg Classic)</h2>
+<div id="luzerner-stadtlauf-musegg-classic"
+class="section level2 tabset tabset-fade tabset-pills" number="4.10">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.10</span> Luzerner Stadtlauf (Musegg
+Classic)</h2>
 <table style="width:67%;">
 <colgroup>
 <col width="9%" />
@@ -1408,8 +1480,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="kerzerslauf" class="section level2 tabset tabset-fade tabset-pills" number="4.11">
-<h2 class="tabset tabset-fade tabset-pills" number="4.11"><span class="header-section-number">4.11</span> Kerzerslauf</h2>
+<div id="kerzerslauf"
+class="section level2 tabset tabset-fade tabset-pills" number="4.11">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.11</span> Kerzerslauf</h2>
 <table style="width:49%;">
 <colgroup>
 <col width="9%" />
@@ -1432,8 +1506,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="inferno-team-trophy" class="section level2 tabset tabset-fade tabset-pills" number="4.12">
-<h2 class="tabset tabset-fade tabset-pills" number="4.12"><span class="header-section-number">4.12</span> Inferno Team Trophy</h2>
+<div id="inferno-team-trophy"
+class="section level2 tabset tabset-fade tabset-pills" number="4.12">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.12</span> Inferno Team Trophy</h2>
 <table style="width:50%;">
 <colgroup>
 <col width="9%" />
@@ -1456,8 +1532,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="halbmarathon-lausanne" class="section level2 tabset tabset-fade tabset-pills" number="4.13">
-<h2 class="tabset tabset-fade tabset-pills" number="4.13"><span class="header-section-number">4.13</span> Halbmarathon Lausanne</h2>
+<div id="halbmarathon-lausanne"
+class="section level2 tabset tabset-fade tabset-pills" number="4.13">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.13</span> Halbmarathon Lausanne</h2>
 <table style="width:60%;">
 <colgroup>
 <col width="9%" />
@@ -1480,8 +1558,11 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="berner-bärgloufcup-gurten-tag-1" class="section level2 tabset tabset-fade tabset-pills" number="4.14">
-<h2 class="tabset tabset-fade tabset-pills" number="4.14"><span class="header-section-number">4.14</span> Berner Bärgloufcup: Gurten (Tag 1)</h2>
+<div id="berner-bärgloufcup-gurten-tag-1"
+class="section level2 tabset tabset-fade tabset-pills" number="4.14">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.14</span> Berner Bärgloufcup: Gurten
+(Tag 1)</h2>
 <table style="width:67%;">
 <colgroup>
 <col width="9%" />
@@ -1504,8 +1585,11 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="berner-bärgloufcup-bantiger-tag-4" class="section level2 tabset tabset-fade tabset-pills" number="4.15">
-<h2 class="tabset tabset-fade tabset-pills" number="4.15"><span class="header-section-number">4.15</span> Berner Bärgloufcup: Bantiger (Tag 4)</h2>
+<div id="berner-bärgloufcup-bantiger-tag-4"
+class="section level2 tabset tabset-fade tabset-pills" number="4.15">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.15</span> Berner Bärgloufcup: Bantiger
+(Tag 4)</h2>
 <table style="width:69%;">
 <colgroup>
 <col width="9%" />
@@ -1528,8 +1612,10 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </tbody>
 </table>
 </div>
-<div id="bay-to-breakers" class="section level2 tabset tabset-fade tabset-pills" number="4.16">
-<h2 class="tabset tabset-fade tabset-pills" number="4.16"><span class="header-section-number">4.16</span> Bay to Breakers</h2>
+<div id="bay-to-breakers"
+class="section level2 tabset tabset-fade tabset-pills" number="4.16">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">4.16</span> Bay to Breakers</h2>
 <table style="width:51%;">
 <colgroup>
 <col width="9%" />
@@ -1553,12 +1639,16 @@ Meiringen<br><h4 class="date">Last change: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="innerhalb-maenner-ueber-alle-wettkaempfe" class="section level1" number="5">
-<h1 number="5"><span class="header-section-number">5</span> Innerhalb Maenner ueber alle Wettkaempfe</h1>
+<div id="innerhalb-maenner-ueber-alle-wettkaempfe"
+class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Innerhalb Maenner ueber
+alle Wettkaempfe</h1>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="innerhalb-alterskategorie-ueber-alle-wettkaempfe" class="section level1" number="6">
-<h1 number="6"><span class="header-section-number">6</span> Innerhalb Alterskategorie ueber alle Wettkaempfe</h1>
+<div id="innerhalb-alterskategorie-ueber-alle-wettkaempfe"
+class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Innerhalb
+Alterskategorie ueber alle Wettkaempfe</h1>
 <p><img src="wettkaempfe_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 

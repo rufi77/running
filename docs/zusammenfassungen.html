@@ -13,7 +13,7 @@
 
 <title>Zusammenfassungen Sport</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -296,7 +297,7 @@ div.tocify {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -309,7 +310,7 @@ div.tocify {
   <a href="wettkaempfe.html">Wettkaempfe</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ausdauer
      
     <span class="caret"></span>
@@ -353,21 +354,24 @@ div.tocify {
 <h1 class="title toc-ignore">Zusammenfassungen Sport</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
+Meiringen<br><h4 class="date">Letzte Aenderung: 07 April, 2023</h4>
 
 </div>
 
 
-<!-- Numbers labelled 2021 are linearly extrapolated from 2022-11-10 to the full year of 2020. -->
-<div id="jaehrliche-zusammenfassungen" class="section level1 tabset tabset-fade tabset-pills" number="1">
-<h1 class="tabset tabset-fade tabset-pills" number="1"><span class="header-section-number">1</span> Jaehrliche Zusammenfassungen</h1>
-<p>2022 bezieht sich immer auf den gegenwaertigen Stand linear extrapoliert auf das ganze Jahr.</p>
+<!-- Numbers labelled 2022 are linearly extrapolated from 2023-04-07 to the full year of 2021. -->
+<div id="jaehrliche-zusammenfassungen"
+class="section level1 tabset tabset-fade tabset-pills" number="1">
+<h1 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">1</span> Jaehrliche Zusammenfassungen</h1>
+<p>2023` bezieht sich immer auf den gegenwaertigen Stand linear
+extrapoliert auf das ganze Jahr.</p>
 <div id="kilometer" class="section level2" number="1.1">
-<h2 number="1.1"><span class="header-section-number">1.1</span> Kilometer</h2>
+<h2><span class="header-section-number">1.1</span> Kilometer</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="aufstieg" class="section level2" number="1.2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Aufstieg</h2>
+<h2><span class="header-section-number">1.2</span> Aufstieg</h2>
 <table>
 <caption>Table continues below</caption>
 <colgroup>
@@ -430,29 +434,34 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 </tbody>
 </table>
-<table style="width:35%;">
+<table style="width:47%;">
 <colgroup>
 <col width="22%" />
+<col width="12%" />
 <col width="12%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th align="center"> </th>
 <th align="center">2021</th>
+<th align="center">2022</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center"><strong>Total</strong></td>
 <td align="center">164095</td>
+<td align="center">75238</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>pro Woche</strong></td>
 <td align="center">3156</td>
+<td align="center">1447</td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>pro Tag</strong></td>
 <td align="center">449.6</td>
+<td align="center">206.1</td>
 </tr>
 </tbody>
 </table>
@@ -462,51 +471,56 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="zeit" class="section level2" number="1.3">
-<h2 number="1.3"><span class="header-section-number">1.3</span> Zeit</h2>
+<h2><span class="header-section-number">1.3</span> Zeit</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="pro-jahr" class="section level1 tabset tabset-fade tabset-pills" number="2">
-<h1 class="tabset tabset-fade tabset-pills" number="2"><span class="header-section-number">2</span> Pro Jahr</h1>
+<div id="pro-jahr"
+class="section level1 tabset tabset-fade tabset-pills" number="2">
+<h1 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2</span> Pro Jahr</h1>
 <div id="bike" class="section level2" number="2.1">
-<h2 number="2.1"><span class="header-section-number">2.1</span> Bike</h2>
+<h2><span class="header-section-number">2.1</span> Bike</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-9-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-9-3.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="run" class="section level2" number="2.2">
-<h2 number="2.2"><span class="header-section-number">2.2</span> Run</h2>
+<h2><span class="header-section-number">2.2</span> Run</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-10-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-10-3.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="hiking" class="section level2" number="2.3">
-<h2 number="2.3"><span class="header-section-number">2.3</span> Hiking</h2>
+<h2><span class="header-section-number">2.3</span> Hiking</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-11-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-11-3.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="skitouring" class="section level2" number="2.4">
-<h2 number="2.4"><span class="header-section-number">2.4</span> Skitouring</h2>
+<h2><span class="header-section-number">2.4</span> Skitouring</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-12-2.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="exersuisse" class="section level2" number="2.5">
-<h2 number="2.5"><span class="header-section-number">2.5</span> Exersuisse</h2>
+<h2><span class="header-section-number">2.5</span> Exersuisse</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="pro-woche" class="section level1 tabset tabset-fade tabset-pills" number="3">
-<h1 class="tabset tabset-fade tabset-pills" number="3"><span class="header-section-number">3</span> Pro Woche</h1>
+<div id="pro-woche"
+class="section level1 tabset tabset-fade tabset-pills" number="3">
+<h1 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">3</span> Pro Woche</h1>
 <div id="bike-1" class="section level2" number="3.1">
-<h2 number="3.1"><span class="header-section-number">3.1</span> Bike</h2>
+<h2><span class="header-section-number">3.1</span> Bike</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-14-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-14-3.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="run-1" class="section level2" number="3.2">
-<h2 number="3.2"><span class="header-section-number">3.2</span> Run</h2>
+<h2><span class="header-section-number">3.2</span> Run</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-15-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-15-3.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="hiking-1" class="section level2" number="3.3">
-<h2 number="3.3"><span class="header-section-number">3.3</span> Hiking</h2>
-<p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-3.png" width="672" style="display: block; margin: auto;" /> ## Skitouring</p>
+<h2><span class="header-section-number">3.3</span> Hiking</h2>
+<p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-2.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-16-3.png" width="672" style="display: block; margin: auto;" />
+## Skitouring</p>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /><img src="zusammenfassungen_files/figure-html/unnamed-chunk-17-2.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="exersuisse-1" class="section level2" number="3.4">
-<h2 number="3.4"><span class="header-section-number">3.4</span> Exersuisse</h2>
+<h2><span class="header-section-number">3.4</span> Exersuisse</h2>
 <p><img src="zusammenfassungen_files/figure-html/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>

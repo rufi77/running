@@ -28,6 +28,7 @@ source(paste(path, "functions/plotSummary.r", sep = ""))
 ## =================================================================
 ## input 
 ## =================================================================
+cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 sportKR <- as.data.frame(read_excel(paste(path, "data/zsf.xlsx", sep = ""), col_types = NULL))
 sportKR <- (sportKR %>% mutate("Sport" = as.factor(Sport), "Einheit" = as.factor(Einheit)))
 
@@ -77,7 +78,7 @@ ascent <- as.data.frame(read_excel(paste(path, "data/ascentmonthly.xlsx", sep = 
 
 # Jaehrliche Zusammenfassungen {.tabset .tabset-fade .tabset-pills}
 
-2022 bezieht sich immer auf den gegenwaertigen Stand linear extrapoliert auf das ganze Jahr.
+`r cy`` bezieht sich immer auf den gegenwaertigen Stand linear extrapoliert auf das ganze Jahr.
 
 ## Kilometer
 

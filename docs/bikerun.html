@@ -13,7 +13,7 @@
 
 <title>Bike and run</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -296,7 +297,7 @@ div.tocify {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -309,7 +310,7 @@ div.tocify {
   <a href="wettkaempfe.html">Wettkaempfe</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ausdauer
      
     <span class="caret"></span>
@@ -353,131 +354,107 @@ div.tocify {
 <h1 class="title toc-ignore">Bike and run</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
+Meiringen<br><h4 class="date">Letzte Aenderung: 07 April, 2023</h4>
 
 </div>
 
 
-<div id="aktuelles-jahr" class="section level1 tabset tabset-fade tabset-pills" number="1">
-<h1 class="tabset tabset-fade tabset-pills" number="1"><span class="header-section-number">1</span> Aktuelles Jahr</h1>
-<p>Anzahl Touren: 1.</p>
+<div id="aktuelles-jahr"
+class="section level1 tabset tabset-fade tabset-pills" number="1">
+<h1 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">1</span> Aktuelles Jahr</h1>
+<p>Anzahl Touren: 0.</p>
 <div id="nach-datum" class="section level2" number="1.1">
-<h2 number="1.1"><span class="header-section-number">1.1</span> Nach Datum</h2>
-<table style="width:99%;">
+<h2><span class="header-section-number">1.1</span> Nach Datum</h2>
+<table>
 <colgroup>
-<col width="6%" />
+<col width="11%" />
 <col width="15%" />
-<col width="16%" />
-<col width="18%" />
-<col width="13%" />
-<col width="18%" />
-<col width="9%" />
+<col width="12%" />
+<col width="14%" />
+<col width="17%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="center">Nr</th>
-<th align="center">start</th>
-<th align="center">end</th>
-<th align="center">date</th>
-<th align="center">hm_diff</th>
-<th align="center">time</th>
-<th align="center">hm_h</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td align="center">1</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wilerhorn</td>
-<td align="center">2021-11-20</td>
-<td align="center">1405</td>
-<td align="center">02:00:13.0</td>
-<td align="center">701</td>
+<td align="center"><strong>Nr</strong></td>
+<td align="center"><strong>start</strong></td>
+<td align="center"><strong>end</strong></td>
+<td align="center"><strong>date</strong></td>
+<td align="center"><strong>hm_diff</strong></td>
+<td align="center"><strong>time</strong></td>
+<td align="center"><strong>hm_h</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="nach-hoehenmeter" class="section level2" number="1.2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Nach Hoehenmeter</h2>
-<table style="width:99%;">
+<h2><span class="header-section-number">1.2</span> Nach Hoehenmeter</h2>
+<table>
 <colgroup>
-<col width="6%" />
+<col width="11%" />
 <col width="15%" />
-<col width="16%" />
-<col width="18%" />
-<col width="13%" />
-<col width="18%" />
-<col width="9%" />
+<col width="12%" />
+<col width="14%" />
+<col width="17%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="center">Nr</th>
-<th align="center">start</th>
-<th align="center">end</th>
-<th align="center">date</th>
-<th align="center">hm_diff</th>
-<th align="center">time</th>
-<th align="center">hm_h</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td align="center">1</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wilerhorn</td>
-<td align="center">2021-11-20</td>
-<td align="center">1405</td>
-<td align="center">02:00:13.0</td>
-<td align="center">701</td>
+<td align="center"><strong>Nr</strong></td>
+<td align="center"><strong>start</strong></td>
+<td align="center"><strong>end</strong></td>
+<td align="center"><strong>date</strong></td>
+<td align="center"><strong>hm_diff</strong></td>
+<td align="center"><strong>time</strong></td>
+<td align="center"><strong>hm_h</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="nach-hoehenmeter-pro-stunde" class="section level2" number="1.3">
-<h2 number="1.3"><span class="header-section-number">1.3</span> Nach Hoehenmeter pro Stunde</h2>
-<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
-<table style="width:99%;">
+<div id="nach-hoehenmeter-pro-stunde" class="section level2"
+number="1.3">
+<h2><span class="header-section-number">1.3</span> Nach Hoehenmeter pro
+Stunde</h2>
+<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro
+Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
+<table>
 <colgroup>
-<col width="6%" />
+<col width="11%" />
 <col width="15%" />
-<col width="16%" />
-<col width="18%" />
-<col width="13%" />
-<col width="18%" />
-<col width="9%" />
+<col width="12%" />
+<col width="14%" />
+<col width="17%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="center">Nr</th>
-<th align="center">start</th>
-<th align="center">end</th>
-<th align="center">date</th>
-<th align="center">hm_diff</th>
-<th align="center">time</th>
-<th align="center">hm_h</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td align="center">1</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wilerhorn</td>
-<td align="center">2021-11-20</td>
-<td align="center">1405</td>
-<td align="center">02:00:13.0</td>
-<td align="center">701</td>
+<td align="center"><strong>Nr</strong></td>
+<td align="center"><strong>start</strong></td>
+<td align="center"><strong>end</strong></td>
+<td align="center"><strong>date</strong></td>
+<td align="center"><strong>hm_diff</strong></td>
+<td align="center"><strong>time</strong></td>
+<td align="center"><strong>hm_h</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div id="touren-nach-ziel" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Touren nach Ziel</h1>
-<p>Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.</p>
-<div id="gaulihuette" class="section level2 tabset tabset-fade tabset-pills" number="2.1">
-<h2 class="tabset tabset-fade tabset-pills" number="2.1"><span class="header-section-number">2.1</span> Gaulihuette</h2>
+<h1><span class="header-section-number">2</span> Touren nach Ziel</h1>
+<p>Dieser Abschnitt listet die Touren auf, chronologisch oder nach
+Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe
+nicht aufgefuehrt.</p>
+<div id="gaulihuette"
+class="section level2 tabset tabset-fade tabset-pills" number="2.1">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.1</span> Gaulihuette</h2>
 <div id="chronologisch" class="section level3" number="2.1.1">
-<h3 number="2.1.1"><span class="header-section-number">2.1.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.1.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="18%" />
@@ -514,7 +491,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit" class="section level3" number="2.1.2">
-<h3 number="2.1.2"><span class="header-section-number">2.1.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.1.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -559,10 +536,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="grindelgrat" class="section level2 tabset tabset-fade tabset-pills" number="2.2">
-<h2 class="tabset tabset-fade tabset-pills" number="2.2"><span class="header-section-number">2.2</span> Grindelgrat</h2>
+<div id="grindelgrat"
+class="section level2 tabset tabset-fade tabset-pills" number="2.2">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.2</span> Grindelgrat</h2>
 <div id="chronologisch-1" class="section level3" number="2.2.1">
-<h3 number="2.2.1"><span class="header-section-number">2.2.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.2.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="18%" />
@@ -592,7 +571,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-1" class="section level3" number="2.2.2">
-<h3 number="2.2.2"><span class="header-section-number">2.2.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.2.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -628,10 +607,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="signal" class="section level2 tabset tabset-fade tabset-pills" number="2.3">
-<h2 class="tabset tabset-fade tabset-pills" number="2.3"><span class="header-section-number">2.3</span> Signal</h2>
+<div id="signal" class="section level2 tabset tabset-fade tabset-pills"
+number="2.3">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.3</span> Signal</h2>
 <div id="chronologisch-2" class="section level3" number="2.3.1">
-<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.3.1</span> Chronologisch</h3>
 <table style="width:76%;">
 <colgroup>
 <col width="18%" />
@@ -668,7 +649,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-2" class="section level3" number="2.3.2">
-<h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.3.2</span> Nach Zeit</h3>
 <table style="width:97%;">
 <colgroup>
 <col width="6%" />
@@ -713,10 +694,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wilerhorn" class="section level2 tabset tabset-fade tabset-pills" number="2.4">
-<h2 class="tabset tabset-fade tabset-pills" number="2.4"><span class="header-section-number">2.4</span> Wilerhorn</h2>
+<div id="wilerhorn"
+class="section level2 tabset tabset-fade tabset-pills" number="2.4">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.4</span> Wilerhorn</h2>
 <div id="chronologisch-3" class="section level3" number="2.4.1">
-<h3 number="2.4.1"><span class="header-section-number">2.4.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.4.1</span> Chronologisch</h3>
 <table style="width:78%;">
 <colgroup>
 <col width="15%" />
@@ -774,7 +757,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-3" class="section level3" number="2.4.2">
-<h3 number="2.4.2"><span class="header-section-number">2.4.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.4.2</span> Nach Zeit</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="6%" />
@@ -848,8 +831,10 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </div>
 </div>
 <div id="hoehenmeter-pro-stunde" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Hoehenmeter pro Stunde</h1>
-<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
+<h1><span class="header-section-number">3</span> Hoehenmeter pro
+Stunde</h1>
+<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro
+Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
 <table style="width:97%;">
 <colgroup>
 <col width="18%" />

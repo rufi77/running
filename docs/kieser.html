@@ -13,7 +13,7 @@
 
 <title>Kieser Training</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -296,7 +297,7 @@ div.tocify {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -309,7 +310,7 @@ div.tocify {
   <a href="wettkaempfe.html">Wettkaempfe</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ausdauer
      
     <span class="caret"></span>
@@ -353,13 +354,13 @@ div.tocify {
 <h1 class="title toc-ignore">Kieser Training</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
+Meiringen<br><h4 class="date">Letzte Aenderung: 07 April, 2023</h4>
 
 </div>
 
 
 <div id="analyse" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Analyse</h1>
+<h1><span class="header-section-number">1</span> Analyse</h1>
 <table>
 <colgroup>
 <col width="35%" />
@@ -382,15 +383,15 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">Anzahl Programme</td>
 <td align="center">16</td>
 <td align="center">27</td>
-<td align="center">8</td>
-<td align="center">51</td>
+<td align="center">9</td>
+<td align="center">52</td>
 </tr>
 <tr class="even">
 <td align="center">Anzahl Trainings</td>
 <td align="center">305</td>
 <td align="center">506</td>
-<td align="center">127</td>
-<td align="center">938</td>
+<td align="center">144</td>
+<td align="center">955</td>
 </tr>
 <tr class="odd">
 <td align="center">Erstes Training</td>
@@ -403,19 +404,21 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">Bisher letztes Training</td>
 <td align="center">2011-01-10</td>
 <td align="center">2017-11-15</td>
-<td align="center">2020-02-12</td>
+<td align="center">2023-01-10</td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
 <p><img src="kieser_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="uebungen-des-letzten-absolvierten-programms" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Uebungen des letzten absolvierten Programms</h1>
+<div id="uebungen-des-letzten-absolvierten-programms"
+class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Uebungen des letzten
+absolvierten Programms</h1>
 <p><img src="kieser_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-3-2.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-3-3.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-3-4.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-3-5.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-3-6.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="alle-uebungen" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Alle Uebungen</h1>
+<h1><span class="header-section-number">3</span> Alle Uebungen</h1>
 <p><img src="kieser_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-2.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-3.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-4.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-5.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-6.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-7.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-8.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-9.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-10.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-11.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-12.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-13.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-14.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-15.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-16.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-17.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-18.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-19.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-20.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-21.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-22.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-23.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-24.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-25.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-26.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-27.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-28.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-29.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-30.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-31.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-32.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-33.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-34.png" width="672" style="display: block; margin: auto;" /><img src="kieser_files/figure-html/unnamed-chunk-4-35.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 

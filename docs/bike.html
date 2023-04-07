@@ -13,7 +13,7 @@
 
 <title>Bike</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -128,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -161,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -170,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -296,7 +297,7 @@ div.tocify {
 <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -309,7 +310,7 @@ div.tocify {
   <a href="wettkaempfe.html">Wettkaempfe</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Ausdauer
      
     <span class="caret"></span>
@@ -353,24 +354,26 @@ div.tocify {
 <h1 class="title toc-ignore">Bike</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
+Meiringen<br><h4 class="date">Letzte Aenderung: 07 April, 2023</h4>
 
 </div>
 
 
-<div id="aktuelles-jahr" class="section level1 tabset tabset-fade tabset-pills" number="1">
-<h1 class="tabset tabset-fade tabset-pills" number="1"><span class="header-section-number">1</span> Aktuelles Jahr</h1>
-<p>Anzahl Touren: 19.</p>
+<div id="aktuelles-jahr"
+class="section level1 tabset tabset-fade tabset-pills" number="1">
+<h1 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">1</span> Aktuelles Jahr</h1>
+<p>Anzahl Touren: 6.</p>
 <div id="nach-datum" class="section level2" number="1.1">
-<h2 number="1.1"><span class="header-section-number">1.1</span> Nach Datum</h2>
-<table>
+<h2><span class="header-section-number">1.1</span> Nach Datum</h2>
+<table style="width:100%;">
 <colgroup>
-<col width="5%" />
-<col width="22%" />
-<col width="22%" />
-<col width="15%" />
-<col width="11%" />
-<col width="15%" />
+<col width="6%" />
+<col width="14%" />
+<col width="24%" />
+<col width="16%" />
+<col width="12%" />
+<col width="16%" />
 <col width="8%" />
 </colgroup>
 <thead>
@@ -387,188 +390,71 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <tbody>
 <tr class="odd">
 <td align="center">1</td>
-<td align="center">Alpbach</td>
-<td align="center">Schletter</td>
-<td align="center">2022-03-17</td>
+<td align="center">Amtshaus</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-02-18</td>
+<td align="center">617</td>
+<td align="center">00:46:20.2</td>
+<td align="center">799</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatstr</td>
+<td align="center">2023-02-19</td>
+<td align="center">452</td>
+<td align="center"></td>
 <td align="center">NA</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Amtshaus</td>
+<td align="center">Haslizentrum</td>
+<td align="center">2023-02-22</td>
+<td align="center">656</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
 <tr class="even">
-<td align="center">2</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-21</td>
-<td align="center">480</td>
-<td align="center">00:52:29.5</td>
-<td align="center">549</td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-22</td>
-<td align="center">480</td>
-<td align="center">00:47:31.0</td>
-<td align="center">606</td>
-</tr>
-<tr class="even">
 <td align="center">4</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-29</td>
-<td align="center">480</td>
+<td align="center">Amtshaus</td>
+<td align="center">Bidmi</td>
+<td align="center">2023-03-17</td>
+<td align="center">820</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-04-11</td>
-<td align="center">480</td>
-<td align="center">00:48:30.0</td>
-<td align="center">594</td>
+<td align="center">Alpbach</td>
+<td align="center">Winterlicke</td>
+<td align="center">2023-03-23</td>
+<td align="center">775</td>
+<td align="center">00:53:29.0</td>
+<td align="center">869</td>
 </tr>
 <tr class="even">
 <td align="center">6</td>
-<td align="center">Alpbach</td>
-<td align="center">Winterlicke</td>
-<td align="center">2022-04-17</td>
-<td align="center">775</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">7</td>
-<td align="center">Alpbach</td>
-<td align="center">Pumptrack Haslib</td>
-<td align="center">2022-05-01</td>
-<td align="center">NA</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">8</td>
 <td align="center">Amtshaus</td>
 <td align="center">Wasserwendi</td>
-<td align="center">2022-05-02</td>
+<td align="center">2023-04-06</td>
 <td align="center">617</td>
 <td align="center"></td>
 <td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">9</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-13</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">10</td>
-<td align="center">Frutal Willigen</td>
-<td align="center">Schwarzwaldalp</td>
-<td align="center">2022-10-17</td>
-<td align="center">835</td>
-<td align="center">01:06:16.6</td>
-<td align="center">756</td>
-</tr>
-<tr class="odd">
-<td align="center">11</td>
-<td align="center">Amtshaus</td>
-<td align="center">Bidmi</td>
-<td align="center">2022-10-19</td>
-<td align="center">820</td>
-<td align="center">01:10:29.0</td>
-<td align="center">698</td>
-</tr>
-<tr class="even">
-<td align="center">12</td>
-<td align="center">Alpbach</td>
-<td align="center">Reuti Post</td>
-<td align="center">2022-10-21</td>
-<td align="center">437</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">13</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-22</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">14</td>
-<td align="center">Alpbach</td>
-<td align="center">Lischen</td>
-<td align="center">2022-10-27</td>
-<td align="center">NA</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">15</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-29</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">16</td>
-<td align="center">Alpbach</td>
-<td align="center">Kaeserstatt Velo</td>
-<td align="center">2022-10-30</td>
-<td align="center">1212</td>
-<td align="center">01:40:01.0</td>
-<td align="center">727</td>
-</tr>
-<tr class="odd">
-<td align="center">17</td>
-<td align="center">Balm Abzweigung</td>
-<td align="center">Wandel Hochmoor</td>
-<td align="center">2022-10-31</td>
-<td align="center">1261</td>
-<td align="center">01:42:10.1</td>
-<td align="center">741</td>
-</tr>
-<tr class="even">
-<td align="center">18</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-11-06</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">19</td>
-<td align="center">Alpbach</td>
-<td align="center">Winterlicke</td>
-<td align="center">2022-11-08</td>
-<td align="center">775</td>
-<td align="center">00:57:24.9</td>
-<td align="center">810</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="nach-hoehenmeter" class="section level2" number="1.2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Nach Hoehenmeter</h2>
-<table>
+<h2><span class="header-section-number">1.2</span> Nach Hoehenmeter</h2>
+<table style="width:100%;">
 <colgroup>
-<col width="5%" />
-<col width="22%" />
-<col width="22%" />
-<col width="15%" />
-<col width="11%" />
-<col width="15%" />
+<col width="6%" />
+<col width="14%" />
+<col width="24%" />
+<col width="16%" />
+<col width="12%" />
+<col width="16%" />
 <col width="8%" />
 </colgroup>
 <thead>
@@ -585,163 +471,76 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <tbody>
 <tr class="odd">
 <td align="center">1</td>
-<td align="center">Balm Abzweigung</td>
-<td align="center">Wandel Hochmoor</td>
-<td align="center">2022-10-31</td>
-<td align="center">1261</td>
-<td align="center">01:42:10.1</td>
-<td align="center">741</td>
+<td align="center">Amtshaus</td>
+<td align="center">Bidmi</td>
+<td align="center">2023-03-17</td>
+<td align="center">820</td>
+<td align="center"></td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
 <td align="center">Alpbach</td>
-<td align="center">Kaeserstatt Velo</td>
-<td align="center">2022-10-30</td>
-<td align="center">1212</td>
-<td align="center">01:40:01.0</td>
-<td align="center">727</td>
+<td align="center">Winterlicke</td>
+<td align="center">2023-03-23</td>
+<td align="center">775</td>
+<td align="center">00:53:29.0</td>
+<td align="center">869</td>
 </tr>
 <tr class="odd">
 <td align="center">3</td>
-<td align="center">Frutal Willigen</td>
-<td align="center">Schwarzwaldalp</td>
-<td align="center">2022-10-17</td>
-<td align="center">835</td>
-<td align="center">01:06:16.6</td>
-<td align="center">756</td>
+<td align="center">Amtshaus</td>
+<td align="center">Haslizentrum</td>
+<td align="center">2023-02-22</td>
+<td align="center">656</td>
+<td align="center"></td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">4</td>
 <td align="center">Amtshaus</td>
-<td align="center">Bidmi</td>
-<td align="center">2022-10-19</td>
-<td align="center">820</td>
-<td align="center">01:10:29.0</td>
-<td align="center">698</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-02-18</td>
+<td align="center">617</td>
+<td align="center">00:46:20.2</td>
+<td align="center">799</td>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
-<td align="center">Alpbach</td>
-<td align="center">Winterlicke</td>
-<td align="center">2022-11-08</td>
-<td align="center">775</td>
-<td align="center">00:57:24.9</td>
-<td align="center">810</td>
+<td align="center">Amtshaus</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-04-06</td>
+<td align="center">617</td>
+<td align="center"></td>
+<td align="center">NA</td>
 </tr>
 <tr class="even">
 <td align="center">6</td>
-<td align="center">Alpbach</td>
-<td align="center">Winterlicke</td>
-<td align="center">2022-04-17</td>
-<td align="center">775</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">7</td>
 <td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-05-02</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">8</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-13</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">9</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-22</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">10</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-10-29</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="odd">
-<td align="center">11</td>
-<td align="center">Amtshaus</td>
-<td align="center">Wasserwendi</td>
-<td align="center">2022-11-06</td>
-<td align="center">617</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">12</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-22</td>
-<td align="center">480</td>
-<td align="center">00:47:31.0</td>
-<td align="center">606</td>
-</tr>
-<tr class="odd">
-<td align="center">13</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-04-11</td>
-<td align="center">480</td>
-<td align="center">00:48:30.0</td>
-<td align="center">594</td>
-</tr>
-<tr class="even">
-<td align="center">14</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-21</td>
-<td align="center">480</td>
-<td align="center">00:52:29.5</td>
-<td align="center">549</td>
-</tr>
-<tr class="odd">
-<td align="center">15</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-29</td>
-<td align="center">480</td>
-<td align="center"></td>
-<td align="center">NA</td>
-</tr>
-<tr class="even">
-<td align="center">16</td>
-<td align="center">Alpbach</td>
-<td align="center">Reuti Post</td>
-<td align="center">2022-10-21</td>
-<td align="center">437</td>
+<td align="center">Hohfluh Staatstr</td>
+<td align="center">2023-02-19</td>
+<td align="center">452</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="nach-hoehenmeter-pro-stunde" class="section level2" number="1.3">
-<h2 number="1.3"><span class="header-section-number">1.3</span> Nach Hoehenmeter pro Stunde</h2>
-<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
-<table>
+<div id="nach-hoehenmeter-pro-stunde" class="section level2"
+number="1.3">
+<h2><span class="header-section-number">1.3</span> Nach Hoehenmeter pro
+Stunde</h2>
+<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro
+Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
+<table style="width:100%;">
 <colgroup>
-<col width="5%" />
-<col width="22%" />
-<col width="22%" />
+<col width="6%" />
 <col width="15%" />
-<col width="11%" />
-<col width="15%" />
-<col width="8%" />
+<col width="19%" />
+<col width="17%" />
+<col width="13%" />
+<col width="17%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -759,139 +558,103 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">1</td>
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
-<td align="center">2022-11-08</td>
+<td align="center">2023-03-23</td>
 <td align="center">775</td>
-<td align="center">00:57:24.9</td>
-<td align="center">810</td>
+<td align="center">00:53:29.0</td>
+<td align="center">869</td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
-<td align="center">Frutal Willigen</td>
-<td align="center">Schwarzwaldalp</td>
-<td align="center">2022-10-17</td>
-<td align="center">835</td>
-<td align="center">01:06:16.6</td>
-<td align="center">756</td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center">Balm Abzweigung</td>
-<td align="center">Wandel Hochmoor</td>
-<td align="center">2022-10-31</td>
-<td align="center">1261</td>
-<td align="center">01:42:10.1</td>
-<td align="center">741</td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center">Alpbach</td>
-<td align="center">Kaeserstatt Velo</td>
-<td align="center">2022-10-30</td>
-<td align="center">1212</td>
-<td align="center">01:40:01.0</td>
-<td align="center">727</td>
-</tr>
-<tr class="odd">
-<td align="center">5</td>
 <td align="center">Amtshaus</td>
-<td align="center">Bidmi</td>
-<td align="center">2022-10-19</td>
-<td align="center">820</td>
-<td align="center">01:10:29.0</td>
-<td align="center">698</td>
-</tr>
-<tr class="even">
-<td align="center">6</td>
-<td align="center">Dornacherstrasse</td>
-<td align="center">Gempen</td>
-<td align="center">2022-03-22</td>
-<td align="center">480</td>
-<td align="center">00:47:31.0</td>
-<td align="center">606</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-02-18</td>
+<td align="center">617</td>
+<td align="center">00:46:20.2</td>
+<td align="center">799</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="mit-alexander" class="section level2" number="1.4">
-<h2 number="1.4"><span class="header-section-number">1.4</span> Mit Alexander</h2>
-<table>
+<h2><span class="header-section-number">1.4</span> Mit Alexander</h2>
+<table style="width:96%;">
+<caption>Table continues below</caption>
 <colgroup>
 <col width="16%" />
-<col width="20%" />
-<col width="16%" />
-<col width="12%" />
-<col width="8%" />
-<col width="8%" />
-<col width="17%" />
+<col width="13%" />
+<col width="15%" />
+<col width="19%" />
+<col width="15%" />
+<col width="15%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="center">start</th>
-<th align="center">end</th>
-<th align="center">date</th>
-<th align="center">hm_diff</th>
-<th align="center">time</th>
-<th align="center">hm_h</th>
-<th align="center">begleitung1</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td align="center">Alpbaechli</td>
-<td align="center">Schwendichehr</td>
-<td align="center">2022-10-28</td>
-<td align="center">NA</td>
-<td align="center"></td>
-<td align="center">NA</td>
-<td align="center">Alexander</td>
+<td align="center"><strong>start</strong></td>
+<td align="center"><strong>end</strong></td>
+<td align="center"><strong>date</strong></td>
+<td align="center"><strong>hm_diff</strong></td>
+<td align="center"><strong>time</strong></td>
+<td align="center"><strong>hm_h</strong></td>
+</tr>
+</tbody>
+</table>
+<table style="width:25%;">
+<colgroup>
+<col width="25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>begleitung1</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="mit-lorenz" class="section level2" number="1.5">
-<h2 number="1.5"><span class="header-section-number">1.5</span> Mit Lorenz</h2>
-<table>
+<h2><span class="header-section-number">1.5</span> Mit Lorenz</h2>
+<table style="width:96%;">
+<caption>Table continues below</caption>
 <colgroup>
 <col width="16%" />
-<col width="20%" />
-<col width="16%" />
-<col width="12%" />
-<col width="8%" />
-<col width="8%" />
-<col width="17%" />
+<col width="13%" />
+<col width="15%" />
+<col width="19%" />
+<col width="15%" />
+<col width="15%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th align="center">start</th>
-<th align="center">end</th>
-<th align="center">date</th>
-<th align="center">hm_diff</th>
-<th align="center">time</th>
-<th align="center">hm_h</th>
-<th align="center">begleitung1</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td align="center">Alpbaechli</td>
-<td align="center">Schwendichehr</td>
-<td align="center">2022-10-28</td>
-<td align="center">NA</td>
-<td align="center"></td>
-<td align="center">NA</td>
-<td align="center">Alexander</td>
+<td align="center"><strong>start</strong></td>
+<td align="center"><strong>end</strong></td>
+<td align="center"><strong>date</strong></td>
+<td align="center"><strong>hm_diff</strong></td>
+<td align="center"><strong>time</strong></td>
+<td align="center"><strong>hm_h</strong></td>
+</tr>
+</tbody>
+</table>
+<table style="width:25%;">
+<colgroup>
+<col width="25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>begleitung1</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div id="touren-nach-ziel" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Touren nach Ziel</h1>
-<p>Dieser Abschnitt listet die Touren auf, chronologisch oder nach Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe nicht aufgefuehrt.</p>
-<div id="abzweigung-wanderweg" class="section level2 tabset tabset-fade tabset-pills" number="2.1">
-<h2 class="tabset tabset-fade tabset-pills" number="2.1"><span class="header-section-number">2.1</span> Abzweigung Wanderweg</h2>
+<h1><span class="header-section-number">2</span> Touren nach Ziel</h1>
+<p>Dieser Abschnitt listet die Touren auf, chronologisch oder nach
+Laufzeit. Fuer die Listen nach Zeit werden die Touren ohne Zeitangabe
+nicht aufgefuehrt.</p>
+<div id="abzweigung-wanderweg"
+class="section level2 tabset tabset-fade tabset-pills" number="2.1">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.1</span> Abzweigung Wanderweg</h2>
 <div id="chronologisch" class="section level3" number="2.1.1">
-<h3 number="2.1.1"><span class="header-section-number">2.1.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.1.1</span> Chronologisch</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="26%" />
@@ -921,7 +684,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit" class="section level3" number="2.1.2">
-<h3 number="2.1.2"><span class="header-section-number">2.1.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.1.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -957,10 +720,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="alpbaechli" class="section level2 tabset tabset-fade tabset-pills" number="2.2">
-<h2 class="tabset tabset-fade tabset-pills" number="2.2"><span class="header-section-number">2.2</span> Alpbaechli</h2>
+<div id="alpbaechli"
+class="section level2 tabset tabset-fade tabset-pills" number="2.2">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.2</span> Alpbaechli</h2>
 <div id="chronologisch-1" class="section level3" number="2.2.1">
-<h3 number="2.2.1"><span class="header-section-number">2.2.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.2.1</span> Chronologisch</h3>
 <table style="width:82%;">
 <colgroup>
 <col width="18%" />
@@ -990,7 +755,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-1" class="section level3" number="2.2.2">
-<h3 number="2.2.2"><span class="header-section-number">2.2.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.2.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -1026,10 +791,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="alpbruecke-wegweiser" class="section level2 tabset tabset-fade tabset-pills" number="2.3">
-<h2 class="tabset tabset-fade tabset-pills" number="2.3"><span class="header-section-number">2.3</span> Alpbruecke Wegweiser</h2>
+<div id="alpbruecke-wegweiser"
+class="section level2 tabset tabset-fade tabset-pills" number="2.3">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.3</span> Alpbruecke Wegweiser</h2>
 <div id="chronologisch-2" class="section level3" number="2.3.1">
-<h3 number="2.3.1"><span class="header-section-number">2.3.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.3.1</span> Chronologisch</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="15%" />
@@ -1115,7 +882,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-2" class="section level3" number="2.3.2">
-<h3 number="2.3.2"><span class="header-section-number">2.3.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.3.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -1223,10 +990,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="bidmi" class="section level2 tabset tabset-fade tabset-pills" number="2.4">
-<h2 class="tabset tabset-fade tabset-pills" number="2.4"><span class="header-section-number">2.4</span> Bidmi</h2>
+<div id="bidmi" class="section level2 tabset tabset-fade tabset-pills"
+number="2.4">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.4</span> Bidmi</h2>
 <div id="chronologisch-3" class="section level3" number="2.4.1">
-<h3 number="2.4.1"><span class="header-section-number">2.4.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.4.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="15%" />
@@ -1245,6 +1014,20 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="center">Amtshaus</td>
+<td align="center">Bidmi</td>
+<td align="center">2023-03-17</td>
+<td align="center"></td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center">Alpbach</td>
+<td align="center">Bidmi</td>
+<td align="center">2022-11-13</td>
+<td align="center">00:54:29.2</td>
+<td align="center">886</td>
+</tr>
 <tr class="odd">
 <td align="center">Amtshaus</td>
 <td align="center">Bidmi</td>
@@ -1326,7 +1109,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-3" class="section level3" number="2.4.2">
-<h3 number="2.4.2"><span class="header-section-number">2.4.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.4.2</span> Nach Zeit</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="6%" />
@@ -1387,6 +1170,15 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
+<td align="center">Alpbach</td>
+<td align="center">Bidmi</td>
+<td align="center">2022-11-13</td>
+<td align="center">00:54:29.2</td>
+<td align="center">886</td>
+<td align="center">1m45s</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
 <td align="center">Amtshaus</td>
 <td align="center">Bidmi</td>
 <td align="center">2021-04-22</td>
@@ -1394,8 +1186,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">896</td>
 <td align="center">2m11s</td>
 </tr>
-<tr class="even">
-<td align="center">6</td>
+<tr class="odd">
+<td align="center">7</td>
 <td align="center">Alpbach</td>
 <td align="center">Bidmi</td>
 <td align="center">2020-09-22</td>
@@ -1403,8 +1195,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">874</td>
 <td align="center">2m33s</td>
 </tr>
-<tr class="odd">
-<td align="center">7</td>
+<tr class="even">
+<td align="center">8</td>
 <td align="center">Alpbach</td>
 <td align="center">Bidmi</td>
 <td align="center">2021-07-19</td>
@@ -1412,8 +1204,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">867</td>
 <td align="center">2m60s</td>
 </tr>
-<tr class="even">
-<td align="center">8</td>
+<tr class="odd">
+<td align="center">9</td>
 <td align="center">Amtshaus</td>
 <td align="center">Bidmi</td>
 <td align="center">2019-09-15</td>
@@ -1421,8 +1213,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">882</td>
 <td align="center">3m3s</td>
 </tr>
-<tr class="odd">
-<td align="center">9</td>
+<tr class="even">
+<td align="center">10</td>
 <td align="center">Alpbach</td>
 <td align="center">Bidmi</td>
 <td align="center">2020-06-25</td>
@@ -1430,8 +1222,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">848</td>
 <td align="center">4m11s</td>
 </tr>
-<tr class="even">
-<td align="center">10</td>
+<tr class="odd">
+<td align="center">11</td>
 <td align="center">Amtshaus</td>
 <td align="center">Bidmi</td>
 <td align="center">2020-03-21</td>
@@ -1439,8 +1231,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">833</td>
 <td align="center">6m19s</td>
 </tr>
-<tr class="odd">
-<td align="center">11</td>
+<tr class="even">
+<td align="center">12</td>
 <td align="center">Amtshaus</td>
 <td align="center">Bidmi</td>
 <td align="center">2022-10-19</td>
@@ -1452,10 +1244,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="bidmi-abesyten" class="section level2 tabset tabset-fade tabset-pills" number="2.5">
-<h2 class="tabset tabset-fade tabset-pills" number="2.5"><span class="header-section-number">2.5</span> Bidmi Abesyten</h2>
+<div id="bidmi-abesyten"
+class="section level2 tabset tabset-fade tabset-pills" number="2.5">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.5</span> Bidmi Abesyten</h2>
 <div id="chronologisch-4" class="section level3" number="2.5.1">
-<h3 number="2.5.1"><span class="header-section-number">2.5.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.5.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="13%" />
@@ -1506,7 +1300,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-4" class="section level3" number="2.5.2">
-<h3 number="2.5.2"><span class="header-section-number">2.5.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.5.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -1569,10 +1363,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="blueme-turm" class="section level2 tabset tabset-fade tabset-pills" number="2.6">
-<h2 class="tabset tabset-fade tabset-pills" number="2.6"><span class="header-section-number">2.6</span> Blueme Turm</h2>
+<div id="blueme-turm"
+class="section level2 tabset tabset-fade tabset-pills" number="2.6">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.6</span> Blueme Turm</h2>
 <div id="chronologisch-5" class="section level3" number="2.6.1">
-<h3 number="2.6.1"><span class="header-section-number">2.6.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.6.1</span> Chronologisch</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="27%" />
@@ -1602,7 +1398,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-5" class="section level3" number="2.6.2">
-<h3 number="2.6.2"><span class="header-section-number">2.6.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.6.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -1638,10 +1434,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="brienz" class="section level2 tabset tabset-fade tabset-pills" number="2.7">
-<h2 class="tabset tabset-fade tabset-pills" number="2.7"><span class="header-section-number">2.7</span> Brienz</h2>
+<div id="brienz" class="section level2 tabset tabset-fade tabset-pills"
+number="2.7">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.7</span> Brienz</h2>
 <div id="chronologisch-6" class="section level3" number="2.7.1">
-<h3 number="2.7.1"><span class="header-section-number">2.7.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.7.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="13%" />
@@ -1671,7 +1469,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-6" class="section level3" number="2.7.2">
-<h3 number="2.7.2"><span class="header-section-number">2.7.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.7.2</span> Nach Zeit</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="6%" />
@@ -1707,10 +1505,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="brunni" class="section level2 tabset tabset-fade tabset-pills" number="2.8">
-<h2 class="tabset tabset-fade tabset-pills" number="2.8"><span class="header-section-number">2.8</span> Brunni</h2>
+<div id="brunni" class="section level2 tabset tabset-fade tabset-pills"
+number="2.8">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.8</span> Brunni</h2>
 <div id="chronologisch-7" class="section level3" number="2.8.1">
-<h3 number="2.8.1"><span class="header-section-number">2.8.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.8.1</span> Chronologisch</h3>
 <table style="width:68%;">
 <colgroup>
 <col width="18%" />
@@ -1740,7 +1540,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-7" class="section level3" number="2.8.2">
-<h3 number="2.8.2"><span class="header-section-number">2.8.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.8.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -1776,10 +1576,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="chlyn-rychenbach" class="section level2 tabset tabset-fade tabset-pills" number="2.9">
-<h2 class="tabset tabset-fade tabset-pills" number="2.9"><span class="header-section-number">2.9</span> Chlyn Rychenbach</h2>
+<div id="chlyn-rychenbach"
+class="section level2 tabset tabset-fade tabset-pills" number="2.9">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.9</span> Chlyn Rychenbach</h2>
 <div id="chronologisch-8" class="section level3" number="2.9.1">
-<h3 number="2.9.1"><span class="header-section-number">2.9.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.9.1</span> Chronologisch</h3>
 <table style="width:97%;">
 <colgroup>
 <col width="25%" />
@@ -1809,7 +1611,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-8" class="section level3" number="2.9.2">
-<h3 number="2.9.2"><span class="header-section-number">2.9.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.9.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -1845,10 +1647,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="creux-du-van" class="section level2 tabset tabset-fade tabset-pills" number="2.10">
-<h2 class="tabset tabset-fade tabset-pills" number="2.10"><span class="header-section-number">2.10</span> Creux du Van</h2>
+<div id="creux-du-van"
+class="section level2 tabset tabset-fade tabset-pills" number="2.10">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.10</span> Creux du Van</h2>
 <div id="chronologisch-9" class="section level3" number="2.10.1">
-<h3 number="2.10.1"><span class="header-section-number">2.10.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.10.1</span> Chronologisch</h3>
 <table style="width:85%;">
 <colgroup>
 <col width="18%" />
@@ -1892,7 +1696,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-9" class="section level3" number="2.10.2">
-<h3 number="2.10.2"><span class="header-section-number">2.10.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.10.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -1937,10 +1741,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="engstlen" class="section level2 tabset tabset-fade tabset-pills" number="2.11">
-<h2 class="tabset tabset-fade tabset-pills" number="2.11"><span class="header-section-number">2.11</span> Engstlen</h2>
+<div id="engstlen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.11">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.11</span> Engstlen</h2>
 <div id="chronologisch-10" class="section level3" number="2.11.1">
-<h3 number="2.11.1"><span class="header-section-number">2.11.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.11.1</span> Chronologisch</h3>
 <table style="width:75%;">
 <colgroup>
 <col width="13%" />
@@ -1970,7 +1776,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-10" class="section level3" number="2.11.2">
-<h3 number="2.11.2"><span class="header-section-number">2.11.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.11.2</span> Nach Zeit</h3>
 <table style="width:96%;">
 <colgroup>
 <col width="6%" />
@@ -2006,10 +1812,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="gempen" class="section level2 tabset tabset-fade tabset-pills" number="2.12">
-<h2 class="tabset tabset-fade tabset-pills" number="2.12"><span class="header-section-number">2.12</span> Gempen</h2>
+<div id="gempen" class="section level2 tabset tabset-fade tabset-pills"
+number="2.12">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.12</span> Gempen</h2>
 <div id="chronologisch-11" class="section level3" number="2.12.1">
-<h3 number="2.12.1"><span class="header-section-number">2.12.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.12.1</span> Chronologisch</h3>
 <table style="width:85%;">
 <colgroup>
 <col width="26%" />
@@ -2060,7 +1868,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-11" class="section level3" number="2.12.2">
-<h3 number="2.12.2"><span class="header-section-number">2.12.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.12.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -2114,10 +1922,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="gibel" class="section level2 tabset tabset-fade tabset-pills" number="2.13">
-<h2 class="tabset tabset-fade tabset-pills" number="2.13"><span class="header-section-number">2.13</span> Gibel</h2>
+<div id="gibel" class="section level2 tabset tabset-fade tabset-pills"
+number="2.13">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.13</span> Gibel</h2>
 <div id="chronologisch-12" class="section level3" number="2.13.1">
-<h3 number="2.13.1"><span class="header-section-number">2.13.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.13.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="15%" />
@@ -2189,7 +1999,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-12" class="section level3" number="2.13.2">
-<h3 number="2.13.2"><span class="header-section-number">2.13.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.13.2</span> Nach Zeit</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="6%" />
@@ -2270,10 +2080,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="goldern" class="section level2 tabset tabset-fade tabset-pills" number="2.14">
-<h2 class="tabset tabset-fade tabset-pills" number="2.14"><span class="header-section-number">2.14</span> Goldern</h2>
+<div id="goldern" class="section level2 tabset tabset-fade tabset-pills"
+number="2.14">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.14</span> Goldern</h2>
 <div id="chronologisch-13" class="section level3" number="2.14.1">
-<h3 number="2.14.1"><span class="header-section-number">2.14.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.14.1</span> Chronologisch</h3>
 <table style="width:74%;">
 <colgroup>
 <col width="13%" />
@@ -2295,18 +2107,25 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Goldern</td>
+<td align="center">2022-11-13</td>
+<td align="center">00:30:59.0</td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center">Alpbach</td>
+<td align="center">Goldern</td>
 <td align="center">2022-10-27</td>
 <td align="center">00:31:19.0</td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Goldern</td>
 <td align="center">2021-08-12</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Goldern</td>
 <td align="center">2021-06-20</td>
@@ -2317,7 +2136,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-13" class="section level3" number="2.14.2">
-<h3 number="2.14.2"><span class="header-section-number">2.14.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.14.2</span> Nach Zeit</h3>
 <table style="width:94%;">
 <colgroup>
 <col width="6%" />
@@ -2353,6 +2172,15 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">2</td>
 <td align="center">Alpbach</td>
 <td align="center">Goldern</td>
+<td align="center">2022-11-13</td>
+<td align="center">00:30:59.0</td>
+<td align="center">NA</td>
+<td align="center">0m12s</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Alpbach</td>
+<td align="center">Goldern</td>
 <td align="center">2022-10-27</td>
 <td align="center">00:31:19.0</td>
 <td align="center">NA</td>
@@ -2362,10 +2190,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="grengiols" class="section level2 tabset tabset-fade tabset-pills" number="2.15">
-<h2 class="tabset tabset-fade tabset-pills" number="2.15"><span class="header-section-number">2.15</span> Grengiols</h2>
+<div id="grengiols"
+class="section level2 tabset tabset-fade tabset-pills" number="2.15">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.15</span> Grengiols</h2>
 <div id="chronologisch-14" class="section level3" number="2.15.1">
-<h3 number="2.15.1"><span class="header-section-number">2.15.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.15.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="18%" />
@@ -2395,7 +2225,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-14" class="section level3" number="2.15.2">
-<h3 number="2.15.2"><span class="header-section-number">2.15.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.15.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -2431,10 +2261,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="grimselpass" class="section level2 tabset tabset-fade tabset-pills" number="2.16">
-<h2 class="tabset tabset-fade tabset-pills" number="2.16"><span class="header-section-number">2.16</span> Grimselpass</h2>
+<div id="grimselpass"
+class="section level2 tabset tabset-fade tabset-pills" number="2.16">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.16</span> Grimselpass</h2>
 <div id="chronologisch-15" class="section level3" number="2.16.1">
-<h3 number="2.16.1"><span class="header-section-number">2.16.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.16.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="18%" />
@@ -2464,7 +2296,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-15" class="section level3" number="2.16.2">
-<h3 number="2.16.2"><span class="header-section-number">2.16.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.16.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -2500,10 +2332,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="grindelfeld-brunnen" class="section level2 tabset tabset-fade tabset-pills" number="2.17">
-<h2 class="tabset tabset-fade tabset-pills" number="2.17"><span class="header-section-number">2.17</span> Grindelfeld Brunnen</h2>
+<div id="grindelfeld-brunnen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.17">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.17</span> Grindelfeld Brunnen</h2>
 <div id="chronologisch-16" class="section level3" number="2.17.1">
-<h3 number="2.17.1"><span class="header-section-number">2.17.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.17.1</span> Chronologisch</h3>
 <table>
 <colgroup>
 <col width="24%" />
@@ -2533,7 +2367,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-16" class="section level3" number="2.17.2">
-<h3 number="2.17.2"><span class="header-section-number">2.17.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.17.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -2569,10 +2403,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="grosse-scheidegg" class="section level2 tabset tabset-fade tabset-pills" number="2.18">
-<h2 class="tabset tabset-fade tabset-pills" number="2.18"><span class="header-section-number">2.18</span> Grosse Scheidegg</h2>
+<div id="grosse-scheidegg"
+class="section level2 tabset tabset-fade tabset-pills" number="2.18">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.18</span> Grosse Scheidegg</h2>
 <div id="chronologisch-17" class="section level3" number="2.18.1">
-<h3 number="2.18.1"><span class="header-section-number">2.18.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.18.1</span> Chronologisch</h3>
 <table style="width:97%;">
 <colgroup>
 <col width="25%" />
@@ -2623,7 +2459,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-17" class="section level3" number="2.18.2">
-<h3 number="2.18.2"><span class="header-section-number">2.18.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.18.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -2686,10 +2522,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="gurnigel-restaurant" class="section level2 tabset tabset-fade tabset-pills" number="2.19">
-<h2 class="tabset tabset-fade tabset-pills" number="2.19"><span class="header-section-number">2.19</span> Gurnigel Restaurant</h2>
+<div id="gurnigel-restaurant"
+class="section level2 tabset tabset-fade tabset-pills" number="2.19">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.19</span> Gurnigel Restaurant</h2>
 <div id="chronologisch-18" class="section level3" number="2.19.1">
-<h3 number="2.19.1"><span class="header-section-number">2.19.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.19.1</span> Chronologisch</h3>
 <table>
 <colgroup>
 <col width="26%" />
@@ -2747,7 +2585,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-18" class="section level3" number="2.19.2">
-<h3 number="2.19.2"><span class="header-section-number">2.19.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.19.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -2819,10 +2657,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="guttannen" class="section level2 tabset tabset-fade tabset-pills" number="2.20">
-<h2 class="tabset tabset-fade tabset-pills" number="2.20"><span class="header-section-number">2.20</span> Guttannen</h2>
+<div id="guttannen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.20">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.20</span> Guttannen</h2>
 <div id="chronologisch-19" class="section level3" number="2.20.1">
-<h3 number="2.20.1"><span class="header-section-number">2.20.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.20.1</span> Chronologisch</h3>
 <table style="width:79%;">
 <colgroup>
 <col width="16%" />
@@ -2852,7 +2692,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-19" class="section level3" number="2.20.2">
-<h3 number="2.20.2"><span class="header-section-number">2.20.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.20.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -2888,10 +2728,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="halgenfluh" class="section level2 tabset tabset-fade tabset-pills" number="2.21">
-<h2 class="tabset tabset-fade tabset-pills" number="2.21"><span class="header-section-number">2.21</span> Halgenfluh</h2>
+<div id="halgenfluh"
+class="section level2 tabset tabset-fade tabset-pills" number="2.21">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.21</span> Halgenfluh</h2>
 <div id="chronologisch-20" class="section level3" number="2.21.1">
-<h3 number="2.21.1"><span class="header-section-number">2.21.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.21.1</span> Chronologisch</h3>
 <table style="width:79%;">
 <colgroup>
 <col width="15%" />
@@ -2970,7 +2812,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-20" class="section level3" number="2.21.2">
-<h3 number="2.21.2"><span class="header-section-number">2.21.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.21.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -3051,10 +2893,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="haslizentrum" class="section level2 tabset tabset-fade tabset-pills" number="2.22">
-<h2 class="tabset tabset-fade tabset-pills" number="2.22"><span class="header-section-number">2.22</span> Haslizentrum</h2>
+<div id="haslizentrum"
+class="section level2 tabset tabset-fade tabset-pills" number="2.22">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.22</span> Haslizentrum</h2>
 <div id="chronologisch-21" class="section level3" number="2.22.1">
-<h3 number="2.22.1"><span class="header-section-number">2.22.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.22.1</span> Chronologisch</h3>
 <table style="width:74%;">
 <colgroup>
 <col width="15%" />
@@ -3073,6 +2917,20 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="center">Amtshaus</td>
+<td align="center">Haslizentrum</td>
+<td align="center">2023-02-22</td>
+<td align="center"></td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center">Amtshaus</td>
+<td align="center">Haslizentrum</td>
+<td align="center">2022-11-17</td>
+<td align="center"></td>
+<td align="center">NA</td>
+</tr>
 <tr class="odd">
 <td align="center">Amtshaus</td>
 <td align="center">Haslizentrum</td>
@@ -3098,7 +2956,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-21" class="section level3" number="2.22.2">
-<h3 number="2.22.2"><span class="header-section-number">2.22.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.22.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -3134,10 +2992,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="hohfluh-staatstrasse" class="section level2 tabset tabset-fade tabset-pills" number="2.23">
-<h2 class="tabset tabset-fade tabset-pills" number="2.23"><span class="header-section-number">2.23</span> Hohfluh Staatstrasse</h2>
+<div id="hohfluh-staatstrasse"
+class="section level2 tabset tabset-fade tabset-pills" number="2.23">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.23</span> Hohfluh Staatstrasse</h2>
 <div id="chronologisch-22" class="section level3" number="2.23.1">
-<h3 number="2.23.1"><span class="header-section-number">2.23.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.23.1</span> Chronologisch</h3>
 <table style="width:93%;">
 <colgroup>
 <col width="15%" />
@@ -3156,6 +3016,34 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatstrasse</td>
+<td align="center">2023-03-17</td>
+<td align="center">00:31:56.5</td>
+<td align="center">849</td>
+</tr>
+<tr class="even">
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatstrasse</td>
+<td align="center">2023-02-19</td>
+<td align="center"></td>
+<td align="center">NA</td>
+</tr>
+<tr class="odd">
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatstrasse</td>
+<td align="center">2023-02-18</td>
+<td align="center">00:31:39.5</td>
+<td align="center">857</td>
+</tr>
+<tr class="even">
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatstrasse</td>
+<td align="center">2022-11-17</td>
+<td align="center">00:30:57.0</td>
+<td align="center">876</td>
+</tr>
 <tr class="odd">
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatstrasse</td>
@@ -3426,7 +3314,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-22" class="section level3" number="2.23.2">
-<h3 number="2.23.2"><span class="header-section-number">2.23.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.23.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -3669,13 +3557,22 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">25</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
+<td align="center">2022-11-17</td>
+<td align="center">00:30:57.0</td>
+<td align="center">876</td>
+<td align="center">4m19s</td>
+</tr>
+<tr class="even">
+<td align="center">26</td>
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatst</td>
 <td align="center">2022-10-22</td>
 <td align="center">00:30:59.3</td>
 <td align="center">875</td>
 <td align="center">4m21s</td>
 </tr>
-<tr class="even">
-<td align="center">26</td>
+<tr class="odd">
+<td align="center">27</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2020-03-21</td>
@@ -3683,8 +3580,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">870</td>
 <td align="center">4m33s</td>
 </tr>
-<tr class="odd">
-<td align="center">27</td>
+<tr class="even">
+<td align="center">28</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-04-11</td>
@@ -3692,8 +3589,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">865</td>
 <td align="center">4m44s</td>
 </tr>
-<tr class="even">
-<td align="center">28</td>
+<tr class="odd">
+<td align="center">29</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-07-17</td>
@@ -3701,8 +3598,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">862</td>
 <td align="center">4m50s</td>
 </tr>
-<tr class="odd">
-<td align="center">29</td>
+<tr class="even">
+<td align="center">30</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-08-24</td>
@@ -3710,8 +3607,17 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">858</td>
 <td align="center">4m59s</td>
 </tr>
+<tr class="odd">
+<td align="center">31</td>
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatst</td>
+<td align="center">2023-02-18</td>
+<td align="center">00:31:39.5</td>
+<td align="center">857</td>
+<td align="center">5m2s</td>
+</tr>
 <tr class="even">
-<td align="center">30</td>
+<td align="center">32</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2020-08-08</td>
@@ -3720,7 +3626,16 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">5m5s</td>
 </tr>
 <tr class="odd">
-<td align="center">31</td>
+<td align="center">33</td>
+<td align="center">Amtshaus</td>
+<td align="center">Hohfluh Staatst</td>
+<td align="center">2023-03-17</td>
+<td align="center">00:31:56.5</td>
+<td align="center">849</td>
+<td align="center">5m19s</td>
+</tr>
+<tr class="even">
+<td align="center">34</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-10-02</td>
@@ -3728,8 +3643,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">835</td>
 <td align="center">5m51s</td>
 </tr>
-<tr class="even">
-<td align="center">32</td>
+<tr class="odd">
+<td align="center">35</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2022-10-13</td>
@@ -3737,8 +3652,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">821</td>
 <td align="center">6m25s</td>
 </tr>
-<tr class="odd">
-<td align="center">33</td>
+<tr class="even">
+<td align="center">36</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-05-18</td>
@@ -3746,8 +3661,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">809</td>
 <td align="center">6m53s</td>
 </tr>
-<tr class="even">
-<td align="center">34</td>
+<tr class="odd">
+<td align="center">37</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2022-10-13</td>
@@ -3755,8 +3670,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">808</td>
 <td align="center">6m56s</td>
 </tr>
-<tr class="odd">
-<td align="center">35</td>
+<tr class="even">
+<td align="center">38</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-09-10</td>
@@ -3764,8 +3679,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">806</td>
 <td align="center">7m2s</td>
 </tr>
-<tr class="even">
-<td align="center">36</td>
+<tr class="odd">
+<td align="center">39</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2021-05-17</td>
@@ -3773,8 +3688,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">785</td>
 <td align="center">7m55s</td>
 </tr>
-<tr class="odd">
-<td align="center">37</td>
+<tr class="even">
+<td align="center">40</td>
 <td align="center">Amtshaus</td>
 <td align="center">Hohfluh Staatst</td>
 <td align="center">2022-10-19</td>
@@ -3786,10 +3701,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="honegg" class="section level2 tabset tabset-fade tabset-pills" number="2.24">
-<h2 class="tabset tabset-fade tabset-pills" number="2.24"><span class="header-section-number">2.24</span> Honegg</h2>
+<div id="honegg" class="section level2 tabset tabset-fade tabset-pills"
+number="2.24">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.24</span> Honegg</h2>
 <div id="chronologisch-23" class="section level3" number="2.24.1">
-<h3 number="2.24.1"><span class="header-section-number">2.24.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.24.1</span> Chronologisch</h3>
 <table style="width:78%;">
 <colgroup>
 <col width="19%" />
@@ -3819,7 +3736,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-23" class="section level3" number="2.24.2">
-<h3 number="2.24.2"><span class="header-section-number">2.24.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.24.2</span> Nach Zeit</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="6%" />
@@ -3855,10 +3772,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="hundschipfi" class="section level2 tabset tabset-fade tabset-pills" number="2.25">
-<h2 class="tabset tabset-fade tabset-pills" number="2.25"><span class="header-section-number">2.25</span> Hundschipfi</h2>
+<div id="hundschipfi"
+class="section level2 tabset tabset-fade tabset-pills" number="2.25">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.25</span> Hundschipfi</h2>
 <div id="chronologisch-24" class="section level3" number="2.25.1">
-<h3 number="2.25.1"><span class="header-section-number">2.25.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.25.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="15%" />
@@ -3902,7 +3821,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-24" class="section level3" number="2.25.2">
-<h3 number="2.25.2"><span class="header-section-number">2.25.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.25.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -3938,10 +3857,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="innertkirchen" class="section level2 tabset tabset-fade tabset-pills" number="2.26">
-<h2 class="tabset tabset-fade tabset-pills" number="2.26"><span class="header-section-number">2.26</span> Innertkirchen</h2>
+<div id="innertkirchen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.26">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.26</span> Innertkirchen</h2>
 <div id="chronologisch-25" class="section level3" number="2.26.1">
-<h3 number="2.26.1"><span class="header-section-number">2.26.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.26.1</span> Chronologisch</h3>
 <table style="width:76%;">
 <colgroup>
 <col width="16%" />
@@ -3971,7 +3892,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-25" class="section level3" number="2.26.2">
-<h3 number="2.26.2"><span class="header-section-number">2.26.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.26.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -4007,10 +3928,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="kaeserstatt" class="section level2 tabset tabset-fade tabset-pills" number="2.27">
-<h2 class="tabset tabset-fade tabset-pills" number="2.27"><span class="header-section-number">2.27</span> Kaeserstatt</h2>
+<div id="kaeserstatt"
+class="section level2 tabset tabset-fade tabset-pills" number="2.27">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.27</span> Kaeserstatt</h2>
 <div id="chronologisch-26" class="section level3" number="2.27.1">
-<h3 number="2.27.1"><span class="header-section-number">2.27.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.27.1</span> Chronologisch</h3>
 <table style="width:72%;">
 <colgroup>
 <col width="15%" />
@@ -4040,7 +3963,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-26" class="section level3" number="2.27.2">
-<h3 number="2.27.2"><span class="header-section-number">2.27.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.27.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -4076,10 +3999,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="kaeserstatt-velostaender" class="section level2 tabset tabset-fade tabset-pills" number="2.28">
-<h2 class="tabset tabset-fade tabset-pills" number="2.28"><span class="header-section-number">2.28</span> Kaeserstatt Velostaender</h2>
+<div id="kaeserstatt-velostaender"
+class="section level2 tabset tabset-fade tabset-pills" number="2.28">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.28</span> Kaeserstatt Velostaender</h2>
 <div id="chronologisch-27" class="section level3" number="2.28.1">
-<h3 number="2.28.1"><span class="header-section-number">2.28.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.28.1</span> Chronologisch</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="15%" />
@@ -4200,7 +4125,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-27" class="section level3" number="2.28.2">
-<h3 number="2.28.2"><span class="header-section-number">2.28.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.28.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -4353,10 +4278,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="lischen" class="section level2 tabset tabset-fade tabset-pills" number="2.29">
-<h2 class="tabset tabset-fade tabset-pills" number="2.29"><span class="header-section-number">2.29</span> Lischen</h2>
+<div id="lischen" class="section level2 tabset tabset-fade tabset-pills"
+number="2.29">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.29</span> Lischen</h2>
 <div id="chronologisch-28" class="section level3" number="2.29.1">
-<h3 number="2.29.1"><span class="header-section-number">2.29.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.29.1</span> Chronologisch</h3>
 <table style="width:74%;">
 <colgroup>
 <col width="13%" />
@@ -4400,7 +4327,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-28" class="section level3" number="2.29.2">
-<h3 number="2.29.2"><span class="header-section-number">2.29.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.29.2</span> Nach Zeit</h3>
 <table style="width:94%;">
 <colgroup>
 <col width="6%" />
@@ -4436,10 +4363,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="maegis" class="section level2 tabset tabset-fade tabset-pills" number="2.30">
-<h2 class="tabset tabset-fade tabset-pills" number="2.30"><span class="header-section-number">2.30</span> Maegis</h2>
+<div id="maegis" class="section level2 tabset tabset-fade tabset-pills"
+number="2.30">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.30</span> Maegis</h2>
 <div id="chronologisch-29" class="section level3" number="2.30.1">
-<h3 number="2.30.1"><span class="header-section-number">2.30.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.30.1</span> Chronologisch</h3>
 <table style="width:74%;">
 <colgroup>
 <col width="15%" />
@@ -4497,7 +4426,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-29" class="section level3" number="2.30.2">
-<h3 number="2.30.2"><span class="header-section-number">2.30.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.30.2</span> Nach Zeit</h3>
 <table style="width:94%;">
 <colgroup>
 <col width="6%" />
@@ -4569,10 +4498,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="meiringen" class="section level2 tabset tabset-fade tabset-pills" number="2.31">
-<h2 class="tabset tabset-fade tabset-pills" number="2.31"><span class="header-section-number">2.31</span> Meiringen</h2>
+<div id="meiringen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.31">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.31</span> Meiringen</h2>
 <div id="chronologisch-30" class="section level3" number="2.31.1">
-<h3 number="2.31.1"><span class="header-section-number">2.31.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.31.1</span> Chronologisch</h3>
 <table style="width:82%;">
 <colgroup>
 <col width="19%" />
@@ -4609,7 +4540,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-30" class="section level3" number="2.31.2">
-<h3 number="2.31.2"><span class="header-section-number">2.31.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.31.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -4645,10 +4576,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="miliflue" class="section level2 tabset tabset-fade tabset-pills" number="2.32">
-<h2 class="tabset tabset-fade tabset-pills" number="2.32"><span class="header-section-number">2.32</span> Miliflue</h2>
+<div id="miliflue"
+class="section level2 tabset tabset-fade tabset-pills" number="2.32">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.32</span> Miliflue</h2>
 <div id="chronologisch-31" class="section level3" number="2.32.1">
-<h3 number="2.32.1"><span class="header-section-number">2.32.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.32.1</span> Chronologisch</h3>
 <table style="width:68%;">
 <colgroup>
 <col width="15%" />
@@ -4678,7 +4611,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-31" class="section level3" number="2.32.2">
-<h3 number="2.32.2"><span class="header-section-number">2.32.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.32.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -4714,10 +4647,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="obri-mettlen" class="section level2 tabset tabset-fade tabset-pills" number="2.33">
-<h2 class="tabset tabset-fade tabset-pills" number="2.33"><span class="header-section-number">2.33</span> Obri Mettlen</h2>
+<div id="obri-mettlen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.33">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.33</span> Obri Mettlen</h2>
 <div id="chronologisch-32" class="section level3" number="2.33.1">
-<h3 number="2.33.1"><span class="header-section-number">2.33.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.33.1</span> Chronologisch</h3>
 <table style="width:92%;">
 <colgroup>
 <col width="25%" />
@@ -4761,7 +4696,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-32" class="section level3" number="2.33.2">
-<h3 number="2.33.2"><span class="header-section-number">2.33.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.33.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -4815,10 +4750,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="oltscheren-bielen" class="section level2 tabset tabset-fade tabset-pills" number="2.34">
-<h2 class="tabset tabset-fade tabset-pills" number="2.34"><span class="header-section-number">2.34</span> Oltscheren Bielen</h2>
+<div id="oltscheren-bielen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.34">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.34</span> Oltscheren Bielen</h2>
 <div id="chronologisch-33" class="section level3" number="2.34.1">
-<h3 number="2.34.1"><span class="header-section-number">2.34.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.34.1</span> Chronologisch</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="25%" />
@@ -4848,7 +4785,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-33" class="section level3" number="2.34.2">
-<h3 number="2.34.2"><span class="header-section-number">2.34.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.34.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -4884,10 +4821,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="oltscheren-oberfeld" class="section level2 tabset tabset-fade tabset-pills" number="2.35">
-<h2 class="tabset tabset-fade tabset-pills" number="2.35"><span class="header-section-number">2.35</span> Oltscheren Oberfeld</h2>
+<div id="oltscheren-oberfeld"
+class="section level2 tabset tabset-fade tabset-pills" number="2.35">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.35</span> Oltscheren Oberfeld</h2>
 <div id="chronologisch-34" class="section level3" number="2.35.1">
-<h3 number="2.35.1"><span class="header-section-number">2.35.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.35.1</span> Chronologisch</h3>
 <table>
 <colgroup>
 <col width="24%" />
@@ -4917,7 +4856,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-34" class="section level3" number="2.35.2">
-<h3 number="2.35.2"><span class="header-section-number">2.35.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.35.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -4953,10 +4892,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="planplatten" class="section level2 tabset tabset-fade tabset-pills" number="2.36">
-<h2 class="tabset tabset-fade tabset-pills" number="2.36"><span class="header-section-number">2.36</span> Planplatten</h2>
+<div id="planplatten"
+class="section level2 tabset tabset-fade tabset-pills" number="2.36">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.36</span> Planplatten</h2>
 <div id="chronologisch-35" class="section level3" number="2.36.1">
-<h3 number="2.36.1"><span class="header-section-number">2.36.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.36.1</span> Chronologisch</h3>
 <table style="width:81%;">
 <colgroup>
 <col width="15%" />
@@ -5000,7 +4941,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-35" class="section level3" number="2.36.2">
-<h3 number="2.36.2"><span class="header-section-number">2.36.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.36.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -5045,10 +4986,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="pumptrack-hasliberg" class="section level2 tabset tabset-fade tabset-pills" number="2.37">
-<h2 class="tabset tabset-fade tabset-pills" number="2.37"><span class="header-section-number">2.37</span> Pumptrack Hasliberg</h2>
+<div id="pumptrack-hasliberg"
+class="section level2 tabset tabset-fade tabset-pills" number="2.37">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.37</span> Pumptrack Hasliberg</h2>
 <div id="chronologisch-36" class="section level3" number="2.37.1">
-<h3 number="2.37.1"><span class="header-section-number">2.37.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.37.1</span> Chronologisch</h3>
 <table style="width:82%;">
 <colgroup>
 <col width="13%" />
@@ -5078,7 +5021,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-36" class="section level3" number="2.37.2">
-<h3 number="2.37.2"><span class="header-section-number">2.37.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.37.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -5114,10 +5057,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="raeterichsbodensee" class="section level2 tabset tabset-fade tabset-pills" number="2.38">
-<h2 class="tabset tabset-fade tabset-pills" number="2.38"><span class="header-section-number">2.38</span> Raeterichsbodensee</h2>
+<div id="raeterichsbodensee"
+class="section level2 tabset tabset-fade tabset-pills" number="2.38">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.38</span> Raeterichsbodensee</h2>
 <div id="chronologisch-37" class="section level3" number="2.38.1">
-<h3 number="2.38.1"><span class="header-section-number">2.38.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.38.1</span> Chronologisch</h3>
 <table style="width:85%;">
 <colgroup>
 <col width="18%" />
@@ -5147,7 +5092,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-37" class="section level3" number="2.38.2">
-<h3 number="2.38.2"><span class="header-section-number">2.38.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.38.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -5183,10 +5128,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="reuti-post" class="section level2 tabset tabset-fade tabset-pills" number="2.39">
-<h2 class="tabset tabset-fade tabset-pills" number="2.39"><span class="header-section-number">2.39</span> Reuti Post</h2>
+<div id="reuti-post"
+class="section level2 tabset tabset-fade tabset-pills" number="2.39">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.39</span> Reuti Post</h2>
 <div id="chronologisch-38" class="section level3" number="2.39.1">
-<h3 number="2.39.1"><span class="header-section-number">2.39.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.39.1</span> Chronologisch</h3>
 <table style="width:78%;">
 <colgroup>
 <col width="13%" />
@@ -5208,186 +5155,193 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
+<td align="center">2023-03-23</td>
+<td align="center">00:29.03.0</td>
+<td align="center">903</td>
+</tr>
+<tr class="even">
+<td align="center">Alpbach</td>
+<td align="center">Reuti Post</td>
 <td align="center">2022-10-21</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2022-03-17</td>
 <td align="center">00:27:57.0</td>
 <td align="center">938</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-10-22</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-09-24</td>
 <td align="center">00:31:22.0</td>
 <td align="center">836</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-09-04</td>
 <td align="center">00:23:38.9</td>
 <td align="center">1109</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-09-03</td>
 <td align="center">00:28:25.3</td>
 <td align="center">923</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-06-23</td>
 <td align="center">00:28:55.0</td>
 <td align="center">907</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-06-13</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-06-06</td>
 <td align="center">00:28:22.4</td>
 <td align="center">924</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2021-05-13</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-11-22</td>
 <td align="center">00:28:10.6</td>
 <td align="center">931</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-11-12</td>
 <td align="center">00:28:24.6</td>
 <td align="center">923</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-10-20</td>
 <td align="center">00:27:29.8</td>
 <td align="center">954</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-08-01</td>
 <td align="center">00:28:09.7</td>
 <td align="center">931</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-07-12</td>
 <td align="center">00:26:09.8</td>
 <td align="center">1002</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-06-21</td>
 <td align="center">00:28:49.7</td>
 <td align="center">910</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-05-25</td>
 <td align="center">00:26:35.5</td>
 <td align="center">986</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-05-17</td>
 <td align="center">00:27:52.1</td>
 <td align="center">941</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-04-27</td>
 <td align="center">00:26:34.9</td>
 <td align="center">986</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2020-04-05</td>
 <td align="center">00:27:13.6</td>
 <td align="center">963</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2019-08-27</td>
 <td align="center">00:26:02.1</td>
 <td align="center">1007</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2019-06-07</td>
 <td align="center">00:28:06.3</td>
 <td align="center">933</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2018-10-22</td>
 <td align="center">00:28:05.8</td>
 <td align="center">933</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2018-10-07</td>
 <td align="center">00:26:31.0</td>
 <td align="center">989</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2018-06-25</td>
 <td align="center">00:24:30.3</td>
 <td align="center">1070</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2018-05-27</td>
 <td align="center">00:27:40.0</td>
 <td align="center">948</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
 <td align="center">2015-05-27</td>
@@ -5398,7 +5352,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-38" class="section level3" number="2.39.2">
-<h3 number="2.39.2"><span class="header-section-number">2.39.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.39.2</span> Nach Zeit</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="6%" />
@@ -5623,6 +5577,15 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">23</td>
 <td align="center">Alpbach</td>
 <td align="center">Reuti Post</td>
+<td align="center">2023-03-23</td>
+<td align="center">00:29.03.0</td>
+<td align="center">903</td>
+<td align="center">5m24s</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">Alpbach</td>
+<td align="center">Reuti Post</td>
 <td align="center">2021-09-24</td>
 <td align="center">00:31:22.0</td>
 <td align="center">836</td>
@@ -5632,10 +5595,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="rohrmatten" class="section level2 tabset tabset-fade tabset-pills" number="2.40">
-<h2 class="tabset tabset-fade tabset-pills" number="2.40"><span class="header-section-number">2.40</span> Rohrmatten</h2>
+<div id="rohrmatten"
+class="section level2 tabset tabset-fade tabset-pills" number="2.40">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.40</span> Rohrmatten</h2>
 <div id="chronologisch-39" class="section level3" number="2.40.1">
-<h3 number="2.40.1"><span class="header-section-number">2.40.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.40.1</span> Chronologisch</h3>
 <table style="width:82%;">
 <colgroup>
 <col width="18%" />
@@ -5672,7 +5637,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-39" class="section level3" number="2.40.2">
-<h3 number="2.40.2"><span class="header-section-number">2.40.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.40.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -5717,10 +5682,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="saflischpass" class="section level2 tabset tabset-fade tabset-pills" number="2.41">
-<h2 class="tabset tabset-fade tabset-pills" number="2.41"><span class="header-section-number">2.41</span> Saflischpass</h2>
+<div id="saflischpass"
+class="section level2 tabset tabset-fade tabset-pills" number="2.41">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.41</span> Saflischpass</h2>
 <div id="chronologisch-40" class="section level3" number="2.41.1">
-<h3 number="2.41.1"><span class="header-section-number">2.41.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.41.1</span> Chronologisch</h3>
 <table style="width:75%;">
 <colgroup>
 <col width="16%" />
@@ -5750,7 +5717,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-40" class="section level3" number="2.41.2">
-<h3 number="2.41.2"><span class="header-section-number">2.41.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.41.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -5786,10 +5753,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="schlafbielen" class="section level2 tabset tabset-fade tabset-pills" number="2.42">
-<h2 class="tabset tabset-fade tabset-pills" number="2.42"><span class="header-section-number">2.42</span> Schlafbielen</h2>
+<div id="schlafbielen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.42">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.42</span> Schlafbielen</h2>
 <div id="chronologisch-41" class="section level3" number="2.42.1">
-<h3 number="2.42.1"><span class="header-section-number">2.42.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.42.1</span> Chronologisch</h3>
 <table style="width:81%;">
 <colgroup>
 <col width="13%" />
@@ -5819,7 +5788,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-41" class="section level3" number="2.42.2">
-<h3 number="2.42.2"><span class="header-section-number">2.42.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.42.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -5855,10 +5824,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="schletter" class="section level2 tabset tabset-fade tabset-pills" number="2.43">
-<h2 class="tabset tabset-fade tabset-pills" number="2.43"><span class="header-section-number">2.43</span> Schletter</h2>
+<div id="schletter"
+class="section level2 tabset tabset-fade tabset-pills" number="2.43">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.43</span> Schletter</h2>
 <div id="chronologisch-42" class="section level3" number="2.43.1">
-<h3 number="2.43.1"><span class="header-section-number">2.43.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.43.1</span> Chronologisch</h3>
 <table style="width:68%;">
 <colgroup>
 <col width="13%" />
@@ -5888,7 +5859,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-42" class="section level3" number="2.43.2">
-<h3 number="2.43.2"><span class="header-section-number">2.43.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.43.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -5924,10 +5895,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="schwarzwaldalp" class="section level2 tabset tabset-fade tabset-pills" number="2.44">
-<h2 class="tabset tabset-fade tabset-pills" number="2.44"><span class="header-section-number">2.44</span> Schwarzwaldalp</h2>
+<div id="schwarzwaldalp"
+class="section level2 tabset tabset-fade tabset-pills" number="2.44">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.44</span> Schwarzwaldalp</h2>
 <div id="chronologisch-43" class="section level3" number="2.44.1">
-<h3 number="2.44.1"><span class="header-section-number">2.44.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.44.1</span> Chronologisch</h3>
 <table style="width:94%;">
 <colgroup>
 <col width="25%" />
@@ -6097,7 +6070,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-43" class="section level3" number="2.44.2">
-<h3 number="2.44.2"><span class="header-section-number">2.44.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.44.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -6304,10 +6277,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="schwendichehr" class="section level2 tabset tabset-fade tabset-pills" number="2.45">
-<h2 class="tabset tabset-fade tabset-pills" number="2.45"><span class="header-section-number">2.45</span> Schwendichehr</h2>
+<div id="schwendichehr"
+class="section level2 tabset tabset-fade tabset-pills" number="2.45">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.45</span> Schwendichehr</h2>
 <div id="chronologisch-44" class="section level3" number="2.45.1">
-<h3 number="2.45.1"><span class="header-section-number">2.45.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.45.1</span> Chronologisch</h3>
 <table style="width:85%;">
 <colgroup>
 <col width="25%" />
@@ -6344,7 +6319,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-44" class="section level3" number="2.45.2">
-<h3 number="2.45.2"><span class="header-section-number">2.45.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.45.2</span> Nach Zeit</h3>
 <table style="width:69%;">
 <colgroup>
 <col width="6%" />
@@ -6380,10 +6355,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="taelli" class="section level2 tabset tabset-fade tabset-pills" number="2.46">
-<h2 class="tabset tabset-fade tabset-pills" number="2.46"><span class="header-section-number">2.46</span> Taelli</h2>
+<div id="taelli" class="section level2 tabset tabset-fade tabset-pills"
+number="2.46">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.46</span> Taelli</h2>
 <div id="chronologisch-45" class="section level3" number="2.46.1">
-<h3 number="2.46.1"><span class="header-section-number">2.46.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.46.1</span> Chronologisch</h3>
 <table style="width:76%;">
 <colgroup>
 <col width="18%" />
@@ -6413,7 +6390,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-45" class="section level3" number="2.46.2">
-<h3 number="2.46.2"><span class="header-section-number">2.46.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.46.2</span> Nach Zeit</h3>
 <table style="width:97%;">
 <colgroup>
 <col width="6%" />
@@ -6449,10 +6426,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="tschorren" class="section level2 tabset tabset-fade tabset-pills" number="2.47">
-<h2 class="tabset tabset-fade tabset-pills" number="2.47"><span class="header-section-number">2.47</span> Tschorren</h2>
+<div id="tschorren"
+class="section level2 tabset tabset-fade tabset-pills" number="2.47">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.47</span> Tschorren</h2>
 <div id="chronologisch-46" class="section level3" number="2.47.1">
-<h3 number="2.47.1"><span class="header-section-number">2.47.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.47.1</span> Chronologisch</h3>
 <table style="width:78%;">
 <colgroup>
 <col width="15%" />
@@ -6489,7 +6468,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-46" class="section level3" number="2.47.2">
-<h3 number="2.47.2"><span class="header-section-number">2.47.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.47.2</span> Nach Zeit</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="6%" />
@@ -6534,10 +6513,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wandel-hochmoor" class="section level2 tabset tabset-fade tabset-pills" number="2.48">
-<h2 class="tabset tabset-fade tabset-pills" number="2.48"><span class="header-section-number">2.48</span> Wandel Hochmoor</h2>
+<div id="wandel-hochmoor"
+class="section level2 tabset tabset-fade tabset-pills" number="2.48">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.48</span> Wandel Hochmoor</h2>
 <div id="chronologisch-47" class="section level3" number="2.48.1">
-<h3 number="2.48.1"><span class="header-section-number">2.48.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.48.1</span> Chronologisch</h3>
 <table style="width:96%;">
 <colgroup>
 <col width="25%" />
@@ -6581,7 +6562,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-47" class="section level3" number="2.48.2">
-<h3 number="2.48.2"><span class="header-section-number">2.48.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.48.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -6635,10 +6616,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wandel-mettlen" class="section level2 tabset tabset-fade tabset-pills" number="2.49">
-<h2 class="tabset tabset-fade tabset-pills" number="2.49"><span class="header-section-number">2.49</span> Wandel Mettlen</h2>
+<div id="wandel-mettlen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.49">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.49</span> Wandel Mettlen</h2>
 <div id="chronologisch-48" class="section level3" number="2.49.1">
-<h3 number="2.49.1"><span class="header-section-number">2.49.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.49.1</span> Chronologisch</h3>
 <table style="width:94%;">
 <colgroup>
 <col width="25%" />
@@ -6710,7 +6693,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-48" class="section level3" number="2.49.2">
-<h3 number="2.49.2"><span class="header-section-number">2.49.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.49.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -6800,10 +6783,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wandel-mittlesten" class="section level2 tabset tabset-fade tabset-pills" number="2.50">
-<h2 class="tabset tabset-fade tabset-pills" number="2.50"><span class="header-section-number">2.50</span> Wandel mittlesten</h2>
+<div id="wandel-mittlesten"
+class="section level2 tabset tabset-fade tabset-pills" number="2.50">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.50</span> Wandel mittlesten</h2>
 <div id="chronologisch-49" class="section level3" number="2.50.1">
-<h3 number="2.50.1"><span class="header-section-number">2.50.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.50.1</span> Chronologisch</h3>
 <table style="width:99%;">
 <colgroup>
 <col width="25%" />
@@ -6854,7 +6839,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-49" class="section level3" number="2.50.2">
-<h3 number="2.50.2"><span class="header-section-number">2.50.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.50.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -6917,10 +6902,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wandel-obristen" class="section level2 tabset tabset-fade tabset-pills" number="2.51">
-<h2 class="tabset tabset-fade tabset-pills" number="2.51"><span class="header-section-number">2.51</span> Wandel obristen</h2>
+<div id="wandel-obristen"
+class="section level2 tabset tabset-fade tabset-pills" number="2.51">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.51</span> Wandel obristen</h2>
 <div id="chronologisch-50" class="section level3" number="2.51.1">
-<h3 number="2.51.1"><span class="header-section-number">2.51.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.51.1</span> Chronologisch</h3>
 <table style="width:96%;">
 <colgroup>
 <col width="25%" />
@@ -6971,7 +6958,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-50" class="section level3" number="2.51.2">
-<h3 number="2.51.2"><span class="header-section-number">2.51.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.51.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="5%" />
@@ -7034,10 +7021,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="wasserwendi" class="section level2 tabset tabset-fade tabset-pills" number="2.52">
-<h2 class="tabset tabset-fade tabset-pills" number="2.52"><span class="header-section-number">2.52</span> Wasserwendi</h2>
+<div id="wasserwendi"
+class="section level2 tabset tabset-fade tabset-pills" number="2.52">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.52</span> Wasserwendi</h2>
 <div id="chronologisch-51" class="section level3" number="2.52.1">
-<h3 number="2.52.1"><span class="header-section-number">2.52.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.52.1</span> Chronologisch</h3>
 <table style="width:81%;">
 <colgroup>
 <col width="15%" />
@@ -7056,6 +7045,20 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td align="center">Amtshaus</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-04-06</td>
+<td align="center"></td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center">Amtshaus</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-02-18</td>
+<td align="center">00:46:20.2</td>
+<td align="center">799</td>
+</tr>
 <tr class="odd">
 <td align="center">Amtshaus</td>
 <td align="center">Wasserwendi</td>
@@ -7151,7 +7154,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-51" class="section level3" number="2.52.2">
-<h3 number="2.52.2"><span class="header-section-number">2.52.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.52.2</span> Nach Zeit</h3>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -7201,14 +7204,25 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">873</td>
 <td align="center">1m54s</td>
 </tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Amtshaus</td>
+<td align="center">Wasserwendi</td>
+<td align="center">2023-02-18</td>
+<td align="center">00:46:20.2</td>
+<td align="center">799</td>
+<td align="center">5m50s</td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="wiler-vorsass" class="section level2 tabset tabset-fade tabset-pills" number="2.53">
-<h2 class="tabset tabset-fade tabset-pills" number="2.53"><span class="header-section-number">2.53</span> Wiler Vorsass</h2>
+<div id="wiler-vorsass"
+class="section level2 tabset tabset-fade tabset-pills" number="2.53">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.53</span> Wiler Vorsass</h2>
 <div id="chronologisch-52" class="section level3" number="2.53.1">
-<h3 number="2.53.1"><span class="header-section-number">2.53.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.53.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="15%" />
@@ -7266,7 +7280,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-52" class="section level3" number="2.53.2">
-<h3 number="2.53.2"><span class="header-section-number">2.53.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.53.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -7338,10 +7352,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="winterlicke" class="section level2 tabset tabset-fade tabset-pills" number="2.54">
-<h2 class="tabset tabset-fade tabset-pills" number="2.54"><span class="header-section-number">2.54</span> Winterlicke</h2>
+<div id="winterlicke"
+class="section level2 tabset tabset-fade tabset-pills" number="2.54">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.54</span> Winterlicke</h2>
 <div id="chronologisch-53" class="section level3" number="2.54.1">
-<h3 number="2.54.1"><span class="header-section-number">2.54.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.54.1</span> Chronologisch</h3>
 <table style="width:79%;">
 <colgroup>
 <col width="13%" />
@@ -7363,144 +7379,151 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
+<td align="center">2023-03-23</td>
+<td align="center">00:53:29.0</td>
+<td align="center">869</td>
+</tr>
+<tr class="even">
+<td align="center">Alpbach</td>
+<td align="center">Winterlicke</td>
 <td align="center">2022-11-08</td>
 <td align="center">00:57:24.9</td>
 <td align="center">810</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2022-04-17</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-11-19</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-10-22</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-09-03</td>
 <td align="center">00:51:25.3</td>
 <td align="center">904</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-06-06</td>
 <td align="center">00:51:52.6</td>
 <td align="center">896</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-04-24</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-04-10</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2021-03-02</td>
 <td align="center"></td>
 <td align="center">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-11-22</td>
 <td align="center">00:50:22.4</td>
 <td align="center">923</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-11-12</td>
 <td align="center">00:51:43.6</td>
 <td align="center">899</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-10-20</td>
 <td align="center">00:49:49.2</td>
 <td align="center">933</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-07-12</td>
 <td align="center">00:48:05.4</td>
 <td align="center">967</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-06-21</td>
 <td align="center">00:53:37.2</td>
 <td align="center">867</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-05-25</td>
 <td align="center">00:48:13.6</td>
 <td align="center">964</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2020-04-05</td>
 <td align="center">00:49:21.5</td>
 <td align="center">942</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2019-06-07</td>
 <td align="center">00:53:13.5</td>
 <td align="center">874</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2018-10-22</td>
 <td align="center">00:51:47.1</td>
 <td align="center">898</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2018-10-07</td>
 <td align="center">00:48:55.6</td>
 <td align="center">950</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2018-05-27</td>
 <td align="center">00:55:00.0</td>
 <td align="center">845</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2015-05-27</td>
@@ -7511,7 +7534,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-53" class="section level3" number="2.54.2">
-<h3 number="2.54.2"><span class="header-section-number">2.54.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.54.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -7646,13 +7669,22 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">13</td>
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
+<td align="center">2023-03-23</td>
+<td align="center">00:53:29.0</td>
+<td align="center">869</td>
+<td align="center">5m24s</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">Alpbach</td>
+<td align="center">Winterlicke</td>
 <td align="center">2020-06-21</td>
 <td align="center">00:53:37.2</td>
 <td align="center">867</td>
 <td align="center">5m32s</td>
 </tr>
-<tr class="even">
-<td align="center">14</td>
+<tr class="odd">
+<td align="center">15</td>
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2018-05-27</td>
@@ -7660,8 +7692,8 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 <td align="center">845</td>
 <td align="center">6m55s</td>
 </tr>
-<tr class="odd">
-<td align="center">15</td>
+<tr class="even">
+<td align="center">16</td>
 <td align="center">Alpbach</td>
 <td align="center">Winterlicke</td>
 <td align="center">2022-11-08</td>
@@ -7673,10 +7705,12 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 </div>
-<div id="zwirgi" class="section level2 tabset tabset-fade tabset-pills" number="2.55">
-<h2 class="tabset tabset-fade tabset-pills" number="2.55"><span class="header-section-number">2.55</span> Zwirgi</h2>
+<div id="zwirgi" class="section level2 tabset tabset-fade tabset-pills"
+number="2.55">
+<h2 class="tabset tabset-fade tabset-pills"><span
+class="header-section-number">2.55</span> Zwirgi</h2>
 <div id="chronologisch-54" class="section level3" number="2.55.1">
-<h3 number="2.55.1"><span class="header-section-number">2.55.1</span> Chronologisch</h3>
+<h3><span class="header-section-number">2.55.1</span> Chronologisch</h3>
 <table style="width:83%;">
 <colgroup>
 <col width="25%" />
@@ -7818,7 +7852,7 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </table>
 </div>
 <div id="nach-zeit-54" class="section level3" number="2.55.2">
-<h3 number="2.55.2"><span class="header-section-number">2.55.2</span> Nach Zeit</h3>
+<h3><span class="header-section-number">2.55.2</span> Nach Zeit</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -7991,8 +8025,10 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 10 November, 2022</h4>
 </div>
 </div>
 <div id="hoehenmeter-pro-stunde" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Hoehenmeter pro Stunde</h1>
-<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
+<h1><span class="header-section-number">3</span> Hoehenmeter pro
+Stunde</h1>
+<p>Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro
+Stunde, wobei fuer jede Tour nur die schnellste genommen wird.</p>
 <table style="width:100%;">
 <colgroup>
 <col width="23%" />

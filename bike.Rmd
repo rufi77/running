@@ -30,6 +30,7 @@ source(paste(path, "/functions/hm_print.r", sep = ""))
 ## =================================================================
 ## input data
 ## =================================================================
+cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 touren <- input_touren(path)
                   
 # Bike
@@ -42,7 +43,7 @@ tour <- sort(unique(ski$end))
 # Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Bike" & year(touren$date) == "2022" & begleitung1 != "Alexander") %>% group_by(date) %>% slice_tail() %>% hm_print())
+t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy & begleitung1 != "Alexander") %>% group_by(date) %>% slice_tail() %>% hm_print())
 ```
 
 Anzahl Touren: `r nrow(t)`. 
@@ -75,7 +76,7 @@ pander(t1)
 ## Mit Alexander
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Bike" & year(touren$date) == "2022") %>% arrange(date))
+t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy) %>% arrange(date))
 t1 <- (t %>% filter(begleitung1 == "Alexander" | begleitung2 == "Alexander" | begleitung3 == "Alexander" | begleitung4 == "Alexander") %>% rowid_to_column("Nr") %>% hm_print())
 pander(t1)
 ```

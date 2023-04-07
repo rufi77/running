@@ -30,6 +30,7 @@ source(paste(path, "/functions/hm_print.r", sep = ""))
 ## =================================================================
 ## input data
 ## =================================================================
+cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 touren <- input_touren(path)
                   
 # Bike and run
@@ -42,7 +43,7 @@ tour <- unique(ski$end)
 # Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Bike and run" & year(touren$date) == "2021") %>% group_by(date) %>% arrange(desc(time), .by_group = TRUE) %>% slice(1) %>% hm_print())
+t <- (touren %>% filter(sport == "Bike and run" & year(touren$date) == cy) %>% group_by(date) %>% arrange(desc(time), .by_group = TRUE) %>% slice(1) %>% hm_print())
 ```
 
 Anzahl Touren: `r nrow(t)`. 
