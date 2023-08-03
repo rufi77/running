@@ -354,7 +354,7 @@ div.tocify {
 <h1 class="title toc-ignore">Tage im Ausland</h1>
 <h4 class="author">Kaspar Rufibach</h4>
 <address class="author_afil">
-Meiringen<br><h4 class="date">Letzte Aenderung: 29 Juli, 2023</h4>
+Meiringen<br><h4 class="date">Letzte Aenderung: 03 August, 2023</h4>
 
 </div>
 
@@ -362,10 +362,35 @@ Meiringen<br><h4 class="date">Letzte Aenderung: 29 Juli, 2023</h4>
 <div id="pro-jahr-und-land" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Pro Jahr und Land</h1>
 <p><img src="travel_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 9} -->
+<!-- ggplot(countries2, aes(fill = country, y = days, x = country)) +  -->
+<!--   geom_bar(position="dodge", stat="identity") + -->
+<!--   ggtitle("Travel") + -->
+<!--   facet_wrap(~year) + -->
+<!-- #  theme_ipsum()  -->
+<!--   theme(legend.position = "none") + -->
+<!--   xlab("") + -->
+<!--   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + -->
+<!--   geom_text(aes(label = days), vjust = 1.6, color = "white", size = 3.5) +  -->
+<!--   theme(text = element_text(size = 20)) -->
+<!-- ``` -->
 </div>
 <div id="pro-jahr" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Pro Jahr</h1>
 <p><img src="travel_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<!-- ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 4.5} -->
+<!-- ggplot(countries3, aes(fill = year, y = days, x = year)) +  -->
+<!--   geom_bar(position="dodge", stat="identity") + -->
+<!--   ggtitle("Travel") + -->
+<!-- #  facet_wrap(~year) + -->
+<!-- #  theme_ipsum()  -->
+<!--   theme(legend.position = "none") + -->
+<!--   xlab("") + -->
+<!--   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + -->
+<!--   geom_text(aes(label = days), vjust = 1.6, color = "white", size = 3.5) + -->
+<!--   theme_minimal() +  -->
+<!--   theme(text = element_text(size = 20)) -->
+<!-- ``` -->
 </div>
 
 
