@@ -1,0 +1,46 @@
+project:
+  title: "running"
+  type: website
+  output-dir: docs
+  render:
+    - wettkaempfe.qmd
+    - bike.qmd
+    - run.qmd
+    - hike.qmd
+    - bikerun.qmd
+    - skitouren.qmd
+    - kieser.qmd
+    - zusammenfassungen.qmd
+
+website:
+  title: "EFSPI regulatory statistics workshop"
+  navbar:
+    background: info
+    left:
+    - text: "Wettkaempfe"
+      href: wettkaempfe.html
+    - text: "Ausdauer"
+      menu:
+        - text: "Bike"
+          href: bike.html
+        - text: "Run"
+          href: run.html
+        - text: "Wandern"
+          href: hike.html
+        - text: "Bike & Run"
+          href: bikerun.html
+        - text: "Skitouren"
+          href: skitouren.html
+    - text: "Kieser"
+      href: kieser.html
+    - text: "Zusammenfassungen"
+      href: zusammenfassungen.html
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: source
+
