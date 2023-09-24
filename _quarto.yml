@@ -13,7 +13,7 @@ project:
     - zusammenfassungen.qmd
 
 website:
-  title: "EFSPI regulatory statistics workshop"
+  title: "Sport Kaspar"
   navbar:
     background: info
     left:
