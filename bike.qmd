@@ -42,6 +42,8 @@ tour <- sort(unique(ski$end))
 
 # Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}
 
+::: {.panel-tabset .nav-pills}
+
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy & begleitung1 != "Alexander") %>% group_by(date) %>% slice_tail() %>% hm_print())
 ```
@@ -87,6 +89,8 @@ pander(t1)
 t1 <- (t %>% filter(begleitung1 == "Lorenz" | begleitung2 == "Lorenz" | begleitung3 == "Lorenz" | begleitung4 == "Lorenz") %>% rowid_to_column("Nr") %>% hm_print())
 pander(t1)
 ```
+
+:::
 
 # Touren nach Ziel
 

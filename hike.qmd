@@ -40,13 +40,15 @@ ski <- (all %>% select(start, end, date, time))
 tour <- unique(ski$end)
 ```
 
-# Aktuelles Jahr {.tabset .tabset-fade .tabset-pills}
+# Aktuelles Jahr 
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t <- (touren %>% filter(sport == "Hike" & year(touren$date) == cy) %>% group_by(date) %>% arrange(desc(time), .by_group = TRUE) %>% slice(1) %>% hm_print())
 ```
 
 Anzahl Touren: `r nrow(t)`. 
+
+::: {.panel-tabset .nav-pills}
 
 ## Nach Datum
 
@@ -72,6 +74,8 @@ t1 <- (t1 %>% hm_print())
 t1 <- (t1 %>% select(-begleitung1)) %>% rowid_to_column("Nr")
 pander(t1)
 ```
+
+:::
 
 # Touren nach Ziel
 

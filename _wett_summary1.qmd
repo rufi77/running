@@ -6,7 +6,7 @@ ind <- (Anlass == names(a)[i])
 ind[is.na(ind)] <- FALSE
 ```
 
-## `r names(a)[i]` {.tabset .tabset-fade .tabset-pills}
+## `r names(a)[i]` 
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE}
 panderOptions('knitr.auto.asis', FALSE)

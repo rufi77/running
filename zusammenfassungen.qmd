@@ -76,7 +76,9 @@ ascent <- as.data.frame(read_excel(paste(path, "data/ascentmonthly.xlsx", sep = 
 
 <!-- Numbers labelled `r tail(colnames(dat), 1)` are linearly extrapolated from `r toda` to the full year of `r tail(colnames(dat), 2)[1]`. -->
 
-# Jaehrliche Zusammenfassungen {.tabset .tabset-fade .tabset-pills}
+# Jaehrliche Zusammenfassungen 
+
+::: {.panel-tabset .nav-pills}
 
 `r cy`` bezieht sich immer auf den gegenwaertigen Stand linear extrapoliert auf das ganze Jahr.
 
@@ -175,8 +177,11 @@ df <- data.frame(df, rep(as.character(km[, "Sport"]), each = length(xs)))
 colnames(df) <- c("Jahr", "Zeit", "Disziplin")
 ggplot(df, aes(x = Jahr, y = Zeit, fill = Disziplin)) + geom_area(position = 'stack')
 ```
+:::
 
-# Pro Jahr {.tabset .tabset-fade .tabset-pills}
+# Pro Jahr
+
+::: {.panel-tabset .nav-pills}
 
 ## Bike
 
@@ -209,7 +214,11 @@ for (i in 19:20){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
-# Pro Woche {.tabset .tabset-fade .tabset-pills}
+:::
+
+# Pro Woche
+
+::: {.panel-tabset .nav-pills}
 
 ## Bike
 
@@ -242,3 +251,4 @@ for (i in 19:20){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 for (i in 10){plotSummary(dat = dat, sportKR = sportKR, i = i, s = s)}
 ```
 
+:::

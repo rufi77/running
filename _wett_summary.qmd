@@ -6,7 +6,9 @@ ind <- (Anlass == names(a)[i])
 ind[is.na(ind)] <- FALSE
 ```
 
-## `r names(a)[i]` {.tabset .tabset-fade .tabset-pills}
+## `r names(a)[i]` 
+
+::: {.panel-tabset .nav-pills}
 
 ### Relativer Rang Kategorie
 
@@ -63,3 +65,4 @@ d2 <- (d[order(d[, "Zeit"]), ] %>% rowid_to_column("Nr"))
 pander(d2)          
 ```
 
+:::

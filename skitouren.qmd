@@ -83,6 +83,8 @@ t <- (touren %>% filter(sport == "Skitour" & season == paste("Winter ", s - 1, "
 - Anzahl Tourentage: `r length(unique(t$date))`. 
 - Total Hoehenmeter: `r disp(sum(t$hm_diff), 0)`.
 
+::: {.panel-tabset .nav-pills}
+
 ## Nach Datum
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
@@ -114,6 +116,8 @@ pander(t1)
 t1 <- (t %>% filter(begleitung1 == "Papa") %>% select(-begleitung1) %>% arrange(desc(hm_h))) %>% rowid_to_column("Nr")
 pander(t1)
 ```
+
+:::
 
 # Skimodell
 

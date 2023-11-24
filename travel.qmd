@@ -43,6 +43,8 @@ countries3 <- countries %>%
     summarise(days = sum(days, na.rm = TRUE)) 
 ```
 
+::: {.panel-tabset .nav-pills}
+
 # Pro Jahr und Land
 
 ```{r, echo = FALSE, fig.cap = "", fig.align = "center", fig.width = 7, fig.height = 9}
@@ -85,3 +87,5 @@ barplot(days ~ year, data = countries3, xlab = "", ylim = c(0, 45), col = 1:10)
 <!--   theme_minimal() +  -->
 <!--   theme(text = element_text(size = 20)) -->
 <!-- ``` -->
+
+:::
