@@ -34,7 +34,7 @@ cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 s <- as.numeric(substr(cy, 3, 4))
 
 # delete when in 2024
-s <- s - 1
+#s <- s - 1
 
 touren <- input_touren(path)
                   
@@ -71,9 +71,9 @@ tour <- unique(ski$end)
 # pander(m1)
 
 # days on ski (double counting not possible)
-f4 <- with(touren, data.frame(date, skihalbtag, skihalbtag_fam, tour = as.numeric(sport == "Skitour"), season))
+f4 <- with(touren, data.frame(date, skihalbtag, skihalbtag_fam, skitag_fam, tour = as.numeric(sport == "Skitour"), season))
 f5 <- f4[f4$season == levels(with(touren, season))[s], ]
-f5$any <- with(f5, pmax(skihalbtag, skihalbtag_fam, tour, na.rm = TRUE))
+f5$any <- with(f5, pmax(skihalbtag, skihalbtag_fam, skitag_fam, tour, na.rm = TRUE))
 f5_dat <- f5[f5$any == 1, "date"]
 skidays <- length(unique(f5_dat))
 ```
@@ -128,7 +128,7 @@ pander(t1)
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 all_m0 <- all[all$date >= "2003-12-31" & all$date <= "2024-08-31", ]
 all_m <- (all_m0 %>% arrange(date) %>% group_by(date) %>% slice(1) %>% select(-season))
-cuts <- parse_date_time(x = "2003-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 20, by = 1))
+cuts <- parse_date_time(x = "2003-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 21, by = 1))
 labs <- c(paste("Winter 0", 3:8, "/0", 4:9, sep = ""), "Winter 09/10", paste("Winter ", 10:(s - 1), "/", 11:s, sep = ""))
 
 all_m$season <- cut.POSIXt(x = parse_date_time(x = all_m$date, orders = "ymd"), breaks = cuts, labels = labs)
