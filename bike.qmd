@@ -34,7 +34,8 @@ cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 touren <- input_touren(path)
                   
 # Bike
-all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Bike"))
+all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, begleitung4 = NULL,
+                          beg = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Bike"))
 
 ski <- (all %>% select(start, end, date, time))
 tour <- sort(unique(ski$end))
@@ -45,7 +46,7 @@ tour <- sort(unique(ski$end))
 ::: {.panel-tabset .nav-pills}
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy & begleitung1 != "Alexander") %>% group_by(date) %>% slice_tail() %>% hm_print())
+t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy & grepl("Alexander", beg) == FALSE) %>% group_by(date) %>% slice_tail() %>% hm_print())
 ```
 
 Anzahl Touren: `r nrow(t)`. 
@@ -53,14 +54,14 @@ Anzahl Touren: `r nrow(t)`.
 ## Nach Datum
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-begleitung1) %>% arrange(date)) %>% rowid_to_column("Nr")
+t1 <- (t %>% select(-beg) %>% arrange(date)) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
 ## Nach Hoehenmeter
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-begleitung1) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
+t1 <- (t %>% select(-beg) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
@@ -71,7 +72,7 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% group_by(paste(start, end, sep = "")) %>% filter(is.na(hm_h) == FALSE) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
 t1 <- (t1 %>% hm_print())
-t1 <- (t1 %>% select(-begleitung1)) %>% rowid_to_column("Nr")
+t1 <- (t1 %>% select(-beg)) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
@@ -79,14 +80,14 @@ pander(t1)
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy) %>% arrange(date))
-t1 <- (t %>% filter(begleitung1 == "Alexander" | begleitung2 == "Alexander" | begleitung3 == "Alexander" | begleitung4 == "Alexander") %>% rowid_to_column("Nr") %>% hm_print())
+t1 <- (t %>% filter(grepl("Alexander", beg) == TRUE) %>% rowid_to_column("Nr") %>% hm_print())
 pander(t1)
 ```
 
 ## Mit Lorenz
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% filter(begleitung1 == "Lorenz" | begleitung2 == "Lorenz" | begleitung3 == "Lorenz" | begleitung4 == "Lorenz") %>% rowid_to_column("Nr") %>% hm_print())
+t1 <- (t %>% filter(grepl("Lorenz", beg) == TRUE) %>% rowid_to_column("Nr") %>% hm_print())
 pander(t1)
 ```
 
@@ -116,7 +117,7 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Bike"))
 t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
 t <- (t %>% hm_print())
-t1 <- (t %>% select(-begleitung1))
+t1 <- (t %>% select(-beg))
 pander(t1)
 ```
 

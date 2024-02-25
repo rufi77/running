@@ -34,7 +34,8 @@ cy <- as.character(read_excel(paste(path, "data/currentyear.xlsx", sep = "")))
 touren <- input_touren(path)
                   
 # Hike
-all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, region = NULL, kommentar = NULL) %>% filter(sport == "Hike") %>% arrange(end, time) )
+all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, 
+                          begleitung4 = NULL, beg = TRUE, region = NULL, kommentar = NULL) %>% filter(sport == "Hike") %>% arrange(end, time) )
 
 ski <- (all %>% select(start, end, date, time))
 tour <- unique(ski$end)
@@ -53,14 +54,14 @@ Anzahl Touren: `r nrow(t)`.
 ## Nach Datum
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-begleitung1) %>% arrange(date)) %>% rowid_to_column("Nr")
+t1 <- (t %>% select(-beg) %>% arrange(date)) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
 ## Nach Hoehenmeter
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-begleitung1) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
+t1 <- (t %>% select(-beg) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
@@ -71,7 +72,7 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
 t1 <- (t %>% group_by(paste(start, end, sep = "")) %>% filter(is.na(hm_h) == FALSE) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
 t1 <- (t1 %>% hm_print())
-t1 <- (t1 %>% select(-begleitung1)) %>% rowid_to_column("Nr")
+t1 <- (t1 %>% select(-beg)) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
@@ -101,7 +102,7 @@ Dieser Abschnitt sortiert die Touren absteigend nach Hoehenmetern pro Stunde, wo
 t <- (touren %>% filter(is.na(hm_h) == FALSE & sport == "Hike"))
 t <- (t %>% group_by(paste(start, end, sep = "")) %>% arrange(desc(hm_h)) %>% slice(1) %>% ungroup())
 t <- (t %>% hm_print())
-t1 <- (t %>% select(-begleitung1))
+t1 <- (t %>% select(-beg))
 pander(t1)
 ```
 
