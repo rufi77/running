@@ -14,8 +14,15 @@ input_touren <- function(path){
              %>% rename(end_hm = mum) 
              %>% mutate(time_h = as.numeric(hms(time, quiet = TRUE)) / 3600))
   
-  # add Hm / h
+  # add Hm and Hm / h
   touren <- (touren %>% mutate(hm_diff = end_hm - start_hm, hm_h = round(hm_diff / time_h)))
+  
+  # overwrite if Hm manually given
+  ind <- is.na(touren$hm_manual) == FALSE
+  touren <- (touren %>% mutate(hm_diff = ifelse(ind, touren$hm_manual[ind], hm_diff), hm_h = round(hm_diff / time_h)))
+  
+  
+  touren[ind, "hm_diff"] <- touren$hm_manual[ind]
   
   # add season
   cuts <- parse_date_time(x = "2000-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
