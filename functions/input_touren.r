@@ -1,7 +1,7 @@
 input_touren <- function(path){
   
   # Touren
-  touren0 <- read_excel(paste(path, "data/touren.xls", sep = ""))
+  touren0 <- read_excel(paste(path, "data/touren.xlsx", sep = ""))
   
   # Hoehenmeter
   hm <- read_excel(paste(path, "data/hm.xlsx", sep = ""))
