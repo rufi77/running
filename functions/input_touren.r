@@ -25,7 +25,7 @@ input_touren <- function(path){
   touren[ind, "hm_diff"] <- touren$hm_manual[ind]
   
   # add season
-  cuts <- parse_date_time(x = "2000-06-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
+  cuts <- parse_date_time(x = "2000-07-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
   touren$season <- cut.POSIXt(x = parse_date_time(x = touren$date, orders = "ymd"), breaks = cuts, 
                               labels = c(paste("Winter 0", 0:8, "/0", 1:9, sep = ""), 
                                          "Winter 09/10", paste("Winter ", 10:49, "/", 11:50, sep = "")))
