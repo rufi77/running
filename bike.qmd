@@ -61,7 +61,8 @@ pander(t1)
 ## Nach Hoehenmeter
 
 ```{r, echo = FALSE, results = 'asis', message = FALSE, eval = TRUE}
-t1 <- (t %>% select(-beg) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
+thm <- (touren %>% filter(sport == "Bike" & year(touren$date) == cy) %>% group_by(date) %>% arrange(desc(time), .by_group = TRUE) %>% hm_print())
+t1 <- (thm %>% select(-beg) %>% filter(is.na(hm_diff) == FALSE) %>% arrange(desc(hm_diff))) %>% rowid_to_column("Nr")
 pander(t1)
 ```
 
