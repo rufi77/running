@@ -19,10 +19,9 @@ input_touren <- function(path){
   
   # overwrite if Hm manually given
   ind <- is.na(touren$hm_manual) == FALSE
-  touren <- (touren %>% mutate(hm_diff = ifelse(ind, touren$hm_manual[ind], hm_diff), hm_h = round(hm_diff / time_h)))
-  
-  
-  touren[ind, "hm_diff"] <- touren$hm_manual[ind]
+  touren[ind, "hm_diff"] <- touren[ind, "hm_manual"]
+  touren[ind, "hm_h"] <- round(touren[ind, "hm_diff"] / touren[ind, "time_h"])
+  #touren <- (touren %>% mutate(hm_diff = ifelse(ind, touren$hm_manual, hm_diff), hm_h = round(hm_diff / time_h)))
   
   # add season
   cuts <- parse_date_time(x = "2000-07-30", orders = "ymd") + years(x = seq.int(from = 0, to = 50, by = 1))
