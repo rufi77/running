@@ -2,7 +2,7 @@ input_touren <- function(path){
   
   # Touren
   touren0 <- read_excel(paste(path, "data/touren.xlsx", sep = ""))
-  
+
   # Hoehenmeter
   hm <- read_excel(paste(path, "data/hm.xlsx", sep = ""))
   hm$mum <- with(hm, pmax(mum_prov, mum_def, na.rm = TRUE))
@@ -12,7 +12,8 @@ input_touren <- function(path){
              %>% rename(start_hm = mum) 
              %>% left_join(hm[, c("ort", "mum")], by = c("end" = "ort")) 
              %>% rename(end_hm = mum) 
-             %>% mutate(time_h = as.numeric(hms(time, quiet = TRUE)) / 3600))
+             %>% mutate(time_h = as.numeric(hms(time, quiet = TRUE)) / 3600)
+             %>% mutate(startend = paste(start, " --> ", end, sep = "")))
   
   # add Hm and Hm / h
   touren <- (touren %>% mutate(hm_diff = end_hm - start_hm, hm_h = round(hm_diff / time_h)))

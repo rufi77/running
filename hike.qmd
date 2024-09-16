@@ -37,8 +37,8 @@ touren <- input_touren(path)
 all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 = NULL, begleitung2 = NULL, begleitung3 = NULL, 
                           begleitung4 = NULL, beg = TRUE, region = NULL, kommentar = NULL) %>% filter(sport == "Hike") %>% arrange(end, time) )
 
-hike <- (all %>% select(start, end, date, time))
-tour <- unique(hike$end)
+ski <- (all %>% select(start, end, date, time, startend))
+tour <- sort(unique(ski$startend))
 ```
 
 # Aktuelles Jahr 

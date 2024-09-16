@@ -43,8 +43,8 @@ all <- (touren %>% mutate(skihalbtag = NULL, skihalbtag_fam = NULL, begleitung1 
                           begleitung2 = NULL, begleitung3 = NULL, begleitung4 = NULL, beg = NULL,
                           region = NULL, kommentar = NULL) %>% filter(sport == "Skitour") %>% arrange(end, time) )
 
-ski <- (all %>% select(start, end, date, time))
-tour <- unique(ski$end)
+ski <- (all %>% select(start, end, date, time, startend))
+tour <- sort(unique(ski$startend))
 ```
 
 # Aktuelle Saison {.tabset .tabset-fade .tabset-pills}
