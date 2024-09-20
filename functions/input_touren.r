@@ -13,7 +13,7 @@ input_touren <- function(path){
              %>% left_join(hm[, c("ort", "mum")], by = c("end" = "ort")) 
              %>% rename(end_hm = mum) 
              %>% mutate(time_h = as.numeric(hms(time, quiet = TRUE)) / 3600)
-             %>% mutate(startend = paste(start, " --> ", end, sep = "")))
+             %>% mutate(startend = paste(start, " --> ", ifelse(is.na(via1), "", paste(via1, " --> ", sep = "")), end, sep = "")))
   
   # add Hm and Hm / h
   touren <- (touren %>% mutate(hm_diff = end_hm - start_hm, hm_h = round(hm_diff / time_h)))
