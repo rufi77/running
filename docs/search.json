@@ -1803,7 +1803,7 @@
     "href": "run.html#sandstrasse-lammi-tankstelle-sandstrasse",
     "title": "Run",
     "section": "Sandstrasse –> Lammi Tankstelle –> Sandstrasse",
-    "text": "Sandstrasse –&gt; Lammi Tankstelle –&gt; Sandstrasse\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSandstrasse\n2024-11-21\n\nNA\n\n\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n\n\n\n2\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n0m39s\n\n\n3\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n4m14s"
+    "text": "Sandstrasse –&gt; Lammi Tankstelle –&gt; Sandstrasse\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSandstrasse\n2024-12-18\n00:38:48.8\n408\n\n\nSandstrasse\nSandstrasse\n2024-11-21\n00:46:43.0\n342\n\n\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n\n\nSandstrasse\nSandstrasse\n2024-03-29\n00:43:07.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-03-19\n00:49:19.0\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSandstrasse\nSandstrasse\n2024-12-18\n00:38:48.8\n408\n\n\n\n2\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n1m33s\n\n\n3\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n2m12s\n\n\n4\nSandstrasse\nSandstrasse\n2024-03-29\n00:43:07.0\n0\n4m18s\n\n\n5\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n5m47s\n\n\n6\nSandstrasse\nSandstrasse\n2024-11-21\n00:46:43.0\n342\n7m54s\n\n\n7\nSandstrasse\nSandstrasse\n2024-03-19\n00:49:19.0\n0\n10m30s"
   },
   {
     "objectID": "run.html#sandstrasse-huesen-sandstrasse",
@@ -1887,7 +1887,7 @@
     "href": "run.html#sandstrasse-lammi-schwendichehr",
     "title": "Run",
     "section": "Sandstrasse –> Lammi –> Schwendichehr",
-    "text": "Sandstrasse –&gt; Lammi –&gt; Schwendichehr\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSchwendichehr\n2024-03-29\n\nNA\n\n\nSandstrasse\nSchwendichehr\n2024-03-19\n\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA"
+    "text": "Sandstrasse –&gt; Lammi –&gt; Schwendichehr\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSchwendichehr\n2024-12-18\n00:38:48.8\n408\n\n\nSandstrasse\nSchwendichehr\n2024-03-29\n\nNA\n\n\nSandstrasse\nSchwendichehr\n2024-03-19\n\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSandstrasse\nSchwendichehr\n2024-12-18\n00:38:48.8\n408"
   },
   {
     "objectID": "run.html#alpbaechli-seilialp",
@@ -2378,5 +2378,33 @@
     "title": "Skitouren",
     "section": "Steingletscher –> Sustenhorn",
     "text": "Steingletscher –&gt; Sustenhorn\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSteingletscher\nSustenhorn\n2024-05-10\n03:33:03.1\n462\n\n\nSteingletscher\nSustenhorn\n2024-05-09\n03:01:08.0\n543\n\n\nSteingletscher\nSustenhorn\n2023-05-04\n03:08:36.0\n521\n\n\nSteingletscher\nSustenhorn\n2021-05-28\n03:18:04.0\n496\n\n\nSteingletscher\nSustenhorn\n2019-06-01\n03:12:22.8\n511\n\n\nSteingletscher\nSustenhorn\n2008-05-12\n03:00:00.0\n546\n\n\nSteingletscher\nSustenhorn\n2004-05-28\n\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSteingletscher\nSustenhorn\n2008-05-12\n03:00:00.0\n546\n\n\n\n2\nSteingletscher\nSustenhorn\n2024-05-09\n03:01:08.0\n543\n1m8s\n\n\n3\nSteingletscher\nSustenhorn\n2023-05-04\n03:08:36.0\n521\n8m36s\n\n\n4\nSteingletscher\nSustenhorn\n2019-06-01\n03:12:22.8\n511\n12m23s\n\n\n5\nSteingletscher\nSustenhorn\n2021-05-28\n03:18:04.0\n496\n18m4s\n\n\n6\nSteingletscher\nSustenhorn\n2024-05-10\n03:33:03.1\n462\n33m3s"
+  },
+  {
+    "objectID": "run.html#alpbaechli-lammi-tankstelle-alpbaechli",
+    "href": "run.html#alpbaechli-lammi-tankstelle-alpbaechli",
+    "title": "Run",
+    "section": "Alpbaechli –> Lammi Tankstelle –> Alpbaechli",
+    "text": "Alpbaechli –&gt; Lammi Tankstelle –&gt; Alpbaechli\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nAlpbaechli\nAlpbaechli\n2021-03-08\n00:40:41.4\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nAlpbaechli\nAlpbaechli\n2021-03-08\n00:40:41.4\n0"
+  },
+  {
+    "objectID": "run.html#sandstrasse-lammi-tankstelle-schwendichehr",
+    "href": "run.html#sandstrasse-lammi-tankstelle-schwendichehr",
+    "title": "Run",
+    "section": "Sandstrasse –> Lammi Tankstelle –> Schwendichehr",
+    "text": "Sandstrasse –&gt; Lammi Tankstelle –&gt; Schwendichehr\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSchwendichehr\n2024-12-18\n00:38:48.8\n408\n\n\nSandstrasse\nSchwendichehr\n2024-03-29\n\nNA\n\n\nSandstrasse\nSchwendichehr\n2024-03-19\n\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSandstrasse\nSchwendichehr\n2024-12-18\n00:38:48.8\n408"
+  },
+  {
+    "objectID": "run.html#alpbaechli-schwendichehr-alpbaechli",
+    "href": "run.html#alpbaechli-schwendichehr-alpbaechli",
+    "title": "Run",
+    "section": "Alpbaechli –> Schwendichehr –> Alpbaechli",
+    "text": "Alpbaechli –&gt; Schwendichehr –&gt; Alpbaechli\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nAlpbaechli\nAlpbaechli\n2021-03-08\n00:40:41.4\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nAlpbaechli\nAlpbaechli\n2021-03-08\n00:40:41.4\n0"
+  },
+  {
+    "objectID": "run.html#sandstrasse-schwendichehr-sandstrasse",
+    "href": "run.html#sandstrasse-schwendichehr-sandstrasse",
+    "title": "Run",
+    "section": "Sandstrasse –> Schwendichehr –> Sandstrasse",
+    "text": "Sandstrasse –&gt; Schwendichehr –&gt; Sandstrasse\n\nChronologischNach Zeit\n\n\n\n\n\n\n\n\n\n\n\n\nstart\nend\ndate\ntime\nhm_h\n\n\n\n\nSandstrasse\nSandstrasse\n2024-12-18\n00:38:48.8\n408\n\n\nSandstrasse\nSandstrasse\n2024-11-21\n00:46:43.0\n342\n\n\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n\n\nSandstrasse\nSandstrasse\n2024-03-29\n00:43:07.0\n0\n\n\nSandstrasse\nSandstrasse\n2024-03-19\n00:49:19.0\n0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNr\nstart\nend\ndate\ntime\nhm_h\nRueckst\n\n\n\n\n1\nSandstrasse\nSandstrasse\n2024-12-18\n00:38:48.8\n408\n\n\n\n2\nSandstrasse\nSandstrasse\n2024-06-05\n00:40:22.1\n0\n1m33s\n\n\n3\nSandstrasse\nSandstrasse\n2024-07-21\n00:41:01.0\n0\n2m12s\n\n\n4\nSandstrasse\nSandstrasse\n2024-03-29\n00:43:07.0\n0\n4m18s\n\n\n5\nSandstrasse\nSandstrasse\n2024-06-15\n00:44:36.0\n0\n5m47s\n\n\n6\nSandstrasse\nSandstrasse\n2024-11-21\n00:46:43.0\n342\n7m54s\n\n\n7\nSandstrasse\nSandstrasse\n2024-03-19\n00:49:19.0\n0\n10m30s"
   }
 ]
